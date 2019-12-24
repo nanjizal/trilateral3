@@ -1,4 +1,4 @@
-package trilateral2.geom;
+package trilateral2;
 typedef Point = { x: Float, y: Float }
 typedef QuadPoint = { A: Point, B: Point, C: Point, D: Point };
 class Algebra {
