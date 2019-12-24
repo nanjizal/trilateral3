@@ -1,7 +1,7 @@
 package trilateral2.draw;
 import trilateral2.draw.DrawType;
 import trilateral2.geom.Algebra;
-import trilateral2.angle.Angles;
+import fracs.Angles;
 @:enum
 abstract PolySides( Int ) from Int to Int {
     var triangle        = 3;
