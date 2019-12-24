@@ -1,4 +1,4 @@
-package trilateral2.draw;
+package trilateral2;
 
 enum abstract EndLineCurve( Int ){
     var no    = 0;
