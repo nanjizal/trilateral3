@@ -1,6 +1,6 @@
-package trilateral2.draw;
-import trilateral2.draw.DrawType;
-import trilateral2.geom.Algebra;
+package trilateral2;
+import trilateral2.DrawType;
+import trilateral2.Algebra;
 import fracs.Angles;
 @:enum
 abstract PolySides( Int ) from Int to Int {
