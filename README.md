@@ -1,5 +1,5 @@
 # trilateral2
-trilateral2 rebuild of Trilateral.
+trilateral2 rebuild of http://github.com/nanjizal/Trilateral.
   
 [demo of trilateral2](https://nanjizal.github.io/trilateral2demo/)
   
