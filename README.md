@@ -7,7 +7,7 @@ trilateral2 rebuild of http://github.com/nanjizal/Trilateral.
   
 #provides matrix abilities.  
 -lib geom    
-#provides array structures including one for triangles and colours. 
+#provides array structures including one for triangles and colours.   
 -lib flat   
 #provides angles and fractions help.   
 -lib fracs    
