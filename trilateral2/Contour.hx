@@ -1,4 +1,4 @@
-package trilateral2.draw;
+package trilateral2;
 import trilateral2.DrawType;
 import trilateral2.Algebra;
 import fracs.Pi2pi;
