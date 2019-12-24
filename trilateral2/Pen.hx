@@ -1,6 +1,6 @@
-package trilateral2.draw;
-import trilateral2.draw.DrawType;
-import trilateral2.draw.ColorType;
+package trilateral2;
+import trilateral2.DrawType;
+import trilateral2.ColorType;
 class Pen {
     public var currentColor: Int = 0xFACADE; // Classic Rose 
     public var drawType:  DrawType;
