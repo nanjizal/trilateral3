@@ -2,8 +2,8 @@
 trilateral2 rebuild of Trilateral.
 
 dependancies  
--lib geom  
--lib flat  
--lib fracs  
--lib justPath
--lib pallette
+-lib geom      provides matrix abilities.
+-lib flat      provides array structures including one for triangles.
+-lib fracs     provides angles and fractions help. 
+-lib justPath  provides svg parsing helpers.
+-lib pallette  provides test colors used internally.
