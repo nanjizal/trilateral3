@@ -7,5 +7,5 @@
     "version"      : "0.0.2",
     "releasenote"  : "See https://github.com/nanjizal/trilateral2/blob/master/CHANGELOG.md",
     "contributors" : ["Nanjizal"],
-    "dependencies" : {"geom":"", "Flat":"", "fracs":"", "justPath":""}
+    "dependencies" : {"geom":"", "flat":"", "fracs":"", "justPath":""}
 }
