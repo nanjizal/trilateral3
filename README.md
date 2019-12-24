@@ -1,2 +1,2 @@
 # trilateral2
-Trilateral2 rebuild of trilateral.
+trilateral2 rebuild of Trilateral.
