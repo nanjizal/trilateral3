@@ -5,4 +5,5 @@ dependancies
 -lib geom  
 -lib flat  
 -lib fracs  
--lib justPath  
+-lib justPath
+-lib pallette
