@@ -1,5 +1,5 @@
 package trilateral2.draw;
-import trilateral.justPath.IPathContext;
+import justPath.IPathContext;
 import trilateral2.geom.Algebra;
 import trilateral2.draw.Contour;
 typedef Dim = {
