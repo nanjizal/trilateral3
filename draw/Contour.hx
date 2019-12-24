@@ -1,12 +1,12 @@
 package trilateral2.draw;
 import trilateral2.draw.DrawType;
 import trilateral2.geom.Algebra;
-import trilateral2.angle.Pi2pi;
-import trilateral2.angle.Fraction;
+import fracs.Pi2pi;
+import fracs.Fraction;
 import trilateral2.draw.Pen;
 import trilateral2.draw.ColorWheel24;
-//import trilateral2.angle.ZeroTo2pi;
-import trilateral2.angle.Angles;
+//import fracs.ZeroTo2pi;
+import fracs.angle.Angles;
 //#if trilateral_includeSegments
 //import trilateralXtra.segment.SixteenSeg;
 //import trilateralXtra.segment.SevenSeg;
