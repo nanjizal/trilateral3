@@ -1,4 +1,4 @@
-package trilateral2.draw; 
+package trilateral2; 
 typedef DrawType = {
     var triangle: ( ax_: Float, ay_: Float, az_: Float
           , bx_: Float, by_: Float, bz_: Float
