@@ -1,7 +1,7 @@
 # trilateral2
 trilateral2 rebuild of http://github.com/nanjizal/Trilateral.
   
-[demo of trilateral2](https://nanjizal.github.io/trilateral2demo/)
+[demo of trilateral2](https://nanjizal.github.io/trilateral2demo/binWebGL/)
   
 ### dependancies:  
   
