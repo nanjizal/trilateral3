@@ -1,6 +1,8 @@
 # trilateral2
-trilateral2 rebuild of http://github.com/nanjizal/Trilateral.
-  
+trilateral2 rebuild of http://github.com/nanjizal/Trilateral.  
+
+![kiwi](https://user-images.githubusercontent.com/20134338/71471335-1440fd00-27c7-11ea-9138-a649c96e057e.png)  
+
 [demo of trilateral2](https://nanjizal.github.io/trilateral2demo/binWebGL/)
   
 ### dependancies:  
