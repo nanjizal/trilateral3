@@ -1,6 +1,8 @@
 # trilateral2
 trilateral2 rebuild of http://github.com/nanjizal/Trilateral.  
 
+Still some tweaks to do, the angle code needs looking at since reverting one bug caused the endcaps incorrect, and fill, color, texture and linear gradient need to be re-added.
+
 ![kiwi](https://user-images.githubusercontent.com/20134338/71471335-1440fd00-27c7-11ea-9138-a649c96e057e.png)  
 
 [demo of trilateral2](https://nanjizal.github.io/trilateral2demo/binWebGL/)
