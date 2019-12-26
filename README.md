@@ -6,12 +6,12 @@ trilateral2 rebuild of http://github.com/nanjizal/Trilateral.
 ### dependancies:  
   
 #provides matrix abilities.  
--lib geom    
+-lib [geom](https://github.com/nanjizal/geom)    
 #provides array structures including one for triangles and colours.   
--lib flat   
+-lib [flat](http://github.com/nanjizal/flat)   
 #provides angles and fractions help.   
--lib fracs    
+-lib [fracs](http://github.com/nanjizal/fracs)    
 #provides svg parsing helpers.  
--lib justPath   
+-lib [justPath](http://github.com/nanjizal/justPath)   
 #provides test colors used internally.  
--lib pallette    
+-lib [pallette](http://github.com/nanjizal/pallette)    
