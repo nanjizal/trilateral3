@@ -13,6 +13,7 @@ class Sketch implements IPathContext {
     var y:                          Float = 0.;
     public var width:               Float = 0.01;
     public var widthFunction:       Float->Float->Float->Float->Float->Float;
+    public var colourFunction:      Int->Float->Float->Float->Float->Int;
     var tempArr:                    Array<Float>;
     public var contour:             Contour;
     var pen:                        Pen;
@@ -265,6 +266,7 @@ class Sketch implements IPathContext {
         var repeat = ( x == x_ && y == y_ ); // added for poly2tryhx it does not like repeat points!
         if( !repeat ){ // this does not allow dot's to be created using lineTo can move beyond lineTo if it seems problematic.
             if( widthFunction != null ) width = widthFunction( width, x, x, x_, y_ );
+            if( colourFunction != null ) pen.currentColor = colourFunction( pen.currentColor, x, x, x_, y_ );
             line( x_, y_ ); 
             var l = points.length;
             var p = points[ l - 1 ];
