@@ -1,6 +1,8 @@
 package trilateral2;
 import trilateral2.DrawType;
 import trilateral2.Algebra;
+import geom.Quad2D;
+import geom.Matrix1x2;
 import fracs.Angles;
 @:enum
 abstract PolySides( Int ) from Int to Int {
@@ -64,12 +66,12 @@ class Shaper {
         return 2;
     }
     public static inline 
-    function quad( drawType: DrawType, q: QuadPoint ): Int {
+    function quad( drawType: DrawType, q: Quad2D ): Int {
         return add2DQuad( drawType,  q.A.x, q.A.y, q.B.x, q.B.y, q.C.x, q.C.y, q.D.x, q.D.y );
     }
     public static inline 
     function lineAB( drawType: DrawType
-                   , A: Point, B: Point
+                   , A: Matrix1x2, B: Matrix1x2
                    , width: Float ): Int {
         var q = Algebra.lineAB( A, B, width );
         return quad( drawType, q );
