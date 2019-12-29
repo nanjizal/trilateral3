@@ -357,7 +357,6 @@ class Contour {
         var len = Shaper.pie( pen.drawType
                              , ax, ay, radius, beta, gamma, prefer, sides );
         pen.colorTriangles( mark, len );
-        //triArr.addArray( Poly.pie( ax, ay, radius, beta, gamma, prefer, mark, sides ) );
     }
     inline
     function computeJ( width_: Float, theta0: Float, dif: Float ){
@@ -612,14 +611,11 @@ class Contour {
                 
                 pen.pos = quadIndex + 1;
                 triangle2DFill( kax, kay, kbx, kby, jxOld, jyOld #if trilateral_debug ,debugCol7 #end );
-                
-                //triArr[ quadIndex + 1 ] = new Trilateral( kax, kay, kbx, kby, jxOld, jyOld #if trilateral_debug ,debugCol7 #end );
                 //addDebugLine( kbx, kby,jxOld, jyOld, width_, 3 );
                 //addDebugLine( jxOld, jyOld, kbx, kby, width_, 3 );
             }
             pen.pos = quadIndex;
             triangle2DFill( kax, kay, kbx, kby, jx, jy #if trilateral_debug ,debugCol6 #end );
-            //triArr[ quadIndex ] = new Trilateral( kax, kay, kbx, kby, jx, jy #if trilateral_debug ,debugCol6 #end );
             //addDebugLine( jx, jy, kax, kay, width_, 4 );
             //addDebugLine( kax, kay, jx, jy, width_, 4 );
         }
@@ -641,9 +637,7 @@ class Contour {
                 triangle2DFill( kax, kay, kbx, kby, jx, jy #if trilateral_debug ,debugCol6 #end );
                 pen.pos = quadIndex + 1;
                 triangle2DFill( kax, kay, kbx, kby, ncx, ncy #if trilateral_debug ,debugCol7 #end );
-                //triArr[ quadIndex ] = new Trilateral( kax, kay, kbx, kby, jx, jy #if trilateral_debug ,debugCol6 #end );
                 // addDebugLine( kbx, kby, jx, jy, width_, 4 ); //NOT USED STILL TO TEST
-                // triArr[ quadIndex + 1 ] = new Trilateral( kax, kay, kbx, kby, ncx, ncy #if trilateral_debug ,debugCol7 #end );
             } else {
                 pA = pointsAnti.length;//6
                 pointsAnti[ pA++ ] = jxOld;
@@ -661,11 +655,8 @@ class Contour {
                 
                 pen.pos = quadIndex + 1;
                 triangle2DFill( jxOld, jyOld, kbx, kby, ncx, ncy #if trilateral_debug ,debugCol7 #end );
-                
-                //triArr[ quadIndex ] = new Trilateral( jxOld, jyOld, kbx, kby, jx, jy #if trilateral_debug ,debugCol6 #end );
                 // used reverse 3,4kax, kay,
                 //addDebugLine( jx, jy, jxOld, jyOld, width_, 4 );
-                //triArr[ quadIndex + 1 ] = new Trilateral( jxOld, jyOld, kbx, kby, ncx, ncy #if trilateral_debug ,debugCol7 #end );
                 // used reverse 3,4,5 ... does not go right in other direction
                 //addDebugLine( kbx, kby, ncx, ncy , width_, 3 );
             }
@@ -675,8 +666,6 @@ class Contour {
             
             pen.pos = quadIndex;
             triangle2DFill( kax, kay, jx, jy, kcx, kcy #if trilateral_debug ,debugCol6 #end );
-            
-            /*triArr[ quadIndex ] = new Trilateral( kax, kay, jx, jy, kcx, kcy #if trilateral_debug ,6 #end );*/
             // used 1,2,3 reverse 1, 2  correct :)
             //addDebugLine( kax, kay, kcx, kcy, width_, 4 );
             if( count == 1 ){
@@ -690,12 +679,8 @@ class Contour {
                 pointsClock[ pC++ ] = ncy;
                 pointsClock[ pC++ ] = jx;
                 pointsClock[ pC++ ] = jy;
-                
                 pen.pos = quadIndex + 1;
                 triangle2DFill( kax, kay, jx, jy, ncx, ncy #if trilateral_debug ,debugCol7 #end );
-            
-                
-                //triArr[ quadIndex + 1 ] = new Trilateral( kax, kay, jx, jy, ncx, ncy #if trilateral_debug ,debugCol7 #end );
                 //addDebugLine( ncx, ncy, jx, jy, width_, 3 );
             } else {
                 pA = pointsAnti.length;//6
@@ -708,11 +693,8 @@ class Contour {
                 pointsClock[ pC++ ] = jyOld;
                 pointsClock[ pC++ ] = jx;
                 pointsClock[ pC++ ] = jy;
-                
                 pen.pos = quadIndex + 1;
                 triangle2DFill( kax, kay, jx, jy, jxOld, jyOld #if trilateral_debug ,debugCol7 #end );
-                
-                //triArr[ quadIndex + 1 ] = new Trilateral( kax, kay, jx, jy, jxOld, jyOld #if trilateral_debug ,debugCol7 #end );
                 //addDebugLine( jxOld, jyOld, jx, jy, width_, 3 );
             }
         }
@@ -729,18 +711,10 @@ class Contour {
                 pointsClock[ pC++ ] = jy;
                 pointsClock[ pC++ ] = ncx;
                 pointsClock[ pC++ ] = ncy;
-                
                 pen.pos = quadIndex;
                 triangle2DFill( kax, kay, jx, jy, kcx, kcy #if trilateral_debug ,debugCol6 #end );
                 pen.pos = quadIndex + 1;
                 triangle2DFill( kax, kay, jx, jy, ncx, ncy #if trilateral_debug ,debugCol7 #end );
-                
-                
-                //triArr[ quadIndex ] = new Trilateral( kax, kay, jx, jy, kcx, kcy #if trilateral_debug ,debugCol6 #end );
-                //triArr[ quadIndex + 1 ] = new Trilateral( kax, kay, jx, jy, ncx, ncy #if trilateral_debug ,debugCol7 #end );
-                
-                
-                
             } else {
                 pA = pointsAnti.length;//6
                 pointsAnti[ pA++ ] = jxOld;
@@ -752,20 +726,13 @@ class Contour {
                 pointsClock[ pC++ ] = jy;
                 pointsClock[ pC++ ] = ncx;
                 pointsClock[ pC++ ] = ncy;
-                
                 pen.pos = quadIndex;
                 triangle2DFill( jxOld, jyOld, jx, jy, kcx, kcy #if trilateral_debug ,debugCol6 #end );
                 pen.pos = quadIndex + 1;
                 triangle2DFill( jxOld, jyOld, jx, jy, ncx, ncy #if trilateral_debug ,debugCol7 #end );
-                
-                
-                //triArr[ quadIndex ] = new Trilateral( jxOld, jyOld, jx, jy, kcx, kcy #if trilateral_debug ,debugCol6 #end );
-                //triArr[ quadIndex + 1 ] = new Trilateral( jxOld, jyOld, jx, jy, ncx, ncy #if trilateral_debug ,debugCol7 #end );
             }
         }
-        
         // reset pen pos
-        
         pen.pos = currQuadIndex;
         
     }
@@ -819,18 +786,4 @@ class Contour {
         triangle2DFill( dxPrev_, dyPrev_, dx, dy, exPrev_, eyPrev_ );
         triangle2DFill( dxPrev_, dyPrev_, dx, dy, ex, ey );
     }
-    
-    // REDUNDANT
-    /*
-    inline
-    function add( trilateral: Trilateral ){
-        triArr.add( trilateral );
-    }
-    inline
-    function addArray( trilateralArray: TrilateralArray ){
-        triArr.addArray( trilateralArray );
-    }
-    
-    */
-    
 }
