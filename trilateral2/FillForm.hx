@@ -1,6 +1,6 @@
 package trilateral2;
 
-enum SketchForm {
+enum FillForm {
     tess2;
     polyK;
     poly2tri;
