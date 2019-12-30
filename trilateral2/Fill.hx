@@ -1,26 +1,30 @@
 package trilateral2;
-//based on trilateral untested.
+// compiles, but untested.
 import org.poly2tri.VisiblePolygon;
-import trilateral.parsing.FillDraw;
+import hxGeomAlgo.Tess2;
 import hxPolyK.PolyK;
 class Fill {
-    function triangulate( p: Array<Array<Float>>, fillForm: FillForm ):{ vert: Array<Float>, tri: Array<Int> } {
+    public static
+    function triangulate( p: Array<Array<Float>>, fillForm: FillForm ): { vert: Array<Float>, tri: Array<Int> } {
         var vert: Array<Float>;
         var tri: Array<Int>;
         switch( fillForm ){
-            case tess2:
-                var pt = vp.getVerticesAndTriangles();
-                tri = pt.triangles;
-                vert = pt.vertices;
-            case poly2tri:
+            case FillForm.tess2:
+            
+                var res = Tess2.tesselate( p, null, ResultType.POLYGONS, 3 );
+                vert = res.vertices;
+                tri = res.elements;
+            
+            case FillForm.poly2tri:
+            
                 var vp = new VisiblePolygon();
-                var l = points.length;
-                var p: Array<Float>;
+                var l = p.length;
+                var p_: Array<Float>;
                 for( i in 0...l ){
-                    p = points[ i ];
-                    if( p.length != 0 ) {
+                    p_ = p[ i ];
+                    if( p_.length != 0 ) {
                         var p2t: Array<org.poly2tri.Point> = [];
-                        var pairs = new ArrayPairs<Float>( p );
+                        var pairs = new ArrayPairs<Float>( p_ );
                         var p0 = pairs[0].x;
                         var p1 = pairs[0].y;
                         for( pair in pairs ) p2t.push( new org.poly2tri.Point( pair.x, pair.y ) );
@@ -35,18 +39,21 @@ class Fill {
                 var pt = vp.getVerticesAndTriangles();
                 tri = pt.triangles;
                 vert = pt.vertices;
-            case polyK:
+            
+            case FillForm.polyK:
+            
                 var l = p.length;
                 var count = 0;
                 vert = new Array<Float>();
                 tri = new Array<Int>();
                 for( i in 0...l ) if( p[ i ].length != 0 ) {
+                    var poly = p[ i ];
                     var tgs = PolyK.triangulate( poly ); 
                     var triples = new ArrayTriple( tgs );
-                    for( tri in triples ){
-                        var a: Int = Std.int( tri.a*2 );
-                        var b: Int = Std.int( tri.b*2 );
-                        var c: Int = Std.int( tri.c*2 );
+                    for( tri_ in triples ){
+                        var a: Int = Std.int( tri_.a*2 );
+                        var b: Int = Std.int( tri_.b*2 );
+                        var c: Int = Std.int( tri_.c*2 );
                         vert.push( poly[ a ] );
                         vert.push( poly[ a + 1 ] );
                         tri.push( count++ );
@@ -58,7 +65,8 @@ class Fill {
                         tri.push( count++ );
                     }
                 }
+            
         }
-        return { vert: Array<Float>, tri: Array<Int> };
+        return { vert: vert, tri: tri };
     }
 }
