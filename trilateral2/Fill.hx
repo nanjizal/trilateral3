@@ -1,22 +1,34 @@
 package trilateral2;
-// compiles, but untested.
 import org.poly2tri.VisiblePolygon;
 import hxGeomAlgo.Tess2;
 import hxPolyK.PolyK;
 class Fill {
     public static
-    function triangulate( p: Array<Array<Float>>, fillForm: FillForm ): { vert: Array<Float>, tri: Array<Int> } {
+    function triangulate( pen: Pen, sketch: Sketch, fillForm: FillForm ) {
         var vert: Array<Float>;
         var tri: Array<Int>;
+        var p: Array<Array<Float>>;
         switch( fillForm ){
             case FillForm.tess2:
-            
+                sketch.pointsRewound();
+                p = sketch.points;
                 var res = Tess2.tesselate( p, null, ResultType.POLYGONS, 3 );
                 vert = res.vertices;
                 tri = res.elements;
-            
+                var triples = new ArrayTriple( tri );
+                var i: Int;
+                for( tri_ in triples ){
+                    var a: Int = Std.int( tri_.a*2 );
+                    var b: Int = Std.int( tri_.b*2 );
+                    var c: Int = Std.int( tri_.c*2 );
+                    pen.triangle2DFill(  vert[ a ], vert[ a + 1 ]
+                                       , vert[ b ], vert[ b + 1 ]
+                                       , vert[ c ], vert[ c + 1 ], -1 );
+                }
+                
             case FillForm.poly2tri:
-            
+                sketch.pointsNoEndOverlap();
+                p = sketch.points;
                 var vp = new VisiblePolygon();
                 var l = p.length;
                 var p_: Array<Float>;
@@ -39,9 +51,19 @@ class Fill {
                 var pt = vp.getVerticesAndTriangles();
                 tri = pt.triangles;
                 vert = pt.vertices;
-            
+                var triples = new ArrayTriple( tri );
+                var i: Int;
+                for( tri_ in triples ){
+                    var a: Int = Std.int( tri_.a*3 );
+                    var b: Int = Std.int( tri_.b*3 );
+                    var c: Int = Std.int( tri_.c*3 );
+                    pen.triangle2DFill(  vert[ a ], vert[ a + 1 ]
+                                       , vert[ b ], vert[ b + 1 ]
+                                       , vert[ c ], vert[ c + 1 ], -1 );
+                }
+                
             case FillForm.polyK:
-            
+                p = sketch.points;
                 var l = p.length;
                 var count = 0;
                 vert = new Array<Float>();
@@ -54,19 +76,12 @@ class Fill {
                         var a: Int = Std.int( tri_.a*2 );
                         var b: Int = Std.int( tri_.b*2 );
                         var c: Int = Std.int( tri_.c*2 );
-                        vert.push( poly[ a ] );
-                        vert.push( poly[ a + 1 ] );
-                        tri.push( count++ );
-                        vert.push( poly[ b ] );
-                        vert.push( poly[ b + 1 ] );
-                        tri.push( count++ );
-                        vert.push( poly[ c ] );
-                        vert.push( poly[ c + 1 ] );
-                        tri.push( count++ );
+                        pen.triangle2DFill( poly[ a ], poly[ a + 1 ],
+                                            poly[ b ], poly[ b + 1 ], 
+                                            poly[ c ], poly[ c + 1 ], -1 );
                     }
                 }
             
         }
-        return { vert: vert, tri: tri };
     }
 }

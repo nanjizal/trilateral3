@@ -179,6 +179,7 @@ class Sketch implements IPathContext {
                 cc += ( x2 - x1 ) * ( y2 + y1 ); //(x1 * y2 - x2 * y1)
                 k += 2;
             }
+            /*
             var reverse = cc > 0;
             if( reverse ){
                 k = 0;
@@ -190,7 +191,7 @@ class Sketch implements IPathContext {
                 }
             }
             
-            p.reverse();
+            p.reverse();*/
             points[ i ] = p;
         }
         return points;
