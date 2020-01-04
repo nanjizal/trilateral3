@@ -1,6 +1,6 @@
 package trilateral2;
-import geom.Matrix1x2;
-import geom.Quad2D;
+import geom.matrix.Matrix1x2;
+import geom.obj.Quad2D;
 import geom.curve.Bezier;
 
 class Algebra {
