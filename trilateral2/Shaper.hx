@@ -1,8 +1,8 @@
 package trilateral2;
 import trilateral2.DrawType;
 import trilateral2.Algebra;
-import geom.Quad2D;
-import geom.Matrix1x2;
+import geom.obj.Quad2D;
+import geom.matrix.Matrix1x2;
 import fracs.Angles;
 @:enum
 abstract PolySides( Int ) from Int to Int {
