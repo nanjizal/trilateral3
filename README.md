@@ -15,3 +15,5 @@ Still some tweaks to do, the angle code needs looking at since reverting one bug
 -lib [justPath](http://github.com/nanjizal/justPath)   
 #provides test colors used internally.  
 -lib [pallette](http://github.com/nanjizal/pallette)    
+
+<img width="840" alt="trilateral2Setup" src="https://user-images.githubusercontent.com/20134338/72229420-5d09fb80-35a6-11ea-97c0-2817a3b841b2.png">
