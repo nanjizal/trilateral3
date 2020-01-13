@@ -1,18 +1,16 @@
 # trilateral2
 trilateral2 rebuild of http://github.com/nanjizal/Trilateral.  
 
-Still some tweaks to do, the angle code needs looking at since reverting one bug caused the endcaps incorrect, and fill, color, texture and linear gradient need to be re-added.
+Still some tweaks to do, the angle code needs looking at since reverting one bug caused the endcaps incorrect, and fill texture and linear gradient need to be re-added.
 
 ![kiwi](https://user-images.githubusercontent.com/20134338/71471335-1440fd00-27c7-11ea-9138-a649c96e057e.png)  
 
-[demo of trilateral2](https://nanjizal.github.io/trilateral2demo/binWebGL/)
+[setup example](https://github.com/nanjizal/trilateral2Setup)
   
 ### dependancies:  
   
-#provides matrix abilities.  
--lib [geom](https://github.com/nanjizal/geom)    
-#provides array structures including one for triangles and colours.   
--lib [flat](http://github.com/nanjizal/flat)   
+#provides matrix abilitie and array structures including one for triangles and colours. 
+-lib [geom](https://github.com/nanjizal/geom)      
 #provides angles and fractions help.   
 -lib [fracs](http://github.com/nanjizal/fracs)    
 #provides svg parsing helpers.  
