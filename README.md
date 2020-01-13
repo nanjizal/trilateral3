@@ -7,8 +7,8 @@ Still some tweaks to do, the angle code needs looking at since reverting one bug
   
 ### dependancies:  
   
-#provides matrix abilities and array structures including one for triangles and colours. 
--lib [geom](https://github.com/nanjizal/geom)      
+#provides matrix abilities and array structures including one for triangles and colours.   
+-lib [geom](https://github.com/nanjizal/geom)       
 #provides angles and fractions help.   
 -lib [fracs](http://github.com/nanjizal/fracs)    
 #provides svg parsing helpers.  
