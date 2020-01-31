@@ -1,6 +1,8 @@
 package trilateral2;
 import trilateral2.DrawType;
 import trilateral2.ColorType;
+import geom.flat.f32.Float32FlatRGBA;
+import geom.flat.f32.Float32FlatTriangle;
 class Pen {
     public var currentColor: Int = 0xFACADE; // Classic Rose 
     public var drawType:  DrawType;
@@ -10,12 +12,28 @@ class Pen {
         drawType  = drawType_;
         colorType = colorType_;
     }
+    // normal WebGL implementation using Float32Flat's, but Pen would accept alternate implementation
+    public static inline 
+    function create(    verts: Float32FlatTriangle
+                      , cols:  Float32FlatRGBA ): Pen {
+        return new Pen( {  triangle: verts.triangle
+                            , next:     verts.next
+                            , hasNext:  verts.hasNext
+                            , pos:      verts.pos
+                            , length:   verts.length 
+                            }
+                          , { cornerColors:   cols.cornerColors
+                            , colorTriangles: cols.colorTriangles
+                            , pos:            verts.pos
+                            , length:         verts.length
+                            } 
+                        );
+    }    
     inline public
     function cornerColor( color: Int = -1 ): Void {
         if( color == -1 ) color = currentColor;
         colorType.cornerColors( color, color, color );
     }
-    
     inline public
     function cornerColors( colorA: Int, colorB: Int, colorC: Int ): Void {
         colorType.cornerColors( colorA, colorB, colorC );
