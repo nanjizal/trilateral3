@@ -266,8 +266,8 @@ class Sketch implements IPathContext {
     function lineTo( x_: Float, y_: Float ): Void{
         var repeat = ( x == x_ && y == y_ ); // added for poly2tryhx it does not like repeat points!
         if( !repeat ){ // this does not allow dot's to be created using lineTo can move beyond lineTo if it seems problematic.
-            if( widthFunction != null ) width = widthFunction( width, x, x, x_, y_ );
-            if( colourFunction != null ) pen.currentColor = colourFunction( pen.currentColor, x, x, x_, y_ );
+            if( widthFunction != null ) width = widthFunction( width, x, y, x_, y_ );
+            if( colourFunction != null ) pen.currentColor = colourFunction( pen.currentColor, x, y, x_, y_ );
             line( x_, y_ ); 
             var l = points.length;
             var p = points[ l - 1 ];
