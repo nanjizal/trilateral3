@@ -3,11 +3,13 @@ import trilateral2.DrawType;
 import trilateral2.ColorType;
 import geom.flat.f32.Float32FlatRGBA;
 import geom.flat.f32.Float32FlatTriangle;
+import geom.matrix.Matrix4x3;
 class Pen {
     public var currentColor: Int = 0xFACADE; // Classic Rose 
     public var drawType:  DrawType;
     public var colorType: ColorType;
     public var indices:   Array<Int> = [];
+    public var transformMatrix: Matrix4x3;
     public function new( drawType_: DrawType, colorType_: ColorType ){
         drawType  = drawType_;
         colorType = colorType_;
@@ -17,6 +19,7 @@ class Pen {
     function create(    verts: Float32FlatTriangle
                       , cols:  Float32FlatRGBA ): Pen {
         return new Pen( {  triangle: verts.triangle
+                            , transform:verts.transform
                             , next:     verts.next
                             , hasNext:  verts.hasNext
                             , pos:      verts.pos
@@ -49,6 +52,7 @@ class Pen {
                         , cx: Float, cy: Float, cz: Float ){
         // don't need to reorder corners and Trilateral can do that!
         drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        if( transformMatrix != null ) drawType.transform( transformMatrix );
         drawType.next();
     }
     inline public

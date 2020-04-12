@@ -3,6 +3,7 @@ import trilateral2.DrawType;
 import trilateral2.Algebra;
 import geom.obj.Quad2D;
 import geom.matrix.Matrix1x2;
+import geom.matrix.Matrix4x3;
 import fracs.Angles;
 @:enum
 abstract PolySides( Int ) from Int to Int {
@@ -45,6 +46,9 @@ Shaper provides static methods for drawing with triangles.
 the methods return the number of triangles added.
 **/
 class Shaper {
+    public static
+    var transformMatrix: Matrix4x3;
+    
     public static inline
     function add2DTriangle( drawType: DrawType
                           , ax: Float, ay: Float
@@ -52,6 +56,8 @@ class Shaper {
                           , cx: Float, cy: Float ): Int {
         // don't need to reorder corners and Trilateral can do that!
         drawType.triangle( ax, ay, 0, bx, by, 0, cx, cy, 0 );
+        var m = Shaper.transformMatrix;
+        if( m != null ) drawType.transform( m );
         drawType.next();
         return 1;
     }
