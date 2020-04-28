@@ -1,34 +1,44 @@
 package trilateral2;
-import trilateral2.DrawType;
-import trilateral2.ColorType;
+import trilateral2.DrawAbstract;
+import trilateral2.ColorAbstract;
 import geom.flat.f32.Float32FlatRGBA;
 import geom.flat.f32.Float32FlatTriangle;
 import geom.matrix.Matrix4x3;
 class Pen {
+    public var rounded: Float = 30; // default value... change
+    public var dz: Float = 0.01; // default value... change
     public var currentColor: Int = 0xFACADE; // Classic Rose 
-    public var drawType:  DrawType;
-    public var colorType: ColorType;
+    public var drawType:  DrawAbstract;
+    public var colorType: ColorAbstract;
     public var indices:   Array<Int> = [];
     public var transformMatrix: Matrix4x3;
-    public function new( drawType_: DrawType, colorType_: ColorType ){
+    public function new( drawType_: DrawAbstract, colorType_: ColorAbstract ){
         drawType  = drawType_;
         colorType = colorType_;
     }
     // normal WebGL implementation using Float32Flat's, but Pen would accept alternate implementation
+    //@:access(geom.flat.f32.Float32FlatTriangle,geom.flat.f32.Float32FlatRGBA)
+    
     public static inline 
     function create(    verts: Float32FlatTriangle
                       , cols:  Float32FlatRGBA ): Pen {
-        return new Pen( {  triangle: verts.triangle
-                            , transform:verts.transform
-                            , next:     verts.next
-                            , hasNext:  verts.hasNext
-                            , pos:      verts.pos
-                            , length:   verts.length 
+        @:privateAccess
+        return new Pen( {  triangle:          verts.triangle
+                            , transform:      verts.transform
+                            , transformRange: verts.transformRange
+                            , next:           verts.next
+                            , hasNext:        verts.hasNext
+                            , get_pos:        verts.get_pos
+                            , set_pos:        verts.set_pos
+                            , get_size:       verts.get_size
+                            , set_size:       verts.set_size
                             }
                           , { cornerColors:   cols.cornerColors
                             , colorTriangles: cols.colorTriangles
-                            , pos:            verts.pos
-                            , length:         verts.length
+                            , get_pos:        verts.get_pos
+                            , set_pos:        verts.set_pos
+                            , get_size:       verts.get_size
+                            , set_size:       verts.set_size
                             } 
                         );
     }    
@@ -73,7 +83,7 @@ class Pen {
     }
     inline
     function set_pos( v: Float ){
-        drawType.pos = v;
+        drawType.pos  = v;
         colorType.pos = v;
         return v;
     }
