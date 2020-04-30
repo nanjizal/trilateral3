@@ -52,6 +52,16 @@ class Pen {
         colorType.cornerColors( colorA, colorB, colorC );
     }
     inline public
+    function middleColor( color: Int, colorCentre: Int ): Void {
+        colorType.cornerColors( colorCentre, color, color );
+    }
+    inline public
+    function middleColors( color: Int, colorCentre: Int, times: Int ): Void {
+        for( i in 0...times ){
+            middleColor( color, colorCentre );
+        }
+    }
+    inline public
     function colorTriangles( color: Int, times: Int ): Void {
         if( color == -1 ) color = currentColor;
         colorType.colorTriangles( color, times );

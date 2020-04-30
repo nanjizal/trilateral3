@@ -81,6 +81,17 @@ abstract Regular( Pen ) from Pen to Pen {
         return { start: se0.start, end: se1.end };
     }
     public inline
+    function circleRadial( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float ): IndexRange {
+        return polygonRadial( rs, colorCentre, rx, ry );
+    }
+    public inline
+    function circleRadial2( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float ): IndexRange {
+        var se0 = circleRadial( rs, colorCentre, rx, ry );
+        var se1 = circleRadial( rs, colorCentre, -rx, -ry );
+        back( se1 );
+        return { start: se0.start, end: se1.end };
+    }
+    public inline
     function roundedSquare( rs: RegularShape  ): IndexRange {
         var start = this.drawType.size;
         var len = Shaper.roundedRectangle( this.drawType, rs.x - rs.radius, rs.y - rs.radius
@@ -134,12 +145,46 @@ abstract Regular( Pen ) from Pen to Pen {
     function transBack(): Matrix4x3 {
         return Matrix4x3.unit.rotateX( Math.PI ) * Matrix4x3.unit.translateX( this.dz );
     }
-    inline
+    public inline
     function polygon( rs: RegularShape, sides: Int = 36 ): IndexRange {
         var start = this.drawType.size;
         var len = Shaper.circle( this.drawType, rs.x, rs.y, rs.radius, sides );
         this.colorTriangles( rs.color, len );
         var end: Int = start + len - 1;
+        var startEnd: IndexRange = { start: start, end: end };
+        return startEnd;
+    }
+    public inline
+    function polygonRadial( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float, sides: Int = 36 ): IndexRange {
+        var start = this.drawType.size;
+        var len = Shaper.shapeRadial( this.drawType, rs.x, rs.y, rx, ry, rs.radius, sides );
+        this.middleColors( colorCentre, rs.color, len );
+        var end: Int = start + len - 1;
+        var startEnd: IndexRange = { start: start, end: end };
+        return startEnd;
+    }
+    public inline
+    function circleMultiCorners( rs: RegularShape, arr: Array<Int>, rx: Float = 0, ry: Float = 0 ):IndexRange {
+        return polygonMultiCorners( rs, arr, rx, ry );
+    }
+    public inline
+    function polygonMultiCorners( rs: RegularShape, arr: Array<Int>, rx: Float = 0, ry: Float = 0, sides: Int = 36 ): IndexRange {
+        var start = this.drawType.size;
+        var len = Shaper.shapeRadial( this.drawType, rs.x, rs.y, rx, ry, rs.radius, sides );
+        //this.middleColors( arr[0], rs.color, len );
+        var k = 1;
+        var arrEnd = arr.length - 1;
+        var end: Int = start + len - 1;
+        var arr_ = arr.copy();
+        for( j in 0...(len-1) ){
+            this.cornerColors( rs.color, arr_[k-1], arr_[k] );
+            k++;
+            if( k > arrEnd ) {
+                k = 1; // wrap
+                arr_.reverse();
+            }
+        }
+        this.cornerColors( rs.color, arr_[k-1], arr[0] );
         var startEnd: IndexRange = { start: start, end: end };
         return startEnd;
     }

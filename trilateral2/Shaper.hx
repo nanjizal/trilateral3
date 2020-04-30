@@ -297,9 +297,9 @@ class Shaper {
                    , ax: Float, ay: Float
                    , radius: Float
                    , ?sides: Int = 36, ?omega: Float = 0. ): Int {
-        var pi = Math.PI;
-        var theta = pi/2 + omega;
-        var step = pi*2/sides;
+        var pi: Float = Math.PI;
+        var theta: Float = pi/2 + omega;
+        var step: Float = pi*2/sides;
         var bx: Float;
         var by: Float;
         var cx: Float;
@@ -312,6 +312,69 @@ class Shaper {
             cy = ay + radius*Math.cos( theta );
             add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
         }
+        return sides;
+    }
+    public static inline
+    function circleRadial( drawType: DrawType
+                   , ax: Float, ay: Float
+                   , rx: Float, ry: Float // -1 to 1 offset centre.
+                   , radius: Float
+                   , ?sides: Int = 36, ?omega: Float = 0. ): Int {
+        var pi: Float = Math.PI;
+        var theta: Float = pi/2 + omega;
+        var step: Float = pi*2/sides;
+        var bx: Float;
+        var by: Float;
+        var cx: Float;
+        var cy: Float;
+        if( rx > 1. ) rx = 1;
+        if( rx < -1. ) rx = -1;
+        if( ry > 1. ) ry = 1;
+        if( ry < -1. ) ry = -1;
+        var mx: Float = ax + rx*radius;
+        var my: Float = ay - ry*radius;
+        for( i in 0...sides ){
+            bx = ax + radius*Math.sin( theta );
+            by = ay + radius*Math.cos( theta );
+            theta += step;
+            cx = ax + radius*Math.sin( theta );
+            cy = ay + radius*Math.cos( theta );
+            add2DTriangle( drawType, mx, my, bx, by, cx, cy );
+        }
+        return sides;
+    }
+    public static inline
+    function circleRadialOnSide( drawType: DrawType
+                         , ax: Float, ay: Float
+                         , rx: Float, ry: Float // -1 to 1 offset centre.
+                         , radius: Float, ?sides: Int = 36
+                         , ?omega: Float = 0. ): Int {
+        var pi = Math.PI;
+        var theta = pi/2;
+        var step = pi*2/sides;
+        theta -= step/2 + omega;
+        var bx: Float = 0;
+        var by: Float = 0;
+        var cx: Float = 0;
+        var cy: Float = 0;
+        if( rx > 1. ) rx = 1;
+        if( rx < -1. ) rx = -1;
+        if( ry > 1. ) ry = 1;
+        if( ry < -1. ) ry = -1;
+        var mx: Float = ax + rx*radius;
+        var my: Float = ay - ry*radius;
+        var dx = ax + radius*Math.sin( theta );
+        var dy = ay + radius*Math.cos( theta );
+        for( i in 0...( sides-1) ){
+            bx = ax + radius*Math.sin( theta );
+            by = ay + radius*Math.cos( theta );
+            theta += step;
+            cx = ax + radius*Math.sin( theta );
+            cy = ay + radius*Math.cos( theta );
+            add2DTriangle( drawType, mx, my, bx, by, cx, cy );
+        }
+        add2DTriangle( drawType, mx, my, cx, cy, dx, dy ); // will not render without?
+        //add2DTriangle( drawType, mx, my, cx, cy, dx, dy );
         return sides;
     }
     public static inline 
@@ -556,7 +619,6 @@ class Shaper {
         }
         return totalSteps*2;
     }
-        
     public static inline
     function circleOnSide( drawType: DrawType
                          , ax: Float, ay: Float
@@ -611,6 +673,20 @@ class Shaper {
             circleOnSide( drawType, x, y, radius, p, omega );
         } else {
             circle( drawType, x, y, radius, p, omega );
+        }
+    }
+    public static inline
+    function shapeRadial( drawType: DrawType
+                  , x: Float, y: Float
+                  , rx: Float, ry: Float
+                  , radius: Float, p: PolySides, ?omega: Float = 0. ): Int {
+        return if( ( p & 1 ) == 0 ){
+            trace('even');
+            circleRadial( drawType, x, y, rx, ry, radius, p, omega );
+        } else {
+            trace('odd');
+            trace( p & 1 );circleRadialOnSide( drawType, x, y, rx, ry, radius, p, omega );
+            
         }
     }
     public static inline
