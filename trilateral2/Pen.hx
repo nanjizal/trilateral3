@@ -3,6 +3,7 @@ import trilateral2.DrawAbstract;
 import trilateral2.ColorAbstract;
 import geom.flat.f32.Float32FlatRGBA;
 import geom.flat.f32.Float32FlatTriangle;
+import geom.obj.Tri3D;
 import geom.matrix.Matrix4x3;
 class Pen {
     public var rounded: Float = 30; // default value... change
@@ -26,6 +27,7 @@ class Pen {
         return new Pen( {  triangle:          verts.triangle
                             , transform:      verts.transform
                             , transformRange: verts.transformRange
+                            , getTri3D:       verts.getTri3D
                             , next:           verts.next
                             , hasNext:        verts.hasNext
                             , get_pos:        verts.get_pos
