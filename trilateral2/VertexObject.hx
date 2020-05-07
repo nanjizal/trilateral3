@@ -38,6 +38,10 @@ abstract VertexObject( DualQuaternionObject ) to DualQuaternionObject from DualQ
                                                 , startEnd: qo.startEnd });
         return vo;
     }
+    public inline
+    function transform( dualQ: DualQuaternion ){
+        this.centre = this.centre * dualQ;
+    }
     /**
      *  gets the maximum radius from centre
      */

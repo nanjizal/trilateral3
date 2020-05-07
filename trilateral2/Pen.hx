@@ -3,7 +3,9 @@ import trilateral2.DrawAbstract;
 import trilateral2.ColorAbstract;
 import geom.flat.f32.Float32FlatRGBA;
 import geom.flat.f32.Float32FlatTriangle;
+import geom.matrix.Matrix1x4;
 import geom.obj.Tri3D;
+import geom.obj.TriColors;
 import geom.matrix.Matrix4x3;
 class Pen {
     public var rounded: Float = 30; // default value... change
@@ -37,6 +39,7 @@ class Pen {
                             }
                           , { cornerColors:   cols.cornerColors
                             , colorTriangles: cols.colorTriangles
+                            , getTriColors:   cols.getTriColors
                             , get_pos:        verts.get_pos
                             , set_pos:        verts.set_pos
                             , get_size:       verts.get_size
@@ -68,6 +71,43 @@ class Pen {
         if( color == -1 ) color = currentColor;
         colorType.colorTriangles( color, times );
     }
+    inline public
+    function copyRange( otherPen: Pen, startEnd: IndexRange, vec: Matrix1x4 ): IndexRange {
+        var start = pos;
+        otherPen.pos = startEnd.start;
+        var colors: TriColors;
+        for( i in startEnd.start...(startEnd.end+1) ){
+            var tri: Tri3D = otherPen.drawType.getTri3D();
+            drawType.triangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
+                       , tri.b.x + vec.x, tri.b.y + vec.y, tri.b.z + vec.z
+                       , tri.c.x + vec.x, tri.c.y + vec.y, tri.c.z + vec.z );
+            drawType.next();
+            //colors = otherPen.colorType.getTriColors();
+            //cornerColors( colors.a, colors.b, colors.c );
+        }
+        var end = Std.int( pos - 1 );
+        var s0: IndexRange = { start: Std.int( start ), end: end };
+        return s0;
+    }
+    inline public
+    function copyRange2( otherPen: Pen, startEnd: IndexRange, vec: Matrix1x4 ): IndexRange {
+        var start = pos;
+        otherPen.pos = startEnd.start;
+        var colors: TriColors;
+        for( i in startEnd.start...(startEnd.end+1) ){
+            var tri: Tri3D = otherPen.drawType.getTri3D();
+            addTriangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
+                       , tri.b.x + vec.x, tri.b.y + vec.y, tri.b.z + vec.z
+                       , tri.c.x + vec.x, tri.c.y + vec.y, tri.c.z + vec.z );
+            //drawType.next();
+            //colors = otherPen.colorType.getTriColors();
+            //cornerColors( colors.a, colors.b, colors.c );
+        }
+        var end = Std.int( pos - 1 );
+        var s0: IndexRange = { start: Std.int( start ), end: end };
+        return s0;
+    }
+    
     inline public
     function addTriangle( ax: Float, ay: Float, az: Float
                         , bx: Float, by: Float, bz: Float
