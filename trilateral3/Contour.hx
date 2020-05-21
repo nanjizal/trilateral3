@@ -1,9 +1,9 @@
-package trilateral2;
-import trilateral2.DrawType;
-import trilateral2.Algebra;
+package trilateral3;
+import trilateral3.DrawType;
+import trilateral3.Algebra;
 import fracs.Pi2pi;
 import fracs.Fraction;
-import trilateral2.Pen;
+import trilateral3.Pen;
 import pallette.ColorWheel24;
 //import fracs.ZeroTo2pi;
 import fracs.Angles;
