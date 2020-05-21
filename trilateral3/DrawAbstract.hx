@@ -1,4 +1,4 @@
-package trilateral2;
+package trilateral3;
 @:forward
 abstract DrawAbstract( DrawType ) to DrawType from DrawType {
     public inline function new( drawType: DrawType ){
