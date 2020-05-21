@@ -1,7 +1,7 @@
-package trilateral2;
+package trilateral3;
 import justPath.IPathContext;
-import trilateral2.Algebra;
-import trilateral2.Contour;
+import trilateral3.Algebra;
+import trilateral3.Contour;
 typedef Dim = {
     var minX: Float;
     var maxX: Float;
