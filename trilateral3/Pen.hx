@@ -1,6 +1,6 @@
-package trilateral2;
-import trilateral2.DrawAbstract;
-import trilateral2.ColorAbstract;
+package trilateral;3
+import trilateral3.DrawAbstract;
+import trilateral3.ColorAbstract;
 import geom.flat.f32.Float32FlatRGBA;
 import geom.flat.f32.Float32FlatTriangle;
 import geom.matrix.Matrix1x4;
