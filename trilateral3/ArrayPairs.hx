@@ -1,4 +1,4 @@
-package trilateral2;
+package trilateral3;
 
 abstract ArrayPairs<T>( Array<T> ) {
     public function new( arr: Array<T> ):Void this = arr;
