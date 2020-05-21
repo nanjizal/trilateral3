@@ -1,5 +1,5 @@
-# trilateral2
-trilateral2 rebuild of http://github.com/nanjizal/Trilateral.  
+# trilateral3
+trilateral3 rebuild of http://github.com/nanjizal/Trilateral, rethink of http://github.com/nanjizal/Trilateral2
 
 Still some tweaks to do, the angle code needs looking at since reverting one bug caused the endcaps incorrect, and fill texture and linear gradient need to be re-added.
 
