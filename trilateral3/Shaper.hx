@@ -1,6 +1,6 @@
-package trilateral2;
-import trilateral2.DrawType;
-import trilateral2.Algebra;
+package trilateral3;
+import trilateral3.DrawType;
+import trilateral3.Algebra;
 import geom.obj.Quad2D;
 import geom.matrix.Matrix1x2;
 import geom.matrix.Matrix4x3;
