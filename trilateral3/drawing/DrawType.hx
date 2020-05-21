@@ -1,4 +1,4 @@
-package trilateral3; 
+package trilateral3.drawing; 
 import geom.matrix.Matrix4x3;
 import geom.obj.Tri3D;
 typedef DrawType = {

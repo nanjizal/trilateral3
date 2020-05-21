@@ -1,4 +1,4 @@
-package trilateral3;
+package trilateral3.drawing;
 import geom.obj.TriColors;
 typedef ColorType = {
     var cornerColors: ( colorA: Int, colorB: Int, colorC: Int ) -> Void;

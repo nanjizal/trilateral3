@@ -1,7 +1,7 @@
-package trilateral3;
+package trilateral3.drawing;
 import justPath.IPathContext;
-import trilateral3.Algebra;
-import trilateral3.Contour;
+import trilateral3.math.Algebra;
+import trilateral3.drawing.Contour;
 typedef Dim = {
     var minX: Float;
     var maxX: Float;
@@ -51,7 +51,8 @@ class Sketch implements IPathContext {
         contour.triangleJoin( x, y, x_, y_, width, true, true );
     }
     public var line: ( x: Float, y: Float ) -> Void;
-    public function new( pen_: Pen,  sketchForm_: SketchForm, endLine_: EndLineCurve = no ){
+    public
+    function new( pen_: Pen,  sketchForm_: SketchForm, endLine_: EndLineCurve = no ){
         contour    = new Contour( pen_, endLine_ );
         pen        = pen_;
         endLine    = endLine_;
@@ -72,6 +73,15 @@ class Sketch implements IPathContext {
         pointsAnti = [];
         points[0] = new Array<Float>();
         dim = new Array<Dim>();
+    }
+    public static inline
+    function create( drawType_: DrawAbstract
+                   , colorType_: ColorAbstract
+                   , sketchForm_: SketchForm
+                   , endLine_: EndLineCurve = no ){
+        @:privateAccess
+        var pen = Pen.create( cast drawType_, cast colorType_ );
+        return new Sketch( pen, sketchForm_, endLine_ );
     }
     // TODO: reset pen? reset Contour instead?
     public function reset(){
@@ -282,7 +292,7 @@ class Sketch implements IPathContext {
     public inline
     function quadTo( x1: Float, y1: Float, x2: Float, y2: Float ): Void {
         tempArr = [];
-        Algebra.quadCurve( tempArr, x, y, x1, y1, x2, y2 );
+        quadCurve( tempArr, x, y, x1, y1, x2, y2 );
         plotCoord( tempArr, false );
         x = x2;
         y = y2;
@@ -297,7 +307,7 @@ class Sketch implements IPathContext {
     public inline
     function curveTo( x1: Float, y1: Float, x2: Float, y2: Float, x3: Float, y3: Float ): Void {
         tempArr = [];
-        Algebra.cubicCurve( tempArr, x, y, x1, y1, x2, y2, x3, y3 );
+        cubicCurve( tempArr, x, y, x1, y1, x2, y2, x3, y3 );
         plotCoord( tempArr, false );
         x = x3;
         y = y3;

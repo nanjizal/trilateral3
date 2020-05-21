@@ -1,6 +1,7 @@
-package trilateral;3
-import trilateral3.DrawAbstract;
-import trilateral3.ColorAbstract;
+package trilateral3.drawing;
+import trilateral3.drawing.DrawAbstract;
+import trilateral3.drawing.ColorAbstract;
+import trilateral3.shape.IndexRange;
 import geom.flat.f32.Float32FlatRGBA;
 import geom.flat.f32.Float32FlatTriangle;
 import geom.matrix.Matrix1x4;
@@ -14,7 +15,6 @@ class Pen {
     public var drawType:  DrawAbstract;
     public var colorType: ColorAbstract;
     public var indices:   Array<Int> = [];
-    public var transformMatrix: Matrix4x3;
     public function new( drawType_: DrawAbstract, colorType_: ColorAbstract ){
         drawType  = drawType_;
         colorType = colorType_;
@@ -46,7 +46,7 @@ class Pen {
                             , set_size:       verts.set_size
                             } 
                         );
-    }    
+    }
     inline public
     function cornerColor( color: Int = -1 ): Void {
         if( color == -1 ) color = currentColor;
@@ -72,49 +72,12 @@ class Pen {
         colorType.colorTriangles( color, times );
     }
     inline public
-    function copyRange( otherPen: Pen, startEnd: IndexRange, vec: Matrix1x4 ): IndexRange {
-        var start = pos;
-        otherPen.pos = startEnd.start;
-        var colors: TriColors;
-        for( i in startEnd.start...(startEnd.end+1) ){
-            var tri: Tri3D = otherPen.drawType.getTri3D();
-            drawType.triangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
-                       , tri.b.x + vec.x, tri.b.y + vec.y, tri.b.z + vec.z
-                       , tri.c.x + vec.x, tri.c.y + vec.y, tri.c.z + vec.z );
-            drawType.next();
-            //colors = otherPen.colorType.getTriColors();
-            //cornerColors( colors.a, colors.b, colors.c );
-        }
-        var end = Std.int( pos - 1 );
-        var s0: IndexRange = { start: Std.int( start ), end: end };
-        return s0;
-    }
-    inline public
-    function copyRange2( otherPen: Pen, startEnd: IndexRange, vec: Matrix1x4 ): IndexRange {
-        var start = pos;
-        otherPen.pos = startEnd.start;
-        var colors: TriColors;
-        for( i in startEnd.start...(startEnd.end+1) ){
-            var tri: Tri3D = otherPen.drawType.getTri3D();
-            addTriangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
-                       , tri.b.x + vec.x, tri.b.y + vec.y, tri.b.z + vec.z
-                       , tri.c.x + vec.x, tri.c.y + vec.y, tri.c.z + vec.z );
-            //drawType.next();
-            //colors = otherPen.colorType.getTriColors();
-            //cornerColors( colors.a, colors.b, colors.c );
-        }
-        var end = Std.int( pos - 1 );
-        var s0: IndexRange = { start: Std.int( start ), end: end };
-        return s0;
-    }
-    
-    inline public
     function addTriangle( ax: Float, ay: Float, az: Float
                         , bx: Float, by: Float, bz: Float
                         , cx: Float, cy: Float, cz: Float ){
         // don't need to reorder corners and Trilateral can do that!
         drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
-        if( transformMatrix != null ) drawType.transform( transformMatrix );
+        if( Trilateral.transformMatrix != null ) drawType.transform( Trilateral.transformMatrix );
         drawType.next();
     }
     inline public

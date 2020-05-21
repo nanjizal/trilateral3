@@ -6,6 +6,7 @@ import geom.matrix.Matrix1x4;
 import geom.matrix.Matrix4x3;
 import geom.matrix.Quaternion;
 import geom.obj.Tri3D;
+// WIP may remove has rather tightly coupled to geom
 @:forward
 abstract VertexObject( DualQuaternionObject ) to DualQuaternionObject from DualQuaternionObject {
     public inline

@@ -1,12 +1,12 @@
-package trilateral3;
-import trilateral3.Pen;
+package trilateral3.shape;
+import trilateral3.TransformPen;
 import geom.matrix.Matrix4x3;
-import trilateral3.Shaper;
+import trilateral3.shape.Shaper;
 
 @:forward
-abstract Regular( Pen ) from Pen to Pen {
-    public function new( pen: Pen ){
-        this = pen;
+abstract Regular( TransformPen ) from TransformPen to TransformPen {
+    public function new( transformPen: TransformPen ){
+        this = transformPen;
     }
     // All shape centred, quick equalateral shapes for simple graphs.
     public inline
@@ -122,28 +122,6 @@ abstract Regular( Pen ) from Pen to Pen {
         var se1 = star( rs );
         back( se1 );
         return { start: se0.start, end: se1.end };
-    }
-    public inline
-    function transformRange( trans: Matrix4x3, ir: IndexRange ){
-        this.drawType.transformRange( trans, ir.start, ir.end );
-    }
-    public inline
-    function up( ir: IndexRange ){
-        var trans = Matrix4x3.unit.translateZ( this.dz/2 );
-        transformRange( trans, ir );
-    }
-    public inline
-    function down( ir: IndexRange ){
-        var trans = Matrix4x3.unit.translateZ( -this.dz/2 );
-        transformRange( trans, ir );
-    }
-    public inline
-    function back( ir: IndexRange ){
-        transformRange( transBack(), ir );
-    }
-    inline
-    function transBack(): Matrix4x3 {
-        return Matrix4x3.unit.rotateX( Math.PI ) * Matrix4x3.unit.translateX( this.dz );
     }
     public inline
     function polygon( rs: RegularShape, sides: Int = 36 ): IndexRange {

@@ -1,4 +1,4 @@
-package trilateral3;
+package trilateral3.shape.xtra;
 import trilateral3.Pen;
 import geom.matrix.Matrix4x3;
 import pallette.ColorWheel24;

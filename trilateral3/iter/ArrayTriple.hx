@@ -1,4 +1,4 @@
-package trilateral3;
+package trilateral3.iter;
 
 abstract ArrayTriple<T>( Array<T> ) {
     public function new( arr: Array<T> ):Void this = arr;

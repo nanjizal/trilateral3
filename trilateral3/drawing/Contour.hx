@@ -1,9 +1,10 @@
-package trilateral3;
-import trilateral3.DrawType;
-import trilateral3.Algebra;
+package trilateral3.drawing;
+import trilateral3.drawing.DrawType;
+import trilateral3.math.Algebra;
+import trilateral3.shape.Shaper;
 import fracs.Pi2pi;
 import fracs.Fraction;
-import trilateral3.Pen;
+import trilateral3.drawing.Pen;
 import pallette.ColorWheel24;
 //import fracs.ZeroTo2pi;
 import fracs.Angles;
@@ -255,11 +256,11 @@ class Contour {
             if( curveEnds ){
                 //joinArc
                 if( clockWise ){
-                    var len = Shaper.pieDifX( pen.drawType, ax_, ay_, width_/2, theta0, dif, pointsClock );
+                    var len = pieDifX( pen.drawType, ax_, ay_, width_/2, theta0, dif, pointsClock );
                     pen.colorTriangles(-1, len);
                     //addArray( Poly.pieDifX( ax_, ay_, width_/2, theta0, dif, pointsClock ) );
                 } else {
-                    var len = Shaper.pieDifX( pen.drawType, ax_, ay_, width_/2, theta0, dif, pointsAnti );
+                    var len = pieDifX( pen.drawType, ax_, ay_, width_/2, theta0, dif, pointsAnti );
                     pen.colorTriangles(-1, len);
                     //addArray( Poly.pieDifX( ax_, ay_, width_/2, theta0, dif, pointsAnti ) );
                 }
@@ -316,7 +317,7 @@ class Contour {
     function addPieXstart( ax: Float, ay: Float, radius: Float, beta: Float, gamma: Float, prefer: DifferencePreference, ?mark: Int = -1, ?sides: Int = 36 ){
         var temp = new Array<Float>();
         //triArr.addArray( Poly.pieX( ax, ay, radius, beta, gamma, prefer, temp, mark, sides ) );
-        var len = Shaper.pieX( pen.drawType, ax, ay, radius, beta, gamma, prefer, temp, sides );
+        var len = pieX( pen.drawType, ax, ay, radius, beta, gamma, prefer, temp, sides );
         pen.colorTriangles( mark, len );
         var pA = pointsAnti.length;
         var len = Std.int( temp.length/2 );
@@ -335,7 +336,7 @@ class Contour {
     inline
     function addPieX( ax: Float, ay: Float, radius: Float, beta: Float, gamma: Float, prefer: DifferencePreference, ?mark: Int = 0, ?sides: Int = 36 ){
         var temp = new Array<Float>();
-        var len = Shaper.pieX( pen.drawType
+        var len = pieX( pen.drawType
                              , ax, ay, radius, beta, gamma, prefer, temp, sides );
         pen.colorTriangles( mark, len );
         
@@ -354,7 +355,7 @@ class Contour {
     
     inline
     function addPie( ax: Float, ay: Float, radius: Float, beta: Float, gamma: Float, prefer: DifferencePreference, ?mark: Int = 0, ?sides: Int = 36 ){
-        var len = Shaper.pie( pen.drawType
+        var len = pie( pen.drawType
                              , ax, ay, radius, beta, gamma, prefer, sides );
         pen.colorTriangles( mark, len );
     }
@@ -371,7 +372,7 @@ class Contour {
     inline 
     function addDot( x: Float, y: Float, color: Int, width_: Float ){
         var w = width_ * smallDotScale;
-        var len = Shaper.circle( pen.drawType, x, y, w );
+        var len = circle( pen.drawType, x, y, w );
         pen.colorTriangles( color, len );
     }
     #if trilateral_debug
@@ -385,10 +386,10 @@ class Contour {
         dy = dy/len;
         for( i in 0...len ){
             if( i < 5 ){
-                var len = Shaper.circle( pen.drawType, x0 + dx*i, y0 + dy*i, w*2 );
+                var len = circle( pen.drawType, x0 + dx*i, y0 + dy*i, w*2 );
                 pen.colorTriangles( colStart, len );
             } else {
-                var len = Shaper.circle( pen.drawType, x0 + dx*i, y0 + dy*i, w );
+                var len = circle( pen.drawType, x0 + dx*i, y0 + dy*i, w );
                 pen.colorTriangles( col, len );
             }
         }
@@ -409,23 +410,23 @@ class Contour {
     inline
     function triangle2DFillangleCorners( oldx_: Float, oldy_: Float, prevx_: Float, prevy_: Float, width_: Float ){
         var w = width_ * smallDotScale;
-        var len = Shaper.circle( pen.drawType, oldx_, oldy_, w );
+        var len = circle( pen.drawType, oldx_, oldy_, w );
         pen.colorTriangles( debugCol4, len );
-        len = Shaper.circle( pen.drawType, prevx_, prevy_, w );
+        len = circle( pen.drawType, prevx_, prevy_, w );
         pen.colorTriangles( debugCol3, len );
-        len = Shaper.circle( pen.drawType, ax, ay, w );
+        len = circle( pen.drawType, ax, ay, w );
         pen.colorTriangles( debugCol10, len );
-        len = Shaper.circle( pen.drawType, jx, jy, w );
+        len = circle( pen.drawType, jx, jy, w );
         pen.colorTriangles( debugCol5, len );
     }
     inline
     function triangle2DFillangleCornersLess( oldx_: Float, oldy_: Float, prevx_: Float, prevy_: Float, width_: Float ){
         var w = width_ * smallDotScale;
-        var len = Shaper.circle( pen.drawType, oldx_, oldy_, w );
+        var len = circle( pen.drawType, oldx_, oldy_, w );
         pen.colorTriangles( debugCol4, len );
-        len = Shaper.circle( pen.drawType, prevx_, prevy_, w );
+        len = circle( pen.drawType, prevx_, prevy_, w );
         pen.colorTriangles( debugCol3, len );
-        len = Shaper.circle( pen.drawType, jx, jy, w );
+        len = circle( pen.drawType, jx, jy, w );
         pen.colorTriangles( debugCol5, len );
     }
     // The triangle between quads

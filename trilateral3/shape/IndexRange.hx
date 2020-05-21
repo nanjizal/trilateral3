@@ -1,4 +1,4 @@
-package trilateral3;
+package trilateral3.shape;
 
 @:structInit
 class IndexRange{
