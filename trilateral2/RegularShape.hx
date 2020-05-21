@@ -1,4 +1,4 @@
-package trilateral2;
+package trilateral3;
 @:structInit
 class RegularShape{
     public var x: Float;
