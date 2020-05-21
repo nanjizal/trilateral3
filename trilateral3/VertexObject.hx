@@ -1,6 +1,6 @@
-package trilateral2;
+package trilateral3;
 import geom.matrix.Quaternion;
-import trilateral2.IndexRange;
+import trilateral3.IndexRange;
 import geom.matrix.DualQuaternion;
 import geom.matrix.Matrix1x4;
 import geom.matrix.Matrix4x3;
