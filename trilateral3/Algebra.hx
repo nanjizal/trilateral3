@@ -1,4 +1,4 @@
-package trilateral2;
+package trilateral3;
 import geom.matrix.Matrix1x2;
 import geom.obj.Quad2D;
 import geom.curve.Bezier;
