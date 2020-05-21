@@ -1,11 +1,11 @@
 {
-    "name"         : "trilateral2",
-    "url"          : "https://github.com/nanjizal/trilateral2#trilatelal2",
+    "name"         : "trilateral3",
+    "url"          : "https://github.com/nanjizal/trilateral3#trilatelal3",
     "license"      : "MIT",
     "tags"         : ["cross", "drawing","2d","WebGL" ],
-    "description"  : "trilateral2 rework of Trilateral",
-    "version"      : "0.0.2",
-    "releasenote"  : "See https://github.com/nanjizal/trilateral2/blob/master/CHANGELOG.md",
+    "description"  : "trilateral3 rework of Trilateral and Trilateral2",
+    "version"      : "0.0.3",
+    "releasenote"  : "See https://github.com/nanjizal/trilateral3/blob/master/CHANGELOG.md",
     "contributors" : ["Nanjizal"],
     "dependencies" : {}
 }
