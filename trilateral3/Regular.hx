@@ -1,7 +1,7 @@
-package trilateral2;
-import trilateral2.Pen;
+package trilateral3;
+import trilateral3.Pen;
 import geom.matrix.Matrix4x3;
-import trilateral2.Shaper;
+import trilateral3.Shaper;
 
 @:forward
 abstract Regular( Pen ) from Pen to Pen {
