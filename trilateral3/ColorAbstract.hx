@@ -1,4 +1,4 @@
-package trilateral2;
+package trilateral3;
 @:forward
 abstract ColorAbstract( ColorType ) to ColorType from ColorType {
     public inline function new( colorType: ColorType ){
