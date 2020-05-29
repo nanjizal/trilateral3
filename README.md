@@ -3,7 +3,7 @@
 
 Low-level GPU triangle drawing engine core.
 
-[trilateral3 dox](https://nanjizal.github.io/trilateral3/pages/)
+[trilateral3 API documentation](https://nanjizal.github.io/trilateral3/pages/)
 
 ### Dependencies
 trilateral3 is written in 100% Haxe and uses a range of helper libraries to complement the basics. No macros are used, but Abstract and Module-level functions are used extensively.
@@ -13,7 +13,7 @@ trilateral3 is written in 100% Haxe and uses a range of helper libraries to comp
 - fracs is currently required for angle calculations.
 - trilateral3.drawing.fill requires the algorithm libraries hxPolyK, poly2trihx, and hxGeomAlgo. If you don't use fills you may not need these installed.
 - trilateral3.matrix.* can optionally be used with geom math library, but should be feasible to use with hxMath instead, or without any math library. I may look into providing an example in the future with hxMath.
-- pallette is likely a dependancy. It only provides colors, so I may try to make it optional in the future.
+- pallette is likely a dependency. It only provides colors, so I may try to make it optional in the future.
 - justPath is used for SVG path drawing and is likely optional.
 
 To quickly setup trilateral3, install kitGL to help with WebGL or Lime setup, it also provides some helpers for general javascript use. This engine can be used with OpenGL or any system that draws triangles with the GPU.
