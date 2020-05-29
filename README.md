@@ -18,7 +18,7 @@ trilateral3 is written in 100% Haxe and uses a range of helper libraries to comp
 
 To quickly setup trilateral3, install kitGL to help with WebGL or Lime setup, it also provides some helpers for general javascript use. This engine can be used with OpenGL or any system that draws triangles with the GPU.
 
-Currently, a simple WebGL example can be found at (http://www.github.com/nanjizal/trilateral3Minimal). You can find an hxml script to help install the required dependdncies from github.
+Currently, a simple WebGL example can be found at (http://www.github.com/nanjizal/trilateral3Minimal). You can find an hxml script to help install the required dependencies from github.
 
 ### Usage
 
