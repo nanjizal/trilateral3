@@ -18,7 +18,7 @@ The code is 100% Haxe and uses a range of helper libraries to complement the bas
 
 For general quick setup it is suggested you install kitGL to help with WebGL or Lime setup, it also provides some helpers for general javascript use. This engine can be used with OpenGL or any system that draws triangles with the GPU.
 
-Currently a simple WebGL example can be found github.com/nanjizal/trilateral3Minimal you can find an hxml script to help install required dependancies from github.
+Currently a simple WebGL example can be found (http://www.github.com/nanjizal/trilateral3Minimal) you can find an hxml script to help install required dependancies from github.
 
 ### Usage
 
