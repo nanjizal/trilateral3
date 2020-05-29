@@ -3,6 +3,8 @@
 
 GPU triangle drawing engine core, low level.
 
+[trilateral3 dox](https://nanjizal.github.io/trilateral3/pages/)
+
 ### Dependancies
 The code is 100% Haxe and uses a range of helper libraries to complement the basics, there are no macros used but does use Abstract extensively and Module-level functions.
 
