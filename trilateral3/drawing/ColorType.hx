@@ -1,9 +1,9 @@
 package trilateral3.drawing;
-import geom.obj.TriColors;
+import trilateral3.structure.TriInt;
 typedef ColorType = {
     var cornerColors: ( colorA: Int, colorB: Int, colorC: Int ) -> Void;
     var colorTriangles: ( color: Int, times: Int ) -> Void;
-    var getTriColors:()->TriColors;
+    var getTriInt:()->TriInt;
     function get_pos(): Float;
     function set_pos( v: Float ): Float;
     function get_size(): Int;

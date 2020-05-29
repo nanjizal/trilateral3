@@ -1,7 +1,7 @@
 package trilateral3;
-import geom.matrix.Matrix4x3;
+import trilateral3.matrix.MatrixDozen;
 class Trilateral{
     public static
-    var transformMatrix: Matrix4x3;
+    var transformMatrix: MatrixDozen;
 
 }

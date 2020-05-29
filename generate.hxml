@@ -1,0 +1,25 @@
+#-lib trilateral3
+-lib dsHelper
+-lib geom
+# angle and fraction code maybe refactor?
+-lib fracs
+# svg paths
+-lib justPath
+# contours
+-lib trilateral3
+# colours   
+-lib pallette
+# fill functions
+-lib hxPolyK
+-lib poly2trihx
+-lib hxGeomAlgo
+
+-D trilateral3Doc
+-D doc-gen
+--macro include('trilateral3')
+-cp src
+-main trilateral3.DocTrilateral3
+--no-output
+-xml output.xml
+-js foo
+-D dump==pretty

@@ -1,0 +1,4 @@
+-cmd haxe generate.hxml
+-cmd haxelib run dox -i output.xml --title "trilateral3 API documentation" -D themeColor 0x003399 --toplevel-package trilateral3
+-cmd cd pages
+-cmd open index.html

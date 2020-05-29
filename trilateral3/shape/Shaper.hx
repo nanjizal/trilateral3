@@ -2,47 +2,12 @@ package trilateral3.shape;
 import trilateral3.drawing.DrawType;
 import trilateral3.math.Algebra;
 import trilateral3.shape.IndexRange;
-import geom.obj.Quad2D;
-import geom.matrix.Matrix1x2;
-import geom.matrix.Matrix4x3;
+import trilateral3.structure.Quad2D;
+import trilateral3.structure.XY;
 import trilateral3.Trilateral;
 import fracs.Angles;
-@:enum
-abstract PolySides( Int ) from Int to Int {
-    var triangle        = 3;
-    var quadrilateral   = 4;
-    //var square          = 4;
-    var tetragon        = 4;
-    var pentagon        = 5;
-    var hexagon         = 6;
-    var heptagon        = 7;
-    var septagon        = 7;
-    var octagon         = 8;
-    var nonagon         = 9;
-    var enneagon        = 9;
-    var decagon         = 10;
-    var hendecagon      = 11;
-    var undecagon       = 11;
-    var dodecagon       = 12;
-    var triskaidecagon  = 13;
-    var tetrakaidecagon = 14;
-    var pentadecagon    = 15;
-    var hexakaidecagon  = 16;
-    var heptadecagon    = 17;
-    var octakaidecagon  = 18;
-    var enneadecagon    = 19;
-    var icosagon        = 20;
-    var triacontagon    = 30;
-    var tetracontagon   = 40;
-    var pentacontagon   = 50;
-    var hexacontagon    = 60;
-    var heptacontagon   = 70;
-    var octacontagon    = 80;
-    var enneacontagon   = 90;
-    var hectagon        = 100;
-    var chiliagon       = 1000;
-    var myriagon        = 10000;
-}
+import trilateral3.shape.PolyEdge;
+
 /**
 Shaper provides static methods for drawing with triangles.
 the methods return the number of triangles added.
@@ -71,11 +36,11 @@ function add2DQuad( drawType: DrawType
 }
 inline 
 function quad( drawType: DrawType, q: Quad2D ): Int {
-    return add2DQuad( drawType,  q.A.x, q.A.y, q.B.x, q.B.y, q.C.x, q.C.y, q.D.x, q.D.y );
+    return add2DQuad( drawType,  q.a.x, q.a.y, q.b.x, q.b.y, q.c.x, q.c.y, q.d.x, q.d.y );
 }
 inline 
 function lineAB( drawType: DrawType
-               , A: Matrix1x2, B: Matrix1x2
+               , A: XY, B: XY
                , width: Float ): Int {
     var q = trilateral3.math.Algebra.lineAB( A, B, width );
     return quad( drawType, q );
@@ -513,7 +478,7 @@ function pieDifX( drawType: DrawType
 }
 
 inline
-function ellpisePie( drawType: DrawType
+function ellipsePie( drawType: DrawType
                    , ax: Float, ay: Float
                    , rx: Float, ry: Float
                    , beta: Float, gamma: Float
@@ -666,7 +631,7 @@ function ellipseOnSide( drawType: DrawType
 inline
 function shape( drawType: DrawType
               , x: Float, y: Float
-              , radius: Float, p: PolySides, ?omega: Float = 0. ): Int {
+              , radius: Float, p: PolyEdge, ?omega: Float = 0. ): Int {
     return if( p & 1 == 0 ){
         circleOnSide( drawType, x, y, radius, p, omega );
     } else {
@@ -677,7 +642,7 @@ inline
 function shapeRadial( drawType: DrawType
               , x: Float, y: Float
               , rx: Float, ry: Float
-              , radius: Float, p: PolySides, ?omega: Float = 0. ): Int {
+              , radius: Float, p: PolyEdge, ?omega: Float = 0. ): Int {
     return if( ( p & 1 ) == 0 ){
         trace('even');
         circleRadial( drawType, x, y, rx, ry, radius, p, omega );
@@ -762,4 +727,117 @@ function spiralLines( drawType: DrawType
         theta += (Math.PI*2)/nolines;
     }
     return nolines;
+}
+
+class Shaper {
+    public var add2DTriangle_: ( drawType: DrawType
+                               , ax: Float, ay: Float
+                               , bx: Float, by: Float
+                               , cx: Float, cy: Float ) -> Int = add2DTriangle;
+    public var add2DQuad_: ( drawType: DrawType
+                           , ax: Float, ay: Float
+                           , bx: Float, by: Float
+                           , cx: Float, cy: Float
+                           , dx: Float, dy: Float ) -> Int = add2DQuad;
+    public var quad_: ( drawType: DrawType, q: Quad2D ) -> Int = quad;
+    public var lineAB_: ( drawType: DrawType
+                        , A: XY, B: XY
+                        , width: Float ) -> Int = lineAB;
+    public var lineXY_: ( drawType: DrawType
+                     , ax: Float, ay: Float, bx: Float, by: Float
+                     , width: Float ) -> Int = lineXY;
+    public var rectangle_: ( drawType: DrawType
+                           , x: Float, y: Float
+                           , w: Float, h: Float ) -> Int = rectangle;
+    public var squareOutline_: ( drawType: DrawType
+                               , px: Float, py: Float
+                               , radius: Float, thick: Float, ?theta: Float ) -> Int = squareOutline;
+    public var square_: ( drawType: DrawType
+                        , px: Float, py: Float
+                        , radius: Float, ?theta: Float ) -> Int = square;
+    public var diamond_: ( drawType: DrawType
+                         , x: Float, y: Float
+                         , radius: Float, ?theta: Float ) -> Int = diamond;
+    public var diamondOutline_: ( drawType: DrawType
+                                , x: Float, y: Float
+                                , thick: Float
+                                , radius: Float, ?theta: Float ) -> Int = diamondOutline;
+    public var overlapStar_: ( drawType: DrawType
+                             , px: Float, py: Float
+                             , radius: Float, ?theta: Float ) -> Int = overlapStar;
+    public var circle_: ( drawType: DrawType
+                        , ax: Float, ay: Float
+                        , radius: Float
+                        , ?sides: Int, ?omega: Float ) -> Int = circle;
+    public var circleRadial_: ( drawType: DrawType
+                              , ax: Float, ay: Float
+                              , rx: Float, ry: Float // -1 to 1 offset centre.
+                              , radius: Float
+                              , ?sides: Int, ?omega: Float ) -> Int = circleRadial;
+    public var circleRadialOnSide_: ( drawType: DrawType
+                                    , ax: Float, ay: Float
+                                    , rx: Float, ry: Float // -1 to 1 offset centre.
+                                    , radius: Float, ?sides: Int
+                                    , ?omega: Float ) -> Int = circleRadialOnSide;
+    public var ellipse_: ( drawType: DrawType
+                         , ax: Float, ay: Float
+                         , rx: Float, ry: Float
+                         , sides: Int ) -> Int = ellipse;
+    public var pie_: ( drawType: DrawType
+                     , ax: Float, ay: Float
+                     , radius: Float, beta: Float, gamma: Float
+                     , prefer: DifferencePreference 
+                     , ?sides: Int ) -> Int = pie;
+    public var pieX_: ( drawType: DrawType
+                      , ax: Float, ay: Float
+                      , radius:   Float, beta: Float, gamma: Float
+                      , prefer:   DifferencePreference
+                      , edgePoly: Array<Float>
+                      , ?sides: Int ) -> Int = pieX;
+    public var pieDifX_: ( drawType: DrawType
+                        , ax: Float, ay: Float
+                        , radius: Float, beta: Float, dif: Float
+                        , edgePoly: Array<Float>
+                        , ?sides: Int ) -> Int = pieDifX;
+    public var ellpisePie_: ( drawType: DrawType
+                            , ax: Float, ay: Float
+                            , rx: Float, ry: Float
+                            , beta: Float, gamma: Float
+                            , prefer: DifferencePreference
+                            , ?sides: Int ) -> Int = ellipsePie;
+    public var pieDif_: ( drawType: DrawType
+                        , ax: Float, ay: Float
+                        , radius: Float, beta: Float
+                        , dif: Float, ?sides: Int ) -> Int = pieDif;
+    public var arc_: ( drawType: DrawType
+                     , ax: Float, ay: Float
+                     , radius: Float, width: Float, beta: Float, gamma: Float
+                     , prefer: DifferencePreference, ?sides: Int ) -> Int = arc;
+    public var circleOnSide_: ( drawType: DrawType
+                              , ax: Float, ay: Float
+                              , radius: Float, ?sides: Int
+                              , ?omega: Float ) -> Int = circleOnSide;
+    public var ellipseOnSide_: ( drawType: DrawType
+                               , ax: Float, ay: Float
+                               , rx: Float, ry: Float
+                               , sides: Int ) -> Int = ellipseOnSide;
+    public var shape_: ( drawType: DrawType
+                       , x: Float, y: Float
+                       , radius: Float, p: PolyEdge, ?omega: Float ) -> Int = shape;
+    public var shapeRadial_: ( drawType: DrawType
+                             , x: Float, y: Float
+                             , rx: Float, ry: Float
+                             , radius: Float, p: PolyEdge, ?omega: Float ) -> Int = shapeRadial;
+    public var roundedRectangle_: ( drawType: DrawType
+                                  , x: Float, y: Float
+                                  , width: Float, height: Float
+                                  , radius: Float ) -> Int = roundedRectangle;
+    public var roundedRectangleOutline_: ( drawType: DrawType
+                                         , x: Float, y: Float
+                                         , width: Float, height: Float
+                                         , thick: Float, radius: Float ) -> Int = roundedRectangleOutline;
+    public var spiralLines_: ( drawType: DrawType
+                             , x: Float, y: Float
+                             , radius: Float, nolines: Int
+                             , startWid: Float, stepWid: Float ) -> Int = spiralLines;
 }

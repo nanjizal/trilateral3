@@ -39,7 +39,7 @@ class Contour {
     public var lastAntiX:       Float;
     public var lastAntiY:       Float; 
     public var pen: Pen;
-    var endLine: EndLineCurve;
+    var endLine: StyleEndLine;
     var ax: Float; // 0
     var ay: Float; // 0
     var bx: Float; // 1
@@ -131,7 +131,7 @@ class Contour {
     }
     //TODO: create lower limit for width   0.00001; ?
     public var count = 0;
-    public function new( pen_: Pen, endLine_: EndLineCurve = no ){
+    public function new( pen_: Pen, endLine_: StyleEndLine = no ){
         pen = pen_;
         endLine = endLine_;
     }
@@ -751,7 +751,7 @@ class Contour {
          return dist( dxOld, dyOld, x, y ) > dist( exOld, eyOld, x, y );
     }
     public inline 
-    function line( ax_: Float, ay_: Float, bx_: Float, by_: Float, width_: Float, ?endLineCurve: EndLineCurve = no ){
+    function line( ax_: Float, ay_: Float, bx_: Float, by_: Float, width_: Float, ?endLineCurve: StyleEndLine = no ){
                     // thick
         ax = bx_;
         ay = by_;
@@ -774,13 +774,13 @@ class Contour {
         by = by_;
         computeDE();
         switch( endLineCurve ){
-            case EndLineCurve.no: 
+            case StyleEndLine.no: 
                 // don't draw ends
-            case EndLineCurve.begin: 
+            case StyleEndLine.begin: 
                 addPie( ax_, ay_, width_/2, -angle1 - Math.PI/2, -angle1 - Math.PI/2 + Math.PI, SMALL );
-            case EndLineCurve.end:
+            case StyleEndLine.end:
                 addPie( bx_, by_, width_/2, -angle1 - Math.PI/2, -angle1 - Math.PI/2 - Math.PI, SMALL );
-            case EndLineCurve.both:
+            case StyleEndLine.both:
                 addPie( ax_, ay_, width_/2, -angle1 - Math.PI/2, -angle1 - Math.PI/2 + Math.PI, SMALL );
                 addPie( bx_, by_, width_/2, -angle1 - Math.PI/2, -angle1 - Math.PI/2 - Math.PI, SMALL );
         }

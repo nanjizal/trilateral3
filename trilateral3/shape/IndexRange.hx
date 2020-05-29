@@ -1,15 +1,16 @@
 package trilateral3.shape;
-
-@:structInit
-class IndexRange{
-    public var start: Int;
-    public var end:   Int;
-    public function new( start: Int, end: Int ){
-        this.start = start;
-        this.end   = end;
+import trilateral3.structure.StartEnd;
+@:forward
+abstract IndexRange( StartEnd ) from StartEnd to StartEnd {
+    public function new( startEnd: StartEnd ){ this = startEnd; }
+    @:op(A + B) public static inline
+    function adding( a: IndexRange, b: IndexRange ): IndexRange {
+      	return a.add( b );
     }
-    public static inline 
-    function merge( ir0: IndexRange, ir1: IndexRange ): IndexRange {
-        return { start: ir0.start, end: ir1.end };
+    public inline
+    function add( b: StartEnd ): IndexRange {
+        var begin: Int = cast Math.min( this.start, b.start );
+        return new IndexRange( {  start: begin
+                                , end: ( begin == this.start )? b.end: this.end } );
     }
 }

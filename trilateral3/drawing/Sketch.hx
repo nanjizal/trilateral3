@@ -17,8 +17,8 @@ class Sketch implements IPathContext {
     var tempArr:                    Array<Float>;
     public var contour:             Contour;
     var pen:                        Pen;
-    var endLine:                    EndLineCurve;
-    var sketchForm:                 SketchForm;
+    var endLine:                    StyleEndLine;
+    var sketchForm:                 StyleSketch;
     public var points:              Array<Array<Float>>;
     public var pointsClock:         Array<Array<Float>>;
     public var pointsAnti:          Array<Array<Float>>;
@@ -52,7 +52,7 @@ class Sketch implements IPathContext {
     }
     public var line: ( x: Float, y: Float ) -> Void;
     public
-    function new( pen_: Pen,  sketchForm_: SketchForm, endLine_: EndLineCurve = no ){
+    function new( pen_: Pen,  sketchForm_: StyleSketch, endLine_: StyleEndLine = no ){
         contour    = new Contour( pen_, endLine_ );
         pen        = pen_;
         endLine    = endLine_;
@@ -77,10 +77,10 @@ class Sketch implements IPathContext {
     public static inline
     function create( drawType_: DrawAbstract
                    , colorType_: ColorAbstract
-                   , sketchForm_: SketchForm
-                   , endLine_: EndLineCurve = no ){
+                   , sketchForm_: StyleSketch
+                   , endLine_: StyleEndLine = no ){
         @:privateAccess
-        var pen = Pen.create( cast drawType_, cast colorType_ );
+        var pen = new Pen( drawType_, colorType_ );
         return new Sketch( pen, sketchForm_, endLine_ );
     }
     // TODO: reset pen? reset Contour instead?

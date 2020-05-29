@@ -2,18 +2,18 @@ package trilateral3.drawing;
 import org.poly2tri.VisiblePolygon;
 import hxGeomAlgo.Tess2;
 import hxPolyK.PolyK;
-import trilateral3.iter.ArrayTriple;
-import trilateral3.iter.ArrayPairs;
+import dsHelper.iterArr.ArrayTriple;
+import dsHelper.iterArr.ArrayPairs;
 import trilateral3.drawing.Pen;
 import trilateral3.drawing.Sketch;
-import trilateral3.drawing.FillForm;
+import trilateral3.drawing.StyleFill;
 
-function triangulate( pen: Pen, sketch: Sketch, fillForm: FillForm ) {
+function triangulate( pen: Pen, sketch: Sketch, fillForm: StyleFill ) {
     var vert: Array<Float>;
     var tri: Array<Int>;
     var p: Array<Array<Float>>;
     switch( fillForm ){
-        case FillForm.tess2:
+        case StyleFill.tess2:
             sketch.pointsRewound();
             p = sketch.points;
             var res = Tess2.tesselate( p, null, ResultType.POLYGONS, 3 );
@@ -30,7 +30,7 @@ function triangulate( pen: Pen, sketch: Sketch, fillForm: FillForm ) {
                                    , vert[ c ], vert[ c + 1 ], -1 );
             }
             
-        case FillForm.poly2tri:
+        case StyleFill.poly2tri:
             sketch.pointsNoEndOverlap();
             p = sketch.points;
             var vp = new VisiblePolygon();
@@ -66,7 +66,7 @@ function triangulate( pen: Pen, sketch: Sketch, fillForm: FillForm ) {
                                    , vert[ c ], vert[ c + 1 ], -1 );
             }
             
-        case FillForm.polyK:
+        case StyleFill.polyK:
             p = sketch.points;
             var l = p.length;
             var count = 0;

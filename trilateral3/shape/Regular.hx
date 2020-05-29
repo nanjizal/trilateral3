@@ -1,35 +1,34 @@
 package trilateral3.shape;
-import trilateral3.TransformPen;
-import geom.matrix.Matrix4x3;
+import trilateral3.drawing.Pen;
 import trilateral3.shape.Shaper;
-
+import trilateral3.structure.RegularShape;
 @:forward
-abstract Regular( TransformPen ) from TransformPen to TransformPen {
-    public function new( transformPen: TransformPen ){
+abstract Regular( Pen ) from Pen to Pen {
+    public function new( transformPen: Pen ){
         this = transformPen;
     }
     // All shape centred, quick equalateral shapes for simple graphs.
     public inline
     function triangle( rs: RegularShape ): IndexRange {
-        return polygon( rs, PolySides.triangle );
+        return polygon( rs, PolyEdge.triangle );
     }
     public inline
     function triangle2( rs: RegularShape ): IndexRange {
         var se0 = triangle( rs );
         var se1 = triangle( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function square( rs: RegularShape ): IndexRange {
-        return polygon( rs, PolySides.square );
+        return polygon( rs, PolyEdge.tetragon );
     }
     public inline
     function square2( rs: RegularShape ): IndexRange {
         var se0 = square( rs );
         var se1 = square( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function bar( rs: RegularShape ): IndexRange {
@@ -44,30 +43,30 @@ abstract Regular( TransformPen ) from TransformPen to TransformPen {
     function bar2( rs: RegularShape ): IndexRange {
         var se0 = bar( rs );
         var se1 = bar( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function pentagon( rs: RegularShape ): IndexRange {
-        return polygon( rs, PolySides.pentagon );
+        return polygon( rs, PolyEdge.pentagon );
     }
     public inline
     function pentagon2( rs: RegularShape ): IndexRange {
         var se0 = pentagon( rs );
         var se1 = pentagon( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function hexagon( rs: RegularShape ): IndexRange {
-        return polygon( rs, PolySides.hexagon );
+        return polygon( rs, PolyEdge.hexagon );
     }
     public inline
     function hexagon2( rs: RegularShape ): IndexRange {
         var se0 = hexagon( rs );
         var se1 = hexagon( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function circle( rs: RegularShape ): IndexRange {
@@ -77,8 +76,8 @@ abstract Regular( TransformPen ) from TransformPen to TransformPen {
     function circle2( rs: RegularShape ): IndexRange {
         var se0 = circle( rs );
         var se1 = circle( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function circleRadial( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float ): IndexRange {
@@ -88,8 +87,8 @@ abstract Regular( TransformPen ) from TransformPen to TransformPen {
     function circleRadial2( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float ): IndexRange {
         var se0 = circleRadial( rs, colorCentre, rx, ry );
         var se1 = circleRadial( rs, colorCentre, -rx, -ry );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function roundedSquare( rs: RegularShape  ): IndexRange {
@@ -104,8 +103,8 @@ abstract Regular( TransformPen ) from TransformPen to TransformPen {
     function roundedSquare2( rs: RegularShape ): IndexRange {
         var se0 = roundedSquare( rs );
         var se1 = roundedSquare( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline 
     function star( rs: RegularShape ): IndexRange {
@@ -120,8 +119,8 @@ abstract Regular( TransformPen ) from TransformPen to TransformPen {
     function star2( rs: RegularShape ): IndexRange {
         var se0 = star( rs );
         var se1 = star( rs );
-        back( se1 );
-        return { start: se0.start, end: se1.end };
+        this.back( se1 );
+        return se0 + se1;
     }
     public inline
     function polygon( rs: RegularShape, sides: Int = 36 ): IndexRange {

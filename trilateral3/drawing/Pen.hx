@@ -2,51 +2,77 @@ package trilateral3.drawing;
 import trilateral3.drawing.DrawAbstract;
 import trilateral3.drawing.ColorAbstract;
 import trilateral3.shape.IndexRange;
-import geom.flat.f32.Float32FlatRGBA;
-import geom.flat.f32.Float32FlatTriangle;
-import geom.matrix.Matrix1x4;
-import geom.obj.Tri3D;
-import geom.obj.TriColors;
-import geom.matrix.Matrix4x3;
+import trilateral3.geom.FlatColorTriangles;
+import trilateral3.matrix.Vertex;
+import trilateral3.matrix.MatrixDozen;
+import trilateral3.geom.Transformer;
+import trilateral3.structure.Triangle3D;
+import trilateral3.structure.TriInt;
 class Pen {
-    public var rounded: Float = 30; // default value... change
-    public var dz: Float = 0.01; // default value... change
+    public var rounded:      Float = 30; // default value... change
+    public var dz:           Float = 0.01; // default value... change
     public var currentColor: Int = 0xFACADE; // Classic Rose 
-    public var drawType:  DrawAbstract;
-    public var colorType: ColorAbstract;
-    public var indices:   Array<Int> = [];
+    public var drawType:     DrawAbstract;
+    public var colorType:    ColorAbstract;
+    public var translateX:   Float -> MatrixDozen;
+    public var translateY:   Float -> MatrixDozen;
+    public var translateZ:   Float -> MatrixDozen;
+    public var rotateX:      Float -> MatrixDozen;
+    public var rotateY:      Float -> MatrixDozen;
+    public var rotateZ:      Float -> MatrixDozen;
+    public var indices:      Array<Int> = [];
     public function new( drawType_: DrawAbstract, colorType_: ColorAbstract ){
         drawType  = drawType_;
         colorType = colorType_;
     }
-    // normal WebGL implementation using Float32Flat's, but Pen would accept alternate implementation
-    //@:access(geom.flat.f32.Float32FlatTriangle,geom.flat.f32.Float32FlatRGBA)
-    
+    public inline
+    function transformRange( trans: MatrixDozen, ir: IndexRange ) {
+        this.drawType.transformRange( trans, ir );
+    }
+    public inline
+    function up( ir: IndexRange ){
+        var trans = translateZ( dz/2 );
+        transformRange( trans, ir );
+    }
+    public inline
+    function down( ir: IndexRange ){
+        var trans = translateZ( -dz/2 );
+        transformRange( trans, ir );
+    }
+    public inline
+    function back( ir: IndexRange ){
+        transformRange( transBack(), ir );
+    }
+    inline
+    function transBack(): MatrixDozen    {
+        return multiplyTransform( rotateX( Math.PI ), translateX( dz ) );
+    }
+    /*
     public static inline 
-    function create(    verts: Float32FlatTriangle
-                      , cols:  Float32FlatRGBA ): Pen {
+    function create(    tri: FlatColorTriangle ): Pen {
         @:privateAccess
-        return new Pen( {  triangle:          verts.triangle
-                            , transform:      verts.transform
-                            , transformRange: verts.transformRange
-                            , getTri3D:       verts.getTri3D
-                            , next:           verts.next
-                            , hasNext:        verts.hasNext
-                            , get_pos:        verts.get_pos
-                            , set_pos:        verts.set_pos
-                            , get_size:       verts.get_size
-                            , set_size:       verts.set_size
+        return new Pen( {  triangle:          tri.triangle
+                            , transform:      tri.transform
+                            , transformRange: tri.transformRange
+                            , getTriangle3D:  tri.getTriangle3D
+                            , next:           tri.next
+                            , hasNext:        tri.hasNext
+                            , get_pos:        tri.get_pos
+                            , set_pos:        tri.set_pos
+                            , get_size:       tri.get_size
+                            , set_size:       tri.set_size
                             }
-                          , { cornerColors:   cols.cornerColors
-                            , colorTriangles: cols.colorTriangles
-                            , getTriColors:   cols.getTriColors
-                            , get_pos:        verts.get_pos
-                            , set_pos:        verts.set_pos
-                            , get_size:       verts.get_size
-                            , set_size:       verts.set_size
+                          , { cornerColors:   tri.cornerColors
+                            , colorTriangles: tri.colorTriangles
+                            , getTriInt:   tri.getTriInt
+                            , get_pos:        tri.get_pos
+                            , set_pos:        tri.set_pos
+                            , get_size:       tri.get_size
+                            , set_size:       tri.set_size
                             } 
                         );
     }
+    */
     inline public
     function cornerColor( color: Int = -1 ): Void {
         if( color == -1 ) color = currentColor;
@@ -101,5 +127,23 @@ class Pen {
         drawType.pos  = v;
         colorType.pos = v;
         return v;
+    }
+    inline public
+    function copyRange( otherPen: Pen, startEnd: IndexRange, vec: Vertex ): IndexRange     {
+        var start = this.pos;
+        otherPen.pos = startEnd.start;
+        var colors: TriInt;
+        for( i in startEnd.start...(startEnd.end+1) ){
+            var tri: Triangle3D = otherPen.drawType.getTriangle3D();
+            this.drawType.triangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
+                       , tri.b.x + vec.x, tri.b.y + vec.y, tri.b.z + vec.z
+                       , tri.c.x + vec.x, tri.c.y + vec.y, tri.c.z + vec.z );
+            this.drawType.next();
+            //colors = otherPen.colorType.getTriInt();
+            //cornerColors( colors.a, colors.b, colors.c );
+        }
+        var end = Std.int( this.pos - 1 );
+        var s0: IndexRange = { start: Std.int( start ), end: end };
+        return s0;
     }
 }
