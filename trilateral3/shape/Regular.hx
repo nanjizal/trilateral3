@@ -4,8 +4,29 @@ import trilateral3.shape.Shaper;
 import trilateral3.structure.RegularShape;
 @:forward
 abstract Regular( Pen ) from Pen to Pen {
-    public function new( transformPen: Pen ){
-        this = transformPen;
+    public function new( pen_: Pen ){
+        this = pen_;
+    }
+    public inline 
+    function addRegular( rs: RegularShape, style: StyleRegular ): IndexRange {
+        return switch( style ){
+            case TRIANGLE:
+                triangle( rs );
+            case SQUARE:
+                square( rs );
+            case BAR:
+                bar( rs );
+            case PENTAGON:
+                pentagon( rs );
+            case HEXAGON:
+                hexagon( rs );
+            case CIRCLE:
+                circle( rs );
+            case ROUNDSQUARE:
+                roundedSquare( rs );
+            case STAR:
+                star( rs );
+        }
     }
     // All shape centred, quick equalateral shapes for simple graphs.
     public inline

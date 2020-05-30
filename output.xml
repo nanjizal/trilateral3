@@ -19436,6 +19436,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</getTriInt>
+	<meta><m n=":directlyUsed"/></meta>
 </class></impl>
 	</abstract>
 	<class path="trilateral3.geom._FlatColorTriangles.FlatColorTriangles_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColorTriangles.hx" private="1" module="trilateral3.geom.FlatColorTriangles" final="1">
@@ -19488,6 +19489,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</getTriInt>
+		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="trilateral3.geom.FlatColors" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColors.hx">
 		<this><x path="dsHelper.flat.f32.Float32FlatRGBA"/></this>
@@ -20069,7 +20071,10 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></new>
-		<meta><m n=":structInit"/></meta>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":structInit"/>
+		</meta>
 	</class>
 	<class path="trilateral3.matrix.Vertex" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/matrix/Vertex.hx">
 		<x public="1" expr="0.">
@@ -20106,6 +20111,23 @@
 			<m n=":directlyUsed"/>
 			<m n=":structInit"/>
 		</meta>
+	</class>
+	<class path="trilateral3.nodule.PenNodule" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/nodule/PenNodule.hx">
+		<largeEnough final="1" set="null" expr="2000000" line="10" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>2000000</e></m></meta>
+		</largeEnough>
+		<colorTriangles expr="new FlatColorTriangles(largeEnough)">
+			<x path="trilateral3.geom.FlatColorTriangles"/>
+			<meta><m n=":value"><e>new FlatColorTriangles(largeEnough)</e></m></meta>
+		</colorTriangles>
+		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
+		<createPen set="method" line="21"><f a=""><x path="Void"/></f></createPen>
+		<data public="1" get="accessor" set="null"><x path="haxe.io.Float32Array"/></data>
+		<get_data public="1" get="inline" set="null" line="47"><f a=""><x path="haxe.io.Float32Array"/></f></get_data>
+		<size public="1" get="accessor" set="null"><x path="Int"/></size>
+		<get_size public="1" get="inline" set="null" line="52"><f a=""><x path="Int"/></f></get_size>
+		<new public="1" set="method" line="13"><f a=""><x path="Void"/></f></new>
 	</class>
 	<abstract path="trilateral3.shape.IndexRange" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/IndexRange.hx">
 		<from><icast><c path="trilateral3.structure.StartEnd"/></icast></from>
@@ -20718,7 +20740,7 @@
 		<meta><m n=":forward"/></meta>
 		<impl><class path="trilateral3.shape._Regular.Regular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Regular.hx" private="1" module="trilateral3.shape.Regular" final="1">
 	<_new public="1" set="method" line="7" static="1">
-		<f a="transformPen">
+		<f a="pen_">
 			<c path="trilateral3.drawing.Pen"/>
 			<x path="trilateral3.shape.Regular"/>
 		</f>
@@ -20727,7 +20749,16 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</_new>
-	<triangle public="1" get="inline" set="null" line="11" static="1">
+	<addRegular public="1" get="inline" set="null" line="10" static="1">
+		<f a="this:rs:style">
+			<c path="trilateral3.drawing.Pen"/>
+			<c path="trilateral3.structure.RegularShape"/>
+			<x path="trilateral3.shape.StyleRegular"/>
+			<x path="trilateral3.shape.IndexRange"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</addRegular>
+	<triangle public="1" get="inline" set="null" line="32" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20735,7 +20766,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</triangle>
-	<triangle2 public="1" get="inline" set="null" line="15" static="1">
+	<triangle2 public="1" get="inline" set="null" line="36" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20743,7 +20774,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</triangle2>
-	<square public="1" get="inline" set="null" line="22" static="1">
+	<square public="1" get="inline" set="null" line="43" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20751,7 +20782,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</square>
-	<square2 public="1" get="inline" set="null" line="26" static="1">
+	<square2 public="1" get="inline" set="null" line="47" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20759,7 +20790,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</square2>
-	<bar public="1" get="inline" set="null" line="33" static="1">
+	<bar public="1" get="inline" set="null" line="54" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20767,7 +20798,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</bar>
-	<bar2 public="1" get="inline" set="null" line="42" static="1">
+	<bar2 public="1" get="inline" set="null" line="63" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20775,7 +20806,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</bar2>
-	<pentagon public="1" get="inline" set="null" line="49" static="1">
+	<pentagon public="1" get="inline" set="null" line="70" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20783,7 +20814,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</pentagon>
-	<pentagon2 public="1" get="inline" set="null" line="53" static="1">
+	<pentagon2 public="1" get="inline" set="null" line="74" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20791,7 +20822,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</pentagon2>
-	<hexagon public="1" get="inline" set="null" line="60" static="1">
+	<hexagon public="1" get="inline" set="null" line="81" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20799,7 +20830,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexagon>
-	<hexagon2 public="1" get="inline" set="null" line="64" static="1">
+	<hexagon2 public="1" get="inline" set="null" line="85" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20807,7 +20838,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexagon2>
-	<circle public="1" get="inline" set="null" line="71" static="1">
+	<circle public="1" get="inline" set="null" line="92" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20815,7 +20846,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circle>
-	<circle2 public="1" get="inline" set="null" line="75" static="1">
+	<circle2 public="1" get="inline" set="null" line="96" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20823,7 +20854,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circle2>
-	<circleRadial public="1" get="inline" set="null" line="82" static="1">
+	<circleRadial public="1" get="inline" set="null" line="103" static="1">
 		<f a="this:rs:colorCentre:rx:ry">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20834,7 +20865,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circleRadial>
-	<circleRadial2 public="1" get="inline" set="null" line="86" static="1">
+	<circleRadial2 public="1" get="inline" set="null" line="107" static="1">
 		<f a="this:rs:colorCentre:rx:ry">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20845,7 +20876,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circleRadial2>
-	<roundedSquare public="1" get="inline" set="null" line="93" static="1">
+	<roundedSquare public="1" get="inline" set="null" line="114" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20853,7 +20884,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</roundedSquare>
-	<roundedSquare2 public="1" get="inline" set="null" line="102" static="1">
+	<roundedSquare2 public="1" get="inline" set="null" line="123" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20861,7 +20892,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</roundedSquare2>
-	<star public="1" get="inline" set="null" line="109" static="1">
+	<star public="1" get="inline" set="null" line="130" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20869,7 +20900,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</star>
-	<star2 public="1" get="inline" set="null" line="118" static="1">
+	<star2 public="1" get="inline" set="null" line="139" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20877,7 +20908,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</star2>
-	<polygon public="1" get="inline" set="null" line="125" static="1">
+	<polygon public="1" get="inline" set="null" line="146" static="1">
 		<f a="this:rs:?sides" v="::36">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20889,7 +20920,7 @@
 			<m n=":impl"/>
 		</meta>
 	</polygon>
-	<polygonRadial public="1" get="inline" set="null" line="134" static="1">
+	<polygonRadial public="1" get="inline" set="null" line="155" static="1">
 		<f a="this:rs:colorCentre:rx:ry:?sides" v=":::::36">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20904,7 +20935,7 @@
 			<m n=":impl"/>
 		</meta>
 	</polygonRadial>
-	<circleMultiCorners public="1" get="inline" set="null" line="143" static="1">
+	<circleMultiCorners public="1" get="inline" set="null" line="164" static="1">
 		<f a="this:rs:arr:?rx:?ry" v=":::0:0">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20918,7 +20949,7 @@
 			<m n=":impl"/>
 		</meta>
 	</circleMultiCorners>
-	<polygonMultiCorners public="1" get="inline" set="null" line="147" static="1">
+	<polygonMultiCorners public="1" get="inline" set="null" line="168" static="1">
 		<f a="this:rs:arr:?rx:?ry:?sides" v=":::0:0:36">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -20937,7 +20968,7 @@
 	</abstract>
 	<class path="trilateral3.shape._Regular.Regular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Regular.hx" private="1" module="trilateral3.shape.Regular" final="1">
 		<_new public="1" set="method" line="7" static="1">
-			<f a="transformPen">
+			<f a="pen_">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="trilateral3.shape.Regular"/>
 			</f>
@@ -20946,7 +20977,16 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</_new>
-		<triangle public="1" get="inline" set="null" line="11" static="1">
+		<addRegular public="1" get="inline" set="null" line="10" static="1">
+			<f a="this:rs:style">
+				<c path="trilateral3.drawing.Pen"/>
+				<c path="trilateral3.structure.RegularShape"/>
+				<x path="trilateral3.shape.StyleRegular"/>
+				<x path="trilateral3.shape.IndexRange"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</addRegular>
+		<triangle public="1" get="inline" set="null" line="32" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -20954,7 +20994,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</triangle>
-		<triangle2 public="1" get="inline" set="null" line="15" static="1">
+		<triangle2 public="1" get="inline" set="null" line="36" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -20962,7 +21002,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</triangle2>
-		<square public="1" get="inline" set="null" line="22" static="1">
+		<square public="1" get="inline" set="null" line="43" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -20970,7 +21010,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</square>
-		<square2 public="1" get="inline" set="null" line="26" static="1">
+		<square2 public="1" get="inline" set="null" line="47" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -20978,7 +21018,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</square2>
-		<bar public="1" get="inline" set="null" line="33" static="1">
+		<bar public="1" get="inline" set="null" line="54" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -20986,7 +21026,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</bar>
-		<bar2 public="1" get="inline" set="null" line="42" static="1">
+		<bar2 public="1" get="inline" set="null" line="63" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -20994,7 +21034,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</bar2>
-		<pentagon public="1" get="inline" set="null" line="49" static="1">
+		<pentagon public="1" get="inline" set="null" line="70" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21002,7 +21042,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</pentagon>
-		<pentagon2 public="1" get="inline" set="null" line="53" static="1">
+		<pentagon2 public="1" get="inline" set="null" line="74" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21010,7 +21050,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</pentagon2>
-		<hexagon public="1" get="inline" set="null" line="60" static="1">
+		<hexagon public="1" get="inline" set="null" line="81" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21018,7 +21058,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexagon>
-		<hexagon2 public="1" get="inline" set="null" line="64" static="1">
+		<hexagon2 public="1" get="inline" set="null" line="85" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21026,7 +21066,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexagon2>
-		<circle public="1" get="inline" set="null" line="71" static="1">
+		<circle public="1" get="inline" set="null" line="92" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21034,7 +21074,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circle>
-		<circle2 public="1" get="inline" set="null" line="75" static="1">
+		<circle2 public="1" get="inline" set="null" line="96" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21042,7 +21082,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circle2>
-		<circleRadial public="1" get="inline" set="null" line="82" static="1">
+		<circleRadial public="1" get="inline" set="null" line="103" static="1">
 			<f a="this:rs:colorCentre:rx:ry">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21053,7 +21093,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circleRadial>
-		<circleRadial2 public="1" get="inline" set="null" line="86" static="1">
+		<circleRadial2 public="1" get="inline" set="null" line="107" static="1">
 			<f a="this:rs:colorCentre:rx:ry">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21064,7 +21104,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circleRadial2>
-		<roundedSquare public="1" get="inline" set="null" line="93" static="1">
+		<roundedSquare public="1" get="inline" set="null" line="114" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21072,7 +21112,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</roundedSquare>
-		<roundedSquare2 public="1" get="inline" set="null" line="102" static="1">
+		<roundedSquare2 public="1" get="inline" set="null" line="123" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21080,7 +21120,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</roundedSquare2>
-		<star public="1" get="inline" set="null" line="109" static="1">
+		<star public="1" get="inline" set="null" line="130" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21088,7 +21128,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</star>
-		<star2 public="1" get="inline" set="null" line="118" static="1">
+		<star2 public="1" get="inline" set="null" line="139" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21096,7 +21136,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</star2>
-		<polygon public="1" get="inline" set="null" line="125" static="1">
+		<polygon public="1" get="inline" set="null" line="146" static="1">
 			<f a="this:rs:?sides" v="::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21108,7 +21148,7 @@
 				<m n=":impl"/>
 			</meta>
 		</polygon>
-		<polygonRadial public="1" get="inline" set="null" line="134" static="1">
+		<polygonRadial public="1" get="inline" set="null" line="155" static="1">
 			<f a="this:rs:colorCentre:rx:ry:?sides" v=":::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21123,7 +21163,7 @@
 				<m n=":impl"/>
 			</meta>
 		</polygonRadial>
-		<circleMultiCorners public="1" get="inline" set="null" line="143" static="1">
+		<circleMultiCorners public="1" get="inline" set="null" line="164" static="1">
 			<f a="this:rs:arr:?rx:?ry" v=":::0:0">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21137,7 +21177,7 @@
 				<m n=":impl"/>
 			</meta>
 		</circleMultiCorners>
-		<polygonMultiCorners public="1" get="inline" set="null" line="147" static="1">
+		<polygonMultiCorners public="1" get="inline" set="null" line="168" static="1">
 			<f a="this:rs:arr:?rx:?ry:?sides" v=":::0:0:36">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21849,6 +21889,146 @@
 the methods return the number of triangles added.</haxe_doc>
 		</add2DTriangle>
 		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<abstract path="trilateral3.shape.StyleRegular" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/StyleRegular.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="trilateral3.shape._StyleRegular.StyleRegular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/StyleRegular.hx" private="1" module="trilateral3.shape.StyleRegular" extern="1" final="1">
+	<TRIANGLE public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 0</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</TRIANGLE>
+	<SQUARE public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 1</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SQUARE>
+	<BAR public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 2</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BAR>
+	<PENTAGON public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 3</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</PENTAGON>
+	<HEXAGON public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 4</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</HEXAGON>
+	<CIRCLE public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 5</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</CIRCLE>
+	<ROUNDSQUARE public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 6</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ROUNDSQUARE>
+	<STAR public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
+		<x path="trilateral3.shape.StyleRegular"/>
+		<meta>
+			<m n=":value"><e>cast 7</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</STAR>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="trilateral3.shape._StyleRegular.StyleRegular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/StyleRegular.hx" private="1" module="trilateral3.shape.StyleRegular" extern="1" final="1">
+		<TRIANGLE public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 0</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</TRIANGLE>
+		<SQUARE public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 1</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SQUARE>
+		<BAR public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 2</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BAR>
+		<PENTAGON public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 3</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</PENTAGON>
+		<HEXAGON public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 4</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</HEXAGON>
+		<CIRCLE public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 5</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</CIRCLE>
+		<ROUNDSQUARE public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 6</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ROUNDSQUARE>
+		<STAR public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
+			<x path="trilateral3.shape.StyleRegular"/>
+			<meta>
+				<m n=":value"><e>cast 7</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</STAR>
+		<meta><m n=":enum"/></meta>
 	</class>
 	<abstract path="trilateral3.shape.xtra.DieSpots" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/xtra/DieSpots.hx">
 		<from><icast><x path="trilateral3.shape.Regular"/></icast></from>
