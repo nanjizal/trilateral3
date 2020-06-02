@@ -3806,7 +3806,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</colorTriangles>
-	<cornerColors public="1" get="inline" set="null" line="353" static="1">
+	<cornerColors public="1" get="inline" set="null" line="356" static="1">
 		<f a="this:colorA:colorB:colorC">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3820,7 +3820,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgb>
-	<set_rgb get="inline" set="null" line="360" static="1">
+	<set_rgb get="inline" set="null" line="363" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3832,7 +3832,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgbA>
-	<set_rgbA get="inline" set="null" line="368" static="1">
+	<set_rgbA get="inline" set="null" line="371" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3840,7 +3840,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_rgbA>
-	<get_rgbA get="inline" set="null" line="376" static="1">
+	<get_rgbA get="inline" set="null" line="379" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3851,7 +3851,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgbB>
-	<set_rgbB get="inline" set="null" line="383" static="1">
+	<set_rgbB get="inline" set="null" line="386" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3859,7 +3859,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_rgbB>
-	<get_rgbB get="inline" set="null" line="391" static="1">
+	<get_rgbB get="inline" set="null" line="394" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3870,7 +3870,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgbC>
-	<set_rgbC get="inline" set="null" line="398" static="1">
+	<set_rgbC get="inline" set="null" line="401" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3878,7 +3878,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_rgbC>
-	<get_rgbC get="inline" set="null" line="406" static="1">
+	<get_rgbC get="inline" set="null" line="409" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3889,7 +3889,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argb>
-	<set_argb get="inline" set="null" line="413" static="1">
+	<set_argb get="inline" set="null" line="416" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3901,7 +3901,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argbA>
-	<set_argbA get="inline" set="null" line="421" static="1">
+	<set_argbA get="inline" set="null" line="424" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3909,7 +3909,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_argbA>
-	<get_argbA get="inline" set="null" line="429" static="1">
+	<get_argbA get="inline" set="null" line="432" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3920,7 +3920,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argbB>
-	<set_argbB get="inline" set="null" line="437" static="1">
+	<set_argbB get="inline" set="null" line="440" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3928,7 +3928,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_argbB>
-	<get_argbB get="inline" set="null" line="445" static="1">
+	<get_argbB get="inline" set="null" line="448" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3939,7 +3939,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argbC>
-	<set_argbC get="inline" set="null" line="453" static="1">
+	<set_argbC get="inline" set="null" line="456" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3947,28 +3947,28 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_argbC>
-	<get_argbC get="inline" set="null" line="461" static="1">
+	<get_argbC get="inline" set="null" line="464" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_argbC>
-	<prettyStringVert public="1" get="inline" set="null" line="468" static="1">
+	<prettyStringVert public="1" get="inline" set="null" line="471" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</prettyStringVert>
-	<prettyAllVert public="1" get="inline" set="null" line="474" static="1">
+	<prettyAllVert public="1" get="inline" set="null" line="477" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</prettyAllVert>
-	<hex public="1" get="inline" set="null" line="485" static="1">
+	<hex public="1" get="inline" set="null" line="488" static="1">
 		<f a="this:v">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<x path="Int"/>
@@ -3976,47 +3976,47 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hex>
-	<hexA public="1" get="inline" set="null" line="489" static="1">
+	<hexA public="1" get="inline" set="null" line="492" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexA>
-	<hexB public="1" get="inline" set="null" line="493" static="1">
+	<hexB public="1" get="inline" set="null" line="496" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexB>
-	<hexC public="1" get="inline" set="null" line="497" static="1">
+	<hexC public="1" get="inline" set="null" line="500" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexC>
-	<hexAll public="1" get="inline" set="null" line="501" static="1">
+	<hexAll public="1" get="inline" set="null" line="504" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexAll>
-	<alphaChannel public="1" get="inline" set="null" line="512" static="1"><f a="int">
+	<alphaChannel public="1" get="inline" set="null" line="515" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></alphaChannel>
-	<redChannel public="1" get="inline" set="null" line="515" static="1"><f a="int">
+	<redChannel public="1" get="inline" set="null" line="518" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></redChannel>
-	<greenChannel public="1" get="inline" set="null" line="518" static="1"><f a="int">
+	<greenChannel public="1" get="inline" set="null" line="521" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></greenChannel>
-	<blueChannel public="1" get="inline" set="null" line="521" static="1"><f a="int">
+	<blueChannel public="1" get="inline" set="null" line="524" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></blueChannel>
@@ -4614,7 +4614,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</colorTriangles>
-		<cornerColors public="1" get="inline" set="null" line="353" static="1">
+		<cornerColors public="1" get="inline" set="null" line="356" static="1">
 			<f a="this:colorA:colorB:colorC">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4628,7 +4628,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgb>
-		<set_rgb get="inline" set="null" line="360" static="1">
+		<set_rgb get="inline" set="null" line="363" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4640,7 +4640,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgbA>
-		<set_rgbA get="inline" set="null" line="368" static="1">
+		<set_rgbA get="inline" set="null" line="371" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4648,7 +4648,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_rgbA>
-		<get_rgbA get="inline" set="null" line="376" static="1">
+		<get_rgbA get="inline" set="null" line="379" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4659,7 +4659,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgbB>
-		<set_rgbB get="inline" set="null" line="383" static="1">
+		<set_rgbB get="inline" set="null" line="386" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4667,7 +4667,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_rgbB>
-		<get_rgbB get="inline" set="null" line="391" static="1">
+		<get_rgbB get="inline" set="null" line="394" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4678,7 +4678,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgbC>
-		<set_rgbC get="inline" set="null" line="398" static="1">
+		<set_rgbC get="inline" set="null" line="401" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4686,7 +4686,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_rgbC>
-		<get_rgbC get="inline" set="null" line="406" static="1">
+		<get_rgbC get="inline" set="null" line="409" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4697,7 +4697,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argb>
-		<set_argb get="inline" set="null" line="413" static="1">
+		<set_argb get="inline" set="null" line="416" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4709,7 +4709,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argbA>
-		<set_argbA get="inline" set="null" line="421" static="1">
+		<set_argbA get="inline" set="null" line="424" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4717,7 +4717,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_argbA>
-		<get_argbA get="inline" set="null" line="429" static="1">
+		<get_argbA get="inline" set="null" line="432" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4728,7 +4728,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argbB>
-		<set_argbB get="inline" set="null" line="437" static="1">
+		<set_argbB get="inline" set="null" line="440" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4736,7 +4736,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_argbB>
-		<get_argbB get="inline" set="null" line="445" static="1">
+		<get_argbB get="inline" set="null" line="448" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4747,7 +4747,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argbC>
-		<set_argbC get="inline" set="null" line="453" static="1">
+		<set_argbC get="inline" set="null" line="456" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4755,28 +4755,28 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_argbC>
-		<get_argbC get="inline" set="null" line="461" static="1">
+		<get_argbC get="inline" set="null" line="464" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_argbC>
-		<prettyStringVert public="1" get="inline" set="null" line="468" static="1">
+		<prettyStringVert public="1" get="inline" set="null" line="471" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</prettyStringVert>
-		<prettyAllVert public="1" get="inline" set="null" line="474" static="1">
+		<prettyAllVert public="1" get="inline" set="null" line="477" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</prettyAllVert>
-		<hex public="1" get="inline" set="null" line="485" static="1">
+		<hex public="1" get="inline" set="null" line="488" static="1">
 			<f a="this:v">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<x path="Int"/>
@@ -4784,47 +4784,47 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hex>
-		<hexA public="1" get="inline" set="null" line="489" static="1">
+		<hexA public="1" get="inline" set="null" line="492" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexA>
-		<hexB public="1" get="inline" set="null" line="493" static="1">
+		<hexB public="1" get="inline" set="null" line="496" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexB>
-		<hexC public="1" get="inline" set="null" line="497" static="1">
+		<hexC public="1" get="inline" set="null" line="500" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexC>
-		<hexAll public="1" get="inline" set="null" line="501" static="1">
+		<hexAll public="1" get="inline" set="null" line="504" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x7"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexAll>
-		<alphaChannel public="1" get="inline" set="null" line="512" static="1"><f a="int">
+		<alphaChannel public="1" get="inline" set="null" line="515" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></alphaChannel>
-		<redChannel public="1" get="inline" set="null" line="515" static="1"><f a="int">
+		<redChannel public="1" get="inline" set="null" line="518" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></redChannel>
-		<greenChannel public="1" get="inline" set="null" line="518" static="1"><f a="int">
+		<greenChannel public="1" get="inline" set="null" line="521" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></greenChannel>
-		<blueChannel public="1" get="inline" set="null" line="521" static="1"><f a="int">
+		<blueChannel public="1" get="inline" set="null" line="524" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></blueChannel>
@@ -21504,7 +21504,17 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</bar>
-	<bar2 public="1" get="inline" set="null" line="63" static="1">
+	<colorTrianglesPos public="1" get="inline" set="null" line="64" static="1">
+		<f a="this:start:col:len">
+			<c path="trilateral3.drawing.Pen"/>
+			<x path="Float"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</colorTrianglesPos>
+	<bar2 public="1" get="inline" set="null" line="69" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21512,7 +21522,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</bar2>
-	<pentagon public="1" get="inline" set="null" line="70" static="1">
+	<pentagon public="1" get="inline" set="null" line="76" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21520,7 +21530,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</pentagon>
-	<pentagon2 public="1" get="inline" set="null" line="74" static="1">
+	<pentagon2 public="1" get="inline" set="null" line="80" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21528,7 +21538,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</pentagon2>
-	<hexagon public="1" get="inline" set="null" line="81" static="1">
+	<hexagon public="1" get="inline" set="null" line="87" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21536,7 +21546,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexagon>
-	<hexagon2 public="1" get="inline" set="null" line="85" static="1">
+	<hexagon2 public="1" get="inline" set="null" line="91" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21544,7 +21554,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexagon2>
-	<circle public="1" get="inline" set="null" line="92" static="1">
+	<circle public="1" get="inline" set="null" line="98" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21552,7 +21562,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circle>
-	<circle2 public="1" get="inline" set="null" line="96" static="1">
+	<circle2 public="1" get="inline" set="null" line="102" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21560,7 +21570,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circle2>
-	<circleRadial public="1" get="inline" set="null" line="103" static="1">
+	<circleRadial public="1" get="inline" set="null" line="109" static="1">
 		<f a="this:rs:colorCentre:rx:ry">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21571,7 +21581,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circleRadial>
-	<circleRadial2 public="1" get="inline" set="null" line="107" static="1">
+	<circleRadial2 public="1" get="inline" set="null" line="113" static="1">
 		<f a="this:rs:colorCentre:rx:ry">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21582,7 +21592,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</circleRadial2>
-	<roundedSquare public="1" get="inline" set="null" line="114" static="1">
+	<roundedSquare public="1" get="inline" set="null" line="120" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21590,7 +21600,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</roundedSquare>
-	<roundedSquare2 public="1" get="inline" set="null" line="123" static="1">
+	<roundedSquare2 public="1" get="inline" set="null" line="129" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21598,7 +21608,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</roundedSquare2>
-	<star public="1" get="inline" set="null" line="130" static="1">
+	<star public="1" get="inline" set="null" line="136" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21606,7 +21616,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</star>
-	<star2 public="1" get="inline" set="null" line="139" static="1">
+	<star2 public="1" get="inline" set="null" line="145" static="1">
 		<f a="this:rs">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21614,7 +21624,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</star2>
-	<polygon public="1" get="inline" set="null" line="146" static="1">
+	<polygon public="1" get="inline" set="null" line="152" static="1">
 		<f a="this:rs:?sides" v="::36">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21626,7 +21636,7 @@
 			<m n=":impl"/>
 		</meta>
 	</polygon>
-	<polygonRadial public="1" get="inline" set="null" line="155" static="1">
+	<polygonRadial public="1" get="inline" set="null" line="161" static="1">
 		<f a="this:rs:colorCentre:rx:ry:?sides" v=":::::36">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21641,7 +21651,7 @@
 			<m n=":impl"/>
 		</meta>
 	</polygonRadial>
-	<circleMultiCorners public="1" get="inline" set="null" line="164" static="1">
+	<circleMultiCorners public="1" get="inline" set="null" line="170" static="1">
 		<f a="this:rs:arr:?rx:?ry" v=":::0:0">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21655,7 +21665,7 @@
 			<m n=":impl"/>
 		</meta>
 	</circleMultiCorners>
-	<polygonMultiCorners public="1" get="inline" set="null" line="168" static="1">
+	<polygonMultiCorners public="1" get="inline" set="null" line="174" static="1">
 		<f a="this:rs:arr:?rx:?ry:?sides" v=":::0:0:36">
 			<c path="trilateral3.drawing.Pen"/>
 			<c path="trilateral3.structure.RegularShape"/>
@@ -21732,7 +21742,17 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</bar>
-		<bar2 public="1" get="inline" set="null" line="63" static="1">
+		<colorTrianglesPos public="1" get="inline" set="null" line="64" static="1">
+			<f a="this:start:col:len">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</colorTrianglesPos>
+		<bar2 public="1" get="inline" set="null" line="69" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21740,7 +21760,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</bar2>
-		<pentagon public="1" get="inline" set="null" line="70" static="1">
+		<pentagon public="1" get="inline" set="null" line="76" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21748,7 +21768,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</pentagon>
-		<pentagon2 public="1" get="inline" set="null" line="74" static="1">
+		<pentagon2 public="1" get="inline" set="null" line="80" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21756,7 +21776,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</pentagon2>
-		<hexagon public="1" get="inline" set="null" line="81" static="1">
+		<hexagon public="1" get="inline" set="null" line="87" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21764,7 +21784,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexagon>
-		<hexagon2 public="1" get="inline" set="null" line="85" static="1">
+		<hexagon2 public="1" get="inline" set="null" line="91" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21772,7 +21792,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexagon2>
-		<circle public="1" get="inline" set="null" line="92" static="1">
+		<circle public="1" get="inline" set="null" line="98" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21780,7 +21800,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circle>
-		<circle2 public="1" get="inline" set="null" line="96" static="1">
+		<circle2 public="1" get="inline" set="null" line="102" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21788,7 +21808,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circle2>
-		<circleRadial public="1" get="inline" set="null" line="103" static="1">
+		<circleRadial public="1" get="inline" set="null" line="109" static="1">
 			<f a="this:rs:colorCentre:rx:ry">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21799,7 +21819,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circleRadial>
-		<circleRadial2 public="1" get="inline" set="null" line="107" static="1">
+		<circleRadial2 public="1" get="inline" set="null" line="113" static="1">
 			<f a="this:rs:colorCentre:rx:ry">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21810,7 +21830,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</circleRadial2>
-		<roundedSquare public="1" get="inline" set="null" line="114" static="1">
+		<roundedSquare public="1" get="inline" set="null" line="120" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21818,7 +21838,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</roundedSquare>
-		<roundedSquare2 public="1" get="inline" set="null" line="123" static="1">
+		<roundedSquare2 public="1" get="inline" set="null" line="129" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21826,7 +21846,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</roundedSquare2>
-		<star public="1" get="inline" set="null" line="130" static="1">
+		<star public="1" get="inline" set="null" line="136" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21834,7 +21854,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</star>
-		<star2 public="1" get="inline" set="null" line="139" static="1">
+		<star2 public="1" get="inline" set="null" line="145" static="1">
 			<f a="this:rs">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21842,7 +21862,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</star2>
-		<polygon public="1" get="inline" set="null" line="146" static="1">
+		<polygon public="1" get="inline" set="null" line="152" static="1">
 			<f a="this:rs:?sides" v="::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21854,7 +21874,7 @@
 				<m n=":impl"/>
 			</meta>
 		</polygon>
-		<polygonRadial public="1" get="inline" set="null" line="155" static="1">
+		<polygonRadial public="1" get="inline" set="null" line="161" static="1">
 			<f a="this:rs:colorCentre:rx:ry:?sides" v=":::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21869,7 +21889,7 @@
 				<m n=":impl"/>
 			</meta>
 		</polygonRadial>
-		<circleMultiCorners public="1" get="inline" set="null" line="164" static="1">
+		<circleMultiCorners public="1" get="inline" set="null" line="170" static="1">
 			<f a="this:rs:arr:?rx:?ry" v=":::0:0">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>
@@ -21883,7 +21903,7 @@
 				<m n=":impl"/>
 			</meta>
 		</circleMultiCorners>
-		<polygonMultiCorners public="1" get="inline" set="null" line="168" static="1">
+		<polygonMultiCorners public="1" get="inline" set="null" line="174" static="1">
 			<f a="this:rs:arr:?rx:?ry:?sides" v=":::0:0:36">
 				<c path="trilateral3.drawing.Pen"/>
 				<c path="trilateral3.structure.RegularShape"/>

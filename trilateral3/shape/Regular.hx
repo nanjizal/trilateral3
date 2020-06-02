@@ -56,9 +56,15 @@ abstract Regular( Pen ) from Pen to Pen {
         var start = this.drawType.size;
         var len = Shaper.rectangle( this.drawType, rs.x - rs.radius, rs.y - rs.radius/4
                                   , rs.radius*2, rs.radius/3 );
-        this.colorTriangles( rs.color, len );
+        colorTrianglesPos( start, rs.color, len );
         var end = start + len - 1 ;
         return { start: start, end: end};
+    }
+    // reset pos when interleave TODO: must rethink for non inteleave case
+    public inline 
+    function colorTrianglesPos( start: Float, col: Int, len: Int ){
+        this.pos = start;
+        this.colorTriangles( col, len );
     }
     public inline
     function bar2( rs: RegularShape ): IndexRange {
@@ -116,7 +122,7 @@ abstract Regular( Pen ) from Pen to Pen {
         var start = this.drawType.size;
         var len = Shaper.roundedRectangle( this.drawType, rs.x - rs.radius, rs.y - rs.radius
                                          , rs.radius*2, rs.radius*2, this.rounded );
-        this.colorTriangles( rs.color, len );
+        colorTrianglesPos( start, rs.color, len );
         var end = start + len - 1 ;
         return { start: start, end: end};
     }
@@ -132,7 +138,7 @@ abstract Regular( Pen ) from Pen to Pen {
         var start = this.drawType.size;
         var len = Shaper.overlapStar( this.drawType, rs.x - rs.radius, rs.y - rs.radius
                                     , rs.radius*2, rs.radius*2 );
-        this.colorTriangles( rs.color, len );
+        colorTrianglesPos( start, rs.color, len );
         var end = start + len - 1 ;
         return { start: start, end: end};
     }
@@ -147,7 +153,7 @@ abstract Regular( Pen ) from Pen to Pen {
     function polygon( rs: RegularShape, sides: Int = 36 ): IndexRange {
         var start = this.drawType.size;
         var len = Shaper.circle( this.drawType, rs.x, rs.y, rs.radius, sides );
-        this.colorTriangles( rs.color, len );
+        colorTrianglesPos( start, rs.color, len );
         var end: Int = start + len - 1;
         var startEnd: IndexRange = { start: start, end: end };
         return startEnd;
