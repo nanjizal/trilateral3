@@ -4,3 +4,7 @@
 Drawing engine suitable for use with GPU.
 
 [trilateral3 API code documentation](https://nanjizal.github.io/trilateral3/pages/)
+
+Have added some simple examples.
+
+https://github.com/TrilateralX
