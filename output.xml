@@ -152,6 +152,18 @@
 
 		If `this.length < 2`, `this` remains unchanged.]]></haxe_doc>
 		</reverse>
+		<shift public="1" set="method">
+			<f a=""><x path="Null"><c path="Array.T"/></x></f>
+			<haxe_doc>Removes the first element of `this` Array and returns it.
+
+		This operation modifies `this` Array in place.
+
+		If `this` has at least one element, `this`.length and the index of each
+		remaining element is decreased by 1.
+
+		If `this` is the empty Array `[]`, `null` is returned and the length
+		remains 0.</haxe_doc>
+		</shift>
 		<slice public="1" set="method">
 			<f a="pos:?end">
 				<x path="Int"/>
@@ -275,6 +287,7 @@
 
 	@see https://haxe.org/manual/types-class-instance.html</haxe_doc>
 		<meta>
+			<m n=":valueUsed"/>
 			<m n=":coreType"/>
 			<m n=":runtimeValue"/>
 		</meta>
@@ -506,6 +519,7 @@
 
 	@see https://haxe.org/manual/types-enum-instance.html</haxe_doc>
 		<meta>
+			<m n=":valueUsed"/>
 			<m n=":coreType"/>
 			<m n=":runtimeValue"/>
 		</meta>
@@ -1282,6 +1296,7 @@
 	@see https://haxe.org/manual/types-basic-types.html
 	@see https://haxe.org/manual/types-nullability.html]]></haxe_doc>
 		<meta>
+			<m n=":valueUsed"/>
 			<m n=":coreType"/>
 			<m n=":notNull"/>
 			<m n=":runtimeValue"/>
@@ -1302,6 +1317,7 @@
 	@see https://haxe.org/manual/std-math-integer-math.html
 	@see https://haxe.org/manual/types-nullability.html]]></haxe_doc>
 		<meta>
+			<m n=":valueUsed"/>
 			<m n=":coreType"/>
 			<m n=":notNull"/>
 			<m n=":runtimeValue"/>
@@ -1335,6 +1351,7 @@
 	@see https://haxe.org/manual/types-bool.html
 	@see https://haxe.org/manual/types-nullability.html]]></haxe_doc>
 		<meta>
+			<m n=":valueUsed"/>
 			<m n=":coreType"/>
 			<m n=":notNull"/>
 			<m n=":runtimeValue"/>
@@ -1350,6 +1367,7 @@
 
 	@see https://haxe.org/manual/types-dynamic.html</haxe_doc>
 		<meta>
+			<m n=":valueUsed"/>
 			<m n=":coreType"/>
 			<m n=":runtimeValue"/>
 		</meta>
@@ -1414,6 +1432,25 @@
 	abstract types.
 
 	@see https://haxe.org/manual/types-abstract-array-access.html</haxe_doc></class>
+	<class path="StringBuf" params="" file="/usr/local/lib/haxe/std/StringBuf.hx">
+		<b><c path="String"/></b>
+		<new public="1" get="inline" set="null" line="44">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>Creates a new StringBuf instance.
+
+		This may involve initialization of the internal buffer.</haxe_doc>
+		</new>
+		<haxe_doc>A String buffer is an efficient way to build a big string by appending small
+	elements together.
+
+	Unlike String, an instance of StringBuf is not immutable in the sense that
+	it can be passed as argument to functions which modify it by appending more
+	values.</haxe_doc>
+		<meta>
+			<m n=":keep"/>
+			<m n=":directlyUsed"/>
+		</meta>
+	</class>
 	<class path="StringTools" params="" file="/usr/local/lib/haxe/std/StringTools.hx">
 		<hex public="1" set="method" line="426" static="1">
 			<f a="n:?digits">
@@ -5501,6 +5538,38 @@
 		</reverse>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
+	<class path="dsHelper.splitter.SpaceSplitter" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/splitter/SpaceSplitter.hx"><parse public="1" get="inline" set="null" line="5" static="1"><f a="str">
+	<c path="String"/>
+	<c path="Array"><c path="Array"><c path="String"/></c></c>
+</f></parse></class>
+	<class path="dsHelper.splitter.StringCodeIterator" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/splitter/StringCodeIterator.hx">
+		<str expr="&quot;&quot;">
+			<c path="String"/>
+			<meta><m n=":value"><e>""</e></m></meta>
+		</str>
+		<b><c path="StringBuf"/></b>
+		<pos public="1"><x path="Int"/></pos>
+		<c public="1"><x path="Int"/></c>
+		<last2 public="1"><c path="String"/></last2>
+		<last public="1"><c path="String"/></last>
+		<length public="1"><x path="Int"/></length>
+		<addChar public="1" get="inline" set="null" line="17"><f a=""><x path="Void"/></f></addChar>
+		<toStr public="1" get="inline" set="null" line="21"><f a=""><c path="String"/></f></toStr>
+		<isRepeat public="1" get="inline" set="null" line="27"><f a=""><x path="Bool"/></f></isRepeat>
+		<resetBuffer public="1" get="inline" set="null" line="33"><f a=""><x path="Void"/></f></resetBuffer>
+		<reset public="1" get="inline" set="null" line="37"><f a=""><x path="Void"/></f></reset>
+		<hasNext public="1" get="inline" set="null" line="41"><f a=""><x path="Bool"/></f></hasNext>
+		<next public="1" get="inline" set="null" line="45"><f a=""><x path="Int"/></f></next>
+		<new public="1" set="method" line="11">
+			<f a="str_:?pos_" v=":0">
+				<c path="String"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ pos_ : 0 }</e></m></meta>
+		</new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
 	<enum path="fracs.DifferencePreference" params="" file="/usr/local/lib/haxeLibrary/fracs/git/src/fracs/Angles.hx" module="fracs.Angles">
 		<CLOCKWISE/>
 		<ANTICLOCKWISE/>
@@ -9297,6 +9366,13 @@
 		<new public="1" set="method" line="106"><f a=""><x path="Void"/></f></new>
 	</class>
 	<class path="js.Boot" params="" file="/usr/local/lib/haxe/std/js/Boot.hx">
+		<getClass set="method" line="41" static="1">
+			<f a="o">
+				<x path="Null"><d/></x>
+				<x path="Null"><d/></x>
+			</f>
+			<meta><m n=":has_untyped"/></meta>
+		</getClass>
 		<__string_rec set="method" line="58" static="1">
 			<f a="o:s">
 				<a>
@@ -9317,7 +9393,45 @@
 				<m n=":ifFeature"><e>"has_enum"</e></m>
 			</meta>
 		</__string_rec>
+		<__interfLoop set="method" line="143" static="1"><f a="cc:cl">
+	<d/>
+	<d/>
+	<x path="Bool"/>
+</f></__interfLoop>
+		<__instanceof set="method" line="162" static="1">
+			<f a="o:cl">
+				<d/>
+				<d/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":has_untyped"/></meta>
+		</__instanceof>
+		<__downcastCheck set="method" line="206" static="1"><f a="o:cl">
+	<d/>
+	<x path="Class"><d/></x>
+	<x path="Bool"/>
+</f></__downcastCheck>
+		<__cast set="method" line="214" static="1">
+			<f a="o:t">
+				<d/>
+				<d/>
+				<unknown/>
+			</f>
+			<meta><m n=":ifFeature"><e>"typed_cast"</e></m></meta>
+		</__cast>
 		<__toStr static="1"><c path="js.lib.Function"/></__toStr>
+		<__nativeClassName set="method" line="228" static="1"><f a="o">
+	<d/>
+	<c path="String"/>
+</f></__nativeClassName>
+		<__isNativeObj set="method" line="238" static="1"><f a="o">
+	<d/>
+	<x path="Bool"/>
+</f></__isNativeObj>
+		<__resolveNativeClass set="method" line="243" static="1"><f a="name">
+	<c path="String"/>
+	<x path="Null"><d/></x>
+</f></__resolveNativeClass>
 		<meta>
 			<m n=":keep"/>
 			<m n=":directlyUsed"/>
@@ -18562,19 +18676,19 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_blue>
-	<stringCYMK public="1" get="inline" set="null" line="127" static="1">
-		<f a="str:?alpha" v=":1.0">
-			<c path="String"/>
+	<aiCYMKA public="1" get="inline" set="null" line="127" static="1">
+		<f a="arr:?alpha" v=":1.0">
+			<c path="Array"><c path="String"/></c>
 			<x path="Float"/>
 			<x path="trilateral3.color.ColorInt"/>
 		</f>
 		<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
-	</stringCYMK>
-	<ARGB_CYMKA public="1" get="inline" set="null" line="137" static="1"><f a="v">
+	</aiCYMKA>
+	<ARGB_CYMKA public="1" get="inline" set="null" line="136" static="1"><f a="v">
 	<c path="trilateral3.structure.ARGB"/>
 	<c path="trilateral3.structure.CYMKA"/>
 </f></ARGB_CYMKA>
-	<CYMKA_ARGB public="1" get="inline" set="null" line="147" static="1"><f a="v">
+	<CYMKA_ARGB public="1" get="inline" set="null" line="146" static="1"><f a="v">
 	<c path="trilateral3.structure.CYMKA"/>
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
@@ -18777,19 +18891,19 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_blue>
-		<stringCYMK public="1" get="inline" set="null" line="127" static="1">
-			<f a="str:?alpha" v=":1.0">
-				<c path="String"/>
+		<aiCYMKA public="1" get="inline" set="null" line="127" static="1">
+			<f a="arr:?alpha" v=":1.0">
+				<c path="Array"><c path="String"/></c>
 				<x path="Float"/>
 				<x path="trilateral3.color.ColorInt"/>
 			</f>
 			<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
-		</stringCYMK>
-		<ARGB_CYMKA public="1" get="inline" set="null" line="137" static="1"><f a="v">
+		</aiCYMKA>
+		<ARGB_CYMKA public="1" get="inline" set="null" line="136" static="1"><f a="v">
 	<c path="trilateral3.structure.ARGB"/>
 	<c path="trilateral3.structure.CYMKA"/>
 </f></ARGB_CYMKA>
-		<CYMKA_ARGB public="1" get="inline" set="null" line="147" static="1"><f a="v">
+		<CYMKA_ARGB public="1" get="inline" set="null" line="146" static="1"><f a="v">
 	<c path="trilateral3.structure.CYMKA"/>
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
@@ -19514,7 +19628,7 @@
 </a></typedef>
 	<class path="trilateral3.drawing.Sketch" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Sketch.hx">
 		<implements path="justPath.IPathContext"/>
-		<create public="1" get="inline" set="null" line="77" static="1">
+		<create public="1" get="inline" set="null" line="80" static="1">
 			<f a="drawType_:colorType_:sketchForm_:?endLine_" v=":::no">
 				<x path="trilateral3.drawing.DrawAbstract"/>
 				<x path="trilateral3.drawing.ColorAbstract"/>
@@ -19561,47 +19675,47 @@
 		<pointsClock public="1"><c path="Array"><c path="Array"><x path="Float"/></c></c></pointsClock>
 		<pointsAnti public="1"><c path="Array"><c path="Array"><x path="Float"/></c></c></pointsAnti>
 		<dim public="1"><c path="Array"><t path="trilateral3.drawing.Dim"/></c></dim>
-		<tracerLine get="inline" set="null" line="26"><f a="x_:y_">
+		<tracerLine get="inline" set="null" line="29"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></tracerLine>
-		<fillOnlyLine get="inline" set="null" line="29"><f a="x_:y_">
+		<fillOnlyLine get="inline" set="null" line="32"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></fillOnlyLine>
-		<baseLine set="method" line="31"><f a="x_:y_">
+		<baseLine set="method" line="34"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></baseLine>
-		<crudeLine get="inline" set="null" line="35"><f a="x_:y_">
+		<crudeLine get="inline" set="null" line="38"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></crudeLine>
-		<roundEndLine get="inline" set="null" line="38"><f a="x_:y_">
+		<roundEndLine get="inline" set="null" line="41"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></roundEndLine>
-		<mediumLine get="inline" set="null" line="41"><f a="x_:y_">
+		<mediumLine get="inline" set="null" line="44"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></mediumLine>
-		<mediumOverlapLine get="inline" set="null" line="44"><f a="x_:y_">
+		<mediumOverlapLine get="inline" set="null" line="47"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></mediumOverlapLine>
-		<fineLine get="inline" set="null" line="47"><f a="x_:y_">
+		<fineLine get="inline" set="null" line="50"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></fineLine>
-		<fineOverlapLine get="inline" set="null" line="50"><f a="x_:y_">
+		<fineOverlapLine get="inline" set="null" line="53"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
@@ -19611,42 +19725,42 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></line>
-		<reset public="1" set="method" line="87"><f a=""><x path="Void"/></f></reset>
-		<pointsNoEndOverlap public="1" set="method" line="96"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
-		<pointsRewound public="1" set="method" line="150"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
-		<initDim get="inline" set="null" line="210"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
-		<updateDim get="inline" set="null" line="213"><f a="x:y">
+		<reset public="1" set="method" line="90"><f a=""><x path="Void"/></f></reset>
+		<pointsNoEndOverlap public="1" set="method" line="99"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
+		<pointsRewound public="1" set="method" line="153"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
+		<initDim get="inline" set="null" line="213"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
+		<updateDim get="inline" set="null" line="216"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></updateDim>
-		<moveTo public="1" set="method" line="220"><f a="x_:y_">
+		<moveTo public="1" set="method" line="223"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></moveTo>
-		<lastClock public="1" get="inline" set="null" line="237"><f a=""><x path="Void"/></f></lastClock>
-		<getEdges public="1" get="inline" set="null" line="247"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
-		<lineTo public="1" get="inline" set="null" line="275"><f a="x_:y_">
+		<lastClock public="1" get="inline" set="null" line="240"><f a=""><x path="Void"/></f></lastClock>
+		<getEdges public="1" get="inline" set="null" line="250"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
+		<lineTo public="1" get="inline" set="null" line="278"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></lineTo>
-		<quadTo public="1" get="inline" set="null" line="292"><f a="x1:y1:x2:y2">
+		<quadTo public="1" get="inline" set="null" line="295"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadTo>
-		<quadThru public="1" get="inline" set="null" line="301"><f a="x1:y1:x2:y2">
+		<quadThru public="1" get="inline" set="null" line="304"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadThru>
-		<curveTo public="1" get="inline" set="null" line="307"><f a="x1:y1:x2:y2:x3:y3">
+		<curveTo public="1" get="inline" set="null" line="310"><f a="x1:y1:x2:y2:x3:y3">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -19655,7 +19769,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></curveTo>
-		<plotCoord public="1" get="inline" set="null" line="315">
+		<plotCoord public="1" get="inline" set="null" line="318">
 			<f a="arr:?withMove" v=":true">
 				<c path="Array"><x path="Float"/></c>
 				<x path="Bool"/>
@@ -19663,7 +19777,11 @@
 			</f>
 			<meta><m n=":value"><e>{ withMove : true }</e></m></meta>
 		</plotCoord>
-		<new public="1" set="method" line="54">
+		<aiString public="1" get="inline" set="null" line="332"><f a="str">
+	<c path="String"/>
+	<x path="Void"/>
+</f></aiString>
+		<new public="1" set="method" line="57">
 			<f a="pen_:sketchForm_:?endLine_" v="::no">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="trilateral3.drawing.StyleSketch"/>

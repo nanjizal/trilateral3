@@ -2,6 +2,9 @@ package trilateral3.drawing;
 import justPath.IPathContext;
 import trilateral3.math.Algebra;
 import trilateral3.drawing.Contour;
+import dsHelper.splitter.SpaceSplitter;
+import trilateral3.color.ColorInt;
+
 typedef Dim = {
     var minX: Float;
     var maxX: Float;
@@ -324,6 +327,30 @@ class Sketch implements IPathContext {
         while( i < l ){
             lineTo( arr[ i ], arr[ i + 1 ] );
             i += 2;
+        }
+    }
+    public inline
+    function aiString( str: String ): Void {
+        var arr: Array<Array<String>> = SpaceSplitter.parse( str );
+        var arr2 = arr.shift();
+        var colorInt = ColorInt.aiCYMKA( arr2 );
+        pen.currentColor = cast( colorInt, Int );
+        var len = arr.length;
+        for( i in 0...len ){
+            var len2 = arr[i].length;
+            var arr3 = arr[i];
+            var str = arr3[len2-1];
+            switch( str ){
+                case 'm':
+                    moveTo( Std.parseFloat( arr3[0] ), Std.parseFloat( arr3[1] ) );
+                case 'L':
+                    lineTo( Std.parseFloat( arr3[0] ), Std.parseFloat( arr3[1] ) );
+                case 'C':
+                    quadTo( Std.parseFloat( arr3[0] ), Std.parseFloat( arr3[1] )
+                          , Std.parseFloat( arr3[1] ), Std.parseFloat( arr3[2] ) );
+                default:
+                    trace( str + ' NOT FOUND in aiString' );
+            }
         }
     }
 }
