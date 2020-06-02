@@ -19777,10 +19777,16 @@
 			</f>
 			<meta><m n=":value"><e>{ withMove : true }</e></m></meta>
 		</plotCoord>
-		<aiString public="1" get="inline" set="null" line="332"><f a="str">
-	<c path="String"/>
-	<x path="Void"/>
-</f></aiString>
+		<aiString public="1" get="inline" set="null" line="333">
+			<f a="str:x:y:?flipY" v=":::0">
+				<c path="String"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ flipY : 0 }</e></m></meta>
+		</aiString>
 		<new public="1" set="method" line="57">
 			<f a="pen_:sketchForm_:?endLine_" v="::no">
 				<c path="trilateral3.drawing.Pen"/>

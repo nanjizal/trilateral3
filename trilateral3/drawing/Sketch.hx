@@ -329,27 +329,47 @@ class Sketch implements IPathContext {
             i += 2;
         }
     }
+    // flipY is because ai export seems to be with y going up.
     public inline
-    function aiString( str: String ): Void {
+    function aiString( str: String, x: Float, y: Float, flipY: Float = 0 ): Void {
         var arr: Array<Array<String>> = SpaceSplitter.parse( str );
         var arr2 = arr.shift();
         var colorInt = ColorInt.aiCYMKA( arr2 );
         pen.currentColor = cast( colorInt, Int );
         var len = arr.length;
-        for( i in 0...len ){
-            var len2 = arr[i].length;
-            var arr3 = arr[i];
-            var str = arr3[len2-1];
-            switch( str ){
-                case 'm':
-                    moveTo( Std.parseFloat( arr3[0] ), Std.parseFloat( arr3[1] ) );
-                case 'L':
-                    lineTo( Std.parseFloat( arr3[0] ), Std.parseFloat( arr3[1] ) );
-                case 'C':
-                    quadTo( Std.parseFloat( arr3[0] ), Std.parseFloat( arr3[1] )
-                          , Std.parseFloat( arr3[1] ), Std.parseFloat( arr3[2] ) );
-                default:
-                    trace( str + ' NOT FOUND in aiString' );
+        if( flipY == 0 ){
+            for( i in 0...len ){
+                var len2 = arr[i].length;
+                var arr3 = arr[i];
+                var str = arr3[len2-1];
+                switch( str ){
+                    case 'm':
+                        moveTo( Std.parseFloat( arr3[0] ) + x, Std.parseFloat( arr3[1] ) + y );
+                    case 'L':
+                        lineTo( Std.parseFloat( arr3[0] ) + x, Std.parseFloat( arr3[1] ) + y );
+                    case 'C':
+                        quadTo( Std.parseFloat( arr3[0] ) + x, Std.parseFloat( arr3[1] ) + y
+                              , Std.parseFloat( arr3[1] ) + x, Std.parseFloat( arr3[2] ) + y );
+                    default:
+                        trace( str + ' NOT FOUND in aiString' );
+                }
+            }
+        } else {
+            for( i in 0...len ){
+                var len2 = arr[i].length;
+                var arr3 = arr[i];
+                var str = arr3[len2-1];
+                switch( str ){
+                    case 'm':
+                        moveTo( Std.parseFloat( arr3[0] ) + x, flipY - Std.parseFloat( arr3[1] ) + y );
+                    case 'L':
+                        lineTo( Std.parseFloat( arr3[0] ) + x, flipY - Std.parseFloat( arr3[1] ) + y );
+                    case 'C':
+                        quadTo( Std.parseFloat( arr3[0] ) + x, flipY - Std.parseFloat( arr3[1] ) + y
+                              , Std.parseFloat( arr3[1] ) + x, flipY - Std.parseFloat( arr3[2] ) + y );
+                    default:
+                        trace( str + ' NOT FOUND in aiString' );
+                }
             }
         }
     }
