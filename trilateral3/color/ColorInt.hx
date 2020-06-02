@@ -123,6 +123,15 @@ abstract ColorInt( Int ) to Int from Int {
         this = new ColorInt( from_argb( alpha, red, green, v ) );
         return v;
     }
+    // String CYMK typically created by ilustrator export from flash
+    static public inline
+    function stringCYMK( str: String, alpha: Float = 1.0 ): ColorInt {
+        var arr = str.split(' ');
+        return new ColorInt( from_cymka( Std.parseFloat( arr[0] )
+                                       , Std.parseFloat( arr[1] )
+                                       , Std.parseFloat( arr[2] )
+                                       , Std.parseFloat( arr[2] ), alpha ) );
+    }
     // not strictly part of this class, but kind of useful rather than going through Int
     // because has structures prefer not in colorHelper?
     static public inline

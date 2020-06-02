@@ -18562,11 +18562,19 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_blue>
-	<ARGB_CYMKA public="1" get="inline" set="null" line="128" static="1"><f a="v">
+	<stringCYMK public="1" get="inline" set="null" line="127" static="1">
+		<f a="str:?alpha" v=":1.0">
+			<c path="String"/>
+			<x path="Float"/>
+			<x path="trilateral3.color.ColorInt"/>
+		</f>
+		<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
+	</stringCYMK>
+	<ARGB_CYMKA public="1" get="inline" set="null" line="137" static="1"><f a="v">
 	<c path="trilateral3.structure.ARGB"/>
 	<c path="trilateral3.structure.CYMKA"/>
 </f></ARGB_CYMKA>
-	<CYMKA_ARGB public="1" get="inline" set="null" line="138" static="1"><f a="v">
+	<CYMKA_ARGB public="1" get="inline" set="null" line="147" static="1"><f a="v">
 	<c path="trilateral3.structure.CYMKA"/>
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
@@ -18769,11 +18777,19 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_blue>
-		<ARGB_CYMKA public="1" get="inline" set="null" line="128" static="1"><f a="v">
+		<stringCYMK public="1" get="inline" set="null" line="127" static="1">
+			<f a="str:?alpha" v=":1.0">
+				<c path="String"/>
+				<x path="Float"/>
+				<x path="trilateral3.color.ColorInt"/>
+			</f>
+			<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
+		</stringCYMK>
+		<ARGB_CYMKA public="1" get="inline" set="null" line="137" static="1"><f a="v">
 	<c path="trilateral3.structure.ARGB"/>
 	<c path="trilateral3.structure.CYMKA"/>
 </f></ARGB_CYMKA>
-		<CYMKA_ARGB public="1" get="inline" set="null" line="138" static="1"><f a="v">
+		<CYMKA_ARGB public="1" get="inline" set="null" line="147" static="1"><f a="v">
 	<c path="trilateral3.structure.CYMKA"/>
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
