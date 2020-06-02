@@ -234,6 +234,9 @@ function overlapStar( drawType: DrawType
                     , radius: Float, ?theta: Float = 0 ): Int {
     var pi = Math.PI;
     var omega: Float = -pi + theta;
+    radius = radius/1.9;
+    px += radius;
+    py += radius;
     var a0x: Float = px + radius * Math.sin( omega );
     var a0y: Float = py + radius * Math.cos( omega );
     omega += pi/3;
