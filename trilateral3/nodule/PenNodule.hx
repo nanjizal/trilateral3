@@ -7,8 +7,8 @@ import trilateral3.drawing.ColorAbstract;
 import trilateral3.geom.FlatColorTriangles;
 import haxe.io.Float32Array;
 class PenNodule {
-    static final largeEnough    = 2000000;
-    var colorTriangles          = new FlatColorTriangles( largeEnough );
+    static final largeEnough    = 20000000;
+    public var colorTriangles   = new FlatColorTriangles( largeEnough );
     public var pen: Pen;
     public function new(){
         // assume scaling of 1000.
@@ -18,7 +18,7 @@ class PenNodule {
         Trilateral.transformMatrix = transform1000;
         createPen();
     }
-    function createPen() {
+    public function createPen() {
        var t = colorTriangles;
        @:privateAccess
        var drawAbstract: DrawAbstract = {     triangle:       t.triangle

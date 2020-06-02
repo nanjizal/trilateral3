@@ -18212,6 +18212,572 @@
 		<transformMatrix public="1" static="1"><c path="trilateral3.matrix.MatrixDozen"/></transformMatrix>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
+	<class path="trilateral3.color.ColorHelper" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorHelper.hx">
+		<getBlack_ public="1" expr="getBlack">
+			<f a="r:g:b">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>getBlack</e></m></meta>
+		</getBlack_>
+		<from_cymka_ public="1" expr="from_cymka">
+			<f a="c:y:m:k:a">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>from_cymka</e></m></meta>
+		</from_cymka_>
+		<from_argb_ public="1" expr="from_argb">
+			<f a="a:r:g:b">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>from_argb</e></m></meta>
+		</from_argb_>
+		<toHexInt_ public="1" expr="toHexInt">
+			<f a="c">
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>toHexInt</e></m></meta>
+		</toHexInt_>
+		<rgbConvert_ public="1" expr="rgbConvert">
+			<f a="color:k">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>rgbConvert</e></m></meta>
+		</rgbConvert_>
+		<cymkConvert_ public="1" expr="cymkConvert">
+			<f a="color:black">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>cymkConvert</e></m></meta>
+		</cymkConvert_>
+		<alphaChannel_ public="1" expr="alphaChannel">
+			<f a="int">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>alphaChannel</e></m></meta>
+		</alphaChannel_>
+		<redChannel_ public="1" expr="redChannel">
+			<f a="int">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>redChannel</e></m></meta>
+		</redChannel_>
+		<greenChannel_ public="1" expr="greenChannel">
+			<f a="int">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>greenChannel</e></m></meta>
+		</greenChannel_>
+		<blueChannel_ public="1" expr="blueChannel">
+			<f a="int">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":value"><e>blueChannel</e></m></meta>
+		</blueChannel_>
+		<new public="1" set="method" line="41">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":compilerGenerated"/></meta>
+		</new>
+	</class>
+	<class path="trilateral3.color._ColorHelper.ColorHelper_Statics_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorHelper.hx" private="1" module="trilateral3.color.ColorHelper" final="1">
+		<blueChannel public="1" get="inline" set="null" line="39" static="1"><f a="int">
+	<x path="Int"/>
+	<x path="Float"/>
+</f></blueChannel>
+		<greenChannel public="1" get="inline" set="null" line="36" static="1"><f a="int">
+	<x path="Int"/>
+	<x path="Float"/>
+</f></greenChannel>
+		<redChannel public="1" get="inline" set="null" line="33" static="1"><f a="int">
+	<x path="Int"/>
+	<x path="Float"/>
+</f></redChannel>
+		<alphaChannel public="1" get="inline" set="null" line="30" static="1"><f a="int">
+	<x path="Int"/>
+	<x path="Float"/>
+</f></alphaChannel>
+		<cymkConvert public="1" get="inline" set="null" line="27" static="1"><f a="color:black">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></cymkConvert>
+		<rgbConvert public="1" get="inline" set="null" line="24" static="1"><f a="color:k">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></rgbConvert>
+		<toHexInt public="1" get="inline" set="null" line="21" static="1"><f a="c">
+	<x path="Float"/>
+	<x path="Int"/>
+</f></toHexInt>
+		<from_argb public="1" get="inline" set="null" line="15" static="1"><f a="a:r:g:b">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></from_argb>
+		<from_cymka public="1" get="inline" set="null" line="8" static="1"><f a="c:y:m:k:a">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></from_cymka>
+		<getBlack public="1" get="inline" set="null" line="4" static="1"><f a="r:g:b">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></getBlack>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<abstract path="trilateral3.color.ColorInt" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorInt.hx">
+		<from>
+			<icast><x path="Int"/></icast>
+			<icast field="fromARGB"><c path="trilateral3.structure.ARGB"/></icast>
+			<icast field="fromCYMKA"><c path="trilateral3.structure.CYMKA"/></icast>
+		</from>
+		<this><x path="Int"/></this>
+		<to>
+			<icast><x path="Int"/></icast>
+			<icast field="toARGB"><c path="trilateral3.structure.ARGB"/></icast>
+			<icast field="toCYMK"><c path="trilateral3.structure.CYMKA"/></icast>
+		</to>
+		<impl><class path="trilateral3.color._ColorInt.ColorInt_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorInt.hx" private="1" module="trilateral3.color.ColorInt" final="1">
+	<_new public="1" get="inline" set="null" line="7" static="1">
+		<f a="v">
+			<x path="Int"/>
+			<x path="trilateral3.color.ColorInt"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+		</meta>
+	</_new>
+	<fromARGB public="1" get="inline" set="null" line="12" static="1">
+		<f a="argb">
+			<c path="trilateral3.structure.ARGB"/>
+			<x path="trilateral3.color.ColorInt"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</fromARGB>
+	<toARGB public="1" get="inline" set="null" line="17" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<c path="trilateral3.structure.ARGB"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":to"/>
+		</meta>
+	</toARGB>
+	<fromCYMKA public="1" get="inline" set="null" line="22" static="1">
+		<f a="c">
+			<c path="trilateral3.structure.CYMKA"/>
+			<x path="trilateral3.color.ColorInt"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</fromCYMKA>
+	<toCYMK public="1" get="inline" set="null" line="27" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<c path="trilateral3.structure.CYMKA"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":to"/>
+		</meta>
+	</toCYMK>
+	<cyan public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</cyan>
+	<get_cyan get="inline" set="null" line="36" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_cyan>
+	<set_cyan get="inline" set="null" line="40" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_cyan>
+	<yellow public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</yellow>
+	<get_yellow get="inline" set="null" line="49" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_yellow>
+	<set_yellow get="inline" set="null" line="53" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_yellow>
+	<magenta public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</magenta>
+	<get_magenta get="inline" set="null" line="62" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_magenta>
+	<set_magenta get="inline" set="null" line="66" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_magenta>
+	<black public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</black>
+	<get_black get="inline" set="null" line="75" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_black>
+	<set_black get="inline" set="null" line="78" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_black>
+	<alpha public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</alpha>
+	<get_alpha get="inline" set="null" line="87" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_alpha>
+	<set_alpha get="inline" set="null" line="91" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_alpha>
+	<red public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</red>
+	<get_red get="inline" set="null" line="97" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_red>
+	<set_red get="inline" set="null" line="101" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_red>
+	<green public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</green>
+	<get_green get="inline" set="null" line="107" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_green>
+	<set_green get="inline" set="null" line="111" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_green>
+	<blue public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</blue>
+	<get_blue get="inline" set="null" line="117" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_blue>
+	<set_blue get="inline" set="null" line="121" static="1">
+		<f a="this:v">
+			<x path="Int"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_blue>
+	<ARGB_CYMKA public="1" get="inline" set="null" line="128" static="1"><f a="v">
+	<c path="trilateral3.structure.ARGB"/>
+	<c path="trilateral3.structure.CYMKA"/>
+</f></ARGB_CYMKA>
+	<CYMKA_ARGB public="1" get="inline" set="null" line="138" static="1"><f a="v">
+	<c path="trilateral3.structure.CYMKA"/>
+	<c path="trilateral3.structure.ARGB"/>
+</f></CYMKA_ARGB>
+</class></impl>
+	</abstract>
+	<class path="trilateral3.color._ColorInt.ColorInt_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorInt.hx" private="1" module="trilateral3.color.ColorInt" final="1">
+		<_new public="1" get="inline" set="null" line="7" static="1">
+			<f a="v">
+				<x path="Int"/>
+				<x path="trilateral3.color.ColorInt"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</_new>
+		<fromARGB public="1" get="inline" set="null" line="12" static="1">
+			<f a="argb">
+				<c path="trilateral3.structure.ARGB"/>
+				<x path="trilateral3.color.ColorInt"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</fromARGB>
+		<toARGB public="1" get="inline" set="null" line="17" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<c path="trilateral3.structure.ARGB"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":to"/>
+			</meta>
+		</toARGB>
+		<fromCYMKA public="1" get="inline" set="null" line="22" static="1">
+			<f a="c">
+				<c path="trilateral3.structure.CYMKA"/>
+				<x path="trilateral3.color.ColorInt"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</fromCYMKA>
+		<toCYMK public="1" get="inline" set="null" line="27" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<c path="trilateral3.structure.CYMKA"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":to"/>
+			</meta>
+		</toCYMK>
+		<cyan public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</cyan>
+		<get_cyan get="inline" set="null" line="36" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_cyan>
+		<set_cyan get="inline" set="null" line="40" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_cyan>
+		<yellow public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</yellow>
+		<get_yellow get="inline" set="null" line="49" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_yellow>
+		<set_yellow get="inline" set="null" line="53" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_yellow>
+		<magenta public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</magenta>
+		<get_magenta get="inline" set="null" line="62" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_magenta>
+		<set_magenta get="inline" set="null" line="66" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_magenta>
+		<black public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</black>
+		<get_black get="inline" set="null" line="75" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_black>
+		<set_black get="inline" set="null" line="78" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_black>
+		<alpha public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</alpha>
+		<get_alpha get="inline" set="null" line="87" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_alpha>
+		<set_alpha get="inline" set="null" line="91" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_alpha>
+		<red public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</red>
+		<get_red get="inline" set="null" line="97" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_red>
+		<set_red get="inline" set="null" line="101" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_red>
+		<green public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</green>
+		<get_green get="inline" set="null" line="107" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_green>
+		<set_green get="inline" set="null" line="111" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_green>
+		<blue public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</blue>
+		<get_blue get="inline" set="null" line="117" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_blue>
+		<set_blue get="inline" set="null" line="121" static="1">
+			<f a="this:v">
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_blue>
+		<ARGB_CYMKA public="1" get="inline" set="null" line="128" static="1"><f a="v">
+	<c path="trilateral3.structure.ARGB"/>
+	<c path="trilateral3.structure.CYMKA"/>
+</f></ARGB_CYMKA>
+		<CYMKA_ARGB public="1" get="inline" set="null" line="138" static="1"><f a="v">
+	<c path="trilateral3.structure.CYMKA"/>
+	<c path="trilateral3.structure.ARGB"/>
+</f></CYMKA_ARGB>
+	</class>
 	<abstract path="trilateral3.drawing.ColorAbstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/ColorAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.ColorType"/></icast></from>
 		<this><t path="trilateral3.drawing.ColorType"/></this>
@@ -20113,16 +20679,16 @@
 		</meta>
 	</class>
 	<class path="trilateral3.nodule.PenNodule" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/nodule/PenNodule.hx">
-		<largeEnough final="1" set="null" expr="2000000" line="10" static="1">
+		<largeEnough final="1" set="null" expr="20000000" line="10" static="1">
 			<x path="Int"/>
-			<meta><m n=":value"><e>2000000</e></m></meta>
+			<meta><m n=":value"><e>20000000</e></m></meta>
 		</largeEnough>
-		<colorTriangles expr="new FlatColorTriangles(largeEnough)">
+		<colorTriangles public="1" expr="new FlatColorTriangles(largeEnough)">
 			<x path="trilateral3.geom.FlatColorTriangles"/>
 			<meta><m n=":value"><e>new FlatColorTriangles(largeEnough)</e></m></meta>
 		</colorTriangles>
 		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
-		<createPen set="method" line="21"><f a=""><x path="Void"/></f></createPen>
+		<createPen public="1" set="method" line="21"><f a=""><x path="Void"/></f></createPen>
 		<data public="1" get="accessor" set="null"><x path="haxe.io.Float32Array"/></data>
 		<get_data public="1" get="inline" set="null" line="47"><f a=""><x path="haxe.io.Float32Array"/></f></get_data>
 		<size public="1" get="accessor" set="null"><x path="Int"/></size>
@@ -22409,6 +22975,74 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</goldOne>
+	</class>
+	<class path="trilateral3.structure.ARGB" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/ARGB.hx">
+		<a public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</a>
+		<r public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</r>
+		<g public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</g>
+		<b public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</b>
+		<new public="1" set="method" line="11"><f a="a:r:g:b">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></new>
+		<haxe_doc>{ a, r, g, b }</haxe_doc>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":structInit"/>
+		</meta>
+	</class>
+	<class path="trilateral3.structure.CYMKA" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/CYMKA.hx">
+		<c public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</c>
+		<y public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</y>
+		<m public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</m>
+		<k public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</k>
+		<a public="1" expr="1.">
+			<x path="Float"/>
+			<meta>
+				<m n=":value"><e>1.</e></m>
+				<m n=":optional"/>
+			</meta>
+		</a>
+		<new public="1" set="method" line="12"><f a="c:y:m:k:?a">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></new>
+		<haxe_doc>{ a, r, g, b }</haxe_doc>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":structInit"/>
+		</meta>
 	</class>
 	<class path="trilateral3.structure.Quad2D" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/Quad2D.hx">
 		<a public="1"><c path="trilateral3.structure.XY"/></a>
