@@ -13,4 +13,10 @@ abstract IndexRange( StartEnd ) from StartEnd to StartEnd {
         return new IndexRange( {  start: begin
                                 , end: ( begin == this.start )? b.end: this.end } );
     }
+    public
+    var length( get, never ): Int; 
+    inline
+    function get_length(): Int {
+        return this.end - this.start + 1;
+    }
 }
