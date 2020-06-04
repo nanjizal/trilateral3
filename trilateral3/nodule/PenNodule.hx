@@ -4,6 +4,8 @@ import trilateral3.drawing.Pen;
 import trilateral3.matrix.MatrixDozen;
 import trilateral3.drawing.DrawAbstract;
 import trilateral3.drawing.ColorAbstract;
+import trilateral3.drawing.TriangleAbstract;
+import trilateral3.drawing.Color3Abstract;
 import trilateral3.geom.FlatColorTriangles;
 import haxe.io.Float32Array;
 class PenNodule {
@@ -21,17 +23,50 @@ class PenNodule {
     public function createPen() {
        var t = colorTriangles;
        @:privateAccess
-       var drawAbstract: DrawAbstract = {     triangle:       t.triangle
-                                            , transform:      t.transform
-                                            , transformRange: t.transformRange
-                                            , getTriangle3D:  t.getTriangle3D
-                                            , next:           t.next
-                                            , hasNext:        t.hasNext
-                                            , get_pos:        t.get_pos
-                                            , set_pos:        t.set_pos
-                                            , get_size:       t.get_size
-                                            , set_size:       t.set_size
-                                            };
+       var triangleAbstract: TriangleAbstract = {
+             rotate:        t.rotate
+           , moveDelta:     t.moveDelta
+           , rotateTrig:    t.rotateTrig
+           , fullHit:       t.fullHit
+           , liteHit:       t.liteHit
+           , get_bottom:    t.get_bottom
+           , get_back:      t.get_back
+           , get_right:     t.get_right
+           , get_x:         t.get_x
+           , set_x:         t.set_x
+           , get_y:         t.get_y
+           , set_y:         t.set_y
+           , get_z:         t.get_z
+           , set_z:         t.set_z
+           , triangle:      t.triangle
+           , getTriangle3D: t.getTriangle3D
+           , transform:     t.transform
+       }
+       @:privateAccess
+       var drawAbstract: DrawAbstract = {     
+              triangle:        t.triangle   // remove...?
+            , transform:       t.transform  // remove...?
+            , transformRange:  t.transformRange
+            , getTriangle3D:   t.getTriangle3D // remove...?
+            , next:            t.next
+            , hasNext:         t.hasNext
+            , get_pos:         t.get_pos
+            , set_pos:         t.set_pos
+            , get_size:        t.get_size
+            , set_size:        t.set_size
+            , triangleCurrent: triangleAbstract
+            };
+       // only viable to set this up for interleave arrays.
+       @:privateAccess
+       var color3Abstract: Color3Abstract = {
+             set_argb:  t.set_argb
+           , set_argbA: t.set_argbA
+           , get_argbA: t.get_argbA
+           , set_argbB: t.set_argbB
+           , get_argbB: t.get_argbB
+           , set_argbC: t.set_argbC
+           , get_argbC: t.get_argbC
+       }
        @:privateAccess
        var colorAbstract: ColorAbstract = {   cornerColors:   t.cornerColors
                                             , colorTriangles: t.colorTriangles
@@ -40,6 +75,7 @@ class PenNodule {
                                             , set_pos:        t.set_pos
                                             , get_size:       t.get_size
                                             , set_size:       t.set_size
+                                            , color3current:  color3Abstract
                                             };
         pen = new Pen( drawAbstract , colorAbstract );
     }

@@ -1,5 +1,5 @@
 #    Javascript test
--cp src
+-cp ./
 -lib utest
 -lib haxe-doctest
 -lib equals

@@ -18908,6 +18908,195 @@
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
 	</class>
+	<abstract path="trilateral3.drawing.Color3Abstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Abstract.hx">
+		<from><icast><t path="trilateral3.drawing.Color3Type"/></icast></from>
+		<this><t path="trilateral3.drawing.Color3Type"/></this>
+		<to><icast><t path="trilateral3.drawing.Color3Type"/></icast></to>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="trilateral3.drawing._Color3Abstract.Color3Abstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Abstract.hx" private="1" module="trilateral3.drawing.Color3Abstract" final="1">
+	<_new public="1" get="inline" set="null" line="5" static="1">
+		<f a="color3Type">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="trilateral3.drawing.Color3Abstract"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+		</meta>
+	</_new>
+	<argb public="1" get="null" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</argb>
+	<set_argb get="inline" set="null" line="9" static="1">
+		<f a="this:col">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_argb>
+	<argbA public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</argbA>
+	<set_argbA get="inline" set="null" line="16" static="1">
+		<f a="this:col">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_argbA>
+	<get_argbA get="inline" set="null" line="20" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_argbA>
+	<argbB public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</argbB>
+	<set_argbB get="inline" set="null" line="25" static="1">
+		<f a="this:col">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_argbB>
+	<get_argbB get="inline" set="null" line="29" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_argbB>
+	<argbC public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</argbC>
+	<set_argbC get="inline" set="null" line="34" static="1">
+		<f a="this:col">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_argbC>
+	<get_argbC get="inline" set="null" line="38" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.Color3Type"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_argbC>
+</class></impl>
+	</abstract>
+	<class path="trilateral3.drawing._Color3Abstract.Color3Abstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Abstract.hx" private="1" module="trilateral3.drawing.Color3Abstract" final="1">
+		<_new public="1" get="inline" set="null" line="5" static="1">
+			<f a="color3Type">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="trilateral3.drawing.Color3Abstract"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</_new>
+		<argb public="1" get="null" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</argb>
+		<set_argb get="inline" set="null" line="9" static="1">
+			<f a="this:col">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_argb>
+		<argbA public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</argbA>
+		<set_argbA get="inline" set="null" line="16" static="1">
+			<f a="this:col">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_argbA>
+		<get_argbA get="inline" set="null" line="20" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_argbA>
+		<argbB public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</argbB>
+		<set_argbB get="inline" set="null" line="25" static="1">
+			<f a="this:col">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_argbB>
+		<get_argbB get="inline" set="null" line="29" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_argbB>
+		<argbC public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</argbC>
+		<set_argbC get="inline" set="null" line="34" static="1">
+			<f a="this:col">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_argbC>
+		<get_argbC get="inline" set="null" line="38" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.Color3Type"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_argbC>
+	</class>
+	<typedef path="trilateral3.drawing.Color3Type" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Type.hx"><a>
+	<set_argbC set="method"><f a="col">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_argbC>
+	<set_argbB set="method"><f a="col">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_argbB>
+	<set_argbA set="method"><f a="col">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_argbA>
+	<set_argb set="method"><f a="col">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_argb>
+	<get_argbC set="method"><f a=""><x path="Int"/></f></get_argbC>
+	<get_argbB set="method"><f a=""><x path="Int"/></f></get_argbB>
+	<get_argbA set="method"><f a=""><x path="Int"/></f></get_argbA>
+</a></typedef>
 	<abstract path="trilateral3.drawing.ColorAbstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/ColorAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.ColorType"/></icast></from>
 		<this><t path="trilateral3.drawing.ColorType"/></this>
@@ -19037,6 +19226,10 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></colorTriangles>
+	<color3current>
+		<x path="Null"><x path="trilateral3.drawing.Color3Abstract"/></x>
+		<meta><m n=":optional"/></meta>
+	</color3current>
 </a></typedef>
 	<class path="trilateral3.drawing.Contour" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Contour.hx">
 		<smallDotScale get="inline" set="null" expr="0.07" line="95" static="1">
@@ -19445,6 +19638,10 @@
 		</get_size>
 	</class>
 	<typedef path="trilateral3.drawing.DrawType" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/DrawType.hx"><a>
+	<triangleCurrent>
+		<x path="Null"><x path="trilateral3.drawing.TriangleAbstract"/></x>
+		<meta><m n=":optional"/></meta>
+	</triangleCurrent>
 	<triangle><f a="ax_:ay_:az_:bx_:by_:bz_:cx_:cy_:cz_">
 	<x path="Float"/>
 	<x path="Float"/>
@@ -19529,54 +19726,54 @@
 			<c path="Array"><x path="Int"/></c>
 			<meta><m n=":value"><e>[]</e></m></meta>
 		</indices>
-		<transformRange public="1" get="inline" set="null" line="28"><f a="trans:ir">
+		<transformRange public="1" get="inline" set="null" line="30"><f a="trans:ir">
 	<c path="trilateral3.matrix.MatrixDozen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></transformRange>
-		<up public="1" get="inline" set="null" line="32"><f a="ir">
+		<up public="1" get="inline" set="null" line="34"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></up>
-		<down public="1" get="inline" set="null" line="37"><f a="ir">
+		<down public="1" get="inline" set="null" line="39"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></down>
-		<back public="1" get="inline" set="null" line="42"><f a="ir">
+		<back public="1" get="inline" set="null" line="44"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></back>
-		<transBack get="inline" set="null" line="46"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
-		<cornerColor public="1" get="inline" set="null" line="76">
+		<transBack get="inline" set="null" line="48"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
+		<cornerColor public="1" get="inline" set="null" line="78">
 			<f a="?color" v="-1">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</cornerColor>
-		<cornerColors public="1" get="inline" set="null" line="81"><f a="colorA:colorB:colorC">
+		<cornerColors public="1" get="inline" set="null" line="83"><f a="colorA:colorB:colorC">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></cornerColors>
-		<middleColor public="1" get="inline" set="null" line="85"><f a="color:colorCentre">
+		<middleColor public="1" get="inline" set="null" line="87"><f a="color:colorCentre">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColor>
-		<middleColors public="1" get="inline" set="null" line="89"><f a="color:colorCentre:times">
+		<middleColors public="1" get="inline" set="null" line="91"><f a="color:colorCentre:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColors>
-		<colorTriangles public="1" get="inline" set="null" line="95"><f a="color:times">
+		<colorTriangles public="1" get="inline" set="null" line="97"><f a="color:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></colorTriangles>
-		<addTriangle public="1" get="inline" set="null" line="100"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
+		<addTriangle public="1" get="inline" set="null" line="102"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -19588,7 +19785,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></addTriangle>
-		<triangle2DFill public="1" get="inline" set="null" line="109">
+		<triangle2DFill public="1" get="inline" set="null" line="111">
 			<f a="ax:ay:bx:by:cx:cy:?color" v="::::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -19602,18 +19799,28 @@
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</triangle2DFill>
 		<pos public="1" get="accessor" set="accessor"><x path="Float"/></pos>
-		<get_pos get="inline" set="null" line="121"><f a=""><x path="Float"/></f></get_pos>
-		<set_pos get="inline" set="null" line="125"><f a="v">
+		<get_pos get="inline" set="null" line="123"><f a=""><x path="Float"/></f></get_pos>
+		<set_pos get="inline" set="null" line="127"><f a="v">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_pos>
-		<copyRange public="1" get="inline" set="null" line="131"><f a="otherPen:startEnd:vec">
+		<triangleCurrent public="1" get="accessor" set="null">
+			<x path="trilateral3.drawing.TriangleAbstract"/>
+			<haxe_doc>* Only optionally available use with care, works with PenNodule.</haxe_doc>
+		</triangleCurrent>
+		<get_triangleCurrent get="inline" set="null" line="137"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
+		<color3Current public="1" get="accessor" set="null">
+			<x path="trilateral3.drawing.Color3Abstract"/>
+			<haxe_doc>* Only possible if using interleave data structure !! use with care.</haxe_doc>
+		</color3Current>
+		<get_color3Current get="inline" set="null" line="145"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
+		<copyRange public="1" get="inline" set="null" line="149"><f a="otherPen:startEnd:vec">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<c path="trilateral3.matrix.Vertex"/>
 	<x path="trilateral3.shape.IndexRange"/>
 </f></copyRange>
-		<new public="1" set="method" line="24"><f a="drawType_:colorType_">
+		<new public="1" set="method" line="26"><f a="drawType_:colorType_">
 	<x path="trilateral3.drawing.DrawAbstract"/>
 	<x path="trilateral3.drawing.ColorAbstract"/>
 	<x path="Void"/>
@@ -20089,6 +20296,281 @@
 		</RoundEnd>
 		<meta><m n=":enum"/></meta>
 	</class>
+	<abstract path="trilateral3.drawing.TriangleAbstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleAbstract.hx">
+		<from><icast><t path="trilateral3.drawing.TriangleType"/></icast></from>
+		<this><t path="trilateral3.drawing.TriangleType"/></this>
+		<to><icast><t path="trilateral3.drawing.TriangleType"/></icast></to>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="trilateral3.drawing._TriangleAbstract.TriangleAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleAbstract.hx" private="1" module="trilateral3.drawing.TriangleAbstract" final="1">
+	<_new public="1" get="inline" set="null" line="5" static="1">
+		<f a="triangleType">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="trilateral3.drawing.TriangleAbstract"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+		</meta>
+	</_new>
+	<bottom public="1" get="accessor" set="null" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</bottom>
+	<get_bottom get="inline" set="null" line="9" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_bottom>
+	<back public="1" get="accessor" set="null" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</back>
+	<get_back get="inline" set="null" line="13" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_back>
+	<right public="1" get="accessor" set="null" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</right>
+	<get_right get="inline" set="null" line="17" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_right>
+	<x public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</x>
+	<get_x get="inline" set="null" line="21" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_x>
+	<set_x get="inline" set="null" line="24" static="1">
+		<f a="this:v">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_x>
+	<y public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</y>
+	<get_y get="inline" set="null" line="28" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_y>
+	<set_y get="inline" set="null" line="31" static="1">
+		<f a="this:v">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_y>
+	<z public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</z>
+	<get_z get="inline" set="null" line="35" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_z>
+	<set_z get="inline" set="null" line="38" static="1">
+		<f a="this:v">
+			<t path="trilateral3.drawing.TriangleType"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_z>
+</class></impl>
+	</abstract>
+	<class path="trilateral3.drawing._TriangleAbstract.TriangleAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleAbstract.hx" private="1" module="trilateral3.drawing.TriangleAbstract" final="1">
+		<_new public="1" get="inline" set="null" line="5" static="1">
+			<f a="triangleType">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="trilateral3.drawing.TriangleAbstract"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</_new>
+		<bottom public="1" get="accessor" set="null" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</bottom>
+		<get_bottom get="inline" set="null" line="9" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_bottom>
+		<back public="1" get="accessor" set="null" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</back>
+		<get_back get="inline" set="null" line="13" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_back>
+		<right public="1" get="accessor" set="null" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</right>
+		<get_right get="inline" set="null" line="17" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_right>
+		<x public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</x>
+		<get_x get="inline" set="null" line="21" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_x>
+		<set_x get="inline" set="null" line="24" static="1">
+			<f a="this:v">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_x>
+		<y public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</y>
+		<get_y get="inline" set="null" line="28" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_y>
+		<set_y get="inline" set="null" line="31" static="1">
+			<f a="this:v">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_y>
+		<z public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</z>
+		<get_z get="inline" set="null" line="35" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_z>
+		<set_z get="inline" set="null" line="38" static="1">
+			<f a="this:v">
+				<t path="trilateral3.drawing.TriangleType"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_z>
+	</class>
+	<typedef path="trilateral3.drawing.TriangleType" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleType.hx"><a>
+	<triangle><f a="ax_:ay_:az_:bx_:by_:bz_:cx_:cy_:cz_">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></triangle>
+	<transform><f a="">
+	<c path="trilateral3.matrix.MatrixDozen"/>
+	<x path="Void"/>
+</f></transform>
+	<set_z set="method"><f a="z">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_z>
+	<set_y set="method"><f a="y">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_y>
+	<set_x set="method"><f a="x">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_x>
+	<rotateTrig><f a="x:y:cos:sin">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></rotateTrig>
+	<rotate><f a="x:y:theta">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></rotate>
+	<moveDelta><f a="dx:dy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></moveDelta>
+	<liteHit><f a="px:py">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></liteHit>
+	<get_z set="method"><f a=""><x path="Float"/></f></get_z>
+	<get_y set="method"><f a=""><x path="Float"/></f></get_y>
+	<get_x set="method"><f a=""><x path="Float"/></f></get_x>
+	<get_right set="method"><f a=""><x path="Float"/></f></get_right>
+	<get_bottom set="method"><f a=""><x path="Float"/></f></get_bottom>
+	<get_back set="method"><f a=""><x path="Float"/></f></get_back>
+	<getTriangle3D><f a=""><c path="trilateral3.structure.Triangle3D"/></f></getTriangle3D>
+	<fullHit><f a="px:py">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></fullHit>
+</a></typedef>
 	<abstract path="trilateral3.geom.FlatColorTriangles" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColorTriangles.hx">
 		<this><x path="dsHelper.flatInterleave.FloatColorTriangles"/></this>
 		<meta><m n=":forward"/></meta>
@@ -20819,7 +21301,7 @@
 		</meta>
 	</class>
 	<class path="trilateral3.nodule.PenNodule" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/nodule/PenNodule.hx">
-		<largeEnough final="1" set="null" expr="20000000" line="10" static="1">
+		<largeEnough final="1" set="null" expr="20000000" line="12" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>20000000</e></m></meta>
 		</largeEnough>
@@ -20828,12 +21310,12 @@
 			<meta><m n=":value"><e>new FlatColorTriangles(largeEnough)</e></m></meta>
 		</colorTriangles>
 		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
-		<createPen public="1" set="method" line="21"><f a=""><x path="Void"/></f></createPen>
+		<createPen public="1" set="method" line="23"><f a=""><x path="Void"/></f></createPen>
 		<data public="1" get="accessor" set="null"><x path="haxe.io.Float32Array"/></data>
-		<get_data public="1" get="inline" set="null" line="47"><f a=""><x path="haxe.io.Float32Array"/></f></get_data>
+		<get_data public="1" get="inline" set="null" line="83"><f a=""><x path="haxe.io.Float32Array"/></f></get_data>
 		<size public="1" get="accessor" set="null"><x path="Int"/></size>
-		<get_size public="1" get="inline" set="null" line="52"><f a=""><x path="Int"/></f></get_size>
-		<new public="1" set="method" line="13"><f a=""><x path="Void"/></f></new>
+		<get_size public="1" get="inline" set="null" line="88"><f a=""><x path="Int"/></f></get_size>
+		<new public="1" set="method" line="15"><f a=""><x path="Void"/></f></new>
 	</class>
 	<abstract path="trilateral3.shape.IndexRange" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/IndexRange.hx">
 		<from><icast><c path="trilateral3.structure.StartEnd"/></icast></from>
@@ -22272,13 +22754,13 @@
 			</f>
 			<meta><m n=":value"><e>spiralLines</e></m></meta>
 		</spiralLines_>
-		<new public="1" set="method" line="732">
+		<new public="1" set="method" line="735">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":compilerGenerated"/></meta>
 		</new>
 	</class>
 	<class path="trilateral3.shape._Shaper.Shaper_Statics_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Shaper.hx" private="1" module="trilateral3.shape.Shaper" final="1">
-		<spiralLines public="1" get="inline" set="null" line="717" static="1"><f a="drawType:x:y:radius:nolines:startWid:stepWid">
+		<spiralLines public="1" get="inline" set="null" line="720" static="1"><f a="drawType:x:y:radius:nolines:startWid:stepWid">
 	<t path="trilateral3.drawing.DrawType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -22288,7 +22770,7 @@
 	<x path="Float"/>
 	<x path="Int"/>
 </f></spiralLines>
-		<roundedRectangleOutline public="1" get="inline" set="null" line="686" static="1"><f a="drawType:x:y:width:height:thick:radius">
+		<roundedRectangleOutline public="1" get="inline" set="null" line="689" static="1"><f a="drawType:x:y:width:height:thick:radius">
 	<t path="trilateral3.drawing.DrawType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -22298,7 +22780,7 @@
 	<x path="Float"/>
 	<x path="Int"/>
 </f></roundedRectangleOutline>
-		<roundedRectangle public="1" get="inline" set="null" line="656" static="1"><f a="drawType:x:y:width:height:radius">
+		<roundedRectangle public="1" get="inline" set="null" line="659" static="1"><f a="drawType:x:y:width:height:radius">
 	<t path="trilateral3.drawing.DrawType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -22307,7 +22789,7 @@
 	<x path="Float"/>
 	<x path="Int"/>
 </f></roundedRectangle>
-		<shapeRadial public="1" get="inline" set="null" line="642" static="1">
+		<shapeRadial public="1" get="inline" set="null" line="645" static="1">
 			<f a="drawType:x:y:rx:ry:radius:p:?omega" v=":::::::0.">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22321,7 +22803,7 @@
 			</f>
 			<meta><m n=":value"><e>{ omega : 0. }</e></m></meta>
 		</shapeRadial>
-		<shape public="1" get="inline" set="null" line="632" static="1">
+		<shape public="1" get="inline" set="null" line="635" static="1">
 			<f a="drawType:x:y:radius:p:?omega" v=":::::0.">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22333,7 +22815,7 @@
 			</f>
 			<meta><m n=":value"><e>{ omega : 0. }</e></m></meta>
 		</shape>
-		<ellipseOnSide public="1" get="inline" set="null" line="609" static="1">
+		<ellipseOnSide public="1" get="inline" set="null" line="612" static="1">
 			<f a="drawType:ax:ay:rx:ry:?sides" v=":::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22345,7 +22827,7 @@
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</ellipseOnSide>
-		<circleOnSide public="1" get="inline" set="null" line="586" static="1">
+		<circleOnSide public="1" get="inline" set="null" line="589" static="1">
 			<f a="drawType:ax:ay:radius:?sides:?omega" v="::::36:0.">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22357,7 +22839,7 @@
 			</f>
 			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
 		</circleOnSide>
-		<arc public="1" get="inline" set="null" line="546" static="1">
+		<arc public="1" get="inline" set="null" line="549" static="1">
 			<f a="drawType:ax:ay:radius:width:beta:gamma:prefer:?sides" v="::::::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22372,7 +22854,7 @@
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</arc>
-		<pieDif public="1" get="inline" set="null" line="517" static="1">
+		<pieDif public="1" get="inline" set="null" line="520" static="1">
 			<f a="drawType:ax:ay:radius:beta:dif:?sides" v="::::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22386,7 +22868,7 @@
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 			<haxe_doc>* Optimized Pie used in Contour, with dif pre-calculated</haxe_doc>
 		</pieDif>
-		<ellipsePie public="1" get="inline" set="null" line="481" static="1">
+		<ellipsePie public="1" get="inline" set="null" line="484" static="1">
 			<f a="drawType:ax:ay:rx:ry:beta:gamma:prefer:?sides" v="::::::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22401,7 +22883,7 @@
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</ellipsePie>
-		<pieDifX public="1" get="inline" set="null" line="446" static="1">
+		<pieDifX public="1" get="inline" set="null" line="449" static="1">
 			<f a="drawType:ax:ay:radius:beta:dif:edgePoly:?sides" v=":::::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22417,7 +22899,7 @@
 			<haxe_doc>* Optimized Pie used in Contour, with dif pre-calculated
  * External edge also added</haxe_doc>
 		</pieDifX>
-		<pieX public="1" get="inline" set="null" line="406" static="1">
+		<pieX public="1" get="inline" set="null" line="409" static="1">
 			<f a="drawType:ax:ay:radius:beta:gamma:prefer:edgePoly:?sides" v="::::::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22434,7 +22916,7 @@
 			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
  * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
 		</pieX>
-		<pie public="1" get="inline" set="null" line="370" static="1">
+		<pie public="1" get="inline" set="null" line="373" static="1">
 			<f a="drawType:ax:ay:radius:beta:gamma:prefer:?sides" v=":::::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22450,7 +22932,7 @@
 			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
  * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
 		</pie>
-		<ellipse public="1" get="inline" set="null" line="344" static="1">
+		<ellipse public="1" get="inline" set="null" line="347" static="1">
 			<f a="drawType:ax:ay:rx:ry:?sides" v=":::::36">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22462,7 +22944,7 @@
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</ellipse>
-		<circleRadialOnSide public="1" get="inline" set="null" line="310" static="1">
+		<circleRadialOnSide public="1" get="inline" set="null" line="313" static="1">
 			<f a="drawType:ax:ay:rx:ry:radius:?sides:?omega" v="::::::36:0.">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22476,7 +22958,7 @@
 			</f>
 			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
 		</circleRadialOnSide>
-		<circleRadial public="1" get="inline" set="null" line="281" static="1">
+		<circleRadial public="1" get="inline" set="null" line="284" static="1">
 			<f a="drawType:ax:ay:rx:ry:radius:?sides:?omega" v="::::::36:0.">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>
@@ -22490,7 +22972,7 @@
 			</f>
 			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
 		</circleRadial>
-		<circle public="1" get="inline" set="null" line="259" static="1">
+		<circle public="1" get="inline" set="null" line="262" static="1">
 			<f a="drawType:ax:ay:radius:?sides:?omega" v="::::36:0.">
 				<t path="trilateral3.drawing.DrawType"/>
 				<x path="Float"/>

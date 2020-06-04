@@ -1,6 +1,7 @@
 package trilateral3.drawing; 
 import trilateral3.matrix.MatrixDozen;
 import trilateral3.structure.Triangle3D;
+import trilateral3.drawing.TriangleAbstract;
 import trilateral3.shape.IndexRange;
 typedef DrawType = {
     var triangle: ( ax_: Float, ay_: Float, az_: Float
@@ -11,6 +12,7 @@ typedef DrawType = {
     var transformRange: ( m: MatrixDozen, startEnd: IndexRange ) -> Void;
     var next: ()->Float;
     var hasNext: ()->Bool;
+    var ?triangleCurrent: TriangleAbstract;
     public function get_pos(): Float;
     public function set_pos( v: Float ): Float;
     public function get_size(): Int;

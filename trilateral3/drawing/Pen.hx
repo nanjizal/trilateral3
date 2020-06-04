@@ -1,6 +1,8 @@
 package trilateral3.drawing;
 import trilateral3.drawing.DrawAbstract;
 import trilateral3.drawing.ColorAbstract;
+import trilateral3.drawing.TriangleAbstract;
+import trilateral3.drawing.Color3Abstract;
 import trilateral3.shape.IndexRange;
 import trilateral3.geom.FlatColorTriangles;
 import trilateral3.matrix.Vertex;
@@ -128,6 +130,22 @@ class Pen {
         colorType.pos = v;
         return v;
     }
+    /**
+     * Only optionally available use with care, works with PenNodule.
+     */
+    public var triangleCurrent( get, never ): TriangleAbstract;
+    inline
+    function get_triangleCurrent(): TriangleAbstract {
+        return drawType.triangleCurrent;
+    } 
+    /**
+     * Only possible if using interleave data structure !! use with care.
+     */
+    public var color3Current( get, never ): Color3Abstract;
+    inline
+    function get_color3Current(): Color3Abstract {
+        return colorType.color3current;
+    } 
     inline public
     function copyRange( otherPen: Pen, startEnd: IndexRange, vec: Vertex ): IndexRange     {
         var start = this.pos;
