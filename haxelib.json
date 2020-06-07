@@ -7,5 +7,6 @@
     "version"      : "0.0.3",
     "releasenote"  : "See https://github.com/nanjizal/trilateral3/blob/master/CHANGELOG.md",
     "contributors" : ["Nanjizal"],
+    "classPath"    : "src",
     "dependencies" : {}
 }

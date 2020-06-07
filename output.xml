@@ -18314,19 +18314,19 @@
 	<x path="pallette.Wheel24"/>
 </f></next>
 	</class>
-	<class path="trilateral3.DocTrilateral3" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/DocTrilateral3.hx">
-		<main public="1" set="method" line="16" static="1">
+	<class path="trilateral3.DocTrilateral3" params="" file="src/trilateral3/DocTrilateral3.hx">
+		<main public="1" set="method" line="18" static="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":keep"/></meta>
 		</main>
-		<new public="1" set="method" line="19"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="21"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":dox"><e>hide</e></m></meta>
 	</class>
-	<class path="trilateral3.Trilateral" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/Trilateral.hx">
+	<class path="trilateral3.Trilateral" params="" file="src/trilateral3/Trilateral.hx">
 		<transformMatrix public="1" static="1"><c path="trilateral3.matrix.MatrixDozen"/></transformMatrix>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<class path="trilateral3.color.ColorHelper" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorHelper.hx">
+	<class path="trilateral3.color.ColorHelper" params="" file="src/trilateral3/color/ColorHelper.hx">
 		<getBlack_ public="1" expr="getBlack">
 			<f a="r:g:b">
 				<x path="Float"/>
@@ -18413,7 +18413,7 @@
 			<meta><m n=":compilerGenerated"/></meta>
 		</new>
 	</class>
-	<class path="trilateral3.color._ColorHelper.ColorHelper_Statics_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorHelper.hx" private="1" module="trilateral3.color.ColorHelper" final="1">
+	<class path="trilateral3.color._ColorHelper.ColorHelper_Statics_" params="" file="src/trilateral3/color/ColorHelper.hx" private="1" module="trilateral3.color.ColorHelper" final="1">
 		<blueChannel public="1" get="inline" set="null" line="39" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
@@ -18467,7 +18467,7 @@
 </f></getBlack>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<abstract path="trilateral3.color.ColorInt" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorInt.hx">
+	<abstract path="trilateral3.color.ColorInt" params="" file="src/trilateral3/color/ColorInt.hx">
 		<from>
 			<icast><x path="Int"/></icast>
 			<icast field="fromARGB"><c path="trilateral3.structure.ARGB"/></icast>
@@ -18479,7 +18479,7 @@
 			<icast field="toARGB"><c path="trilateral3.structure.ARGB"/></icast>
 			<icast field="toCYMK"><c path="trilateral3.structure.CYMKA"/></icast>
 		</to>
-		<impl><class path="trilateral3.color._ColorInt.ColorInt_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorInt.hx" private="1" module="trilateral3.color.ColorInt" final="1">
+		<impl><class path="trilateral3.color._ColorInt.ColorInt_Impl_" params="" file="src/trilateral3/color/ColorInt.hx" private="1" module="trilateral3.color.ColorInt" final="1">
 	<_new public="1" get="inline" set="null" line="7" static="1">
 		<f a="v">
 			<x path="Int"/>
@@ -18694,7 +18694,7 @@
 </f></CYMKA_ARGB>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.color._ColorInt.ColorInt_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/color/ColorInt.hx" private="1" module="trilateral3.color.ColorInt" final="1">
+	<class path="trilateral3.color._ColorInt.ColorInt_Impl_" params="" file="src/trilateral3/color/ColorInt.hx" private="1" module="trilateral3.color.ColorInt" final="1">
 		<_new public="1" get="inline" set="null" line="7" static="1">
 			<f a="v">
 				<x path="Int"/>
@@ -18908,12 +18908,12 @@
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
 	</class>
-	<abstract path="trilateral3.drawing.Color3Abstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Abstract.hx">
+	<abstract path="trilateral3.drawing.Color3Abstract" params="" file="src/trilateral3/drawing/Color3Abstract.hx">
 		<from><icast><t path="trilateral3.drawing.Color3Type"/></icast></from>
 		<this><t path="trilateral3.drawing.Color3Type"/></this>
 		<to><icast><t path="trilateral3.drawing.Color3Type"/></icast></to>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.drawing._Color3Abstract.Color3Abstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Abstract.hx" private="1" module="trilateral3.drawing.Color3Abstract" final="1">
+		<impl><class path="trilateral3.drawing._Color3Abstract.Color3Abstract_Impl_" params="" file="src/trilateral3/drawing/Color3Abstract.hx" private="1" module="trilateral3.drawing.Color3Abstract" final="1">
 	<_new public="1" get="inline" set="null" line="5" static="1">
 		<f a="color3Type">
 			<t path="trilateral3.drawing.Color3Type"/>
@@ -18995,7 +18995,7 @@
 	</get_argbC>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.drawing._Color3Abstract.Color3Abstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Abstract.hx" private="1" module="trilateral3.drawing.Color3Abstract" final="1">
+	<class path="trilateral3.drawing._Color3Abstract.Color3Abstract_Impl_" params="" file="src/trilateral3/drawing/Color3Abstract.hx" private="1" module="trilateral3.drawing.Color3Abstract" final="1">
 		<_new public="1" get="inline" set="null" line="5" static="1">
 			<f a="color3Type">
 				<t path="trilateral3.drawing.Color3Type"/>
@@ -19076,7 +19076,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_argbC>
 	</class>
-	<typedef path="trilateral3.drawing.Color3Type" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Color3Type.hx"><a>
+	<typedef path="trilateral3.drawing.Color3Type" params="" file="src/trilateral3/drawing/Color3Type.hx"><a>
 	<set_argbC set="method"><f a="col">
 	<x path="Int"/>
 	<x path="Int"/>
@@ -19097,12 +19097,12 @@
 	<get_argbB set="method"><f a=""><x path="Int"/></f></get_argbB>
 	<get_argbA set="method"><f a=""><x path="Int"/></f></get_argbA>
 </a></typedef>
-	<abstract path="trilateral3.drawing.ColorAbstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/ColorAbstract.hx">
+	<abstract path="trilateral3.drawing.ColorAbstract" params="" file="src/trilateral3/drawing/ColorAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.ColorType"/></icast></from>
 		<this><t path="trilateral3.drawing.ColorType"/></this>
 		<to><icast><t path="trilateral3.drawing.ColorType"/></icast></to>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.drawing._ColorAbstract.ColorAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/ColorAbstract.hx" private="1" module="trilateral3.drawing.ColorAbstract" final="1">
+		<impl><class path="trilateral3.drawing._ColorAbstract.ColorAbstract_Impl_" params="" file="src/trilateral3/drawing/ColorAbstract.hx" private="1" module="trilateral3.drawing.ColorAbstract" final="1">
 	<_new public="1" get="inline" set="null" line="4" static="1">
 		<f a="colorType">
 			<t path="trilateral3.drawing.ColorType"/>
@@ -19153,7 +19153,7 @@
 	</get_size>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.drawing._ColorAbstract.ColorAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/ColorAbstract.hx" private="1" module="trilateral3.drawing.ColorAbstract" final="1">
+	<class path="trilateral3.drawing._ColorAbstract.ColorAbstract_Impl_" params="" file="src/trilateral3/drawing/ColorAbstract.hx" private="1" module="trilateral3.drawing.ColorAbstract" final="1">
 		<_new public="1" get="inline" set="null" line="4" static="1">
 			<f a="colorType">
 				<t path="trilateral3.drawing.ColorType"/>
@@ -19203,7 +19203,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_size>
 	</class>
-	<typedef path="trilateral3.drawing.ColorType" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/ColorType.hx"><a>
+	<typedef path="trilateral3.drawing.ColorType" params="" file="src/trilateral3/drawing/ColorType.hx"><a>
 	<set_size set="method"><f a="v">
 	<x path="Int"/>
 	<x path="Int"/>
@@ -19231,7 +19231,7 @@
 		<meta><m n=":optional"/></meta>
 	</color3current>
 </a></typedef>
-	<class path="trilateral3.drawing.Contour" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Contour.hx">
+	<class path="trilateral3.drawing.Contour" params="" file="src/trilateral3/drawing/Contour.hx">
 		<smallDotScale get="inline" set="null" expr="0.07" line="95" static="1">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.07</e></m></meta>
@@ -19531,12 +19531,12 @@
 		</new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<abstract path="trilateral3.drawing.DrawAbstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/DrawAbstract.hx">
+	<abstract path="trilateral3.drawing.DrawAbstract" params="" file="src/trilateral3/drawing/DrawAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.DrawType"/></icast></from>
 		<this><t path="trilateral3.drawing.DrawType"/></this>
 		<to><icast><t path="trilateral3.drawing.DrawType"/></icast></to>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.drawing._DrawAbstract.DrawAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/DrawAbstract.hx" private="1" module="trilateral3.drawing.DrawAbstract" final="1">
+		<impl><class path="trilateral3.drawing._DrawAbstract.DrawAbstract_Impl_" params="" file="src/trilateral3/drawing/DrawAbstract.hx" private="1" module="trilateral3.drawing.DrawAbstract" final="1">
 	<_new public="1" get="inline" set="null" line="4" static="1">
 		<f a="drawType">
 			<t path="trilateral3.drawing.DrawType"/>
@@ -19587,7 +19587,7 @@
 	</get_size>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.drawing._DrawAbstract.DrawAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/DrawAbstract.hx" private="1" module="trilateral3.drawing.DrawAbstract" final="1">
+	<class path="trilateral3.drawing._DrawAbstract.DrawAbstract_Impl_" params="" file="src/trilateral3/drawing/DrawAbstract.hx" private="1" module="trilateral3.drawing.DrawAbstract" final="1">
 		<_new public="1" get="inline" set="null" line="4" static="1">
 			<f a="drawType">
 				<t path="trilateral3.drawing.DrawType"/>
@@ -19637,7 +19637,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_size>
 	</class>
-	<typedef path="trilateral3.drawing.DrawType" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/DrawType.hx"><a>
+	<typedef path="trilateral3.drawing.DrawType" params="" file="src/trilateral3/drawing/DrawType.hx"><a>
 	<triangleCurrent>
 		<x path="Null"><x path="trilateral3.drawing.TriangleAbstract"/></x>
 		<meta><m n=":optional"/></meta>
@@ -19677,13 +19677,13 @@
 	<get_pos set="method"><f a=""><x path="Float"/></f></get_pos>
 	<getTriangle3D><f a=""><c path="trilateral3.structure.Triangle3D"/></f></getTriangle3D>
 </a></typedef>
-	<class path="trilateral3.drawing._Fill.Fill_Statics_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Fill.hx" private="1" module="trilateral3.drawing.Fill" final="1"><triangulate public="1" set="method" line="11" static="1"><f a="pen:sketch:fillForm">
+	<class path="trilateral3.drawing._Fill.Fill_Statics_" params="" file="src/trilateral3/drawing/Fill.hx" private="1" module="trilateral3.drawing.Fill" final="1"><triangulate public="1" set="method" line="11" static="1"><f a="pen:sketch:fillForm">
 	<c path="trilateral3.drawing.Pen"/>
 	<c path="trilateral3.drawing.Sketch"/>
 	<x path="trilateral3.drawing.StyleFill"/>
 	<x path="Void"/>
 </f></triangulate></class>
-	<class path="trilateral3.drawing.Pen" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Pen.hx">
+	<class path="trilateral3.drawing.Pen" params="" file="src/trilateral3/drawing/Pen.hx">
 		<rounded public="1" expr="30">
 			<x path="Float"/>
 			<meta><m n=":value"><e>30</e></m></meta>
@@ -19827,13 +19827,13 @@
 </f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<typedef path="trilateral3.drawing.Dim" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Sketch.hx" module="trilateral3.drawing.Sketch"><a>
+	<typedef path="trilateral3.drawing.Dim" params="" file="src/trilateral3/drawing/Sketch.hx" module="trilateral3.drawing.Sketch"><a>
 	<minY><x path="Float"/></minY>
 	<minX><x path="Float"/></minX>
 	<maxY><x path="Float"/></maxY>
 	<maxX><x path="Float"/></maxX>
 </a></typedef>
-	<class path="trilateral3.drawing.Sketch" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/Sketch.hx">
+	<class path="trilateral3.drawing.Sketch" params="" file="src/trilateral3/drawing/Sketch.hx">
 		<implements path="justPath.IPathContext"/>
 		<create public="1" get="inline" set="null" line="80" static="1">
 			<f a="drawType_:colorType_:sketchForm_:?endLine_" v=":::no">
@@ -20004,12 +20004,12 @@
 			<meta><m n=":value"><e>{ endLine_ : no }</e></m></meta>
 		</new>
 	</class>
-	<abstract path="trilateral3.drawing.StyleEndLine" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleEndLine.hx">
+	<abstract path="trilateral3.drawing.StyleEndLine" params="" file="src/trilateral3/drawing/StyleEndLine.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="trilateral3.drawing._StyleEndLine.StyleEndLine_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleEndLine.hx" private="1" module="trilateral3.drawing.StyleEndLine" extern="1" final="1">
+		<impl><class path="trilateral3.drawing._StyleEndLine.StyleEndLine_Impl_" params="" file="src/trilateral3/drawing/StyleEndLine.hx" private="1" module="trilateral3.drawing.StyleEndLine" extern="1" final="1">
 	<no public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 		<x path="trilateral3.drawing.StyleEndLine"/>
 		<meta>
@@ -20045,7 +20045,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.drawing._StyleEndLine.StyleEndLine_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleEndLine.hx" private="1" module="trilateral3.drawing.StyleEndLine" extern="1" final="1">
+	<class path="trilateral3.drawing._StyleEndLine.StyleEndLine_Impl_" params="" file="src/trilateral3/drawing/StyleEndLine.hx" private="1" module="trilateral3.drawing.StyleEndLine" extern="1" final="1">
 		<no public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 			<x path="trilateral3.drawing.StyleEndLine"/>
 			<meta>
@@ -20080,12 +20080,12 @@
 		</both>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="trilateral3.drawing.StyleFill" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleFill.hx">
+	<abstract path="trilateral3.drawing.StyleFill" params="" file="src/trilateral3/drawing/StyleFill.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="trilateral3.drawing._StyleFill.StyleFill_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleFill.hx" private="1" module="trilateral3.drawing.StyleFill" extern="1" final="1">
+		<impl><class path="trilateral3.drawing._StyleFill.StyleFill_Impl_" params="" file="src/trilateral3/drawing/StyleFill.hx" private="1" module="trilateral3.drawing.StyleFill" extern="1" final="1">
 	<tess2 public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 		<x path="trilateral3.drawing.StyleFill"/>
 		<meta>
@@ -20113,7 +20113,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.drawing._StyleFill.StyleFill_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleFill.hx" private="1" module="trilateral3.drawing.StyleFill" extern="1" final="1">
+	<class path="trilateral3.drawing._StyleFill.StyleFill_Impl_" params="" file="src/trilateral3/drawing/StyleFill.hx" private="1" module="trilateral3.drawing.StyleFill" extern="1" final="1">
 		<tess2 public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 			<x path="trilateral3.drawing.StyleFill"/>
 			<meta>
@@ -20140,12 +20140,12 @@
 		</poly2tri>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="trilateral3.drawing.StyleSketch" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleSketch.hx">
+	<abstract path="trilateral3.drawing.StyleSketch" params="" file="src/trilateral3/drawing/StyleSketch.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="trilateral3.drawing._StyleSketch.StyleSketch_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleSketch.hx" private="1" module="trilateral3.drawing.StyleSketch" extern="1" final="1">
+		<impl><class path="trilateral3.drawing._StyleSketch.StyleSketch_Impl_" params="" file="src/trilateral3/drawing/StyleSketch.hx" private="1" module="trilateral3.drawing.StyleSketch" extern="1" final="1">
 	<Tracer public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 		<x path="trilateral3.drawing.StyleSketch"/>
 		<meta>
@@ -20221,7 +20221,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.drawing._StyleSketch.StyleSketch_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/StyleSketch.hx" private="1" module="trilateral3.drawing.StyleSketch" extern="1" final="1">
+	<class path="trilateral3.drawing._StyleSketch.StyleSketch_Impl_" params="" file="src/trilateral3/drawing/StyleSketch.hx" private="1" module="trilateral3.drawing.StyleSketch" extern="1" final="1">
 		<Tracer public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 			<x path="trilateral3.drawing.StyleSketch"/>
 			<meta>
@@ -20296,12 +20296,12 @@
 		</RoundEnd>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="trilateral3.drawing.TriangleAbstract" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleAbstract.hx">
+	<abstract path="trilateral3.drawing.TriangleAbstract" params="" file="src/trilateral3/drawing/TriangleAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.TriangleType"/></icast></from>
 		<this><t path="trilateral3.drawing.TriangleType"/></this>
 		<to><icast><t path="trilateral3.drawing.TriangleType"/></icast></to>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.drawing._TriangleAbstract.TriangleAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleAbstract.hx" private="1" module="trilateral3.drawing.TriangleAbstract" final="1">
+		<impl><class path="trilateral3.drawing._TriangleAbstract.TriangleAbstract_Impl_" params="" file="src/trilateral3/drawing/TriangleAbstract.hx" private="1" module="trilateral3.drawing.TriangleAbstract" final="1">
 	<_new public="1" get="inline" set="null" line="5" static="1">
 		<f a="triangleType">
 			<t path="trilateral3.drawing.TriangleType"/>
@@ -20404,7 +20404,7 @@
 	</set_z>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.drawing._TriangleAbstract.TriangleAbstract_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleAbstract.hx" private="1" module="trilateral3.drawing.TriangleAbstract" final="1">
+	<class path="trilateral3.drawing._TriangleAbstract.TriangleAbstract_Impl_" params="" file="src/trilateral3/drawing/TriangleAbstract.hx" private="1" module="trilateral3.drawing.TriangleAbstract" final="1">
 		<_new public="1" get="inline" set="null" line="5" static="1">
 			<f a="triangleType">
 				<t path="trilateral3.drawing.TriangleType"/>
@@ -20506,7 +20506,7 @@
 			<meta><m n=":impl"/></meta>
 		</set_z>
 	</class>
-	<typedef path="trilateral3.drawing.TriangleType" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/drawing/TriangleType.hx"><a>
+	<typedef path="trilateral3.drawing.TriangleType" params="" file="src/trilateral3/drawing/TriangleType.hx"><a>
 	<triangle><f a="ax_:ay_:az_:bx_:by_:bz_:cx_:cy_:cz_">
 	<x path="Float"/>
 	<x path="Float"/>
@@ -20571,10 +20571,10 @@
 	<x path="Bool"/>
 </f></fullHit>
 </a></typedef>
-	<abstract path="trilateral3.geom.FlatColorTriangles" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColorTriangles.hx">
+	<abstract path="trilateral3.geom.FlatColorTriangles" params="" file="src/trilateral3/geom/FlatColorTriangles.hx">
 		<this><x path="dsHelper.flatInterleave.FloatColorTriangles"/></this>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.geom._FlatColorTriangles.FlatColorTriangles_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColorTriangles.hx" private="1" module="trilateral3.geom.FlatColorTriangles" final="1">
+		<impl><class path="trilateral3.geom._FlatColorTriangles.FlatColorTriangles_Impl_" params="" file="src/trilateral3/geom/FlatColorTriangles.hx" private="1" module="trilateral3.geom.FlatColorTriangles" final="1">
 	<_new public="1" get="inline" set="null" line="13" static="1">
 		<f a="len">
 			<x path="Int"/>
@@ -20627,7 +20627,7 @@
 	<meta><m n=":directlyUsed"/></meta>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.geom._FlatColorTriangles.FlatColorTriangles_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColorTriangles.hx" private="1" module="trilateral3.geom.FlatColorTriangles" final="1">
+	<class path="trilateral3.geom._FlatColorTriangles.FlatColorTriangles_Impl_" params="" file="src/trilateral3/geom/FlatColorTriangles.hx" private="1" module="trilateral3.geom.FlatColorTriangles" final="1">
 		<_new public="1" get="inline" set="null" line="13" static="1">
 			<f a="len">
 				<x path="Int"/>
@@ -20679,10 +20679,10 @@
 		</getTriInt>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<abstract path="trilateral3.geom.FlatColors" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColors.hx">
+	<abstract path="trilateral3.geom.FlatColors" params="" file="src/trilateral3/geom/FlatColors.hx">
 		<this><x path="dsHelper.flat.f32.Float32FlatRGBA"/></this>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.geom._FlatColors.FlatColors_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColors.hx" private="1" module="trilateral3.geom.FlatColors" final="1">
+		<impl><class path="trilateral3.geom._FlatColors.FlatColors_Impl_" params="" file="src/trilateral3/geom/FlatColors.hx" private="1" module="trilateral3.geom.FlatColors" final="1">
 	<_new public="1" get="inline" set="null" line="12" static="1">
 		<f a="len">
 			<x path="Int"/>
@@ -20702,7 +20702,7 @@
 	</getTriInt>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.geom._FlatColors.FlatColors_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatColors.hx" private="1" module="trilateral3.geom.FlatColors" final="1">
+	<class path="trilateral3.geom._FlatColors.FlatColors_Impl_" params="" file="src/trilateral3/geom/FlatColors.hx" private="1" module="trilateral3.geom.FlatColors" final="1">
 		<_new public="1" get="inline" set="null" line="12" static="1">
 			<f a="len">
 				<x path="Int"/>
@@ -20721,10 +20721,10 @@
 			<meta><m n=":impl"/></meta>
 		</getTriInt>
 	</class>
-	<abstract path="trilateral3.geom.FlatTriangles" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatTriangles.hx">
+	<abstract path="trilateral3.geom.FlatTriangles" params="" file="src/trilateral3/geom/FlatTriangles.hx">
 		<this><x path="dsHelper.flat.f32.Float32FlatTriangle"/></this>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.geom._FlatTriangles.FlatTriangles_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatTriangles.hx" private="1" module="trilateral3.geom.FlatTriangles" final="1">
+		<impl><class path="trilateral3.geom._FlatTriangles.FlatTriangles_Impl_" params="" file="src/trilateral3/geom/FlatTriangles.hx" private="1" module="trilateral3.geom.FlatTriangles" final="1">
 	<_new public="1" get="inline" set="null" line="11" static="1">
 		<f a="len">
 			<x path="Int"/>
@@ -20769,7 +20769,7 @@
 	</getTriangle3D>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.geom._FlatTriangles.FlatTriangles_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/FlatTriangles.hx" private="1" module="trilateral3.geom.FlatTriangles" final="1">
+	<class path="trilateral3.geom._FlatTriangles.FlatTriangles_Impl_" params="" file="src/trilateral3/geom/FlatTriangles.hx" private="1" module="trilateral3.geom.FlatTriangles" final="1">
 		<_new public="1" get="inline" set="null" line="11" static="1">
 			<f a="len">
 				<x path="Int"/>
@@ -20813,7 +20813,7 @@
 			<meta><m n=":impl"/></meta>
 		</getTriangle3D>
 	</class>
-	<class path="trilateral3.geom._Transformer.Transformer_Statics_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/geom/Transformer.hx" private="1" module="trilateral3.geom.Transformer" final="1">
+	<class path="trilateral3.geom._Transformer.Transformer_Statics_" params="" file="src/trilateral3/geom/Transformer.hx" private="1" module="trilateral3.geom.Transformer" final="1">
 		<unitTransform public="1" get="inline" set="null" line="24" static="1"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></unitTransform>
 		<transformVertex public="1" get="inline" set="null" line="16" static="1"><f a="v:t">
 	<c path="trilateral3.matrix.Vertex"/>
@@ -20826,7 +20826,7 @@
 	<c path="trilateral3.matrix.MatrixDozen"/>
 </f></multiplyTransform>
 	</class>
-	<class path="trilateral3.math.Algebra" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/math/Algebra.hx">
+	<class path="trilateral3.math.Algebra" params="" file="src/trilateral3/math/Algebra.hx">
 		<adjustWinding_ public="1" expr="adjustWinding">
 			<f a="A_:B_:C_">
 				<c path="trilateral3.structure.XY"/>
@@ -21038,7 +21038,7 @@
 			<meta><m n=":compilerGenerated"/></meta>
 		</new>
 	</class>
-	<class path="trilateral3.math._Algebra.Algebra_Statics_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/math/Algebra.hx" private="1" module="trilateral3.math.Algebra" final="1">
+	<class path="trilateral3.math._Algebra.Algebra_Statics_" params="" file="src/trilateral3/math/Algebra.hx" private="1" module="trilateral3.math.Algebra" final="1">
 		<perp public="1" get="inline" set="null" line="164" static="1"><f a="a:b">
 	<c path="trilateral3.structure.XY"/>
 	<c path="trilateral3.structure.XY"/>
@@ -21195,7 +21195,7 @@
 </f></adjustWinding>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<class path="trilateral3.matrix.MatrixDozen" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/matrix/MatrixDozen.hx">
+	<class path="trilateral3.matrix.MatrixDozen" params="" file="src/trilateral3/matrix/MatrixDozen.hx">
 		<a public="1" expr="0.">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.</e></m></meta>
@@ -21264,7 +21264,7 @@
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.matrix.Vertex" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/matrix/Vertex.hx">
+	<class path="trilateral3.matrix.Vertex" params="" file="src/trilateral3/matrix/Vertex.hx">
 		<x public="1" expr="0.">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.</e></m></meta>
@@ -21300,7 +21300,7 @@
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.nodule.PenNodule" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/nodule/PenNodule.hx">
+	<class path="trilateral3.nodule.PenNodule" params="" file="src/trilateral3/nodule/PenNodule.hx">
 		<largeEnough final="1" set="null" expr="20000000" line="12" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>20000000</e></m></meta>
@@ -21317,12 +21317,12 @@
 		<get_size public="1" get="inline" set="null" line="88"><f a=""><x path="Int"/></f></get_size>
 		<new public="1" set="method" line="15"><f a=""><x path="Void"/></f></new>
 	</class>
-	<abstract path="trilateral3.shape.IndexRange" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/IndexRange.hx">
+	<abstract path="trilateral3.shape.IndexRange" params="" file="src/trilateral3/shape/IndexRange.hx">
 		<from><icast><c path="trilateral3.structure.StartEnd"/></icast></from>
 		<this><c path="trilateral3.structure.StartEnd"/></this>
 		<to><icast><c path="trilateral3.structure.StartEnd"/></icast></to>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.shape._IndexRange.IndexRange_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/IndexRange.hx" private="1" module="trilateral3.shape.IndexRange" final="1">
+		<impl><class path="trilateral3.shape._IndexRange.IndexRange_Impl_" params="" file="src/trilateral3/shape/IndexRange.hx" private="1" module="trilateral3.shape.IndexRange" final="1">
 	<_new public="1" set="method" line="5" static="1">
 		<f a="startEnd">
 			<c path="trilateral3.structure.StartEnd"/>
@@ -21349,10 +21349,21 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</add>
+	<length public="1" get="accessor" set="null" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</length>
+	<get_length get="inline" set="null" line="18" static="1">
+		<f a="this">
+			<c path="trilateral3.structure.StartEnd"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_length>
 	<meta><m n=":directlyUsed"/></meta>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.shape._IndexRange.IndexRange_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/IndexRange.hx" private="1" module="trilateral3.shape.IndexRange" final="1">
+	<class path="trilateral3.shape._IndexRange.IndexRange_Impl_" params="" file="src/trilateral3/shape/IndexRange.hx" private="1" module="trilateral3.shape.IndexRange" final="1">
 		<_new public="1" set="method" line="5" static="1">
 			<f a="startEnd">
 				<c path="trilateral3.structure.StartEnd"/>
@@ -21379,14 +21390,25 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</add>
+		<length public="1" get="accessor" set="null" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</length>
+		<get_length get="inline" set="null" line="18" static="1">
+			<f a="this">
+				<c path="trilateral3.structure.StartEnd"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_length>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<abstract path="trilateral3.shape.PolyEdge" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/PolyEdge.hx">
+	<abstract path="trilateral3.shape.PolyEdge" params="" file="src/trilateral3/shape/PolyEdge.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="trilateral3.shape._PolyEdge.PolyEdge_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/PolyEdge.hx" private="1" module="trilateral3.shape.PolyEdge" extern="1" final="1">
+		<impl><class path="trilateral3.shape._PolyEdge.PolyEdge_Impl_" params="" file="src/trilateral3/shape/PolyEdge.hx" private="1" module="trilateral3.shape.PolyEdge" extern="1" final="1">
 	<triangle public="1" get="inline" set="null" expr="cast 3" line="3" static="1">
 		<x path="trilateral3.shape.PolyEdge"/>
 		<meta>
@@ -21654,7 +21676,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.shape._PolyEdge.PolyEdge_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/PolyEdge.hx" private="1" module="trilateral3.shape.PolyEdge" extern="1" final="1">
+	<class path="trilateral3.shape._PolyEdge.PolyEdge_Impl_" params="" file="src/trilateral3/shape/PolyEdge.hx" private="1" module="trilateral3.shape.PolyEdge" extern="1" final="1">
 		<triangle public="1" get="inline" set="null" expr="cast 3" line="3" static="1">
 			<x path="trilateral3.shape.PolyEdge"/>
 			<meta>
@@ -21921,12 +21943,12 @@
 		</myriagon>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="trilateral3.shape.Regular" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Regular.hx">
+	<abstract path="trilateral3.shape.Regular" params="" file="src/trilateral3/shape/Regular.hx">
 		<from><icast><c path="trilateral3.drawing.Pen"/></icast></from>
 		<this><c path="trilateral3.drawing.Pen"/></this>
 		<to><icast><c path="trilateral3.drawing.Pen"/></icast></to>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.shape._Regular.Regular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Regular.hx" private="1" module="trilateral3.shape.Regular" final="1">
+		<impl><class path="trilateral3.shape._Regular.Regular_Impl_" params="" file="src/trilateral3/shape/Regular.hx" private="1" module="trilateral3.shape.Regular" final="1">
 	<_new public="1" set="method" line="7" static="1">
 		<f a="pen_">
 			<c path="trilateral3.drawing.Pen"/>
@@ -22164,7 +22186,7 @@
 	</polygonMultiCorners>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.shape._Regular.Regular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Regular.hx" private="1" module="trilateral3.shape.Regular" final="1">
+	<class path="trilateral3.shape._Regular.Regular_Impl_" params="" file="src/trilateral3/shape/Regular.hx" private="1" module="trilateral3.shape.Regular" final="1">
 		<_new public="1" set="method" line="7" static="1">
 			<f a="pen_">
 				<c path="trilateral3.drawing.Pen"/>
@@ -22401,7 +22423,7 @@
 			</meta>
 		</polygonMultiCorners>
 	</class>
-	<class path="trilateral3.shape.Shaper" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Shaper.hx">
+	<class path="trilateral3.shape.Shaper" params="" file="src/trilateral3/shape/Shaper.hx">
 		<add2DTriangle_ public="1" expr="add2DTriangle">
 			<f a="drawType:ax:ay:bx:by:cx:cy">
 				<t path="trilateral3.drawing.DrawType"/>
@@ -22759,7 +22781,7 @@
 			<meta><m n=":compilerGenerated"/></meta>
 		</new>
 	</class>
-	<class path="trilateral3.shape._Shaper.Shaper_Statics_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/Shaper.hx" private="1" module="trilateral3.shape.Shaper" final="1">
+	<class path="trilateral3.shape._Shaper.Shaper_Statics_" params="" file="src/trilateral3/shape/Shaper.hx" private="1" module="trilateral3.shape.Shaper" final="1">
 		<spiralLines public="1" get="inline" set="null" line="720" static="1"><f a="drawType:x:y:radius:nolines:startWid:stepWid">
 	<t path="trilateral3.drawing.DrawType"/>
 	<x path="Float"/>
@@ -23098,12 +23120,12 @@ the methods return the number of triangles added.</haxe_doc>
 		</add2DTriangle>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<abstract path="trilateral3.shape.StyleRegular" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/StyleRegular.hx">
+	<abstract path="trilateral3.shape.StyleRegular" params="" file="src/trilateral3/shape/StyleRegular.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="trilateral3.shape._StyleRegular.StyleRegular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/StyleRegular.hx" private="1" module="trilateral3.shape.StyleRegular" extern="1" final="1">
+		<impl><class path="trilateral3.shape._StyleRegular.StyleRegular_Impl_" params="" file="src/trilateral3/shape/StyleRegular.hx" private="1" module="trilateral3.shape.StyleRegular" extern="1" final="1">
 	<TRIANGLE public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 		<x path="trilateral3.shape.StyleRegular"/>
 		<meta>
@@ -23171,7 +23193,7 @@ the methods return the number of triangles added.</haxe_doc>
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.shape._StyleRegular.StyleRegular_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/StyleRegular.hx" private="1" module="trilateral3.shape.StyleRegular" extern="1" final="1">
+	<class path="trilateral3.shape._StyleRegular.StyleRegular_Impl_" params="" file="src/trilateral3/shape/StyleRegular.hx" private="1" module="trilateral3.shape.StyleRegular" extern="1" final="1">
 		<TRIANGLE public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
 			<x path="trilateral3.shape.StyleRegular"/>
 			<meta>
@@ -23238,12 +23260,12 @@ the methods return the number of triangles added.</haxe_doc>
 		</STAR>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="trilateral3.shape.xtra.DieSpots" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/xtra/DieSpots.hx">
+	<abstract path="trilateral3.shape.xtra.DieSpots" params="" file="src/trilateral3/shape/xtra/DieSpots.hx">
 		<from><icast><x path="trilateral3.shape.Regular"/></icast></from>
 		<this><x path="trilateral3.shape.Regular"/></this>
 		<to><icast><x path="trilateral3.shape.Regular"/></icast></to>
 		<meta><m n=":forward"/></meta>
-		<impl><class path="trilateral3.shape.xtra._DieSpots.DieSpots_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/xtra/DieSpots.hx" private="1" module="trilateral3.shape.xtra.DieSpots" final="1">
+		<impl><class path="trilateral3.shape.xtra._DieSpots.DieSpots_Impl_" params="" file="src/trilateral3/shape/xtra/DieSpots.hx" private="1" module="trilateral3.shape.xtra.DieSpots" final="1">
 	<_new public="1" set="method" line="9" static="1">
 		<f a="regular">
 			<x path="trilateral3.shape.Regular"/>
@@ -23431,7 +23453,7 @@ the methods return the number of triangles added.</haxe_doc>
 	</goldOne>
 </class></impl>
 	</abstract>
-	<class path="trilateral3.shape.xtra._DieSpots.DieSpots_Impl_" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/shape/xtra/DieSpots.hx" private="1" module="trilateral3.shape.xtra.DieSpots" final="1">
+	<class path="trilateral3.shape.xtra._DieSpots.DieSpots_Impl_" params="" file="src/trilateral3/shape/xtra/DieSpots.hx" private="1" module="trilateral3.shape.xtra.DieSpots" final="1">
 		<_new public="1" set="method" line="9" static="1">
 			<f a="regular">
 				<x path="trilateral3.shape.Regular"/>
@@ -23618,7 +23640,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<meta><m n=":impl"/></meta>
 		</goldOne>
 	</class>
-	<class path="trilateral3.structure.ARGB" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/ARGB.hx">
+	<class path="trilateral3.structure.ARGB" params="" file="src/trilateral3/structure/ARGB.hx">
 		<a public="1" expr="0.">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.</e></m></meta>
@@ -23648,7 +23670,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.structure.CYMKA" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/CYMKA.hx">
+	<class path="trilateral3.structure.CYMKA" params="" file="src/trilateral3/structure/CYMKA.hx">
 		<c public="1" expr="0.">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.</e></m></meta>
@@ -23686,7 +23708,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.structure.Quad2D" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/Quad2D.hx">
+	<class path="trilateral3.structure.Quad2D" params="" file="src/trilateral3/structure/Quad2D.hx">
 		<a public="1"><c path="trilateral3.structure.XY"/></a>
 		<b public="1"><c path="trilateral3.structure.XY"/></b>
 		<c public="1"><c path="trilateral3.structure.XY"/></c>
@@ -23703,7 +23725,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.structure.RegularShape" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/RegularShape.hx">
+	<class path="trilateral3.structure.RegularShape" params="" file="src/trilateral3/structure/RegularShape.hx">
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
 		<radius public="1"><x path="Float"/></radius>
@@ -23718,7 +23740,7 @@ the methods return the number of triangles added.</haxe_doc>
 </f></new>
 		<meta><m n=":structInit"/></meta>
 	</class>
-	<class path="trilateral3.structure.StartEnd" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/StartEnd.hx">
+	<class path="trilateral3.structure.StartEnd" params="" file="src/trilateral3/structure/StartEnd.hx">
 		<start public="1"><x path="Int"/></start>
 		<end public="1"><x path="Int"/></end>
 		<new public="1" set="method" line="6"><f a="start:end">
@@ -23731,7 +23753,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.structure.TriInt" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/TriInt.hx">
+	<class path="trilateral3.structure.TriInt" params="" file="src/trilateral3/structure/TriInt.hx">
 		<a public="1"><x path="Int"/></a>
 		<b public="1"><x path="Int"/></b>
 		<c public="1"><x path="Int"/></c>
@@ -23746,7 +23768,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.structure.Triangle3D" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/Triangle3D.hx">
+	<class path="trilateral3.structure.Triangle3D" params="" file="src/trilateral3/structure/Triangle3D.hx">
 		<a public="1"><c path="trilateral3.matrix.Vertex"/></a>
 		<b public="1"><c path="trilateral3.matrix.Vertex"/></b>
 		<c public="1"><c path="trilateral3.matrix.Vertex"/></c>
@@ -23761,7 +23783,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.structure.XY" params="" file="/usr/local/lib/haxeLibrary/trilateral3/git/trilateral3/structure/XY.hx">
+	<class path="trilateral3.structure.XY" params="" file="src/trilateral3/structure/XY.hx">
 		<x public="1" expr="0.">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.</e></m></meta>
