@@ -3,7 +3,7 @@ import trilateral3.drawing.Pen;
 import trilateral3.shape.Regular;
 import trilateral3.structure.RegularShape;
 //import geom.matrix.Matrix4x3;
-import pallette.ColorWheel24;
+import pallette.wheel.ColorWheel24;
 @:forward
 abstract DieSpots( Regular ) from Regular to Regular {
     public function new( regular: Regular ){

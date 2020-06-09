@@ -5,7 +5,7 @@ import trilateral3.shape.Shaper;
 import fracs.Pi2pi;
 import fracs.Fraction;
 import trilateral3.drawing.Pen;
-import pallette.ColorWheel24;
+import pallette.wheel.ColorWheel24;
 //import fracs.ZeroTo2pi;
 import fracs.Angles;
 //#if trilateral_includeSegments
