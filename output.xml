@@ -21301,7 +21301,7 @@
 			<m n=":structInit"/>
 		</meta>
 	</class>
-	<class path="trilateral3.nodule.Heaps2GNodule" params="" file="src/trilateral3/nodule/HeapG2Nodule.hx" module="trilateral3.nodule.HeapG2Nodule">
+	<class path="trilateral3.nodule.Heaps2GNodule" params="" file="src/trilateral3/nodule/HeapsG2Nodule.hx" module="trilateral3.nodule.HeapsG2Nodule">
 		<largeEnough final="1" set="null" expr="20000000" line="12" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>20000000</e></m></meta>
