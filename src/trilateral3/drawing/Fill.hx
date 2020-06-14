@@ -1,6 +1,6 @@
 package trilateral3.drawing;
 import org.poly2tri.VisiblePolygon;
-import hxGeomAlgo.Tess2;
+//import hxGeomAlgo.Tess2;
 import hxPolyK.PolyK;
 import dsHelper.iterArr.ArrayTriple;
 import dsHelper.iterArr.ArrayPairs;
@@ -14,6 +14,7 @@ function triangulate( pen: Pen, sketch: Sketch, fillForm: StyleFill ) {
     var p: Array<Array<Float>>;
     switch( fillForm ){
         case StyleFill.tess2:
+        /*
             sketch.pointsRewound();
             p = sketch.points;
             var res = Tess2.tesselate( p, null, ResultType.POLYGONS, 3 );
@@ -29,7 +30,7 @@ function triangulate( pen: Pen, sketch: Sketch, fillForm: StyleFill ) {
                                    , vert[ b ], vert[ b + 1 ]
                                    , vert[ c ], vert[ c + 1 ], -1 );
             }
-            
+            */
         case StyleFill.poly2tri:
             sketch.pointsNoEndOverlap();
             p = sketch.points;
