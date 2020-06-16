@@ -7,7 +7,7 @@ import trilateral3.drawing.ColorAbstract;
 import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.Color3Abstract;
 import trilateral3.geom.FlatColorTriangles;
-import haxe.io.Float32Array;
+import dsHelper.haxe.io.Float32Array;
 class HeapsG2Nodule {
     static final largeEnough    = 20000000;
     public var colorTriangles   = new FlatColorTriangles( largeEnough );

@@ -3,6 +3,8 @@
 -lib geom
 # angle and fraction code maybe refactor?
 -lib fracs
+-lib lime
+-lib nme
 # svg paths
 -lib justPath
 # contours
@@ -16,6 +18,7 @@
 
 -D trilateral3Doc
 -D doc-gen
+-D dsHelperDoc
 --macro include('trilateral3')
 -cp src
 -main trilateral3.DocTrilateral3
