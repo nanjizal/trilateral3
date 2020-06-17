@@ -28,6 +28,7 @@
 --macro allowPackage("flash")
 -D trilateral3Doc
 -D doc-gen
+-D lime-doc-gen
 -D dsHelperDoc
 --macro include('trilateral3')
 -cp src
