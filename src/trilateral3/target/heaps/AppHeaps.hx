@@ -8,18 +8,18 @@ import trilateral3.geom.FlatColorTriangles;
 
 import h2d.Graphics;
 
-class AppHeaps {//extends hxd.App {
+class AppHeaps extends hxd.App {
     public var pen: Pen;
-    //public var nodule = new PenNodule( false ); // same as PenNodule without transform.
+    public var nodule = new PenNodule( false ); // same as PenNodule without transform.
     public var width:  Int;
     public var height: Int;
     public var tri: FlatColorTriangles;
     var g:    h2d.Graphics; 
     //override
-    //function init() {
-        //internalSetup();
-        //firstDraw();
-        //}
+    function init() {
+        internalSetup();
+        firstDraw();
+    }
     
     inline
     function internalSetup(){

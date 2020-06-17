@@ -1,6 +1,4 @@
 package trilateral3.target.nme;
-@:dox(hide)
-#if (!js) // hide from dox because nme is not safe for dox
 import flash.Lib;
 import flash.display.Sprite;
 import flash.events.Event;
