@@ -12,12 +12,14 @@ class PenNodule {
     static final largeEnough    = 20000000;
     public var colorTriangles   = new FlatColorTriangles( largeEnough );
     public var pen: Pen;
-    public function new(){
-        // assume scaling of 1000.
-        var transform1000: MatrixDozen = { a : 0.001, b : 0, c : 0, d : -1
-                                         , e : 0,  f : -0.001, g : 0, h : 1
-                                         , i : 0, j : 0,k : 0.001, l : 0 };
-        Trilateral.transformMatrix = transform1000;
+    public function new( useGLScale: Bool = true ){
+        if( useGLScale ){
+            // assume scaling of 1000.
+            var transform1000: MatrixDozen = { a : 0.001, b : 0, c : 0, d : -1
+                                             , e : 0,  f : -0.001, g : 0, h : 1
+                                             , i : 0, j : 0,k : 0.001, l : 0 };
+            Trilateral.transformMatrix = transform1000;
+        }
         createPen();
     }
     public function createPen() {
