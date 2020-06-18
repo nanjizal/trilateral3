@@ -79,7 +79,7 @@ class AppOpenFL extends Sprite {
     }
     // override
     public
-    function drawRender(){
+    function renderDraw(){
         // draw stuff every frame
     }    
     inline

@@ -131,6 +131,20 @@ abstract ColorInt( Int ) to Int from Int {
                                        , Std.parseFloat( arr[2] )
                                        , Std.parseFloat( arr[3] ), alpha ) );
     }
+    // String CYMK typically created by ilustrator or eps export from flash
+    static public inline
+    function aiARGB( arr: Array<String>, alpha: Float = 1.0 ): ColorInt {
+        return new ColorInt( from_argb( alpha
+                                       , Std.parseFloat( arr[0] )
+                                       , Std.parseFloat( arr[1] )
+                                       , Std.parseFloat( arr[2] ) ) );
+    }
+    // String CYMK typically created by ilustrator or eps export from flash
+    static public inline
+    function aiGreyA( s: String, alpha: Float = 1.0 ): ColorInt {
+        var v = Std.parseFloat( s );
+        return new ColorInt( from_argb( alpha, v, v, v ) );
+    }
     // not strictly part of this class, but kind of useful rather than going through Int
     // because has structures prefer not in colorHelper?
     static public inline

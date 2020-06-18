@@ -10323,7 +10323,7 @@
 </f></set_shiftKey>
 		<updateAfterEvent public="1" set="method"><f a=""><x path="Void"/></f></updateAfterEvent>
 		<new public="1" set="method">
-			<f a="type:?bubbles:?cancelable:?charCodeValue:?keyCodeValue:?keyLocationValue:?ctrlKeyValue:?altKeyValue:?shiftKeyValue" v=":true:false:0:0:0:false:false:false">
+			<f a="type:?bubbles:?cancelable:?charCodeValue:?keyCodeValue:?keyLocationValue:?ctrlKeyValue:?altKeyValue:?shiftKeyValue" v=":true:false:0:0:flash.ui.KeyLocation.D_PAD:false:false:false">
 				<c path="String"/>
 				<x path="Bool"/>
 				<x path="Bool"/>
@@ -10335,7 +10335,7 @@
 				<x path="Bool"/>
 				<x path="Void"/>
 			</f>
-			<meta><m n=":value"><e>{ shiftKeyValue : false, altKeyValue : false, ctrlKeyValue : false, keyLocationValue : 0, keyCodeValue : 0, charCodeValue : 0, cancelable : false, bubbles : true }</e></m></meta>
+			<meta><m n=":value"><e>{ shiftKeyValue : false, altKeyValue : false, ctrlKeyValue : false, keyLocationValue : flash.ui.KeyLocation.D_PAD, keyCodeValue : 0, charCodeValue : 0, cancelable : false, bubbles : true }</e></m></meta>
 		</new>
 	</class>
 	<class path="flash.events.UncaughtErrorEvents" params="" file="/usr/local/lib/haxe/std/flash/events/UncaughtErrorEvents.hx" extern="1">
@@ -13803,9 +13803,7 @@
 		<new public="1" set="method"><f a=""><x path="Void"/></f></new>
 	</class>
 	<abstract path="flash.ui.KeyLocation" params="" file="/usr/local/lib/haxe/std/flash/ui/KeyLocation.hx">
-		<from><icast><x path="UInt"/></icast></from>
 		<this><x path="UInt"/></this>
-		<to><icast><x path="UInt"/></icast></to>
 		<meta>
 			<m n=":enum"/>
 			<m n=":native"><e>"flash.ui.KeyLocation"</e></m>
@@ -28258,11 +28256,27 @@
 		</f>
 		<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
 	</aiCYMKA>
-	<ARGB_CYMKA public="1" get="inline" set="null" line="136" static="1"><f a="v">
+	<aiARGB public="1" get="inline" set="null" line="135" static="1">
+		<f a="arr:?alpha" v=":1.0">
+			<c path="Array"><c path="String"/></c>
+			<x path="Float"/>
+			<x path="trilateral3.color.ColorInt"/>
+		</f>
+		<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
+	</aiARGB>
+	<aiGreyA public="1" get="inline" set="null" line="143" static="1">
+		<f a="s:?alpha" v=":1.0">
+			<c path="String"/>
+			<x path="Float"/>
+			<x path="trilateral3.color.ColorInt"/>
+		</f>
+		<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
+	</aiGreyA>
+	<ARGB_CYMKA public="1" get="inline" set="null" line="150" static="1"><f a="v">
 	<c path="trilateral3.structure.ARGB"/>
 	<c path="trilateral3.structure.CYMKA"/>
 </f></ARGB_CYMKA>
-	<CYMKA_ARGB public="1" get="inline" set="null" line="146" static="1"><f a="v">
+	<CYMKA_ARGB public="1" get="inline" set="null" line="160" static="1"><f a="v">
 	<c path="trilateral3.structure.CYMKA"/>
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
@@ -28473,11 +28487,27 @@
 			</f>
 			<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
 		</aiCYMKA>
-		<ARGB_CYMKA public="1" get="inline" set="null" line="136" static="1"><f a="v">
+		<aiARGB public="1" get="inline" set="null" line="135" static="1">
+			<f a="arr:?alpha" v=":1.0">
+				<c path="Array"><c path="String"/></c>
+				<x path="Float"/>
+				<x path="trilateral3.color.ColorInt"/>
+			</f>
+			<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
+		</aiARGB>
+		<aiGreyA public="1" get="inline" set="null" line="143" static="1">
+			<f a="s:?alpha" v=":1.0">
+				<c path="String"/>
+				<x path="Float"/>
+				<x path="trilateral3.color.ColorInt"/>
+			</f>
+			<meta><m n=":value"><e>{ alpha : 1.0 }</e></m></meta>
+		</aiGreyA>
+		<ARGB_CYMKA public="1" get="inline" set="null" line="150" static="1"><f a="v">
 	<c path="trilateral3.structure.ARGB"/>
 	<c path="trilateral3.structure.CYMKA"/>
 </f></ARGB_CYMKA>
-		<CYMKA_ARGB public="1" get="inline" set="null" line="146" static="1"><f a="v">
+		<CYMKA_ARGB public="1" get="inline" set="null" line="160" static="1"><f a="v">
 	<c path="trilateral3.structure.CYMKA"/>
 	<c path="trilateral3.structure.ARGB"/>
 </f></CYMKA_ARGB>
@@ -29401,6 +29431,82 @@
 </f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
+	<abstract path="trilateral3.drawing.AIColorType" params="" file="src/trilateral3/drawing/Sketch.hx" module="trilateral3.drawing.Sketch">
+		<from><icast><c path="String"/></icast></from>
+		<this><c path="String"/></this>
+		<to><icast><c path="String"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="trilateral3.drawing._Sketch.AIColorType_Impl_" params="" file="src/trilateral3/drawing/Sketch.hx" private="1" module="trilateral3.drawing.Sketch" extern="1" final="1">
+	<GRAY public="1" get="inline" set="null" expr="cast &quot;g&quot;" line="10" static="1">
+		<x path="trilateral3.drawing.AIColorType"/>
+		<meta>
+			<m n=":value"><e>cast "g"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</GRAY>
+	<CYMK public="1" get="inline" set="null" expr="cast &quot;k&quot;" line="11" static="1">
+		<x path="trilateral3.drawing.AIColorType"/>
+		<meta>
+			<m n=":value"><e>cast "k"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</CYMK>
+	<RGB public="1" get="inline" set="null" expr="cast &quot;xa&quot;" line="12" static="1">
+		<x path="trilateral3.drawing.AIColorType"/>
+		<meta>
+			<m n=":value"><e>cast "xa"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</RGB>
+	<EPS_RGB public="1" get="inline" set="null" expr="cast &quot;r&quot;" line="13" static="1">
+		<x path="trilateral3.drawing.AIColorType"/>
+		<meta>
+			<m n=":value"><e>cast "r"</e></m>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</EPS_RGB>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="trilateral3.drawing._Sketch.AIColorType_Impl_" params="" file="src/trilateral3/drawing/Sketch.hx" private="1" module="trilateral3.drawing.Sketch" extern="1" final="1">
+		<GRAY public="1" get="inline" set="null" expr="cast &quot;g&quot;" line="10" static="1">
+			<x path="trilateral3.drawing.AIColorType"/>
+			<meta>
+				<m n=":value"><e>cast "g"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</GRAY>
+		<CYMK public="1" get="inline" set="null" expr="cast &quot;k&quot;" line="11" static="1">
+			<x path="trilateral3.drawing.AIColorType"/>
+			<meta>
+				<m n=":value"><e>cast "k"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</CYMK>
+		<RGB public="1" get="inline" set="null" expr="cast &quot;xa&quot;" line="12" static="1">
+			<x path="trilateral3.drawing.AIColorType"/>
+			<meta>
+				<m n=":value"><e>cast "xa"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</RGB>
+		<EPS_RGB public="1" get="inline" set="null" expr="cast &quot;r&quot;" line="13" static="1">
+			<x path="trilateral3.drawing.AIColorType"/>
+			<meta>
+				<m n=":value"><e>cast "r"</e></m>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</EPS_RGB>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<typedef path="trilateral3.drawing.Dim" params="" file="src/trilateral3/drawing/Sketch.hx" module="trilateral3.drawing.Sketch"><a>
 	<minY><x path="Float"/></minY>
 	<minX><x path="Float"/></minX>
@@ -29409,7 +29515,7 @@
 </a></typedef>
 	<class path="trilateral3.drawing.Sketch" params="" file="src/trilateral3/drawing/Sketch.hx">
 		<implements path="justPath.IPathContext"/>
-		<create public="1" get="inline" set="null" line="80" static="1">
+		<create public="1" get="inline" set="null" line="88" static="1">
 			<f a="drawType_:colorType_:sketchForm_:?endLine_" v=":::no">
 				<x path="trilateral3.drawing.DrawAbstract"/>
 				<x path="trilateral3.drawing.ColorAbstract"/>
@@ -29456,47 +29562,47 @@
 		<pointsClock public="1"><c path="Array"><c path="Array"><x path="Float"/></c></c></pointsClock>
 		<pointsAnti public="1"><c path="Array"><c path="Array"><x path="Float"/></c></c></pointsAnti>
 		<dim public="1"><c path="Array"><t path="trilateral3.drawing.Dim"/></c></dim>
-		<tracerLine get="inline" set="null" line="29"><f a="x_:y_">
+		<tracerLine get="inline" set="null" line="37"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></tracerLine>
-		<fillOnlyLine get="inline" set="null" line="32"><f a="x_:y_">
+		<fillOnlyLine get="inline" set="null" line="40"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></fillOnlyLine>
-		<baseLine set="method" line="34"><f a="x_:y_">
+		<baseLine set="method" line="42"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></baseLine>
-		<crudeLine get="inline" set="null" line="38"><f a="x_:y_">
+		<crudeLine get="inline" set="null" line="46"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></crudeLine>
-		<roundEndLine get="inline" set="null" line="41"><f a="x_:y_">
+		<roundEndLine get="inline" set="null" line="49"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></roundEndLine>
-		<mediumLine get="inline" set="null" line="44"><f a="x_:y_">
+		<mediumLine get="inline" set="null" line="52"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></mediumLine>
-		<mediumOverlapLine get="inline" set="null" line="47"><f a="x_:y_">
+		<mediumOverlapLine get="inline" set="null" line="55"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></mediumOverlapLine>
-		<fineLine get="inline" set="null" line="50"><f a="x_:y_">
+		<fineLine get="inline" set="null" line="58"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></fineLine>
-		<fineOverlapLine get="inline" set="null" line="53"><f a="x_:y_">
+		<fineOverlapLine get="inline" set="null" line="61"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
@@ -29506,42 +29612,42 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></line>
-		<reset public="1" set="method" line="90"><f a=""><x path="Void"/></f></reset>
-		<pointsNoEndOverlap public="1" set="method" line="99"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
-		<pointsRewound public="1" set="method" line="153"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
-		<initDim get="inline" set="null" line="213"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
-		<updateDim get="inline" set="null" line="216"><f a="x:y">
+		<reset public="1" set="method" line="98"><f a=""><x path="Void"/></f></reset>
+		<pointsNoEndOverlap public="1" set="method" line="107"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
+		<pointsRewound public="1" set="method" line="161"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
+		<initDim get="inline" set="null" line="221"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
+		<updateDim get="inline" set="null" line="224"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></updateDim>
-		<moveTo public="1" set="method" line="223"><f a="x_:y_">
+		<moveTo public="1" set="method" line="231"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></moveTo>
-		<lastClock public="1" get="inline" set="null" line="240"><f a=""><x path="Void"/></f></lastClock>
-		<getEdges public="1" get="inline" set="null" line="250"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
-		<lineTo public="1" get="inline" set="null" line="278"><f a="x_:y_">
+		<lastClock public="1" get="inline" set="null" line="248"><f a=""><x path="Void"/></f></lastClock>
+		<getEdges public="1" get="inline" set="null" line="258"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
+		<lineTo public="1" get="inline" set="null" line="286"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></lineTo>
-		<quadTo public="1" get="inline" set="null" line="295"><f a="x1:y1:x2:y2">
+		<quadTo public="1" get="inline" set="null" line="303"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadTo>
-		<quadThru public="1" get="inline" set="null" line="304"><f a="x1:y1:x2:y2">
+		<quadThru public="1" get="inline" set="null" line="312"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadThru>
-		<curveTo public="1" get="inline" set="null" line="310"><f a="x1:y1:x2:y2:x3:y3">
+		<curveTo public="1" get="inline" set="null" line="318"><f a="x1:y1:x2:y2:x3:y3">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -29550,7 +29656,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></curveTo>
-		<plotCoord public="1" get="inline" set="null" line="318">
+		<plotCoord public="1" get="inline" set="null" line="326">
 			<f a="arr:?withMove" v=":true">
 				<c path="Array"><x path="Float"/></c>
 				<x path="Bool"/>
@@ -29558,7 +29664,16 @@
 			</f>
 			<meta><m n=":value"><e>{ withMove : true }</e></m></meta>
 		</plotCoord>
-		<aiString public="1" get="inline" set="null" line="333">
+		<aiColorSet set="method" line="340"><f a="colorType:arr">
+	<x path="trilateral3.drawing.AIColorType"/>
+	<c path="Array"><c path="String"/></c>
+	<x path="trilateral3.color.ColorInt"/>
+</f></aiColorSet>
+		<getColorType set="method" line="357"><f a="arr">
+	<c path="Array"><c path="String"/></c>
+	<x path="trilateral3.drawing.AIColorType"/>
+</f></getColorType>
+		<aiStringPart public="1" get="inline" set="null" line="363">
 			<f a="str:x:y:?flipY" v=":::0">
 				<c path="String"/>
 				<x path="Float"/>
@@ -29567,8 +29682,8 @@
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ flipY : 0 }</e></m></meta>
-		</aiString>
-		<new public="1" set="method" line="57">
+		</aiStringPart>
+		<new public="1" set="method" line="65">
 			<f a="pen_:sketchForm_:?endLine_" v="::no">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="trilateral3.drawing.StyleSketch"/>
@@ -33409,7 +33524,7 @@ the methods return the number of triangles added.</haxe_doc>
 		<draw public="1" set="method" line="48"><f a=""><x path="Void"/></f></draw>
 		<render get="inline" set="null" line="52"><f a=""><x path="Void"/></f></render>
 		<internalDraw get="inline" set="null" line="57"><f a=""><x path="Void"/></f></internalDraw>
-		<drawRender public="1" set="method" line="81"><f a=""><x path="Void"/></f></drawRender>
+		<renderDraw public="1" set="method" line="81"><f a=""><x path="Void"/></f></renderDraw>
 		<this_onEnterFrame get="inline" set="null" line="85"><f a="event">
 	<c path="flash.events.Event"/>
 	<x path="Void"/>

@@ -63,7 +63,7 @@ class AppHeaps extends hxd.App {
     }
     // override
     public
-    function drawRender(){
+    function renderDraw(){
         // draw stuff every frame
     }
     override

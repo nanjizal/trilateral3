@@ -50,6 +50,7 @@ class AppNme extends Sprite {
     }
     inline
     function firstDraw(){
+        pen = nodule.pen;
         draw();
         internalDraw();
     }    
@@ -128,7 +129,7 @@ class AppNme extends Sprite {
     }
     // override
     public
-    function drawRender(){
+    function renderDraw(){
         // draw stuff every frame
     }    
     inline
@@ -136,4 +137,3 @@ class AppNme extends Sprite {
         render();
     }
 }
-#end

@@ -5,6 +5,14 @@ import trilateral3.drawing.Contour;
 import dsHelper.splitter.SpaceSplitter;
 import trilateral3.color.ColorInt;
 
+// Assume converted to lower case
+enum abstract AIColorType ( String ) from String to String {
+    var GRAY = 'g';
+    var CYMK = 'k';
+    var RGB = 'xa'; // unsupported?
+    var EPS_RGB = 'r';
+}
+
 typedef Dim = {
     var minX: Float;
     var maxX: Float;
@@ -329,13 +337,34 @@ class Sketch implements IPathContext {
             i += 2;
         }
     }
+    function aiColorSet( colorType: AIColorType, arr: Array<String> ){
+        var colorInt = switch( colorType ){
+            case GRAY: 
+                ColorInt.aiGreyA( arr[0] );
+            case CYMK:
+                ColorInt.aiCYMKA( arr );
+            case RGB:
+                ColorInt.aiARGB( arr );
+            case EPS_RGB:
+                ColorInt.aiARGB( arr );
+            default:
+                trace( 'color not found' );
+                ColorInt.aiGreyA( '0' );
+        }
+        pen.currentColor = cast( colorInt, Int );
+        return colorInt;
+    }
+    function getColorType( arr: Array<String> ): AIColorType {
+        var col: AIColorType = cast( (arr[ arr.length - 1 ] ).toLowerCase() );
+        return col;
+    }
+    // TODO: make this handle longer string
     // flipY is because ai export seems to be with y going up.
     public inline
-    function aiString( str: String, x: Float, y: Float, flipY: Float = 0 ): Void {
+    function aiStringPart( str: String, x: Float, y: Float, flipY: Float = 0 ): Void {
         var arr: Array<Array<String>> = SpaceSplitter.parse( str );
         var arr2 = arr.shift();
-        var colorInt = ColorInt.aiCYMKA( arr2 );
-        pen.currentColor = cast( colorInt, Int );
+        aiColorSet( getColorType( arr2 ), arr2 );
         var len = arr.length;
         if( flipY == 0 ){
             for( i in 0...len ){
@@ -343,11 +372,12 @@ class Sketch implements IPathContext {
                 var arr3 = arr[i];
                 var str = arr3[len2-1];
                 switch( str ){
-                    case 'm':
+                    // may need adjustment for eps I am not sure if l and c are relative
+                    case 'm'|'M':
                         moveTo( Std.parseFloat( arr3[0] ) + x, Std.parseFloat( arr3[1] ) + y );
-                    case 'L':
+                    case 'L'|'l':
                         lineTo( Std.parseFloat( arr3[0] ) + x, Std.parseFloat( arr3[1] ) + y );
-                    case 'C':
+                    case 'C'|'c':
                         quadTo( Std.parseFloat( arr3[0] ) + x, Std.parseFloat( arr3[1] ) + y
                               , Std.parseFloat( arr3[1] ) + x, Std.parseFloat( arr3[2] ) + y );
                     default:
