@@ -16,5 +16,11 @@ class MatrixDozen {
         this.e = e; this.f = f; this.g = g; this.h = h;
         this.i = i; this.j = j; this.k = k; this.l = l;
     }
+    // for rough debug, perhaps remove later.
+    public function values(){
+        return a + ' ' + b + ' ' + c + ' ' + d + '\n '
+              + e + ' ' + f + ' ' + g + ' ' + h + '\n ' 
+              + i + ' ' + j + ' ' + k + ' ' + l + '\n ';
+    }
 }
 #end

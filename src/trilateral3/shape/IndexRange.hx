@@ -9,7 +9,7 @@ abstract IndexRange( StartEnd ) from StartEnd to StartEnd {
     }
     public inline
     function add( b: StartEnd ): IndexRange {
-        var begin: Int = cast Math.min( this.start, b.start );
+        var begin: Int = Std.int( Math.min( this.start, b.start ) );
         return new IndexRange( {  start: begin
                                 , end: ( begin == this.start )? b.end: this.end } );
     }

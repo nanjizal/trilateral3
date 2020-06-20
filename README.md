@@ -8,3 +8,5 @@ Drawing engine suitable for use with GPU.
 Have added some simple examples.
 
 https://github.com/TrilateralX
+
+Remove 'target' folder from trilateral3 when generating dox it's just simple at moment.

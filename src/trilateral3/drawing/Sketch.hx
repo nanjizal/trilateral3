@@ -351,7 +351,7 @@ class Sketch implements IPathContext {
                 trace( 'color not found' );
                 ColorInt.aiGreyA( '0' );
         }
-        pen.currentColor = cast( colorInt, Int );
+        pen.currentColor = colorInt;
         return colorInt;
     }
     function getColorType( arr: Array<String> ): AIColorType {

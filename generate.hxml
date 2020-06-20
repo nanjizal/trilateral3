@@ -35,5 +35,5 @@
 -main trilateral3.DocTrilateral3
 --no-output
 -xml output.xml
--js foo
+-cpp foo
 -D dump==pretty

@@ -19,5 +19,9 @@ class Vertex {
         this.z = z;
         this.w = w;
     }
+    // for rough debug, perhaps remove later.
+    public function values(){
+        return x + ' ' + y + ' ' + z + ' ' + w;
+    }
 }
 #end

@@ -15,8 +15,10 @@ class AppHeaps extends hxd.App {
     public var height: Int;
     public var tri: FlatColorTriangles;
     var g:    h2d.Graphics; 
-    //override
+    var first = true;
+    override
     function init() {
+        super.init();
         internalSetup();
         firstDraw();
     }
@@ -37,18 +39,23 @@ class AppHeaps extends hxd.App {
     }
     // override
     public
-    function draw( pen: Pen ){
+    function draw(){
         // draw stuff once
     }
-    inline
-    function render(){
-        drawRender( nodule.pen );
-        internalDraw();
+    override
+    function render(_){
+        if( first ){
+            renderDraw();
+            internalDraw();
+            super.render(_);
+        }
+        first = false;
     }
     inline
     function internalDraw(){
         g.clear();
-        var currPos = tri.pos;
+        var currPos = 0;
+        tri.pos = 0;
         for( i in 0...nodule.size ){
              tri.pos = i; // change the position.
              g.beginFill( 0xffffff );
@@ -68,7 +75,7 @@ class AppHeaps extends hxd.App {
     }
     override
     function update( dt: Float ) {
-        render();
+        
     }
     
 }

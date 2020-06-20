@@ -10,6 +10,9 @@ import trilateral3.matrix.MatrixDozen;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.Triangle3D;
 import trilateral3.structure.TriInt;
+#if cpp
+import cpp.Float32;
+#end
 class Pen {
     public var rounded:      Float = 30; // default value... change
     public var dz:           Float = 0.01; // default value... change
@@ -99,6 +102,17 @@ class Pen {
         if( color == -1 ) color = currentColor;
         colorType.colorTriangles( color, times );
     }
+    #if cpp
+    inline public
+    function addTriangle( ax: Float32, ay: Float32, az: Float32
+                        , bx: Float32, by: Float32, bz: Float32
+                        , cx: Float32, cy: Float32, cz: Float32 ){
+        // don't need to reorder corners and Trilateral can do that!
+        drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        if( Trilateral.transformMatrix != null ) drawType.transform( Trilateral.transformMatrix );
+        drawType.next();
+    }
+    #else 
     inline public
     function addTriangle( ax: Float, ay: Float, az: Float
                         , bx: Float, by: Float, bz: Float
@@ -108,6 +122,7 @@ class Pen {
         if( Trilateral.transformMatrix != null ) drawType.transform( Trilateral.transformMatrix );
         drawType.next();
     }
+    #end
     inline public
     function triangle2DFill( ax: Float, ay: Float
                           , bx: Float, by: Float
