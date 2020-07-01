@@ -84,7 +84,7 @@ class PenNodule {
     public var data( get, never ): Float32Array;
     public inline
     function get_data(): Float32Array {
-        return colorTriangles.toArray();
+        return colorTriangles.getArray();
     }
     public var size( get, never ): Int;
     public inline 

@@ -8,8 +8,15 @@ import trilateral3.matrix.Vertex;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 import dsHelper.flatInterleave.FloatColorTriangles;
+import dsHelper.haxe.io.Float32Array;
 @:forward
 abstract FlatColorTriangles( dsHelper.flatInterleave.FloatColorTriangles ){
+    @:to
+    public inline
+    function toArray(): Float32Array {
+        throw 'use getArray()';
+        return null;
+    }
     public inline function new( len: Int ){
         this = new FloatColorTriangles( len );
     }
