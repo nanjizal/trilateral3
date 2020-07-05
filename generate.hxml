@@ -20,7 +20,8 @@
 -lib hxGeomAlgo
 -lib heaps
 -lib openfl
-
+-lib nme
+--remap flash:nme
 #-lib nme ### have to comment out as nme is not dox safe.
 
 -v

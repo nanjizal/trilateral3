@@ -22,10 +22,10 @@ class AppNme extends Sprite {
     var _cols       = new Array<Int>();
     var _indices    = new Array<Int>();
     #else
-    var _vertices   = new nme.Vector<Float>();// better to fix these to a length?
+    var _vertices   = new flash.Vector<Float>();// better to fix these to a length?
     //var _tex        = new nme.Vector<Float>();
-    var _cols       = new nme.Vector<Int>();
-    var _indices    = new nme.Vector<Int>();
+    var _cols       = new flash.Vector<Int>();
+    var _indices    = new flash.Vector<Int>();
     #end
     public static function main(): Void { Lib.current.addChild( new AppNme() ); }
     public
