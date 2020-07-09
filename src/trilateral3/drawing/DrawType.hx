@@ -8,6 +8,10 @@ typedef DrawType = {
     var triangle: ( ax_: Float, ay_: Float, az_: Float
                   , bx_: Float, by_: Float, bz_: Float
                   , cx_: Float, cy_: Float, cz_: Float ) -> Bool;
+    var ?triangleUV: ( uA_: Float, vA_: Float
+                     , uB_: Float, vB_: Float
+                     , uC_: Float, vC_: Float
+                     , ?windAdjust_: Null<Bool> ) -> Bool;
     var getTriangle3D:()->Triangle3D;
     var ?getTriangleUV:()->TriangleUV;
     var transform: ( MatrixDozen ) -> Void;

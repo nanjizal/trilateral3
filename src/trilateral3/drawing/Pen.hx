@@ -10,13 +10,17 @@ import trilateral3.matrix.MatrixDozen;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.Triangle3D;
 import trilateral3.structure.TriInt;
+import trilateral3.structure.XYWH;
 #if cpp
 import cpp.Float32;
 #end
 class Pen {
+    public var useTexture:   Bool = false;
+    var textureFX:     Float = 1./1000.;
+    var textureFY:     Float = 1./1000.;
     public var rounded:      Float = 30; // default value... change
     public var dz:           Float = 0.01; // default value... change
-    public var currentColor: Int = 0xFACADE; // Classic Rose 
+    public var currentColor: Int   = 0xFACADE; // Classic Rose 
     public var drawType:     DrawAbstract;
     public var colorType:    ColorAbstract;
     public var translateX:   Float -> MatrixDozen;
@@ -33,6 +37,13 @@ class Pen {
     public inline
     function transformRange( trans: MatrixDozen, ir: IndexRange ) {
         this.drawType.transformRange( trans, ir );
+    }
+    public var textureXYWH( never, set ): XYWH;
+    inline
+    function set_textureXYWH( r: XYWH ): XYWH {
+        textureFX = r.x/r.w;
+        textureFY = r.y/r.h;
+        return r;
     }
     public inline
     function up( ir: IndexRange ){
@@ -108,8 +119,16 @@ class Pen {
                         , bx: Float32, by: Float32, bz: Float32
                         , cx: Float32, cy: Float32, cz: Float32 ){
         // don't need to reorder corners and Trilateral can do that!
-        drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        var windAdjust = drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
         if( Trilateral.transformMatrix != null ) drawType.transform( Trilateral.transformMatrix );
+        if( useTexture ) {
+            ax -= textureFX;
+            ay -= textureFY;
+            drawType.triangleUV( ( ax + 0.5 )/2., ( ay + 0.5 )/2.
+                               , ( bx + 0.5 )/2., ( by + 0.5 )/2.
+                               , ( cx + 0.5 )/2., ( cy + 0.5 )/2.
+                               , windAdjust );
+        }
         drawType.next();
     }
     #else 
@@ -118,8 +137,16 @@ class Pen {
                         , bx: Float, by: Float, bz: Float
                         , cx: Float, cy: Float, cz: Float ){
         // don't need to reorder corners and Trilateral can do that!
-        drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        var windAdjust = drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
         if( Trilateral.transformMatrix != null ) drawType.transform( Trilateral.transformMatrix );
+        if( useTexture ) {
+            ax -= textureFX;
+            ay -= textureFY;
+            drawType.triangleUV( ( ax + 0.5 )/2., ( ay + 0.5 )/2.
+                               , ( bx + 0.5 )/2., ( by + 0.5 )/2.
+                               , ( cx + 0.5 )/2., ( cy + 0.5 )/2.
+                               , windAdjust );
+        }
         drawType.next();
     }
     #end
