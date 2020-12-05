@@ -86,12 +86,11 @@ class Sketch implements IPathContext {
         dim = new Array<Dim>();
     }
     public static inline
-    function create( drawType_: DrawAbstract
-                   , colorType_: ColorAbstract
+    function create( paintType_: PaintAbstract
                    , sketchForm_: StyleSketch
                    , endLine_: StyleEndLine = no ){
         @:privateAccess
-        var pen = new Pen( drawType_, colorType_ );
+        var pen = new Pen( paintType_ );
         return new Sketch( pen, sketchForm_, endLine_ );
     }
     // TODO: reset pen? reset Contour instead?
@@ -211,8 +210,8 @@ class Sketch implements IPathContext {
                     k += 2;
                 }
             }
-            
-            p.reverse();*/
+            p.reverse();
+            */
             points[ i ] = p;
         }
         return points;

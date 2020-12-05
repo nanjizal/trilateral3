@@ -4,9 +4,9 @@ package trilateral3.matrix;
 **/
 
 #if nanjizal_geom 
-import geom.matrix.Mat1x2;
+import geom.structure.Mat1x2;
 @:forward
-abstract UV( geom.matrix.Mat1x2 ) from geom.matrix.Mat1x2 to geom.matrix.Mat1x2 {
+abstract UV( geom.structure.Mat1x2 ) from geom.structure.Mat1x2 to geom.structure.Mat1x2 {
     public inline
     function new( u: Float, y: Float ){
         this = { x: u, y: u };
@@ -34,7 +34,7 @@ abstract UV( geom.matrix.Mat1x2 ) from geom.matrix.Mat1x2 to geom.matrix.Mat1x2 
     // for rough debug, perhaps remove later.
     inline
     public function values(){
-        return x + ' ' + y;
+        return this.x + ' ' + this.y;
     }
 }
 #else

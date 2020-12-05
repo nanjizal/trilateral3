@@ -5721,7 +5721,7 @@
 		</meta>
 		<haxe_doc><![CDATA[* <pre><code>
      * >>> ({ 
-     * ... var ff = new Flat32(2);
+     * ... var ff = new Float32Flat(2);
      * ... ff[0] = 1.;
      * ... ff[0] == 1.; }) == true
      * </code></pre>]]></haxe_doc>
@@ -5739,7 +5739,7 @@
 		</meta>
 		<haxe_doc><![CDATA[* <pre><code>
      * >>> ({ 
-     * ... var ff = new Flat32(2);
+     * ... var ff = new Float32Flat(2);
      * ... ff[0] = 1.;
      * ... ff[0] == 1.; }) == true
      * </code></pre>]]></haxe_doc>
@@ -5890,7 +5890,7 @@
 			</meta>
 			<haxe_doc><![CDATA[* <pre><code>
      * >>> ({ 
-     * ... var ff = new Flat32(2);
+     * ... var ff = new Float32Flat(2);
      * ... ff[0] = 1.;
      * ... ff[0] == 1.; }) == true
      * </code></pre>]]></haxe_doc>
@@ -5908,7 +5908,7 @@
 			</meta>
 			<haxe_doc><![CDATA[* <pre><code>
      * >>> ({ 
-     * ... var ff = new Flat32(2);
+     * ... var ff = new Float32Flat(2);
      * ... ff[0] = 1.;
      * ... ff[0] == 1.; }) == true
      * </code></pre>]]></haxe_doc>
@@ -7664,7 +7664,9 @@
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="dsHelper.flatInterleave.FloatColorTrianglesUV" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/FloatColorTrianglesUV.hx">
+		<from><icast><x path="dsHelper.flatInterleave.core.Flat3x9"/></icast></from>
 		<this><x path="dsHelper.flatInterleave.core.Flat3x9"/></this>
+		<to><icast><x path="dsHelper.flatInterleave.core.Flat3x9"/></icast></to>
 		<meta><m n=":forward"/></meta>
 		<impl><class path="dsHelper.flatInterleave._FloatColorTrianglesUV.FloatColorTrianglesUV_Impl_" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/FloatColorTrianglesUV.hx" private="1" module="dsHelper.flatInterleave.FloatColorTrianglesUV" final="1">
 	<_new public="1" get="inline" set="null" line="5" static="1">
@@ -8249,7 +8251,7 @@
 		<meta><m n=":impl"/></meta>
 	</get_u>
 	<set_u get="inline" set="null" line="321" static="1">
-		<f a="this:x">
+		<f a="this:u_">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Float"/>
 			<x path="Float"/>
@@ -8268,7 +8270,7 @@
 		<meta><m n=":impl"/></meta>
 	</get_v>
 	<set_v get="inline" set="null" line="334" static="1">
-		<f a="this:y">
+		<f a="this:v_">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Float"/>
 			<x path="Float"/>
@@ -8418,7 +8420,16 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</fullHit>
-	<rotate public="1" get="inline" set="null" line="434" static="1">
+	<moveDeltaUV set="method" line="434" static="1">
+		<f a="this:du:dv">
+			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</moveDeltaUV>
+	<rotate public="1" get="inline" set="null" line="442" static="1">
 		<f a="this:x:y:theta">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Float"/>
@@ -8428,7 +8439,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</rotate>
-	<rotateTrig public="1" get="inline" set="null" line="440" static="1">
+	<rotateTrig public="1" get="inline" set="null" line="448" static="1">
 		<f a="this:x:y:cos:sin">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Float"/>
@@ -8439,7 +8450,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</rotateTrig>
-	<colorTriangles public="1" get="inline" set="null" line="469" static="1">
+	<colorTriangles public="1" get="inline" set="null" line="477" static="1">
 		<f a="this:color:times">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8448,7 +8459,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</colorTriangles>
-	<cornerColors public="1" get="inline" set="null" line="473" static="1">
+	<cornerColors public="1" get="inline" set="null" line="481" static="1">
 		<f a="this:colorA:colorB:colorC">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8462,7 +8473,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgb>
-	<set_rgb get="inline" set="null" line="480" static="1">
+	<set_rgb get="inline" set="null" line="488" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8474,7 +8485,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgbA>
-	<set_rgbA get="inline" set="null" line="488" static="1">
+	<set_rgbA get="inline" set="null" line="496" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8482,7 +8493,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_rgbA>
-	<get_rgbA get="inline" set="null" line="496" static="1">
+	<get_rgbA get="inline" set="null" line="504" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8493,7 +8504,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgbB>
-	<set_rgbB get="inline" set="null" line="503" static="1">
+	<set_rgbB get="inline" set="null" line="511" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8501,7 +8512,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_rgbB>
-	<get_rgbB get="inline" set="null" line="511" static="1">
+	<get_rgbB get="inline" set="null" line="519" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8512,7 +8523,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</rgbC>
-	<set_rgbC get="inline" set="null" line="518" static="1">
+	<set_rgbC get="inline" set="null" line="526" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8520,7 +8531,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_rgbC>
-	<get_rgbC get="inline" set="null" line="526" static="1">
+	<get_rgbC get="inline" set="null" line="534" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8531,7 +8542,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argb>
-	<set_argb get="inline" set="null" line="533" static="1">
+	<set_argb get="inline" set="null" line="541" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8543,7 +8554,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argbA>
-	<set_argbA get="inline" set="null" line="542" static="1">
+	<set_argbA get="inline" set="null" line="550" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8551,7 +8562,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_argbA>
-	<get_argbA get="inline" set="null" line="550" static="1">
+	<get_argbA get="inline" set="null" line="558" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8562,7 +8573,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argbB>
-	<set_argbB get="inline" set="null" line="559" static="1">
+	<set_argbB get="inline" set="null" line="567" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8570,7 +8581,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_argbB>
-	<get_argbB get="inline" set="null" line="567" static="1">
+	<get_argbB get="inline" set="null" line="575" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8581,7 +8592,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</argbC>
-	<set_argbC get="inline" set="null" line="575" static="1">
+	<set_argbC get="inline" set="null" line="583" static="1">
 		<f a="this:col">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8589,28 +8600,28 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_argbC>
-	<get_argbC get="inline" set="null" line="583" static="1">
+	<get_argbC get="inline" set="null" line="591" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_argbC>
-	<prettyStringVert public="1" get="inline" set="null" line="590" static="1">
+	<prettyStringVert public="1" get="inline" set="null" line="598" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</prettyStringVert>
-	<prettyAllVert public="1" get="inline" set="null" line="596" static="1">
+	<prettyAllVert public="1" get="inline" set="null" line="604" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</prettyAllVert>
-	<hex public="1" get="inline" set="null" line="606" static="1">
+	<hex public="1" get="inline" set="null" line="615" static="1">
 		<f a="this:v">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<x path="Int"/>
@@ -8618,61 +8629,68 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hex>
-	<hexA public="1" get="inline" set="null" line="610" static="1">
+	<hexA public="1" get="inline" set="null" line="619" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexA>
-	<hexB public="1" get="inline" set="null" line="614" static="1">
+	<hexB public="1" get="inline" set="null" line="623" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexB>
-	<hexC public="1" get="inline" set="null" line="618" static="1">
+	<hexC public="1" get="inline" set="null" line="627" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexC>
-	<hexAll public="1" get="inline" set="null" line="622" static="1">
+	<hexAll public="1" get="inline" set="null" line="631" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</hexAll>
-	<prettyStringUV public="1" get="inline" set="null" line="633" static="1">
+	<prettyStringUV public="1" get="inline" set="null" line="642" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</prettyStringUV>
-	<prettyAlluv public="1" get="inline" set="null" line="639" static="1">
+	<prettyAlluv public="1" get="inline" set="null" line="648" static="1">
 		<f a="this">
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</prettyAlluv>
-	<alphaChannel public="1" get="inline" set="null" line="650" static="1"><f a="int">
+	<prettyEverything public="1" get="inline" set="null" line="659" static="1">
+		<f a="this">
+			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</prettyEverything>
+	<alphaChannel public="1" get="inline" set="null" line="672" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></alphaChannel>
-	<redChannel public="1" get="inline" set="null" line="653" static="1"><f a="int">
+	<redChannel public="1" get="inline" set="null" line="675" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></redChannel>
-	<greenChannel public="1" get="inline" set="null" line="656" static="1"><f a="int">
+	<greenChannel public="1" get="inline" set="null" line="678" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></greenChannel>
-	<blueChannel public="1" get="inline" set="null" line="659" static="1"><f a="int">
+	<blueChannel public="1" get="inline" set="null" line="681" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></blueChannel>
@@ -9262,7 +9280,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_u>
 		<set_u get="inline" set="null" line="321" static="1">
-			<f a="this:x">
+			<f a="this:u_">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Float"/>
 				<x path="Float"/>
@@ -9281,7 +9299,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_v>
 		<set_v get="inline" set="null" line="334" static="1">
-			<f a="this:y">
+			<f a="this:v_">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Float"/>
 				<x path="Float"/>
@@ -9431,7 +9449,16 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</fullHit>
-		<rotate public="1" get="inline" set="null" line="434" static="1">
+		<moveDeltaUV set="method" line="434" static="1">
+			<f a="this:du:dv">
+				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</moveDeltaUV>
+		<rotate public="1" get="inline" set="null" line="442" static="1">
 			<f a="this:x:y:theta">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Float"/>
@@ -9441,7 +9468,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</rotate>
-		<rotateTrig public="1" get="inline" set="null" line="440" static="1">
+		<rotateTrig public="1" get="inline" set="null" line="448" static="1">
 			<f a="this:x:y:cos:sin">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Float"/>
@@ -9452,7 +9479,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</rotateTrig>
-		<colorTriangles public="1" get="inline" set="null" line="469" static="1">
+		<colorTriangles public="1" get="inline" set="null" line="477" static="1">
 			<f a="this:color:times">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9461,7 +9488,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</colorTriangles>
-		<cornerColors public="1" get="inline" set="null" line="473" static="1">
+		<cornerColors public="1" get="inline" set="null" line="481" static="1">
 			<f a="this:colorA:colorB:colorC">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9475,7 +9502,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgb>
-		<set_rgb get="inline" set="null" line="480" static="1">
+		<set_rgb get="inline" set="null" line="488" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9487,7 +9514,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgbA>
-		<set_rgbA get="inline" set="null" line="488" static="1">
+		<set_rgbA get="inline" set="null" line="496" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9495,7 +9522,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_rgbA>
-		<get_rgbA get="inline" set="null" line="496" static="1">
+		<get_rgbA get="inline" set="null" line="504" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9506,7 +9533,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgbB>
-		<set_rgbB get="inline" set="null" line="503" static="1">
+		<set_rgbB get="inline" set="null" line="511" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9514,7 +9541,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_rgbB>
-		<get_rgbB get="inline" set="null" line="511" static="1">
+		<get_rgbB get="inline" set="null" line="519" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9525,7 +9552,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</rgbC>
-		<set_rgbC get="inline" set="null" line="518" static="1">
+		<set_rgbC get="inline" set="null" line="526" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9533,7 +9560,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_rgbC>
-		<get_rgbC get="inline" set="null" line="526" static="1">
+		<get_rgbC get="inline" set="null" line="534" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9544,7 +9571,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argb>
-		<set_argb get="inline" set="null" line="533" static="1">
+		<set_argb get="inline" set="null" line="541" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9556,7 +9583,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argbA>
-		<set_argbA get="inline" set="null" line="542" static="1">
+		<set_argbA get="inline" set="null" line="550" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9564,7 +9591,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_argbA>
-		<get_argbA get="inline" set="null" line="550" static="1">
+		<get_argbA get="inline" set="null" line="558" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9575,7 +9602,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argbB>
-		<set_argbB get="inline" set="null" line="559" static="1">
+		<set_argbB get="inline" set="null" line="567" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9583,7 +9610,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_argbB>
-		<get_argbB get="inline" set="null" line="567" static="1">
+		<get_argbB get="inline" set="null" line="575" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9594,7 +9621,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</argbC>
-		<set_argbC get="inline" set="null" line="575" static="1">
+		<set_argbC get="inline" set="null" line="583" static="1">
 			<f a="this:col">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9602,28 +9629,28 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_argbC>
-		<get_argbC get="inline" set="null" line="583" static="1">
+		<get_argbC get="inline" set="null" line="591" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_argbC>
-		<prettyStringVert public="1" get="inline" set="null" line="590" static="1">
+		<prettyStringVert public="1" get="inline" set="null" line="598" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</prettyStringVert>
-		<prettyAllVert public="1" get="inline" set="null" line="596" static="1">
+		<prettyAllVert public="1" get="inline" set="null" line="604" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</prettyAllVert>
-		<hex public="1" get="inline" set="null" line="606" static="1">
+		<hex public="1" get="inline" set="null" line="615" static="1">
 			<f a="this:v">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<x path="Int"/>
@@ -9631,61 +9658,68 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hex>
-		<hexA public="1" get="inline" set="null" line="610" static="1">
+		<hexA public="1" get="inline" set="null" line="619" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexA>
-		<hexB public="1" get="inline" set="null" line="614" static="1">
+		<hexB public="1" get="inline" set="null" line="623" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexB>
-		<hexC public="1" get="inline" set="null" line="618" static="1">
+		<hexC public="1" get="inline" set="null" line="627" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexC>
-		<hexAll public="1" get="inline" set="null" line="622" static="1">
+		<hexAll public="1" get="inline" set="null" line="631" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</hexAll>
-		<prettyStringUV public="1" get="inline" set="null" line="633" static="1">
+		<prettyStringUV public="1" get="inline" set="null" line="642" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</prettyStringUV>
-		<prettyAlluv public="1" get="inline" set="null" line="639" static="1">
+		<prettyAlluv public="1" get="inline" set="null" line="648" static="1">
 			<f a="this">
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</prettyAlluv>
-		<alphaChannel public="1" get="inline" set="null" line="650" static="1"><f a="int">
+		<prettyEverything public="1" get="inline" set="null" line="659" static="1">
+			<f a="this">
+				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</prettyEverything>
+		<alphaChannel public="1" get="inline" set="null" line="672" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></alphaChannel>
-		<redChannel public="1" get="inline" set="null" line="653" static="1"><f a="int">
+		<redChannel public="1" get="inline" set="null" line="675" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></redChannel>
-		<greenChannel public="1" get="inline" set="null" line="656" static="1"><f a="int">
+		<greenChannel public="1" get="inline" set="null" line="678" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></greenChannel>
-		<blueChannel public="1" get="inline" set="null" line="659" static="1"><f a="int">
+		<blueChannel public="1" get="inline" set="null" line="681" static="1"><f a="int">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></blueChannel>
@@ -9818,10 +9852,12 @@
 		</getArray>
 	</class>
 	<abstract path="dsHelper.flatInterleave.core.Flat3x9" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/core/Flat3x9.hx">
+		<from><icast><x path="dsHelper.flat.io.Float32Flat"/></icast></from>
 		<this><x path="dsHelper.flat.io.Float32Flat"/></this>
+		<to><icast><x path="dsHelper.flat.io.Float32Flat"/></icast></to>
 		<meta><m n=":forward"/></meta>
 		<impl><class path="dsHelper.flatInterleave.core._Flat3x9.Flat3x9_Impl_" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/core/Flat3x9.hx" private="1" module="dsHelper.flatInterleave.core.Flat3x9" final="1">
-	<readItem public="1" get="inline" set="null" line="6" static="1">
+	<readItem public="1" get="inline" set="null" line="7" static="1">
 		<f a="this:k">
 			<x path="dsHelper.flat.io.Float32Flat"/>
 			<x path="Int"/>
@@ -9832,7 +9868,7 @@
 			<m n=":op"><e>[]</e></m>
 		</meta>
 	</readItem>
-	<writeItem public="1" get="inline" set="null" line="10" static="1">
+	<writeItem public="1" get="inline" set="null" line="11" static="1">
 		<f a="this:k:v">
 			<x path="dsHelper.flat.io.Float32Flat"/>
 			<x path="Int"/>
@@ -9844,7 +9880,7 @@
 			<m n=":op"><e>[]</e></m>
 		</meta>
 	</writeItem>
-	<_new public="1" get="inline" set="null" line="15" static="1">
+	<_new public="1" get="inline" set="null" line="16" static="1">
 		<f a="len">
 			<x path="Int"/>
 			<x path="dsHelper.flatInterleave.core.Flat3x9"/>
@@ -9858,14 +9894,14 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</index>
-	<get_index get="inline" set="null" line="20" static="1">
+	<get_index get="inline" set="null" line="21" static="1">
 		<f a="this">
 			<x path="dsHelper.flat.io.Float32Flat"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_index>
-	<set_index get="inline" set="null" line="24" static="1">
+	<set_index get="inline" set="null" line="25" static="1">
 		<f a="this:id">
 			<x path="dsHelper.flat.io.Float32Flat"/>
 			<x path="Int"/>
@@ -9873,7 +9909,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_index>
-	<getArray public="1" get="inline" set="null" line="29" static="1">
+	<getArray public="1" get="inline" set="null" line="30" static="1">
 		<f a="this">
 			<x path="dsHelper.flat.io.Float32Flat"/>
 			<t path="dsHelper.haxe.io.Float32Array"/>
@@ -9883,7 +9919,7 @@
 </class></impl>
 	</abstract>
 	<class path="dsHelper.flatInterleave.core._Flat3x9.Flat3x9_Impl_" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/core/Flat3x9.hx" private="1" module="dsHelper.flatInterleave.core.Flat3x9" final="1">
-		<readItem public="1" get="inline" set="null" line="6" static="1">
+		<readItem public="1" get="inline" set="null" line="7" static="1">
 			<f a="this:k">
 				<x path="dsHelper.flat.io.Float32Flat"/>
 				<x path="Int"/>
@@ -9894,7 +9930,7 @@
 				<m n=":op"><e>[]</e></m>
 			</meta>
 		</readItem>
-		<writeItem public="1" get="inline" set="null" line="10" static="1">
+		<writeItem public="1" get="inline" set="null" line="11" static="1">
 			<f a="this:k:v">
 				<x path="dsHelper.flat.io.Float32Flat"/>
 				<x path="Int"/>
@@ -9906,7 +9942,7 @@
 				<m n=":op"><e>[]</e></m>
 			</meta>
 		</writeItem>
-		<_new public="1" get="inline" set="null" line="15" static="1">
+		<_new public="1" get="inline" set="null" line="16" static="1">
 			<f a="len">
 				<x path="Int"/>
 				<x path="dsHelper.flatInterleave.core.Flat3x9"/>
@@ -9920,14 +9956,14 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</index>
-		<get_index get="inline" set="null" line="20" static="1">
+		<get_index get="inline" set="null" line="21" static="1">
 			<f a="this">
 				<x path="dsHelper.flat.io.Float32Flat"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_index>
-		<set_index get="inline" set="null" line="24" static="1">
+		<set_index get="inline" set="null" line="25" static="1">
 			<f a="this:id">
 				<x path="dsHelper.flat.io.Float32Flat"/>
 				<x path="Int"/>
@@ -9935,7 +9971,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_index>
-		<getArray public="1" get="inline" set="null" line="29" static="1">
+		<getArray public="1" get="inline" set="null" line="30" static="1">
 			<f a="this">
 				<x path="dsHelper.flat.io.Float32Flat"/>
 				<t path="dsHelper.haxe.io.Float32Array"/>
@@ -10220,6 +10256,7 @@
 	<typedef path="flash.display.Sprite" params="" file="/usr/local/lib/haxeLibrary/nme/6,0,123/src/nme/display/Sprite.hx"><c path="nme.display.Sprite"/></typedef>
 	<typedef path="flash.events.Event" params="" file="/usr/local/lib/haxeLibrary/nme/6,0,123/src/nme/events/Event.hx"><c path="nme.events.Event"/></typedef>
 	<typedef path="flash.events.KeyboardEvent" params="" file="/usr/local/lib/haxeLibrary/nme/6,0,123/src/nme/events/KeyboardEvent.hx"><c path="nme.events.KeyboardEvent"/></typedef>
+	<typedef path="flash.geom.Point" params="" file="/usr/local/lib/haxeLibrary/nme/6,0,123/src/nme/geom/Point.hx"><c path="nme.geom.Point"/></typedef>
 	<typedef path="flash.ui.Keyboard" params="" file="/usr/local/lib/haxeLibrary/nme/6,0,123/src/nme/ui/Keyboard.hx"><c path="nme.ui.Keyboard"/></typedef>
 	<typedef path="format.gif.Data" params="" file="/usr/local/lib/haxeLibrary/format/3,5,0/format/gif/Data.hx">
 		<a>
@@ -30838,6 +30875,1731 @@
 			<m n=":directlyUsed"/>
 			<m n=":coreApi"/>
 			<m n=":buildXml"><e><![CDATA["<include name=\"${HXCPP}/src/hx/libs/zlib/Build.xml\"/>"]]></e></m>
+		</meta>
+	</class>
+	<class path="hxGeomAlgo.Debug" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Debug.hx">
+		<assert public="1" get="inline" set="null" line="22" static="1">
+			<f a="cond:?message:?pos">
+				<x path="Bool"/>
+				<c path="String"/>
+				<x path="Null"><t path="haxe.PosInfos"/></x>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Used for sanity-checks throughout the code when in debug mode (or if -D GEOM_CHECKS is passed to the compiler).
+   * Should be automatically stripped out by the compiler in release mode (or if -D NO_GEOM_CHECKS is passed to the compiler).</haxe_doc>
+		</assert>
+		<haxe_doc>* @author azrafe7</haxe_doc>
+	</class>
+	<class path="hxGeomAlgo.HomogCoord" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/HomogCoord.hx">
+		<INFINITY public="1" expr="new HomogCoord()" line="19" static="1">
+			<c path="hxGeomAlgo.HomogCoord"/>
+			<meta><m n=":value"><e>new HomogCoord()</e></m></meta>
+		</INFINITY>
+		<det public="1" set="method" line="63" static="1"><f a="p:q:r">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<x path="Float"/>
+</f></det>
+		<ccw public="1" set="method" line="67" static="1"><f a="p:q:r">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<x path="Bool"/>
+</f></ccw>
+		<cw public="1" set="method" line="71" static="1"><f a="p:q:r">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<x path="Bool"/>
+</f></cw>
+		<x public="1"><x path="Float"/></x>
+		<y public="1"><x path="Float"/></y>
+		<w public="1"><x path="Float"/></w>
+		<add public="1" set="method" line="31"><f a="p">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+</f></add>
+		<sub public="1" set="method" line="33"><f a="p">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+</f></sub>
+		<neg public="1" set="method" line="35"><f a=""><c path="hxGeomAlgo.HomogCoord"/></f></neg>
+		<mul public="1" set="method" line="37"><f a="m">
+	<x path="Float"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+</f></mul>
+		<div public="1" set="method" line="39"><f a="m">
+	<x path="Float"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+</f></div>
+		<normalize public="1" set="method" line="41"><f a=""><c path="hxGeomAlgo.HomogCoord"/></f></normalize>
+		<lengthSquared public="1" set="method" line="43"><f a=""><x path="Float"/></f></lengthSquared>
+		<length public="1" set="method" line="45"><f a=""><x path="Float"/></f></length>
+		<perp public="1" set="method" line="47"><f a=""><c path="hxGeomAlgo.HomogCoord"/></f></perp>
+		<dotPoint public="1" set="method" line="49"><f a="p">
+	<x path="hxGeomAlgo.HxPoint"/>
+	<x path="Float"/>
+</f></dotPoint>
+		<dot public="1" set="method" line="51"><f a="p">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<x path="Float"/>
+</f></dot>
+		<perpdot public="1" set="method" line="53"><f a="p">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<x path="Float"/>
+</f></perpdot>
+		<dotperp public="1" set="method" line="55"><f a="p">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<x path="Float"/>
+</f></dotperp>
+		<equals public="1" set="method" line="57"><f a="p">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<x path="Bool"/>
+</f></equals>
+		<left public="1" set="method" line="59"><f a="p">
+	<x path="hxGeomAlgo.HxPoint"/>
+	<x path="Bool"/>
+</f></left>
+		<right public="1" set="method" line="61"><f a="p">
+	<x path="hxGeomAlgo.HxPoint"/>
+	<x path="Bool"/>
+</f></right>
+		<toScreen public="1" set="method" line="75"><f a=""><x path="hxGeomAlgo.HxPoint"/></f></toScreen>
+		<toPoint public="1" set="method" line="79"><f a=""><x path="hxGeomAlgo.HxPoint"/></f></toPoint>
+		<meet public="1" set="method" line="81"><f a="p">
+	<c path="hxGeomAlgo.HomogCoord"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+</f></meet>
+		<meetPoint public="1" set="method" line="85"><f a="p">
+	<x path="hxGeomAlgo.HxPoint"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+</f></meetPoint>
+		<toString public="1" set="method" line="89"><f a=""><c path="String"/></f></toString>
+		<new public="1" set="method" line="25">
+			<f a="?x:?y:?w" v="0:0:1">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ w : 1, y : 0, x : 0 }</e></m></meta>
+		</new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<abstract path="hxGeomAlgo.HxPoint" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/HxPoint.hx">
+		<from>
+			<icast><c path="hxGeomAlgo.HxPointData"/></icast>
+			<icast field="fromFlashPoint"><t path="flash.geom.Point"/></icast>
+			<icast field="fromPointStruct"><a>
+	<y><x path="Float"/></y>
+	<x><x path="Float"/></x>
+</a></icast>
+		</from>
+		<this><c path="hxGeomAlgo.HxPointData"/></this>
+		<to>
+			<icast><c path="hxGeomAlgo.HxPointData"/></icast>
+			<icast field="toFlashPoint"><c path="nme.geom.Point"/></icast>
+			<icast field="toPointStruct"><a>
+	<y><x path="Float"/></y>
+	<x><x path="Float"/></x>
+</a></icast>
+		</to>
+		<haxe_doc>* Minimal Point class (auto-converting to/from flash.geom.Point and {x:Float, y:Float}).
+ * 
+ * @author azrafe7</haxe_doc>
+		<meta><m n=":expose"/></meta>
+		<impl><class path="hxGeomAlgo._HxPoint.HxPoint_Impl_" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/HxPoint.hx" private="1" module="hxGeomAlgo.HxPoint" final="1">
+	<EMPTY public="1" set="null" expr="new HxPoint(Math.NaN, Math.NaN)" line="11" static="1">
+		<x path="hxGeomAlgo.HxPoint"/>
+		<meta><m n=":value"><e>new HxPoint(Math.NaN, Math.NaN)</e></m></meta>
+	</EMPTY>
+	<x public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</x>
+	<get_x get="inline" set="null" line="14" static="1">
+		<f a="this">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_x>
+	<set_x get="inline" set="null" line="15" static="1">
+		<f a="this:value">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_x>
+	<y public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</y>
+	<get_y get="inline" set="null" line="18" static="1">
+		<f a="this">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_y>
+	<set_y get="inline" set="null" line="19" static="1">
+		<f a="this:value">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_y>
+	<_new public="1" set="method" line="21" static="1">
+		<f a="?x:?y" v="0:0">
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="hxGeomAlgo.HxPoint"/>
+		</f>
+		<meta>
+			<m n=":value"><e>{ y : 0, x : 0 }</e></m>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+		</meta>
+	</_new>
+	<setTo public="1" set="method" line="26" static="1">
+		<f a="this:newX:newY">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</setTo>
+	<equals public="1" get="inline" set="null" line="32" static="1">
+		<f a="this:p">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<x path="hxGeomAlgo.HxPoint"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</equals>
+	<clone public="1" get="inline" set="null" line="37" static="1">
+		<f a="this">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<x path="hxGeomAlgo.HxPoint"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</clone>
+	<toString public="1" get="inline" set="null" line="42" static="1">
+		<f a="this">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
+	<fromFlashPoint get="inline" set="null" line="48" static="1">
+		<f a="p">
+			<t path="flash.geom.Point"/>
+			<x path="hxGeomAlgo.HxPoint"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</fromFlashPoint>
+	<toFlashPoint get="inline" set="null" line="53" static="1">
+		<f a="this">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<c path="nme.geom.Point"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":to"/>
+		</meta>
+	</toFlashPoint>
+	<fromPointStruct get="inline" set="null" line="59" static="1">
+		<f a="p">
+			<a>
+				<y><x path="Float"/></y>
+				<x><x path="Float"/></x>
+			</a>
+			<x path="hxGeomAlgo.HxPoint"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</fromPointStruct>
+	<toPointStruct get="inline" set="null" line="64" static="1">
+		<f a="this">
+			<c path="hxGeomAlgo.HxPointData"/>
+			<a>
+				<y><x path="Float"/></y>
+				<x><x path="Float"/></x>
+			</a>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":to"/>
+		</meta>
+	</toPointStruct>
+	<meta>
+		<m n=":directlyUsed"/>
+		<m n=":expose"/>
+	</meta>
+</class></impl>
+	</abstract>
+	<class path="hxGeomAlgo.HxPointData" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/HxPoint.hx" module="hxGeomAlgo.HxPoint">
+		<x public="1"><x path="Float"/></x>
+		<y public="1"><x path="Float"/></y>
+		<toString public="1" get="inline" set="null" line="82"><f a=""><c path="String"/></f></toString>
+		<new public="1" get="inline" set="null" line="76">
+			<f a="?x:?y" v="0:0">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ y : 0, x : 0 }</e></m></meta>
+		</new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._HxPoint.HxPoint_Impl_" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/HxPoint.hx" private="1" module="hxGeomAlgo.HxPoint" final="1">
+		<EMPTY public="1" set="null" expr="new HxPoint(Math.NaN, Math.NaN)" line="11" static="1">
+			<x path="hxGeomAlgo.HxPoint"/>
+			<meta><m n=":value"><e>new HxPoint(Math.NaN, Math.NaN)</e></m></meta>
+		</EMPTY>
+		<x public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</x>
+		<get_x get="inline" set="null" line="14" static="1">
+			<f a="this">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_x>
+		<set_x get="inline" set="null" line="15" static="1">
+			<f a="this:value">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_x>
+		<y public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</y>
+		<get_y get="inline" set="null" line="18" static="1">
+			<f a="this">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_y>
+		<set_y get="inline" set="null" line="19" static="1">
+			<f a="this:value">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_y>
+		<_new public="1" set="method" line="21" static="1">
+			<f a="?x:?y" v="0:0">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+			</f>
+			<meta>
+				<m n=":value"><e>{ y : 0, x : 0 }</e></m>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</_new>
+		<setTo public="1" set="method" line="26" static="1">
+			<f a="this:newX:newY">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</setTo>
+		<equals public="1" get="inline" set="null" line="32" static="1">
+			<f a="this:p">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</equals>
+		<clone public="1" get="inline" set="null" line="37" static="1">
+			<f a="this">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</clone>
+		<toString public="1" get="inline" set="null" line="42" static="1">
+			<f a="this">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
+		<fromFlashPoint get="inline" set="null" line="48" static="1">
+			<f a="p">
+				<t path="flash.geom.Point"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</fromFlashPoint>
+		<toFlashPoint get="inline" set="null" line="53" static="1">
+			<f a="this">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<c path="nme.geom.Point"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":to"/>
+			</meta>
+		</toFlashPoint>
+		<fromPointStruct get="inline" set="null" line="59" static="1">
+			<f a="p">
+				<a>
+					<y><x path="Float"/></y>
+					<x><x path="Float"/></x>
+				</a>
+				<x path="hxGeomAlgo.HxPoint"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</fromPointStruct>
+		<toPointStruct get="inline" set="null" line="64" static="1">
+			<f a="this">
+				<c path="hxGeomAlgo.HxPointData"/>
+				<a>
+					<y><x path="Float"/></y>
+					<x><x path="Float"/></x>
+				</a>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":to"/>
+			</meta>
+		</toPointStruct>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"/>
+		</meta>
+	</class>
+	<typedef path="hxGeomAlgo.Poly" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/PolyTools.hx" module="hxGeomAlgo.PolyTools"><c path="Array"><x path="hxGeomAlgo.HxPoint"/></c></typedef>
+	<typedef path="hxGeomAlgo.Tri" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/PolyTools.hx" module="hxGeomAlgo.PolyTools"><t path="hxGeomAlgo.Poly"/></typedef>
+	<typedef path="hxGeomAlgo.Diagonal" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/PolyTools.hx" module="hxGeomAlgo.PolyTools">
+		<a>
+			<to><x path="Int"/></to>
+			<from><x path="Int"/></from>
+		</a>
+		<meta><m n=":expose"/></meta>
+	</typedef>
+	<class path="hxGeomAlgo.PolyTools" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/PolyTools.hx">
+		<point expr="new HxPoint()" line="31" static="1">
+			<x path="hxGeomAlgo.HxPoint"/>
+			<meta><m n=":value"><e>new HxPoint()</e></m></meta>
+		</point>
+		<zero public="1" expr="new HxPoint(0, 0)" line="33" static="1">
+			<x path="hxGeomAlgo.HxPoint"/>
+			<meta><m n=":value"><e>new HxPoint(0, 0)</e></m></meta>
+		</zero>
+		<EPSILON public="1" expr=".00000001" line="35" static="1">
+			<x path="Float"/>
+			<meta><m n=":value"><e>.00000001</e></m></meta>
+		</EPSILON>
+		<isCCW public="1" set="method" line="39" static="1">
+			<f a="poly">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if `poly` is counterclockwise (assumes y axis pointing down).</haxe_doc>
+		</isCCW>
+		<isCW public="1" set="method" line="51" static="1">
+			<f a="poly">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if `poly` is clockwise (assumes y axis pointing down).</haxe_doc>
+		</isCW>
+		<makeCCW public="1" set="method" line="63" static="1">
+			<f a="poly">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Makes `poly` counterclockwise (in place). Returns true if reversed.</haxe_doc>
+		</makeCCW>
+		<makeCW public="1" set="method" line="76" static="1">
+			<f a="poly">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Makes `poly` clockwise (in place). Returns true if reversed.</haxe_doc>
+		</makeCW>
+		<isConvex public="1" set="method" line="91" static="1">
+			<f a="poly">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Assuming the polygon is simple (not self-intersecting), checks if it is convex.</haxe_doc>
+		</isConvex>
+		<isSimple public="1" set="method" line="124" static="1">
+			<f a="poly">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Checks if the polygon is simple (not self-intersecting).</haxe_doc>
+		</isSimple>
+		<segmentIntersect public="1" set="method" line="159" static="1">
+			<f a="p0:p1:q0:q1">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+			</f>
+			<haxe_doc>* Returns the intersection point between segments p0-p1 and q0-q1. Null if no intersection is found.</haxe_doc>
+		</segmentIntersect>
+		<findDuplicatePoints public="1" set="method" line="203" static="1">
+			<f a="poly:?consecutiveOnly:?wrapAround" v=":true:true">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<c path="Array"><x path="Int"/></c>
+			</f>
+			<meta><m n=":value"><e>{ wrapAround : true, consecutiveOnly : true }</e></m></meta>
+			<haxe_doc>* Returns indices of duplicate points in `poly` (or an empty array if none are found).
+   * NOTE: indices in the result are guaranteed to be in ascending order.
+   * 
+   * @param consecutiveOnly		if true only equal adjacent points are reported
+   * @param wrapAround			if true also first vs last point will be checked</haxe_doc>
+		</findDuplicatePoints>
+		<intersection public="1" set="method" line="224" static="1">
+			<f a="p1:p2:q1:q2">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+			</f>
+			<meta><m n=":noUsing"/></meta>
+			<haxe_doc>Finds the intersection point between lines extending the segments `p1`-`p2` and `q1`-`q2`. Returns null if they're parallel.</haxe_doc>
+		</intersection>
+		<isReflex public="1" set="method" line="245" static="1">
+			<f a="poly:idx">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if `poly` vertex at idx is a reflex vertex.</haxe_doc>
+		</isReflex>
+		<at public="1" get="inline" set="null" line="251" static="1">
+			<f a="poly:idx">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Int"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+			</f>
+			<haxe_doc>Gets `poly` vertex at `idx` (wrapping around if needed).</haxe_doc>
+		</at>
+		<wrappedIdx public="1" get="inline" set="null" line="258" static="1">
+			<f a="poly:idx">
+				<t path="hxGeomAlgo.Poly"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Gets usable `idx` from `poly` (wrapping around if needed).</haxe_doc>
+		</wrappedIdx>
+		<side public="1" get="inline" set="null" line="266" static="1">
+			<f a="p:a:b">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc><![CDATA[Gets the side (signed area) of `p` relative to the line extending `b`-`a` (> 0 -> left, < 0 -> right, == 0 -> collinear).]]></haxe_doc>
+		</side>
+		<isLeft public="1" get="inline" set="null" line="272" static="1">
+			<f a="p:a:b">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if `p` is on the left of the line extending `b`-`a`.</haxe_doc>
+		</isLeft>
+		<isLeftOrOn public="1" get="inline" set="null" line="278" static="1">
+			<f a="p:a:b">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if `p` is on the left or collinear to the line extending `b`-`a`.</haxe_doc>
+		</isLeftOrOn>
+		<isRight public="1" get="inline" set="null" line="284" static="1">
+			<f a="p:a:b">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if `p` is on the right of the line extending `b`-`a`.</haxe_doc>
+		</isRight>
+		<isRightOrOn public="1" get="inline" set="null" line="290" static="1">
+			<f a="p:a:b">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if `p` is on the right or collinear to the line extending `b`-`a`.</haxe_doc>
+		</isRightOrOn>
+		<isCollinear public="1" get="inline" set="null" line="296" static="1">
+			<f a="p:a:b">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>Returns true if the specified triangle is degenerate (collinear points).</haxe_doc>
+		</isCollinear>
+		<distance public="1" get="inline" set="null" line="302" static="1">
+			<f a="v:w">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>Distance from `v` to `w`.</haxe_doc>
+		</distance>
+		<distanceToSegment public="1" get="inline" set="null" line="305" static="1">
+			<f a="p:v:w">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>Perpendicular distance from `p` to line segment `v`-`w`.</haxe_doc>
+		</distanceToSegment>
+		<distanceSquared public="1" get="inline" set="null" line="308" static="1">
+			<f a="v:w">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>Squared distance from `v` to `w`.</haxe_doc>
+		</distanceSquared>
+		<distanceToSegmentSquared public="1" set="method" line="311" static="1">
+			<f a="p:v:w">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>Squared perpendicular distance from `p` to line segment `v`-`w`.</haxe_doc>
+		</distanceToSegmentSquared>
+		<getCentroid public="1" set="method" line="321" static="1"><f a="poly">
+	<t path="hxGeomAlgo.Poly"/>
+	<x path="hxGeomAlgo.HxPoint"/>
+</f></getCentroid>
+		<getArea public="1" set="method" line="342" static="1"><f a="poly">
+	<t path="hxGeomAlgo.Poly"/>
+	<x path="Float"/>
+</f></getArea>
+		<meet public="1" set="method" line="353" static="1"><f a="p:q">
+	<x path="hxGeomAlgo.HxPoint"/>
+	<x path="hxGeomAlgo.HxPoint"/>
+	<c path="hxGeomAlgo.HomogCoord"/>
+</f></meet>
+		<dot public="1" set="method" line="359" static="1">
+			<f a="p:q">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>Dot product.</haxe_doc>
+		</dot>
+		<sqr public="1" get="inline" set="null" line="365" static="1">
+			<f a="x">
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":noUsing"/></meta>
+			<haxe_doc>Returns `x` squared.</haxe_doc>
+		</sqr>
+		<eq public="1" get="inline" set="null" line="368" static="1">
+			<f a="a:b">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":noUsing"/></meta>
+			<haxe_doc>Returns true if `a` is _acceptably_ equal to `b` (i.e. `a` is within EPSILON distance from `b`).</haxe_doc>
+		</eq>
+		<clear public="1" params="T" get="inline" set="null" line="374" static="1">
+			<f a="array">
+				<c path="Array"><c path="clear.T"/></c>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>Empties an array of its contents.</haxe_doc>
+		</clear>
+		<toFloatArray public="1" set="method" line="384" static="1">
+			<f a="poly:?out">
+				<t path="hxGeomAlgo.Poly"/>
+				<c path="Array"><x path="Float"/></c>
+				<c path="Array"><x path="Float"/></c>
+			</f>
+			<haxe_doc><![CDATA[Converts a poly defined by an Array<HxPoint> to an Array<Float> (appending values to `out` if specified).]]></haxe_doc>
+		</toFloatArray>
+		<reverseFloatArray public="1" set="method" line="397" static="1">
+			<f a="poly:?inPlace" v=":false">
+				<c path="Array"><x path="Float"/></c>
+				<x path="Bool"/>
+				<c path="Array"><x path="Float"/></c>
+			</f>
+			<meta><m n=":value"><e>{ inPlace : false }</e></m></meta>
+			<haxe_doc>Reverses the coords of the 2D float array `poly` (doing it `inPlace` if specified).</haxe_doc>
+		</reverseFloatArray>
+		<flatten public="1" params="T" set="method" line="412" static="1">
+			<f a="array:?out">
+				<c path="Array"><c path="Array"><c path="flatten.T"/></c></c>
+				<c path="Array"><c path="flatten.T"/></c>
+				<c path="Array"><c path="flatten.T"/></c>
+			</f>
+			<haxe_doc>Converts an Array of Arrays into a 'flattened' Array (appending values to `out` if specified).</haxe_doc>
+		</flatten>
+		<toPointArray public="1" set="method" line="424" static="1">
+			<f a="poly:?out">
+				<c path="Array"><x path="Float"/></c>
+				<x path="Null"><t path="hxGeomAlgo.Poly"/></x>
+				<t path="hxGeomAlgo.Poly"/>
+			</f>
+			<haxe_doc><![CDATA[Converts a poly defined by an Array<Float> to an Array<HxPoint> (appending values to `out` if specified).]]></haxe_doc>
+		</toPointArray>
+		<inflateLine public="1" set="method" line="439" static="1">
+			<f a="start:end:thickness">
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="hxGeomAlgo.HxPoint"/>
+				<x path="Float"/>
+				<t path="hxGeomAlgo.Poly"/>
+			</f>
+			<meta><m n=":noUsing"/></meta>
+			<haxe_doc>Expands a line into a rectangular poly, offsetting it by half-`thickness` along its normals.</haxe_doc>
+		</inflateLine>
+		<clip public="1" set="method" line="457" static="1">
+			<f a="subjPoly:clipPoly">
+				<t path="hxGeomAlgo.Poly"/>
+				<t path="hxGeomAlgo.Poly"/>
+				<c path="Array"><t path="hxGeomAlgo.Poly"/></c>
+			</f>
+			<haxe_doc>* Clips `subjPoly` with `clipPoly` (using the Sutherland-Hodgman algorithm).
+   * 
+   * NOTE: expects simple polygons, and `clipPoly` MUST be convex.
+   * 
+   * @see https://en.wikipedia.org/wiki/Sutherland%E2%80%93Hodgman_algorithm</haxe_doc>
+		</clip>
+		<exposeEnum public="1" params="T" set="method" line="502" static="1">
+			<f a="enumClass:?as">
+				<x path="Enum"><c path="exposeEnum.T"/></x>
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<meta>
+				<m n=":noUsing"/>
+				<m n=":noCompletion"/>
+			</meta>
+			<haxe_doc>Used internally to expose enums in js.</haxe_doc>
+		</exposeEnum>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"/>
+		</meta>
+	</class>
+	<enum path="hxGeomAlgo.WindingRule" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" module="hxGeomAlgo.Tess2">
+		<ODD/>
+		<NON_ZERO/>
+		<POSITIVE/>
+		<NEGATIVE/>
+		<ABS_GEQ_TWO/>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":flatEnum"/>
+			<m n=":expose"/>
+		</meta>
+	</enum>
+	<enum path="hxGeomAlgo.ResultType" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" module="hxGeomAlgo.Tess2">
+		<POLYGONS/>
+		<CONNECTED_POLYGONS/>
+		<BOUNDARY_CONTOURS/>
+		<EXPERIMENTAL_DELAUNAY/>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":flatEnum"/>
+			<m n=":expose"/>
+		</meta>
+	</enum>
+	<typedef path="hxGeomAlgo.TessResult" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" module="hxGeomAlgo.Tess2"><a>
+	<vertices><c path="Array"><x path="Float"/></c></vertices>
+	<vertexIndices><c path="Array"><x path="Int"/></c></vertexIndices>
+	<vertexCount><x path="Int"/></vertexCount>
+	<elements><c path="Array"><x path="Int"/></c></elements>
+	<elementCount><x path="Int"/></elementCount>
+</a></typedef>
+	<class path="hxGeomAlgo.Tess2" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx">
+		<tesselate public="1" set="method" line="124" static="1">
+			<f a="contours:?windingRule:?resultType:?polySize:?vertexDim:?normal" v=":null:null:3:2:null">
+				<c path="Array"><c path="Array"><x path="Float"/></c></c>
+				<e path="hxGeomAlgo.WindingRule"/>
+				<e path="hxGeomAlgo.ResultType"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<c path="Array"><x path="Float"/></c>
+				<t path="hxGeomAlgo.TessResult"/>
+			</f>
+			<meta><m n=":value"><e>{ normal : null, vertexDim : 2, polySize : 3, resultType : null, windingRule : null }</e></m></meta>
+			<haxe_doc><![CDATA[* Tesselates the specified `contours`.
+   * 
+   * (see Tess2.convertResult() for an easy way to use the returned TessResult)
+   * 
+   * @param	contours		Array of polygons to tesselate. Each poly is specified as a sequence of point coords (i.e. [x0, y0, x1, y1, x2, y2, ...]).
+   * @param	windingRule		Winding rule to apply. Deaults to WindingRule.ODD.
+   * @param	resultType		The result type you want as output. Defaults to ResultType.POLYGONS.
+   * @param	polySize		Max dimesion of the polygons resulting from the tesselation. Defaults to 3 (not considered if resultType is BOUNDARY_CONTOURS or EXPERIMENTAL_DELAUNAY).
+   * @param	vertexDim		Pass 2 when working with 2D polys (default), or 3 for 3D.
+   * @param	normal			Array of length 3 representing the normals in each plane.
+   * 
+   * @return A structure of TessResult type, composed of the following fields:
+   *		   { 
+   *				vertices:Array<Float>;		// A sequence of point coords in the same format of `contours`.
+   *				vertexIndices:Array<Int>;	// A sequence of indices that map into the original `contours` joined together.
+   *				vertexCount:Int;			// The number of vertices.
+   *				elements:Array<Int>;		// Elements' indices whose meaning depends on the ResultType used.
+   *				elementCount:Int;			// The number of elements found.
+   * 		   };]]></haxe_doc>
+		</tesselate>
+		<union public="1" set="method" line="149" static="1">
+			<f a="contoursA:contoursB:?resultType:?polySize:?vertexDim" v="::null:3:2">
+				<c path="Array"><c path="Array"><x path="Float"/></c></c>
+				<c path="Array"><c path="Array"><x path="Float"/></c></c>
+				<e path="hxGeomAlgo.ResultType"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<t path="hxGeomAlgo.TessResult"/>
+			</f>
+			<meta><m n=":value"><e>{ vertexDim : 2, polySize : 3, resultType : null }</e></m></meta>
+			<haxe_doc>* Computes the union between `contoursA` and `contoursB`. 
+   *
+   * @see "CSG Uses for Winding Rules" section on http://www.glprogramming.com/red/chapter11.html</haxe_doc>
+		</union>
+		<intersection public="1" set="method" line="160" static="1">
+			<f a="contoursA:contoursB:?resultType:?polySize:?vertexDim" v="::null:3:2">
+				<c path="Array"><c path="Array"><x path="Float"/></c></c>
+				<c path="Array"><c path="Array"><x path="Float"/></c></c>
+				<e path="hxGeomAlgo.ResultType"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<t path="hxGeomAlgo.TessResult"/>
+			</f>
+			<meta><m n=":value"><e>{ vertexDim : 2, polySize : 3, resultType : null }</e></m></meta>
+			<haxe_doc>* Computes the intersection between `contoursA` and `contoursB`.
+   *
+   * @see "CSG Uses for Winding Rules" section on http://www.glprogramming.com/red/chapter11.html</haxe_doc>
+		</intersection>
+		<difference public="1" set="method" line="171" static="1">
+			<f a="contoursA:contoursB:?resultType:?polySize:?vertexDim" v="::null:3:2">
+				<c path="Array"><c path="Array"><x path="Float"/></c></c>
+				<c path="Array"><c path="Array"><x path="Float"/></c></c>
+				<e path="hxGeomAlgo.ResultType"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<t path="hxGeomAlgo.TessResult"/>
+			</f>
+			<meta><m n=":value"><e>{ vertexDim : 2, polySize : 3, resultType : null }</e></m></meta>
+			<haxe_doc>* Computes `contoursA` - `contoursB`.
+   *
+   * @see "CSG Uses for Winding Rules" section on http://www.glprogramming.com/red/chapter11.html</haxe_doc>
+		</difference>
+		<convertResult public="1" set="method" line="189" static="1">
+			<f a="vertices:elements:resultType:polySize:?out">
+				<c path="Array"><x path="Float"/></c>
+				<c path="Array"><x path="Int"/></c>
+				<e path="hxGeomAlgo.ResultType"/>
+				<x path="Int"/>
+				<c path="Array"><t path="hxGeomAlgo.Poly"/></c>
+				<c path="Array"><t path="hxGeomAlgo.Poly"/></c>
+			</f>
+			<haxe_doc>* Converts the results from tesselate() in a more manageable output.
+   * 
+   * @param	vertices	A sequence of point coords in the same format of `contours`. Typically the `vertices` field of Tess2.tesselate() output.
+   * @param	elements	A sequence of elements. Typically the `vertices` field of Tess2.tesselate() output.
+   * @param	resultType	The `resultType` passed to Tess2.tesselate().
+   * @param	polySize	The `polySize` passed to Tess2.tesselate().
+   * @param	out			The output will be appended to this array of polygons (if specified).
+   * 
+   * @return An array of polygons.</haxe_doc>
+		</convertResult>
+		<haxe_doc>* Class offering a quick wrapper around Tesselator functions.
+ * 
+ * For more info about how to use this class see the demo by Mikko Mononen on (https://github.com/memononen/tess2.js).
+ * Live version rehosted here (https://dl.dropboxusercontent.com/u/32864004/dev/FPDemo/tess2.js-demo/index.html).
+ * 
+ * Further reading: http://www.glprogramming.com/red/chapter11.html</haxe_doc>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"/>
+		</meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.TessVertex" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<next public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessVertex"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</next>
+		<prev public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessVertex"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</prev>
+		<anEdge public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</anEdge>
+		<coords public="1" expr="[0, 0, 0]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[0, 0, 0]</e></m></meta>
+		</coords>
+		<s public="1" expr="0.0">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.0</e></m></meta>
+		</s>
+		<t public="1" expr="0.0">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.0</e></m></meta>
+		</t>
+		<pqHandle public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</pqHandle>
+		<n public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</n>
+		<idx public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</idx>
+		<new public="1" set="method" line="323"><f a=""><x path="Void"/></f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.TessFace" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<next public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessFace"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</next>
+		<prev public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessFace"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</prev>
+		<anEdge public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</anEdge>
+		<trail public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessFace"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</trail>
+		<n public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</n>
+		<marked public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</marked>
+		<inside public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</inside>
+		<new public="1" set="method" line="338"><f a=""><x path="Void"/></f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.TessHalfEdge" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<next public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</next>
+		<Sym public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</Sym>
+		<Onext public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</Onext>
+		<Lnext public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</Lnext>
+		<Org public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessVertex"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</Org>
+		<Lface public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessFace"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</Lface>
+		<activeRegion public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</activeRegion>
+		<winding public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</winding>
+		<side public="1"><x path="Int"/></side>
+		<mark public="1"><x path="Bool"/></mark>
+		<Rface public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessFace"/></Rface>
+		<get_Rface set="method" line="363"><f a=""><c path="hxGeomAlgo._Tess2.TessFace"/></f></get_Rface>
+		<set_Rface set="method" line="364"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+</f></set_Rface>
+		<Dst public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessVertex"/></Dst>
+		<get_Dst set="method" line="367"><f a=""><c path="hxGeomAlgo._Tess2.TessVertex"/></f></get_Dst>
+		<set_Dst set="method" line="368"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+</f></set_Dst>
+		<Oprev public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></Oprev>
+		<get_Oprev set="method" line="371"><f a=""><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></f></get_Oprev>
+		<set_Oprev set="method" line="372"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></set_Oprev>
+		<Lprev public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></Lprev>
+		<get_Lprev set="method" line="375"><f a=""><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></f></get_Lprev>
+		<set_Lprev set="method" line="376"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></set_Lprev>
+		<Dprev public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></Dprev>
+		<get_Dprev set="method" line="379"><f a=""><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></f></get_Dprev>
+		<set_Dprev set="method" line="380"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></set_Dprev>
+		<Rprev public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></Rprev>
+		<get_Rprev set="method" line="383"><f a=""><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></f></get_Rprev>
+		<set_Rprev set="method" line="384"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></set_Rprev>
+		<Dnext public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></Dnext>
+		<get_Dnext set="method" line="387"><f a=""><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></f></get_Dnext>
+		<set_Dnext set="method" line="388"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></set_Dnext>
+		<Rnext public="1" get="accessor" set="accessor"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></Rnext>
+		<get_Rnext set="method" line="391"><f a=""><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></f></get_Rnext>
+		<set_Rnext set="method" line="392"><f a="v">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></set_Rnext>
+		<new public="1" set="method" line="357"><f a="side">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.TessMesh" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<flipEdge public="1" set="method" line="779" static="1"><f a="mesh:edge">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></flipEdge>
+		<v public="1" expr="new TessVertex()">
+			<c path="hxGeomAlgo._Tess2.TessVertex"/>
+			<meta><m n=":value"><e>new TessVertex()</e></m></meta>
+		</v>
+		<f public="1" expr="new TessFace()">
+			<c path="hxGeomAlgo._Tess2.TessFace"/>
+			<meta><m n=":value"><e>new TessFace()</e></m></meta>
+		</f>
+		<e public="1" expr="new TessHalfEdge(0)">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>new TessHalfEdge(0)</e></m></meta>
+		</e>
+		<eSym public="1" expr="new TessHalfEdge(1)">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>new TessHalfEdge(1)</e></m></meta>
+		</eSym>
+		<vHead public="1"><c path="hxGeomAlgo._Tess2.TessVertex"/></vHead>
+		<fHead public="1"><c path="hxGeomAlgo._Tess2.TessFace"/></fHead>
+		<eHead public="1"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></eHead>
+		<eHeadSym public="1"><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></eHeadSym>
+		<makeEdge_ set="method" line="526"><f a="eNext">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></makeEdge_>
+		<splice_ set="method" line="568"><f a="a:b">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></splice_>
+		<makeVertex_ set="method" line="584"><f a="newVertex:eOrig:vNext">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></makeVertex_>
+		<makeFace_ set="method" line="613"><f a="newFace:eOrig:fNext">
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<x path="Void"/>
+</f></makeFace_>
+		<killEdge_ set="method" line="645"><f a="eDel">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></killEdge_>
+		<killVertex_ set="method" line="660"><f a="vDel:newOrg">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></killVertex_>
+		<killFace_ set="method" line="680"><f a="fDel:newLface">
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<x path="Void"/>
+</f></killFace_>
+		<makeEdge public="1" set="method" line="703">
+			<f a=""><c path="hxGeomAlgo._Tess2.TessHalfEdge"/></f>
+			<haxe_doc>**************** Basic Edge Operations ********************</haxe_doc>
+		</makeEdge>
+		<splice public="1" set="method" line="738"><f a="eOrg:eDst">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></splice>
+		<delete public="1" set="method" line="868"><f a="eDel">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></delete>
+		<addEdgeVertex public="1" set="method" line="926">
+			<f a="eOrg">
+				<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+				<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			</f>
+			<haxe_doc>****************** Other Edge Operations ********************</haxe_doc>
+		</addEdgeVertex>
+		<splitEdge public="1" set="method" line="950"><f a="eOrg">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></splitEdge>
+		<connect public="1" set="method" line="979"><f a="eOrg:eDst">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></connect>
+		<zapFace public="1" set="method" line="1017"><f a="fZap">
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<x path="Void"/>
+</f></zapFace>
+		<countFaceVerts_ set="method" line="1059"><f a="f">
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<x path="Int"/>
+</f></countFaceVerts_>
+		<mergeConvexFaces public="1" set="method" line="1072"><f a="maxVertsPerFace">
+	<x path="Int"/>
+	<x path="Bool"/>
+</f></mergeConvexFaces>
+		<check public="1" set="method" line="1130"><f a=""><x path="Void"/></f></check>
+		<new public="1" set="method" line="407"><f a=""><x path="Void"/></f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.Geom" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<vertEq public="1" set="method" line="1189" static="1"><f a="u:v">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Bool"/>
+</f></vertEq>
+		<vertLeq public="1" set="method" line="1194" static="1"><f a="u:v">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Bool"/>
+</f></vertLeq>
+		<transLeq public="1" set="method" line="1199" static="1"><f a="u:v">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Bool"/>
+</f></transLeq>
+		<edgeGoesLeft public="1" set="method" line="1203" static="1"><f a="e">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Bool"/>
+</f></edgeGoesLeft>
+		<edgeGoesRight public="1" set="method" line="1207" static="1"><f a="e">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Bool"/>
+</f></edgeGoesRight>
+		<edgeIsInternal public="1" set="method" line="1211" static="1"><f a="e">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Bool"/>
+</f></edgeIsInternal>
+		<vertL1dist public="1" set="method" line="1215" static="1"><f a="u:v">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Float"/>
+</f></vertL1dist>
+		<edgeEval public="1" set="method" line="1220" static="1"><f a="u:v:w">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Float"/>
+</f></edgeEval>
+		<edgeSign public="1" set="method" line="1248" static="1"><f a="u:v:w">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Float"/>
+</f></edgeSign>
+		<transEval public="1" set="method" line="1271" static="1">
+			<f a="u:v:w">
+				<c path="hxGeomAlgo._Tess2.TessVertex"/>
+				<c path="hxGeomAlgo._Tess2.TessVertex"/>
+				<c path="hxGeomAlgo._Tess2.TessVertex"/>
+				<x path="Float"/>
+			</f>
+			<haxe_doc>*********************************************************************
+  * Define versions of EdgeSign, EdgeEval with s and t transposed.</haxe_doc>
+		</transEval>
+		<transSign public="1" set="method" line="1299" static="1"><f a="u:v:w">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Float"/>
+</f></transSign>
+		<vertCCW public="1" set="method" line="1317" static="1"><f a="u:v:w">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Bool"/>
+</f></vertCCW>
+		<interpolate public="1" set="method" line="1335" static="1"><f a="a:x:b:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></interpolate>
+		<intersect public="1" set="method" line="1367" static="1"><f a="o1:d1:o2:d2:v">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></intersect>
+		<calcAngle public="1" set="method" line="1432" static="1"><f a="v0:v1:v2">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Float"/>
+</f></calcAngle>
+		<edgeIsLocallyDelaunay public="1" set="method" line="1449" static="1"><f a="e">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Bool"/>
+</f></edgeIsLocallyDelaunay>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.DictNode" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<key public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</key>
+		<next public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.DictNode"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</next>
+		<prev public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.DictNode"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</prev>
+		<new public="1" set="method" line="1462"><f a=""><x path="Void"/></f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.Dict" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<head public="1"><c path="hxGeomAlgo._Tess2.DictNode"/></head>
+		<frame public="1"><c path="hxGeomAlgo.Tesselator"/></frame>
+		<leq public="1"><f a="::">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Bool"/>
+</f></leq>
+		<min public="1" set="method" line="1480"><f a=""><c path="hxGeomAlgo._Tess2.DictNode"/></f></min>
+		<max public="1" set="method" line="1484"><f a=""><c path="hxGeomAlgo._Tess2.DictNode"/></f></max>
+		<insert public="1" set="method" line="1488"><f a="k">
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.DictNode"/>
+</f></insert>
+		<search public="1" set="method" line="1492"><f a="key">
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.DictNode"/>
+</f></search>
+		<insertBefore public="1" set="method" line="1505"><f a="node:key">
+	<c path="hxGeomAlgo._Tess2.DictNode"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.DictNode"/>
+</f></insertBefore>
+		<delete public="1" set="method" line="1520"><f a="node">
+	<c path="hxGeomAlgo._Tess2.DictNode"/>
+	<x path="Void"/>
+</f></delete>
+		<new public="1" set="method" line="1471"><f a="frame:leq">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<f a="::">
+		<c path="hxGeomAlgo.Tesselator"/>
+		<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+		<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+		<x path="Bool"/>
+	</f>
+	<x path="Void"/>
+</f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.PQNode" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<handle public="1" expr="-1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>-1</e></m></meta>
+		</handle>
+		<new public="1" set="method" line="1530"><f a=""><x path="Void"/></f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.PQHandleElem" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<key public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessVertex"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</key>
+		<node public="1" expr="-1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>-1</e></m></meta>
+		</node>
+		<new public="1" set="method" line="1538"><f a=""><x path="Void"/></f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.PriorityQ" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<size public="1"><x path="Int"/></size>
+		<max public="1"><x path="Int"/></max>
+		<nodes public="1"><c path="Array"><c path="hxGeomAlgo._Tess2.PQNode"/></c></nodes>
+		<handles public="1"><c path="Array"><c path="hxGeomAlgo._Tess2.PQHandleElem"/></c></handles>
+		<initialized public="1"><x path="Bool"/></initialized>
+		<freeList public="1"><x path="Int"/></freeList>
+		<leq public="1"><f a=":">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Bool"/>
+</f></leq>
+		<floatDown_ set="method" line="1572"><f a="curr">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></floatDown_>
+		<floatUp_ set="method" line="1600"><f a="curr">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></floatUp_>
+		<init public="1" set="method" line="1622"><f a=""><x path="Void"/></f></init>
+		<min public="1" set="method" line="1632"><f a=""><c path="hxGeomAlgo._Tess2.TessVertex"/></f></min>
+		<isEmpty public="1" set="method" line="1636"><f a=""><x path="Bool"/></f></isEmpty>
+		<insert public="1" set="method" line="1643"><f a="keyNew">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Int"/>
+</f></insert>
+		<extractMin public="1" set="method" line="1678"><f a=""><c path="hxGeomAlgo._Tess2.TessVertex"/></f></extractMin>
+		<delete public="1" set="method" line="1700"><f a="hCurr">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></delete>
+		<new public="1" set="method" line="1551"><f a="size:leq">
+	<x path="Int"/>
+	<f a=":">
+		<c path="hxGeomAlgo._Tess2.TessVertex"/>
+		<c path="hxGeomAlgo._Tess2.TessVertex"/>
+		<x path="Bool"/>
+	</f>
+	<x path="Void"/>
+</f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.ActiveRegion" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<eUp public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</eUp>
+		<nodeUp public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.DictNode"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</nodeUp>
+		<windingNumber public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</windingNumber>
+		<inside public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</inside>
+		<sentinel public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</sentinel>
+		<dirty public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</dirty>
+		<fixUpperEdge public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</fixUpperEdge>
+		<new public="1" set="method" line="1746"><f a=""><x path="Void"/></f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo._Tess2.Sweep" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" private="1" module="hxGeomAlgo.Tess2">
+		<regionBelow public="1" set="method" line="1751" static="1"><f a="r">
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+</f></regionBelow>
+		<regionAbove public="1" set="method" line="1755" static="1"><f a="r">
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+</f></regionAbove>
+		<debugEvent public="1" set="method" line="1759" static="1"><f a="tess">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<x path="Void"/>
+</f></debugEvent>
+		<addWinding public="1" set="method" line="1796" static="1"><f a="eDst:eSrc">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></addWinding>
+		<edgeLeq public="1" set="method" line="1802" static="1"><f a="tess:reg1:reg2">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Bool"/>
+</f></edgeLeq>
+		<deleteRegion public="1" set="method" line="1843" static="1"><f a="tess:reg">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Void"/>
+</f></deleteRegion>
+		<fixUpperEdge public="1" set="method" line="1856" static="1"><f a="tess:reg:newEdge">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></fixUpperEdge>
+		<topLeftRegion public="1" set="method" line="1868" static="1"><f a="tess:reg">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+</f></topLeftRegion>
+		<topRightRegion public="1" set="method" line="1890" static="1"><f a="reg">
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+</f></topRightRegion>
+		<addRegionBelow public="1" set="method" line="1902" static="1"><f a="tess:regAbove:eNewUp">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+</f></addRegionBelow>
+		<isWindingInside public="1" set="method" line="1922" static="1"><f a="tess:n">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<x path="Int"/>
+	<x path="Bool"/>
+</f></isWindingInside>
+		<computeWinding public="1" set="method" line="1940" static="1"><f a="tess:reg">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Void"/>
+</f></computeWinding>
+		<finishRegion public="1" set="method" line="1946" static="1"><f a="tess:reg">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Void"/>
+</f></finishRegion>
+		<finishLeftRegions public="1" set="method" line="1964" static="1"><f a="tess:regFirst:regLast">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+</f></finishLeftRegions>
+		<addRightEdges public="1" set="method" line="2017" static="1"><f a="tess:regUp:eFirst:eLast:eTopLeft:cleanUp">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Bool"/>
+	<x path="Void"/>
+</f></addRightEdges>
+		<spliceMergeVertices public="1" set="method" line="2086" static="1"><f a="tess:e1:e2">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></spliceMergeVertices>
+		<vertexWeights public="1" set="method" line="2095" static="1"><f a="isect:org:dst">
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></vertexWeights>
+		<getIntersectData public="1" set="method" line="2113" static="1"><f a="tess:isect:orgUp:dstUp:orgLo:dstLo">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></getIntersectData>
+		<checkForRightSplice public="1" set="method" line="2126" static="1"><f a="tess:regUp">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Bool"/>
+</f></checkForRightSplice>
+		<checkForLeftSplice public="1" set="method" line="2183" static="1"><f a="tess:regUp">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Bool"/>
+</f></checkForLeftSplice>
+		<checkForIntersect public="1" set="method" line="2231" static="1"><f a="tess:regUp">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Bool"/>
+</f></checkForIntersect>
+		<walkDirtyRegions public="1" set="method" line="2380" static="1"><f a="tess:regUp">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<x path="Void"/>
+</f></walkDirtyRegions>
+		<connectRightVertex public="1" set="method" line="2466" static="1"><f a="tess:regUp:eBottomLeft">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></connectRightVertex>
+		<connectLeftDegenerate public="1" set="method" line="2557" static="1"><f a="tess:regUp:vEvent">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.ActiveRegion"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></connectLeftDegenerate>
+		<connectLeftVertex public="1" set="method" line="2616" static="1"><f a="tess:vEvent">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></connectLeftVertex>
+		<sweepEvent public="1" set="method" line="2683" static="1"><f a="tess:vEvent">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.TessVertex"/>
+	<x path="Void"/>
+</f></sweepEvent>
+		<addSentinel public="1" set="method" line="2738" static="1"><f a="tess:smin:smax:t">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></addSentinel>
+		<initEdgeDict public="1" set="method" line="2764" static="1"><f a="tess">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<x path="Void"/>
+</f></initEdgeDict>
+		<doneEdgeDict public="1" set="method" line="2784" static="1"><f a="tess">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<x path="Void"/>
+</f></doneEdgeDict>
+		<removeDegenerateEdges public="1" set="method" line="2806" static="1"><f a="tess">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<x path="Void"/>
+</f></removeDegenerateEdges>
+		<initPriorityQ public="1" set="method" line="2839" static="1"><f a="tess">
+	<a>
+		<pq><c path="hxGeomAlgo._Tess2.PriorityQ"/></pq>
+		<mesh set="null"><a><vHead set="null"><c path="hxGeomAlgo._Tess2.TessVertex"/></vHead></a></mesh>
+	</a>
+	<x path="Bool"/>
+</f></initPriorityQ>
+		<donePriorityQ public="1" set="method" line="2878" static="1"><f a="tess">
+	<a><pq><c path="hxGeomAlgo._Tess2.PriorityQ"/></pq></a>
+	<x path="Void"/>
+</f></donePriorityQ>
+		<removeDegenerateFaces public="1" set="method" line="2882" static="1"><f a="tess:mesh">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<x path="Bool"/>
+</f></removeDegenerateFaces>
+		<computeInterior public="1" set="method" line="2917" static="1"><f a="tess">
+	<c path="hxGeomAlgo.Tesselator"/>
+	<x path="Bool"/>
+</f></computeInterior>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="hxGeomAlgo.Tesselator" params="" file="/usr/local/lib/haxeLibrary/hxGeomAlgo/git/hxGeomAlgo/Tess2.hx" module="hxGeomAlgo.Tess2">
+		<mesh public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessMesh"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+			<haxe_doc>* state needed for collecting the input data *</haxe_doc>
+		</mesh>
+		<normal public="1" expr="[0.0, 0.0, 0.0]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[0.0, 0.0, 0.0]</e></m></meta>
+			<haxe_doc>* state needed for projecting onto the sweep plane *</haxe_doc>
+		</normal>
+		<sUnit public="1" expr="[0.0, 0.0, 0.0]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[0.0, 0.0, 0.0]</e></m></meta>
+		</sUnit>
+		<tUnit public="1" expr="[0.0, 0.0, 0.0]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[0.0, 0.0, 0.0]</e></m></meta>
+		</tUnit>
+		<bmin public="1" expr="[0.0, 0.0]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[0.0, 0.0]</e></m></meta>
+		</bmin>
+		<bmax public="1" expr="[0.0, 0.0]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[0.0, 0.0]</e></m></meta>
+		</bmax>
+		<windingRule public="1">
+			<e path="hxGeomAlgo.WindingRule"/>
+			<haxe_doc>* state needed for the line sweep *</haxe_doc>
+		</windingRule>
+		<dict public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.Dict"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</dict>
+		<pq public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.PriorityQ"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</pq>
+		<event public="1" expr="null">
+			<c path="hxGeomAlgo._Tess2.TessVertex"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</event>
+		<vertexIndexCounter public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</vertexIndexCounter>
+		<vertices public="1" expr="[]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</vertices>
+		<vertexIndices public="1" expr="[]">
+			<c path="Array"><x path="Int"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</vertexIndices>
+		<vertexCount public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</vertexCount>
+		<elements public="1" expr="[]">
+			<c path="Array"><x path="Int"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</elements>
+		<elementCount public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</elementCount>
+		<dot_ set="method" line="3025"><f a="u:v">
+	<c path="Array"><x path="Float"/></c>
+	<c path="Array"><x path="Float"/></c>
+	<x path="Float"/>
+</f></dot_>
+		<normalize_ set="method" line="3029"><f a="v">
+	<c path="Array"><x path="Float"/></c>
+	<x path="Void"/>
+</f></normalize_>
+		<longAxis_ set="method" line="3038"><f a="v">
+	<c path="Array"><x path="Float"/></c>
+	<x path="Int"/>
+</f></longAxis_>
+		<computeNormal_ set="method" line="3045"><f a="norm">
+	<c path="Array"><x path="Float"/></c>
+	<x path="Void"/>
+</f></computeNormal_>
+		<checkOrientation_ set="method" line="3119"><f a=""><x path="Void"/></f></checkOrientation_>
+		<projectPolygon_ set="method" line="3182"><f a=""><x path="Void"/></f></projectPolygon_>
+		<addWinding_ set="method" line="3261"><f a="eDst:eSrc">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Void"/>
+</f></addWinding_>
+		<tessellateMonoRegion_ set="method" line="3294"><f a="mesh:face">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<c path="hxGeomAlgo._Tess2.TessFace"/>
+	<x path="Bool"/>
+</f></tessellateMonoRegion_>
+		<tessellateInterior_ set="method" line="3355"><f a="mesh">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<x path="Bool"/>
+</f></tessellateInterior_>
+		<refineDelaunay_ set="method" line="3378"><f a="mesh">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<x path="Void"/>
+</f></refineDelaunay_>
+		<discardExterior_ set="method" line="3439"><f a="mesh">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<x path="Void"/>
+</f></discardExterior_>
+		<setWindingNumber_ set="method" line="3463"><f a="mesh:value:keepOnlyBoundary">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<x path="Int"/>
+	<x path="Bool"/>
+	<x path="Void"/>
+</f></setWindingNumber_>
+		<getNeighbourFace_ set="method" line="3486"><f a="edge">
+	<c path="hxGeomAlgo._Tess2.TessHalfEdge"/>
+	<x path="Int"/>
+</f></getNeighbourFace_>
+		<outputPolymesh_ set="method" line="3495"><f a="mesh:resultsType:polySize:vertexDim">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<e path="hxGeomAlgo.ResultType"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></outputPolymesh_>
+		<outputContours_ set="method" line="3648"><f a="mesh:vertexDim">
+	<c path="hxGeomAlgo._Tess2.TessMesh"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></outputContours_>
+		<addContour public="1" set="method" line="3744"><f a="vertexDim:vertices">
+	<x path="Int"/>
+	<c path="Array"><x path="Float"/></c>
+	<x path="Void"/>
+</f></addContour>
+		<tesselate public="1" set="method" line="3803">
+			<f a="windingRule:resultType:polySize:vertexDim:?normal" v="::::null">
+				<e path="hxGeomAlgo.WindingRule"/>
+				<e path="hxGeomAlgo.ResultType"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":value"><e>{ normal : null }</e></m></meta>
+		</tesselate>
+		<new public="1" set="method" line="3020"><f a=""><x path="Void"/></f></new>
+		<haxe_doc>* The actual tesselator class.
+ * 
+ * For more info about how to use this class see the demo by Mikko Mononen on (https://github.com/memononen/tess2.js).
+ * Live version rehosted here (https://dl.dropboxusercontent.com/u/32864004/dev/FPDemo/tess2.js-demo/index.html)
+ * 
+ * Further reading: http://www.glprogramming.com/red/chapter11.html</haxe_doc>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":expose"/>
 		</meta>
 	</class>
 	<typedef path="hxPolyK.Rectangle" params="" file="/usr/local/lib/haxeLibrary/hxPolyK/git/hxPolyK/PolyK.hx" module="hxPolyK.PolyK"><a>
@@ -60579,12 +62341,12 @@
 			</f>
 			<meta><m n=":value"><e>{ overlap : false, curveEnds : false }</e></m></meta>
 		</triangleJoin>
-		<overlapQuad get="inline" set="null" line="298"><f a=""><x path="Void"/></f></overlapQuad>
-		<end public="1" get="inline" set="null" line="306"><f a="width_">
+		<overlapQuad get="inline" set="null" line="300"><f a=""><x path="Void"/></f></overlapQuad>
+		<end public="1" get="inline" set="null" line="308"><f a="width_">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></end>
-		<triangle2DFill get="inline" set="null" line="312">
+		<triangle2DFill get="inline" set="null" line="314">
 			<f a="ax_:ay_:bx_:by_:cx_:cy_:?color_" v="::::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -60597,7 +62359,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color_ : -1 }</e></m></meta>
 		</triangle2DFill>
-		<addPieXstart get="inline" set="null" line="316">
+		<addPieXstart get="inline" set="null" line="318">
 			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::-1:36">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -60611,7 +62373,7 @@
 			</f>
 			<meta><m n=":value"><e>{ sides : 36, mark : -1 }</e></m></meta>
 		</addPieXstart>
-		<addPieX get="inline" set="null" line="336">
+		<addPieX get="inline" set="null" line="340">
 			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::0:36">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -60625,7 +62387,7 @@
 			</f>
 			<meta><m n=":value"><e>{ sides : 36, mark : 0 }</e></m></meta>
 		</addPieX>
-		<addPie get="inline" set="null" line="356">
+		<addPie get="inline" set="null" line="361">
 			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::0:36">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -60639,25 +62401,25 @@
 			</f>
 			<meta><m n=":value"><e>{ sides : 36, mark : 0 }</e></m></meta>
 		</addPie>
-		<computeJ get="inline" set="null" line="362"><f a="width_:theta0:dif">
+		<computeJ get="inline" set="null" line="368"><f a="width_:theta0:dif">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></computeJ>
-		<addDot get="inline" set="null" line="372"><f a="x:y:color:width_">
+		<addDot get="inline" set="null" line="378"><f a="x:y:color:width_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></addDot>
-		<addSmallTriangles get="inline" set="null" line="398"><f a="clockWise:width_">
+		<addSmallTriangles get="inline" set="null" line="407"><f a="clockWise:width_">
 	<x path="Bool"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></addSmallTriangles>
-		<triangle2DFillangleCorners get="inline" set="null" line="410"><f a="oldx_:oldy_:prevx_:prevy_:width_">
+		<triangle2DFillangleCorners get="inline" set="null" line="419"><f a="oldx_:oldy_:prevx_:prevy_:width_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -60665,7 +62427,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></triangle2DFillangleCorners>
-		<triangle2DFillangleCornersLess get="inline" set="null" line="422"><f a="oldx_:oldy_:prevx_:prevy_:width_">
+		<triangle2DFillangleCornersLess get="inline" set="null" line="435"><f a="oldx_:oldy_:prevx_:prevy_:width_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -60673,38 +62435,38 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></triangle2DFillangleCornersLess>
-		<connectQuadsWhenQuadsOverlay get="inline" set="null" line="433"><f a="clockWise:width_">
+		<connectQuadsWhenQuadsOverlay get="inline" set="null" line="449"><f a="clockWise:width_">
 	<x path="Bool"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></connectQuadsWhenQuadsOverlay>
-		<connectQuads get="inline" set="null" line="448"><f a="clockWise:width_">
+		<connectQuads get="inline" set="null" line="464"><f a="clockWise:width_">
 	<x path="Bool"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></connectQuads>
-		<addInitialQuads get="inline" set="null" line="464"><f a="clockWise:width_">
+		<addInitialQuads get="inline" set="null" line="480"><f a="clockWise:width_">
 	<x path="Bool"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></addInitialQuads>
-		<endEdges public="1" set="method" line="548"><f a=""><x path="Void"/></f></endEdges>
+		<endEdges public="1" set="method" line="564"><f a=""><x path="Void"/></f></endEdges>
 		<counter expr="0">
 			<x path="Int"/>
 			<meta><m n=":value"><e>0</e></m></meta>
 		</counter>
-		<addQuads set="method" line="574"><f a="clockWise:width_">
+		<addQuads set="method" line="590"><f a="clockWise:width_">
 	<x path="Bool"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></addQuads>
-		<storeLastQuads get="inline" set="null" line="740"><f a=""><x path="Void"/></f></storeLastQuads>
-		<isClockwise get="inline" set="null" line="750"><f a="x:y">
+		<storeLastQuads get="inline" set="null" line="756"><f a=""><x path="Void"/></f></storeLastQuads>
+		<isClockwise get="inline" set="null" line="766"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Bool"/>
 </f></isClockwise>
-		<line public="1" get="inline" set="null" line="753">
+		<line public="1" get="inline" set="null" line="770">
 			<f a="ax_:ay_:bx_:by_:width_:?endLineCurve" v=":::::no">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -60899,7 +62661,312 @@
 	<x path="trilateral3.drawing.StyleFill"/>
 	<x path="Void"/>
 </f></triangulate></class>
+	<class path="trilateral3.drawing.Nymph" params="" file="src/trilateral3/drawing/Nymph.hx">
+		<pen><c path="trilateral3.drawing.Pen"/></pen>
+		<curr><x path="trilateral3.drawing.TriangleAbstract"/></curr>
+		<currUV><x path="trilateral3.drawing.TriangleAbstractUV"/></currUV>
+		<curr3color><x path="trilateral3.drawing.Color3Abstract"/></curr3color>
+		<indexRange><x path="trilateral3.shape.IndexRange"/></indexRange>
+		<sx expr="[]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</sx>
+		<sy expr="[]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</sy>
+		<su expr="[]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</su>
+		<sv expr="[]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</sv>
+		<theta expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</theta>
+		<moveStart public="1" set="method" line="33"><f a="sx_:sy_:su_:sv_">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></moveStart>
+		<dMoveXY public="1" set="method" line="49"><f a="dx:dy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></dMoveXY>
+		<dMoveUV public="1" set="method" line="58"><f a="du:dv">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></dMoveUV>
+		<dMoveXYUV public="1" set="method" line="67"><f a="dx:dy:du:dv">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></dMoveXYUV>
+		<setColor public="1" set="method" line="78"><f a="col">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></setColor>
+		<setRndColor public="1" set="method" line="84"><f a="col">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></setRndColor>
+		<dRotate public="1" set="method" line="90"><f a="dx:dy:dr">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></dRotate>
+		<rotateCentre2 public="1" set="method" line="98"><f a="vx:vy:ax:ay:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></rotateCentre2>
+		<rotateCentre public="1" set="method" line="102"><f a="vx:vy:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></rotateCentre>
+		<x get="accessor" set="accessor"><x path="Float"/></x>
+		<get_x public="1" set="method" line="106"><f a=""><x path="Float"/></f></get_x>
+		<set_x public="1" set="method" line="109"><f a="val">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_x>
+		<y get="accessor" set="accessor"><x path="Float"/></y>
+		<get_y public="1" set="method" line="115"><f a=""><x path="Float"/></f></get_y>
+		<set_y public="1" set="method" line="118"><f a="val">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_y>
+		<u get="accessor" set="accessor"><x path="Float"/></u>
+		<get_u public="1" set="method" line="124"><f a=""><x path="Float"/></f></get_u>
+		<set_u public="1" set="method" line="127"><f a="val">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_u>
+		<v get="accessor" set="accessor"><x path="Float"/></v>
+		<get_v public="1" set="method" line="133"><f a=""><x path="Float"/></f></get_v>
+		<set_v public="1" set="method" line="136"><f a="val">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_v>
+		<argb public="1" get="accessor" set="accessor"><x path="Int"/></argb>
+		<_argb expr="0xFFFFFFFF">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0xFFFFFFFF</e></m></meta>
+		</_argb>
+		<set_argb get="inline" set="null" line="143"><f a="col">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_argb>
+		<get_argb get="inline" set="null" line="149"><f a=""><x path="Int"/></f></get_argb>
+		<new public="1" set="method" line="19"><f a="pen:indexRange">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="trilateral3.shape.IndexRange"/>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<abstract path="trilateral3.drawing.PaintAbstract" params="" file="src/trilateral3/drawing/PaintAbstract.hx">
+		<from><icast><t path="trilateral3.drawing.PaintType"/></icast></from>
+		<this><t path="trilateral3.drawing.PaintType"/></this>
+		<to><icast><t path="trilateral3.drawing.PaintType"/></icast></to>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="trilateral3.drawing._PaintAbstract.PaintAbstract_Impl_" params="" file="src/trilateral3/drawing/PaintAbstract.hx" private="1" module="trilateral3.drawing.PaintAbstract" final="1">
+	<_new public="1" get="inline" set="null" line="4" static="1">
+		<f a="paintType">
+			<t path="trilateral3.drawing.PaintType"/>
+			<x path="trilateral3.drawing.PaintAbstract"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+		</meta>
+	</_new>
+	<pos public="1" get="accessor" set="accessor" static="1">
+		<x path="Float"/>
+		<meta><m n=":impl"/></meta>
+	</pos>
+	<get_pos get="inline" set="null" line="8" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.PaintType"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_pos>
+	<set_pos get="inline" set="null" line="11" static="1">
+		<f a="this:v">
+			<t path="trilateral3.drawing.PaintType"/>
+			<x path="Float"/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_pos>
+	<size public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</size>
+	<set_size get="inline" set="null" line="16" static="1">
+		<f a="this:v">
+			<t path="trilateral3.drawing.PaintType"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_size>
+	<get_size get="inline" set="null" line="20" static="1">
+		<f a="this">
+			<t path="trilateral3.drawing.PaintType"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_size>
+</class></impl>
+	</abstract>
+	<class path="trilateral3.drawing._PaintAbstract.PaintAbstract_Impl_" params="" file="src/trilateral3/drawing/PaintAbstract.hx" private="1" module="trilateral3.drawing.PaintAbstract" final="1">
+		<_new public="1" get="inline" set="null" line="4" static="1">
+			<f a="paintType">
+				<t path="trilateral3.drawing.PaintType"/>
+				<x path="trilateral3.drawing.PaintAbstract"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</_new>
+		<pos public="1" get="accessor" set="accessor" static="1">
+			<x path="Float"/>
+			<meta><m n=":impl"/></meta>
+		</pos>
+		<get_pos get="inline" set="null" line="8" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.PaintType"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_pos>
+		<set_pos get="inline" set="null" line="11" static="1">
+			<f a="this:v">
+				<t path="trilateral3.drawing.PaintType"/>
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_pos>
+		<size public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</size>
+		<set_size get="inline" set="null" line="16" static="1">
+			<f a="this:v">
+				<t path="trilateral3.drawing.PaintType"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_size>
+		<get_size get="inline" set="null" line="20" static="1">
+			<f a="this">
+				<t path="trilateral3.drawing.PaintType"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_size>
+	</class>
+	<typedef path="trilateral3.drawing.PaintType" params="" file="src/trilateral3/drawing/PaintType.hx"><a>
+	<triangleUV>
+		<x path="Null"><f a="uA_:vA_:uB_:vB_:uC_:vC_:?windAdjust_">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+	<x path="Bool"/>
+</f></x>
+		<meta><m n=":optional"/></meta>
+	</triangleUV>
+	<triangleCurrentUV>
+		<x path="Null"><x path="trilateral3.drawing.TriangleAbstractUV"/></x>
+		<meta><m n=":optional"/></meta>
+	</triangleCurrentUV>
+	<triangleCurrent>
+		<x path="Null"><x path="trilateral3.drawing.TriangleAbstract"/></x>
+		<meta><m n=":optional"/></meta>
+	</triangleCurrent>
+	<triangle><f a="ax_:ay_:az_:bx_:by_:bz_:cx_:cy_:cz_">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></triangle>
+	<transformRange><f a="m:startEnd">
+	<c path="trilateral3.matrix.MatrixDozen"/>
+	<x path="trilateral3.shape.IndexRange"/>
+	<x path="Void"/>
+</f></transformRange>
+	<transform><f a="">
+	<c path="trilateral3.matrix.MatrixDozen"/>
+	<x path="Void"/>
+</f></transform>
+	<set_size set="method"><f a="v">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_size>
+	<set_pos set="method"><f a="v">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_pos>
+	<next><f a=""><x path="Float"/></f></next>
+	<hasNext><f a=""><x path="Bool"/></f></hasNext>
+	<get_size set="method"><f a=""><x path="Int"/></f></get_size>
+	<get_pos set="method"><f a=""><x path="Float"/></f></get_pos>
+	<getTriangleUV>
+		<x path="Null"><f a=""><c path="trilateral3.structure.TriangleUV"/></f></x>
+		<meta><m n=":optional"/></meta>
+	</getTriangleUV>
+	<getTriangle3D><f a=""><c path="trilateral3.structure.Triangle3D"/></f></getTriangle3D>
+	<getTriInt><f a=""><c path="trilateral3.structure.TriInt"/></f></getTriInt>
+	<cornerColors><f a="colorA:colorB:colorC">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></cornerColors>
+	<colorTriangles><f a="color:times">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></colorTriangles>
+	<color3current>
+		<x path="Null"><x path="trilateral3.drawing.Color3Abstract"/></x>
+		<meta><m n=":optional"/></meta>
+	</color3current>
+</a></typedef>
 	<class path="trilateral3.drawing.Pen" params="" file="src/trilateral3/drawing/Pen.hx">
+		<z2D public="1" expr="0.">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.</e></m></meta>
+		</z2D>
 		<useTexture public="1" expr="false">
 			<x path="Bool"/>
 			<meta><m n=":value"><e>false</e></m></meta>
@@ -60924,8 +62991,7 @@
 			<x path="Int"/>
 			<meta><m n=":value"><e>0xFACADE</e></m></meta>
 		</currentColor>
-		<drawType public="1"><x path="trilateral3.drawing.DrawAbstract"/></drawType>
-		<colorType public="1"><x path="trilateral3.drawing.ColorAbstract"/></colorType>
+		<paintType public="1"><x path="trilateral3.drawing.PaintAbstract"/></paintType>
 		<translateX public="1"><f a="">
 	<x path="Float"/>
 	<c path="trilateral3.matrix.MatrixDozen"/>
@@ -60954,59 +63020,59 @@
 			<c path="Array"><x path="Int"/></c>
 			<meta><m n=":value"><e>[]</e></m></meta>
 		</indices>
-		<transformRange public="1" get="inline" set="null" line="37"><f a="trans:ir">
+		<transformRange public="1" get="inline" set="null" line="38"><f a="trans:ir">
 	<c path="trilateral3.matrix.MatrixDozen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></transformRange>
 		<textureXYWH public="1" get="null" set="accessor"><x path="trilateral3.structure.XYWH"/></textureXYWH>
-		<set_textureXYWH get="inline" set="null" line="42"><f a="r">
+		<set_textureXYWH get="inline" set="null" line="43"><f a="r">
 	<x path="trilateral3.structure.XYWH"/>
 	<x path="trilateral3.structure.XYWH"/>
 </f></set_textureXYWH>
-		<up public="1" get="inline" set="null" line="48"><f a="ir">
+		<up public="1" get="inline" set="null" line="49"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></up>
-		<down public="1" get="inline" set="null" line="53"><f a="ir">
+		<down public="1" get="inline" set="null" line="54"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></down>
-		<back public="1" get="inline" set="null" line="58"><f a="ir">
+		<back public="1" get="inline" set="null" line="59"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></back>
-		<transBack get="inline" set="null" line="62"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
-		<cornerColor public="1" get="inline" set="null" line="92">
+		<transBack get="inline" set="null" line="63"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
+		<cornerColor public="1" get="inline" set="null" line="93">
 			<f a="?color" v="-1">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</cornerColor>
-		<cornerColors public="1" get="inline" set="null" line="97"><f a="colorA:colorB:colorC">
+		<cornerColors public="1" get="inline" set="null" line="98"><f a="colorA:colorB:colorC">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></cornerColors>
-		<middleColor public="1" get="inline" set="null" line="101"><f a="color:colorCentre">
+		<middleColor public="1" get="inline" set="null" line="102"><f a="color:colorCentre">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColor>
-		<middleColors public="1" get="inline" set="null" line="105"><f a="color:colorCentre:times">
+		<middleColors public="1" get="inline" set="null" line="106"><f a="color:colorCentre:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColors>
-		<colorTriangles public="1" get="inline" set="null" line="111"><f a="color:times">
+		<colorTriangles public="1" get="inline" set="null" line="112"><f a="color:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></colorTriangles>
-		<addTriangle public="1" get="inline" set="null" line="117"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
+		<addTriangle public="1" get="inline" set="null" line="118"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
@@ -61018,7 +63084,7 @@
 	<x path="cpp.Float32"/>
 	<x path="Void"/>
 </f></addTriangle>
-		<triangle2DFill public="1" get="inline" set="null" line="153">
+		<triangle2DFill public="1" get="inline" set="null" line="162">
 			<f a="ax:ay:bx:by:cx:cy:?color" v="::::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -61032,8 +63098,8 @@
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</triangle2DFill>
 		<pos public="1" get="accessor" set="accessor"><x path="Float"/></pos>
-		<get_pos get="inline" set="null" line="165"><f a=""><x path="Float"/></f></get_pos>
-		<set_pos get="inline" set="null" line="169"><f a="v">
+		<get_pos get="inline" set="null" line="175"><f a=""><x path="Float"/></f></get_pos>
+		<set_pos get="inline" set="null" line="179"><f a="v">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_pos>
@@ -61041,21 +63107,25 @@
 			<x path="trilateral3.drawing.TriangleAbstract"/>
 			<haxe_doc>* Only optionally available use with care, works with PenNodule.</haxe_doc>
 		</triangleCurrent>
-		<get_triangleCurrent get="inline" set="null" line="179"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
+		<get_triangleCurrent get="inline" set="null" line="189"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
+		<triangleCurrentUV public="1" get="accessor" set="null">
+			<x path="trilateral3.drawing.TriangleAbstractUV"/>
+			<haxe_doc>* Only optionally available use with care, works with PenNoduleUV.</haxe_doc>
+		</triangleCurrentUV>
+		<get_triangleCurrentUV get="inline" set="null" line="197"><f a=""><x path="trilateral3.drawing.TriangleAbstractUV"/></f></get_triangleCurrentUV>
 		<color3Current public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.Color3Abstract"/>
 			<haxe_doc>* Only possible if using interleave data structure !! use with care.</haxe_doc>
 		</color3Current>
-		<get_color3Current get="inline" set="null" line="187"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
-		<copyRange public="1" get="inline" set="null" line="191"><f a="otherPen:startEnd:vec">
+		<get_color3Current get="inline" set="null" line="205"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
+		<copyRange public="1" get="inline" set="null" line="209"><f a="otherPen:startEnd:vec">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<c path="trilateral3.matrix.Vertex"/>
 	<x path="trilateral3.shape.IndexRange"/>
 </f></copyRange>
-		<new public="1" set="method" line="33"><f a="drawType_:colorType_">
-	<x path="trilateral3.drawing.DrawAbstract"/>
-	<x path="trilateral3.drawing.ColorAbstract"/>
+		<new public="1" set="method" line="35"><f a="paintType_">
+	<x path="trilateral3.drawing.PaintAbstract"/>
 	<x path="Void"/>
 </f></new>
 		<meta><m n=":directlyUsed"/></meta>
@@ -61145,9 +63215,8 @@
 	<class path="trilateral3.drawing.Sketch" params="" file="src/trilateral3/drawing/Sketch.hx">
 		<implements path="justPath.IPathContext"/>
 		<create public="1" get="inline" set="null" line="88" static="1">
-			<f a="drawType_:colorType_:sketchForm_:?endLine_" v=":::no">
-				<x path="trilateral3.drawing.DrawAbstract"/>
-				<x path="trilateral3.drawing.ColorAbstract"/>
+			<f a="paintType_:sketchForm_:?endLine_" v="::no">
+				<x path="trilateral3.drawing.PaintAbstract"/>
 				<x path="trilateral3.drawing.StyleSketch"/>
 				<x path="trilateral3.drawing.StyleEndLine"/>
 				<c path="trilateral3.drawing.Sketch"/>
@@ -61241,42 +63310,42 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></line>
-		<reset public="1" set="method" line="98"><f a=""><x path="Void"/></f></reset>
-		<pointsNoEndOverlap public="1" set="method" line="107"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
-		<pointsRewound public="1" set="method" line="161"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
-		<initDim get="inline" set="null" line="221"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
-		<updateDim get="inline" set="null" line="224"><f a="x:y">
+		<reset public="1" set="method" line="97"><f a=""><x path="Void"/></f></reset>
+		<pointsNoEndOverlap public="1" set="method" line="106"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
+		<pointsRewound public="1" set="method" line="160"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
+		<initDim get="inline" set="null" line="220"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
+		<updateDim get="inline" set="null" line="223"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></updateDim>
-		<moveTo public="1" set="method" line="231"><f a="x_:y_">
+		<moveTo public="1" set="method" line="230"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></moveTo>
-		<lastClock public="1" get="inline" set="null" line="248"><f a=""><x path="Void"/></f></lastClock>
-		<getEdges public="1" get="inline" set="null" line="258"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
-		<lineTo public="1" get="inline" set="null" line="286"><f a="x_:y_">
+		<lastClock public="1" get="inline" set="null" line="247"><f a=""><x path="Void"/></f></lastClock>
+		<getEdges public="1" get="inline" set="null" line="257"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
+		<lineTo public="1" get="inline" set="null" line="285"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></lineTo>
-		<quadTo public="1" get="inline" set="null" line="303"><f a="x1:y1:x2:y2">
+		<quadTo public="1" get="inline" set="null" line="302"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadTo>
-		<quadThru public="1" get="inline" set="null" line="312"><f a="x1:y1:x2:y2">
+		<quadThru public="1" get="inline" set="null" line="311"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadThru>
-		<curveTo public="1" get="inline" set="null" line="318"><f a="x1:y1:x2:y2:x3:y3">
+		<curveTo public="1" get="inline" set="null" line="317"><f a="x1:y1:x2:y2:x3:y3">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -61285,7 +63354,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></curveTo>
-		<plotCoord public="1" get="inline" set="null" line="326">
+		<plotCoord public="1" get="inline" set="null" line="325">
 			<f a="arr:?withMove" v=":true">
 				<c path="Array"><x path="Float"/></c>
 				<x path="Bool"/>
@@ -61293,16 +63362,16 @@
 			</f>
 			<meta><m n=":value"><e>{ withMove : true }</e></m></meta>
 		</plotCoord>
-		<aiColorSet set="method" line="340"><f a="colorType:arr">
+		<aiColorSet set="method" line="339"><f a="colorType:arr">
 	<x path="trilateral3.drawing.AIColorType"/>
 	<c path="Array"><c path="String"/></c>
 	<x path="trilateral3.color.ColorInt"/>
 </f></aiColorSet>
-		<getColorType set="method" line="357"><f a="arr">
+		<getColorType set="method" line="356"><f a="arr">
 	<c path="Array"><c path="String"/></c>
 	<x path="trilateral3.drawing.AIColorType"/>
 </f></getColorType>
-		<aiStringPart public="1" get="inline" set="null" line="363">
+		<aiStringPart public="1" get="inline" set="null" line="362">
 			<f a="str:x:y:?flipY" v=":::0">
 				<c path="String"/>
 				<x path="Float"/>
@@ -61675,7 +63744,7 @@
 		<meta><m n=":impl"/></meta>
 	</get_x>
 	<set_x get="inline" set="null" line="24" static="1">
-		<f a="this:v">
+		<f a="this:x_">
 			<t path="trilateral3.drawing.TriangleType"/>
 			<x path="Float"/>
 			<x path="Float"/>
@@ -61694,7 +63763,7 @@
 		<meta><m n=":impl"/></meta>
 	</get_y>
 	<set_y get="inline" set="null" line="31" static="1">
-		<f a="this:v">
+		<f a="this:y_">
 			<t path="trilateral3.drawing.TriangleType"/>
 			<x path="Float"/>
 			<x path="Float"/>
@@ -61713,7 +63782,7 @@
 		<meta><m n=":impl"/></meta>
 	</get_z>
 	<set_z get="inline" set="null" line="38" static="1">
-		<f a="this:v">
+		<f a="this:z_">
 			<t path="trilateral3.drawing.TriangleType"/>
 			<x path="Float"/>
 			<x path="Float"/>
@@ -61778,7 +63847,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_x>
 		<set_x get="inline" set="null" line="24" static="1">
-			<f a="this:v">
+			<f a="this:x_">
 				<t path="trilateral3.drawing.TriangleType"/>
 				<x path="Float"/>
 				<x path="Float"/>
@@ -61797,7 +63866,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_y>
 		<set_y get="inline" set="null" line="31" static="1">
-			<f a="this:v">
+			<f a="this:y_">
 				<t path="trilateral3.drawing.TriangleType"/>
 				<x path="Float"/>
 				<x path="Float"/>
@@ -61816,7 +63885,7 @@
 			<meta><m n=":impl"/></meta>
 		</get_z>
 		<set_z get="inline" set="null" line="38" static="1">
-			<f a="this:v">
+			<f a="this:z_">
 				<t path="trilateral3.drawing.TriangleType"/>
 				<x path="Float"/>
 				<x path="Float"/>
@@ -62050,14 +64119,19 @@
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></triangleUV>
-	<set_v set="method"><f a="y">
+	<set_v set="method"><f a="v_">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_v>
-	<set_u set="method"><f a="x">
+	<set_u set="method"><f a="u_">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_u>
+	<moveDelta><f a="dx:dy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></moveDelta>
 	<get_v set="method"><f a=""><x path="Float"/></f></get_v>
 	<get_u set="method"><f a=""><x path="Float"/></f></get_u>
 	<get_rightU set="method"><f a=""><x path="Float"/></f></get_rightU>
@@ -62194,8 +64268,12 @@
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="trilateral3.geom.FlatColorTrianglesUV" params="" file="src/trilateral3/geom/FlatColorTrianglesUV.hx">
+		<from><icast><x path="dsHelper.flatInterleave.FloatColorTrianglesUV"/></icast></from>
 		<this><x path="dsHelper.flatInterleave.FloatColorTrianglesUV"/></this>
-		<to><icast field="toArray"><x path="lime.utils.Float32Array"/></icast></to>
+		<to>
+			<icast><x path="dsHelper.flatInterleave.FloatColorTrianglesUV"/></icast>
+			<icast field="toArray"><x path="lime.utils.Float32Array"/></icast>
+		</to>
 		<meta><m n=":forward"/></meta>
 		<impl><class path="trilateral3.geom._FlatColorTrianglesUV.FlatColorTrianglesUV_Impl_" params="" file="src/trilateral3/geom/FlatColorTrianglesUV.hx" private="1" module="trilateral3.geom.FlatColorTrianglesUV" final="1">
 	<toArray public="1" get="inline" set="null" line="17" static="1">
@@ -62981,7 +65059,7 @@
 		</meta>
 	</class>
 	<class path="trilateral3.nodule.PenNodule" params="" file="src/trilateral3/nodule/PenNodule.hx">
-		<largeEnough final="1" set="null" expr="20000000" line="12" static="1">
+		<largeEnough final="1" set="null" expr="20000000" line="11" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>20000000</e></m></meta>
 		</largeEnough>
@@ -62990,12 +65068,12 @@
 			<meta><m n=":value"><e>new FlatColorTriangles(largeEnough)</e></m></meta>
 		</colorTriangles>
 		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
-		<createPen public="1" set="method" line="25"><f a=""><x path="Void"/></f></createPen>
+		<createPen public="1" set="method" line="24"><f a=""><c path="trilateral3.drawing.Pen"/></f></createPen>
 		<data public="1" get="accessor" set="null"><t path="dsHelper.haxe.io.Float32Array"/></data>
-		<get_data public="1" get="inline" set="null" line="85"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
+		<get_data public="1" get="inline" set="null" line="79"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
 		<size public="1" get="accessor" set="null"><x path="Int"/></size>
-		<get_size public="1" get="inline" set="null" line="90"><f a=""><x path="Int"/></f></get_size>
-		<new public="1" set="method" line="15">
+		<get_size public="1" get="inline" set="null" line="84"><f a=""><x path="Int"/></f></get_size>
+		<new public="1" set="method" line="14">
 			<f a="?useGLScale" v="true">
 				<x path="Bool"/>
 				<x path="Void"/>
@@ -63004,8 +65082,8 @@
 		</new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
-	<class path="trilateral3.nodule.PenNoduleUV" params="" file="src/trilateral3/nodule/PenNoduleUV.hx">
-		<largeEnough final="1" set="null" expr="20000000" line="13" static="1">
+	<class path="trilateral3.nodule.PenPaint" params="" file="src/trilateral3/nodule/PenPaint.hx">
+		<largeEnough final="1" set="null" expr="20000000" line="14" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>20000000</e></m></meta>
 		</largeEnough>
@@ -63014,12 +65092,12 @@
 			<meta><m n=":value"><e>new FlatColorTrianglesUV(largeEnough)</e></m></meta>
 		</colorTriangles>
 		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
-		<createPen public="1" set="method" line="26"><f a=""><x path="Void"/></f></createPen>
+		<createPen public="1" set="method" line="27"><f a=""><x path="Void"/></f></createPen>
 		<data public="1" get="accessor" set="null"><t path="dsHelper.haxe.io.Float32Array"/></data>
-		<get_data public="1" get="inline" set="null" line="99"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
+		<get_data public="1" get="inline" set="null" line="96"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
 		<size public="1" get="accessor" set="null"><x path="Int"/></size>
-		<get_size public="1" get="inline" set="null" line="104"><f a=""><x path="Int"/></f></get_size>
-		<new public="1" set="method" line="16">
+		<get_size public="1" get="inline" set="null" line="101"><f a=""><x path="Int"/></f></get_size>
+		<new public="1" set="method" line="17">
 			<f a="?useGLScale" v="true">
 				<x path="Bool"/>
 				<x path="Void"/>

@@ -4,8 +4,8 @@ package trilateral3.matrix;
 **/
 
 #if nanjizal_geom 
-import geom.matrix.Mat1x4;
-typedef Vertex = geom.matrix.Mat1x4;
+import geom.structure.Mat1x4;
+typedef Vertex = geom.structure.Mat1x4;
 #else
 @:structInit
 class Vertex {

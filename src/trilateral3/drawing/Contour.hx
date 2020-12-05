@@ -256,12 +256,14 @@ class Contour {
             if( curveEnds ){
                 //joinArc
                 if( clockWise ){
-                    var len = pieDifX( pen.drawType, ax_, ay_, width_/2, theta0, dif, pointsClock );
-                    pen.colorTriangles(-1, len);
+                    var len = pieDifX( pen.paintType, ax_, ay_, width_/2, theta0, dif, pointsClock );
+                    // Problem here for texturing.
+                    pen.colorTriangles( -1, len );
                     //addArray( Poly.pieDifX( ax_, ay_, width_/2, theta0, dif, pointsClock ) );
                 } else {
-                    var len = pieDifX( pen.drawType, ax_, ay_, width_/2, theta0, dif, pointsAnti );
-                    pen.colorTriangles(-1, len);
+                    var len = pieDifX( pen.paintType, ax_, ay_, width_/2, theta0, dif, pointsAnti );
+                    // Problem here for texturing.
+                    pen.colorTriangles( -1, len );
                     //addArray( Poly.pieDifX( ax_, ay_, width_/2, theta0, dif, pointsAnti ) );
                 }
             } else {
@@ -317,7 +319,9 @@ class Contour {
     function addPieXstart( ax: Float, ay: Float, radius: Float, beta: Float, gamma: Float, prefer: DifferencePreference, ?mark: Int = -1, ?sides: Int = 36 ){
         var temp = new Array<Float>();
         //triArr.addArray( Poly.pieX( ax, ay, radius, beta, gamma, prefer, temp, mark, sides ) );
-        var len = pieX( pen.drawType, ax, ay, radius, beta, gamma, prefer, temp, sides );
+        
+        var len = pieX( pen.paintType, ax, ay, radius, beta, gamma, prefer, temp, sides );
+        pen.paintType.pos -= len;
         pen.colorTriangles( mark, len );
         var pA = pointsAnti.length;
         var len = Std.int( temp.length/2 );
@@ -336,8 +340,9 @@ class Contour {
     inline
     function addPieX( ax: Float, ay: Float, radius: Float, beta: Float, gamma: Float, prefer: DifferencePreference, ?mark: Int = 0, ?sides: Int = 36 ){
         var temp = new Array<Float>();
-        var len = pieX( pen.drawType
+        var len = pieX( pen.paintType
                              , ax, ay, radius, beta, gamma, prefer, temp, sides );
+        pen.paintType.pos -= len;
         pen.colorTriangles( mark, len );
         
         //triArr.addArray( Poly.pieX( ax, ay, radius, beta, gamma, prefer, temp, mark, sides ) );
@@ -355,8 +360,9 @@ class Contour {
     
     inline
     function addPie( ax: Float, ay: Float, radius: Float, beta: Float, gamma: Float, prefer: DifferencePreference, ?mark: Int = 0, ?sides: Int = 36 ){
-        var len = pie( pen.drawType
+        var len = pie( pen.paintType
                              , ax, ay, radius, beta, gamma, prefer, sides );
+        pen.paintType.pos -= len;
         pen.colorTriangles( mark, len );
     }
     inline
@@ -372,7 +378,8 @@ class Contour {
     inline 
     function addDot( x: Float, y: Float, color: Int, width_: Float ){
         var w = width_ * smallDotScale;
-        var len = circle( pen.drawType, x, y, w );
+        var len = circle( pen.paintType, x, y, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( color, len );
     }
     #if trilateral_debug
@@ -386,10 +393,12 @@ class Contour {
         dy = dy/len;
         for( i in 0...len ){
             if( i < 5 ){
-                var len = circle( pen.drawType, x0 + dx*i, y0 + dy*i, w*2 );
+                var len = circle( pen.paintType, x0 + dx*i, y0 + dy*i, w*2 );
+                pen.paintType.pos -= len;
                 pen.colorTriangles( colStart, len );
             } else {
-                var len = circle( pen.drawType, x0 + dx*i, y0 + dy*i, w );
+                var len = circle( pen.paintType, x0 + dx*i, y0 + dy*i, w );
+                pen.paintType.pos -= len;
                 pen.colorTriangles( col, len );
             }
         }
@@ -410,23 +419,30 @@ class Contour {
     inline
     function triangle2DFillangleCorners( oldx_: Float, oldy_: Float, prevx_: Float, prevy_: Float, width_: Float ){
         var w = width_ * smallDotScale;
-        var len = circle( pen.drawType, oldx_, oldy_, w );
+        var len = circle( pen.paintType, oldx_, oldy_, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( debugCol4, len );
-        len = circle( pen.drawType, prevx_, prevy_, w );
+        len = circle( pen.paintType, prevx_, prevy_, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( debugCol3, len );
-        len = circle( pen.drawType, ax, ay, w );
+        len = circle( pen.paintType, ax, ay, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( debugCol10, len );
-        len = circle( pen.drawType, jx, jy, w );
+        len = circle( pen.paintType, jx, jy, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( debugCol5, len );
     }
     inline
     function triangle2DFillangleCornersLess( oldx_: Float, oldy_: Float, prevx_: Float, prevy_: Float, width_: Float ){
         var w = width_ * smallDotScale;
-        var len = circle( pen.drawType, oldx_, oldy_, w );
+        var len = circle( pen.paintType, oldx_, oldy_, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( debugCol4, len );
-        len = circle( pen.drawType, prevx_, prevy_, w );
+        len = circle( pen.paintType, prevx_, prevy_, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( debugCol3, len );
-        len = circle( pen.drawType, jx, jy, w );
+        len = circle( pen.paintType, jx, jy, w );
+        pen.paintType.pos -= len;
         pen.colorTriangles( debugCol5, len );
     }
     // The triangle between quads
@@ -750,6 +766,7 @@ class Contour {
     inline function isClockwise( x: Float, y: Float ): Bool {
          return dist( dxOld, dyOld, x, y ) > dist( exOld, eyOld, x, y );
     }
+    
     public inline 
     function line( ax_: Float, ay_: Float, bx_: Float, by_: Float, width_: Float, ?endLineCurve: StyleEndLine = no ){
                     // thick
@@ -778,6 +795,7 @@ class Contour {
                 // don't draw ends
             case StyleEndLine.begin: 
                 addPie( ax_, ay_, width_/2, -angle1 - Math.PI/2, -angle1 - Math.PI/2 + Math.PI, SMALL );
+                
             case StyleEndLine.end:
                 addPie( bx_, by_, width_/2, -angle1 - Math.PI/2, -angle1 - Math.PI/2 - Math.PI, SMALL );
             case StyleEndLine.both:
@@ -787,4 +805,5 @@ class Contour {
         triangle2DFill( dxPrev_, dyPrev_, dx, dy, exPrev_, eyPrev_ );
         triangle2DFill( dxPrev_, dyPrev_, dx, dy, ex, ey );
     }
+    
 }

@@ -21,21 +21,21 @@ abstract TriangleAbstract( TriangleType ) to TriangleType from TriangleType {
     inline function get_x(): Float {
         return this.get_x();
     }
-    inline function set_x( v: Float ): Float {
-        return this.set_x( v );
+    inline function set_x( x_: Float ): Float {
+        return this.set_x( x_ );
     }
     public var y( get, set ): Float;
     inline function get_y(): Float {
         return this.get_y();
     }
-    inline function set_y( v: Float ): Float {
-        return this.set_y( v );
+    inline function set_y( y_: Float ): Float {
+        return this.set_y( y_ );
     }
     public var z( get, set ): Float;
     inline function get_z(): Float {
         return this.get_z();
     }
-    inline function set_z( v: Float ): Float {
-        return this.set_z( v );
+    inline function set_z( z_: Float ): Float {
+        return this.set_z( z_ );
     }
 }

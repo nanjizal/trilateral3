@@ -2,7 +2,7 @@ package trilateral3.matrix;
 
 #if nanjizal_geom 
 import geom.structure.Mat4x3;
-typedef MatrixDozen = geom.matrix.Mat4x3;
+typedef MatrixDozen = geom.structure.Mat4x3;
 #else
 @:structInit
 class MatrixDozen {

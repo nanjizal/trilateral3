@@ -2,8 +2,7 @@ package trilateral3.nodule;
 import trilateral3.Trilateral;
 import trilateral3.drawing.Pen;
 import trilateral3.matrix.MatrixDozen;
-import trilateral3.drawing.DrawAbstract;
-import trilateral3.drawing.ColorAbstract;
+import trilateral3.drawing.PaintAbstract;
 import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.Color3Abstract;
 import trilateral3.geom.FlatColorTriangles;
@@ -17,7 +16,7 @@ class PenNodule {
             // assume scaling of 1000.
             var transform1000: MatrixDozen = { a : 0.001, b : 0, c : 0, d : -1
                                              , e : 0,  f : -0.001, g : 0, h : 1
-                                             , i : 0, j : 0,k : 0.001, l : 0 };
+                                             , i : 0, j : 0, k : 0.001, l : 0 };
             Trilateral.transformMatrix = transform1000;
         }
         createPen();
@@ -44,20 +43,6 @@ class PenNodule {
            , getTriangle3D: t.getTriangle3D
            , transform:     t.transform
        }
-       @:privateAccess
-       var drawAbstract: DrawAbstract = {     
-              triangle:        t.triangle   // remove...?
-            , transform:       t.transform  // remove...?
-            , transformRange:  t.transformRange
-            , getTriangle3D:   t.getTriangle3D // remove...?
-            , next:            t.next
-            , hasNext:         t.hasNext
-            , get_pos:         t.get_pos
-            , set_pos:         t.set_pos
-            , get_size:        t.get_size
-            , set_size:        t.set_size
-            , triangleCurrent: triangleAbstract
-            };
        // only viable to set this up for interleave arrays.
        @:privateAccess
        var color3Abstract: Color3Abstract = {
@@ -70,16 +55,25 @@ class PenNodule {
            , get_argbC: t.get_argbC
        }
        @:privateAccess
-       var colorAbstract: ColorAbstract = {   cornerColors:   t.cornerColors
-                                            , colorTriangles: t.colorTriangles
-                                            , getTriInt:      t.getTriInt
-                                            , get_pos:        t.get_pos
-                                            , set_pos:        t.set_pos
-                                            , get_size:       t.get_size
-                                            , set_size:       t.set_size
-                                            , color3current:  color3Abstract
-                                            };
-        pen = new Pen( drawAbstract , colorAbstract );
+       var paintAbstract: PaintAbstract = {     
+              triangle:        t.triangle   // remove...?
+            , cornerColors:   t.cornerColors
+            , colorTriangles: t.colorTriangles
+            , getTriInt:      t.getTriInt
+            , transform:       t.transform  // remove...?
+            , transformRange:  t.transformRange
+            , getTriangle3D:   t.getTriangle3D // remove...?
+            , next:            t.next
+            , hasNext:         t.hasNext
+            , get_pos:         t.get_pos
+            , set_pos:         t.set_pos
+            , get_size:        t.get_size
+            , set_size:        t.set_size
+            , triangleCurrent: triangleAbstract
+            , color3current:  color3Abstract
+            };
+        pen = new Pen( paintAbstract );
+        return pen;
     }
     public var data( get, never ): Float32Array;
     public inline

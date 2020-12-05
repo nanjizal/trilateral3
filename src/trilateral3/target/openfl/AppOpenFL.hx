@@ -63,7 +63,7 @@ class AppOpenFL extends Sprite {
         var currPos = tri.pos;
         for( i in 0...nodule.size ){
              tri.pos = i; // change the position.
-             var col3 = pen.colorType.getTriInt();
+             var col3 = pen.paintType.getTriInt();
              var colA: ColorPalletInt = col3.a;
              g.lineStyle( 0., colA, 0. );
              // can't easily do gradient

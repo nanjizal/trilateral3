@@ -12,7 +12,7 @@ import trilateral3.structure.TriInt;
 import dsHelper.flatInterleave.FloatColorTrianglesUV;
 import dsHelper.haxe.io.Float32Array;
 @:forward
-abstract FlatColorTrianglesUV( dsHelper.flatInterleave.FloatColorTrianglesUV ){
+abstract FlatColorTrianglesUV( dsHelper.flatInterleave.FloatColorTrianglesUV ) from dsHelper.flatInterleave.FloatColorTrianglesUV to dsHelper.flatInterleave.FloatColorTrianglesUV {
     @:to
     public inline
     function toArray(): Float32Array {

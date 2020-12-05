@@ -15,14 +15,16 @@ import trilateral3.structure.XYWH;
 import cpp.Float32;
 #end
 class Pen {
+    // this is problematic for Shape triangle2d...
+    public var z2D: Float = 0.;
     public var useTexture:   Bool = false;
     var textureFX:     Float = 1./1000.;
     var textureFY:     Float = 1./1000.;
     public var rounded:      Float = 30; // default value... change
     public var dz:           Float = 0.01; // default value... change
     public var currentColor: Int   = 0xFACADE; // Classic Rose 
-    public var drawType:     DrawAbstract;
-    public var colorType:    ColorAbstract;
+    public var paintType:     PaintAbstract;
+
     public var translateX:   Float -> MatrixDozen;
     public var translateY:   Float -> MatrixDozen;
     public var translateZ:   Float -> MatrixDozen;
@@ -30,13 +32,12 @@ class Pen {
     public var rotateY:      Float -> MatrixDozen;
     public var rotateZ:      Float -> MatrixDozen;
     public var indices:      Array<Int> = [];
-    public function new( drawType_: DrawAbstract, colorType_: ColorAbstract ){
-        drawType  = drawType_;
-        colorType = colorType_;
+    public function new( paintType_: PaintAbstract ){
+        paintType  = paintType_;
     }
     public inline
     function transformRange( trans: MatrixDozen, ir: IndexRange ) {
-        this.drawType.transformRange( trans, ir );
+        this.paintType.transformRange( trans, ir );
     }
     public var textureXYWH( never, set ): XYWH;
     inline
@@ -92,15 +93,15 @@ class Pen {
     inline public
     function cornerColor( color: Int = -1 ): Void {
         if( color == -1 ) color = currentColor;
-        colorType.cornerColors( color, color, color );
+        paintType.cornerColors( color, color, color );
     }
     inline public
     function cornerColors( colorA: Int, colorB: Int, colorC: Int ): Void {
-        colorType.cornerColors( colorA, colorB, colorC );
+        paintType.cornerColors( colorA, colorB, colorC );
     }
     inline public
     function middleColor( color: Int, colorCentre: Int ): Void {
-        colorType.cornerColors( colorCentre, color, color );
+        paintType.cornerColors( colorCentre, color, color );
     }
     inline public
     function middleColors( color: Int, colorCentre: Int, times: Int ): Void {
@@ -111,43 +112,51 @@ class Pen {
     inline public
     function colorTriangles( color: Int, times: Int ): Void {
         if( color == -1 ) color = currentColor;
-        colorType.colorTriangles( color, times );
+        paintType.colorTriangles( color, times );
     }
     #if cpp
-    inline public
+    public inline
     function addTriangle( ax: Float32, ay: Float32, az: Float32
                         , bx: Float32, by: Float32, bz: Float32
                         , cx: Float32, cy: Float32, cz: Float32 ){
         // don't need to reorder corners and Trilateral can do that!
-        var windAdjust = drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
-        if( Trilateral.transformMatrix != null ) drawType.transform( Trilateral.transformMatrix );
+        var windAdjust = paintType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        if( Trilateral.transformMatrix != null ) paintType.transform( Trilateral.transformMatrix );
         if( useTexture ) {
-            ax -= textureFX;
-            ay -= textureFY;
-            drawType.triangleUV( ( ax + 0.5 )/2., ( ay + 0.5 )/2.
-                               , ( bx + 0.5 )/2., ( by + 0.5 )/2.
-                               , ( cx + 0.5 )/2., ( cy + 0.5 )/2.
+            ax = ax/2000;
+            ay = ay/2000;
+            bx = bx/2000;
+            by = by/2000;
+            cx = cx/2000;
+            cy = cy/2000;
+            paintType.triangleUV( ax, ay
+                               , bx, by
+                               , cx, cy
                                , windAdjust );
         }
-        drawType.next();
+        //drawType.next();
     }
     #else 
-    inline public
+    public inline 
     function addTriangle( ax: Float, ay: Float, az: Float
                         , bx: Float, by: Float, bz: Float
                         , cx: Float, cy: Float, cz: Float ){
         // don't need to reorder corners and Trilateral can do that!
-        var windAdjust = drawType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
-        if( Trilateral.transformMatrix != null ) drawType.transform( Trilateral.transformMatrix );
+        var windAdjust = paintType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        if( Trilateral.transformMatrix != null ) paintType.transform( Trilateral.transformMatrix );
         if( useTexture ) {
-            ax -= textureFX;
-            ay -= textureFY;
-            drawType.triangleUV( ( ax + 0.5 )/2., ( ay + 0.5 )/2.
-                               , ( bx + 0.5 )/2., ( by + 0.5 )/2.
-                               , ( cx + 0.5 )/2., ( cy + 0.5 )/2.
+            ax = ax/2000;
+            ay = ay/2000;
+            bx = bx/2000;
+            by = by/2000;
+            cx = cx/2000;
+            cy = cy/2000;
+            paintType.triangleUV( ax, ay
+                               , bx, by
+                               , cx, cy
                                , windAdjust );
         }
-        drawType.next();
+        //drawType.next();
     }
     #end
     inline public
@@ -157,19 +166,20 @@ class Pen {
                           , color: Int = -1 ): Int {
         // if no color set use current default colour.
         if( color == -1 ) color = currentColor;
-        addTriangle( ax, ay, 0, bx, by, 0, cx, cy, 0 );
+        addTriangle( ax, ay, z2D, bx, by, z2D, cx, cy, z2D );
         cornerColors( color, color, color ); // next
+        paintType.next();
         return 1; 
     }
     public var pos( get, set ): Float;
     inline 
     function get_pos(): Float {
-        return drawType.pos;
+        return paintType.pos;
     }
     inline
     function set_pos( v: Float ){
-        drawType.pos  = v;
-        colorType.pos = v;
+        paintType.pos  = v;
+        //colorType.pos = v; assumes they are same
         return v;
     }
     /**
@@ -178,7 +188,15 @@ class Pen {
     public var triangleCurrent( get, never ): TriangleAbstract;
     inline
     function get_triangleCurrent(): TriangleAbstract {
-        return drawType.triangleCurrent;
+        return paintType.triangleCurrent;
+    } 
+    /**
+     * Only optionally available use with care, works with PenNoduleUV.
+     */
+    public var triangleCurrentUV( get, never ): TriangleAbstractUV;
+    inline
+    function get_triangleCurrentUV(): TriangleAbstractUV {
+        return paintType.triangleCurrentUV;
     } 
     /**
      * Only possible if using interleave data structure !! use with care.
@@ -186,7 +204,7 @@ class Pen {
     public var color3Current( get, never ): Color3Abstract;
     inline
     function get_color3Current(): Color3Abstract {
-        return colorType.color3current;
+        return paintType.color3current;
     } 
     inline public
     function copyRange( otherPen: Pen, startEnd: IndexRange, vec: Vertex ): IndexRange     {
@@ -194,11 +212,11 @@ class Pen {
         otherPen.pos = startEnd.start;
         var colors: TriInt;
         for( i in startEnd.start...(startEnd.end+1) ){
-            var tri: Triangle3D = otherPen.drawType.getTriangle3D();
-            this.drawType.triangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
+            var tri: Triangle3D = otherPen.paintType.getTriangle3D();
+            this.paintType.triangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
                        , tri.b.x + vec.x, tri.b.y + vec.y, tri.b.z + vec.z
                        , tri.c.x + vec.x, tri.c.y + vec.y, tri.c.z + vec.z );
-            this.drawType.next();
+            this.paintType.next();
             //colors = otherPen.colorType.getTriInt();
             //cornerColors( colors.a, colors.b, colors.c );
         }
