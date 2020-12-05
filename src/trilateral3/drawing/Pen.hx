@@ -15,8 +15,8 @@ import trilateral3.structure.XYWH;
 import cpp.Float32;
 #end
 class Pen {
-    // this is problematic for Shape triangle2d...
-    public var z2D: Float = 0.;
+   
+    public var z2D: Float = 0.; // this is problematic for Shape triangle2d...
     public var useTexture:   Bool = false;
     var textureFX:     Float = 1./1000.;
     var textureFY:     Float = 1./1000.;
