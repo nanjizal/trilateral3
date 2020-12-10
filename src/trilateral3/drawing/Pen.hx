@@ -171,6 +171,52 @@ class Pen {
         paintType.next();
         return 1; 
     }
+    // 1 2 3
+    // 4 5 6
+    // 7 8 9
+    // borders from outside left, right, top, bottom
+    public inline
+    function nineSliceFill( ax: Float, ay: Float, width: Float, height: Float
+                      , left: Float, right: Float
+                      , top: Float, bottom: Float
+                      , color0: Int = -1, color1: Int = -1, color2: Int = -1
+                      , color3: Int = -1, color4: Int = -1, color5: Int = -1
+                      , color6: Int = -1, color7: Int = -1, color8: Int = -1 ){
+        quad2DFill( ax, ay, left, top, color0 );
+        var middleW = width - left - right;
+        quad2DFill( ax + left, ay, middleW, top, color1 );
+        quad2DFill( ax + middleW, ay, right, top, color2 );
+        
+        var middleH = height - top - bottom;
+        quad2DFill( ax , ay + top, left, middleH, color3 );
+        quad2DFill( ax + left, ay + top, middleW, middleH, color4 );
+        quad2DFill( ax + middleW, ay + top, right, middleH, color5 );
+        
+        var bottomH = ax + height - bottom;
+        quad2DFill( ax, bottomH, left, bottom, color6 );
+        quad2DFill( ax + left, bottomH, middleW, bottom, color7 );
+        quad2DFill( ax + middleW, bottomH, right, bottom, color8 );
+        return 18;
+    }
+    public inline
+    function quad2DFill( ax: Float, ay: Float, width: Float, height: Float, color: Int = -1 ): Int {
+        quad2DFillclockwise( ax, ay, ax + width, ay, ax + width, ay + height, ax, ay + height, color );
+        return 2;
+    }
+    //   A   B
+    //   D   C
+    // A B D
+    // B C D
+    public inline
+    function quad2DFillclockwise( ax: Float, ay: Float
+                                , bx: Float, by: Float
+                                , cx: Float, cy: Float
+                                , dx: Float, dy: Float
+                                , color: Int = -1 ): Int {
+        triangle2DFill( ax, ay, bx, by, dx, dy, color );
+        triangle2DFill( bx, by, cx, cy, dx, dy, color );
+        return 2;
+    }
     public var pos( get, set ): Float;
     inline 
     function get_pos(): Float {
