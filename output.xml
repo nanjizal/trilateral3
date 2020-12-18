@@ -62963,6 +62963,19 @@
 	</color3current>
 </a></typedef>
 	<class path="trilateral3.drawing.Pen" params="" file="src/trilateral3/drawing/Pen.hx">
+		<gradientFunction public="1" get="inline" set="null" line="266" static="1"><f a="tweenEquation">
+	<f a=":::">
+		<x path="Float"/>
+		<x path="Float"/>
+		<x path="Float"/>
+		<x path="Float"/>
+		<x path="Float"/>
+	</f>
+	<f a="">
+		<x path="Float"/>
+		<x path="Float"/>
+	</f>
+</f></gradientFunction>
 		<z2D public="1" expr="0.">
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.</e></m></meta>
@@ -63020,59 +63033,59 @@
 			<c path="Array"><x path="Int"/></c>
 			<meta><m n=":value"><e>[]</e></m></meta>
 		</indices>
-		<transformRange public="1" get="inline" set="null" line="38"><f a="trans:ir">
+		<transformRange public="1" get="inline" set="null" line="40"><f a="trans:ir">
 	<c path="trilateral3.matrix.MatrixDozen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></transformRange>
 		<textureXYWH public="1" get="null" set="accessor"><x path="trilateral3.structure.XYWH"/></textureXYWH>
-		<set_textureXYWH get="inline" set="null" line="43"><f a="r">
+		<set_textureXYWH get="inline" set="null" line="45"><f a="r">
 	<x path="trilateral3.structure.XYWH"/>
 	<x path="trilateral3.structure.XYWH"/>
 </f></set_textureXYWH>
-		<up public="1" get="inline" set="null" line="49"><f a="ir">
+		<up public="1" get="inline" set="null" line="51"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></up>
-		<down public="1" get="inline" set="null" line="54"><f a="ir">
+		<down public="1" get="inline" set="null" line="56"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></down>
-		<back public="1" get="inline" set="null" line="59"><f a="ir">
+		<back public="1" get="inline" set="null" line="61"><f a="ir">
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></back>
-		<transBack get="inline" set="null" line="63"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
-		<cornerColor public="1" get="inline" set="null" line="93">
+		<transBack get="inline" set="null" line="65"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
+		<cornerColor public="1" get="inline" set="null" line="95">
 			<f a="?color" v="-1">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</cornerColor>
-		<cornerColors public="1" get="inline" set="null" line="98"><f a="colorA:colorB:colorC">
+		<cornerColors public="1" get="inline" set="null" line="100"><f a="colorA:colorB:colorC">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></cornerColors>
-		<middleColor public="1" get="inline" set="null" line="102"><f a="color:colorCentre">
+		<middleColor public="1" get="inline" set="null" line="104"><f a="color:colorCentre">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColor>
-		<middleColors public="1" get="inline" set="null" line="106"><f a="color:colorCentre:times">
+		<middleColors public="1" get="inline" set="null" line="108"><f a="color:colorCentre:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColors>
-		<colorTriangles public="1" get="inline" set="null" line="112"><f a="color:times">
+		<colorTriangles public="1" get="inline" set="null" line="114"><f a="color:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></colorTriangles>
-		<addTriangle public="1" get="inline" set="null" line="118"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
+		<addTriangle public="1" get="inline" set="null" line="120"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
@@ -63082,9 +63095,24 @@
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
-	<x path="Void"/>
+	<x path="Bool"/>
 </f></addTriangle>
-		<triangle2DFill public="1" get="inline" set="null" line="162">
+		<triangle2DFillGrad public="1" get="inline" set="null" line="166">
+			<f a="ax:ay:bx:by:cx:cy:?col0:?col1:?gradCorner" v="::::::-1:-1:0">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ gradCorner : 0, col1 : -1, col0 : -1 }</e></m></meta>
+		</triangle2DFillGrad>
+		<triangle2DFill public="1" get="inline" set="null" line="185">
 			<f a="ax:ay:bx:by:cx:cy:?color" v="::::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -63097,7 +63125,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</triangle2DFill>
-		<nineSliceFill public="1" get="inline" set="null" line="178">
+		<nineSliceFill public="1" get="inline" set="null" line="201">
 			<f a="ax:ay:width:height:left:right:top:bottom:?color0:?color1:?color2:?color3:?color4:?color5:?color6:?color7:?color8" v="::::::::-1:-1:-1:-1:-1:-1:-1:-1:-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -63120,7 +63148,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color8 : -1, color7 : -1, color6 : -1, color5 : -1, color4 : -1, color3 : -1, color2 : -1, color1 : -1, color0 : -1 }</e></m></meta>
 		</nineSliceFill>
-		<quad2DFill public="1" get="inline" set="null" line="201">
+		<quad2DFill public="1" get="inline" set="null" line="224">
 			<f a="ax:ay:width:height:?color" v="::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -63131,7 +63159,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</quad2DFill>
-		<quad2DFillclockwise public="1" get="inline" set="null" line="210">
+		<quad2DFillclockwise public="1" get="inline" set="null" line="233">
 			<f a="ax:ay:bx:by:cx:cy:dx:dy:?color" v="::::::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -63146,9 +63174,42 @@
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</quad2DFillclockwise>
+		<quadGradient public="1" get="inline" set="null" line="245">
+			<f a="pos:dim:?col0:?col1:?horizontal:?theta:?pivotX:?pivotY" v="::-1:-1:false:0.:0.:0.">
+				<c path="trilateral3.structure.XY"/>
+				<c path="trilateral3.structure.XY"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ pivotY : 0., pivotX : 0., theta : 0., horizontal : false, col1 : -1, col0 : -1 }</e></m></meta>
+		</quadGradient>
+		<multiGradient public="1" get="inline" set="null" line="270">
+			<f a="horizontal_:x_:y_:wid_:hi_:colors:?func:?theta:?pivotX:?pivotY" v="::::::null:0.:0.:0.">
+				<x path="Bool"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="Array"><x path="Int"/></c>
+				<f a="">
+					<x path="Float"/>
+					<x path="Float"/>
+				</f>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ pivotY : 0., pivotX : 0., theta : 0., func : null }</e></m></meta>
+		</multiGradient>
 		<pos public="1" get="accessor" set="accessor"><x path="Float"/></pos>
-		<get_pos get="inline" set="null" line="221"><f a=""><x path="Float"/></f></get_pos>
-		<set_pos get="inline" set="null" line="225"><f a="v">
+		<get_pos get="inline" set="null" line="311"><f a=""><x path="Float"/></f></get_pos>
+		<set_pos get="inline" set="null" line="315"><f a="v">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_pos>
@@ -63156,24 +63217,24 @@
 			<x path="trilateral3.drawing.TriangleAbstract"/>
 			<haxe_doc>* Only optionally available use with care, works with PenNodule.</haxe_doc>
 		</triangleCurrent>
-		<get_triangleCurrent get="inline" set="null" line="235"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
+		<get_triangleCurrent get="inline" set="null" line="325"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
 		<triangleCurrentUV public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.TriangleAbstractUV"/>
 			<haxe_doc>* Only optionally available use with care, works with PenNoduleUV.</haxe_doc>
 		</triangleCurrentUV>
-		<get_triangleCurrentUV get="inline" set="null" line="243"><f a=""><x path="trilateral3.drawing.TriangleAbstractUV"/></f></get_triangleCurrentUV>
+		<get_triangleCurrentUV get="inline" set="null" line="333"><f a=""><x path="trilateral3.drawing.TriangleAbstractUV"/></f></get_triangleCurrentUV>
 		<color3Current public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.Color3Abstract"/>
 			<haxe_doc>* Only possible if using interleave data structure !! use with care.</haxe_doc>
 		</color3Current>
-		<get_color3Current get="inline" set="null" line="251"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
-		<copyRange public="1" get="inline" set="null" line="255"><f a="otherPen:startEnd:vec">
+		<get_color3Current get="inline" set="null" line="341"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
+		<copyRange public="1" get="inline" set="null" line="345"><f a="otherPen:startEnd:vec">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<c path="trilateral3.matrix.Vertex"/>
 	<x path="trilateral3.shape.IndexRange"/>
 </f></copyRange>
-		<new public="1" set="method" line="35"><f a="paintType_">
+		<new public="1" set="method" line="37"><f a="paintType_">
 	<x path="trilateral3.drawing.PaintAbstract"/>
 	<x path="Void"/>
 </f></new>
@@ -65216,6 +65277,50 @@
 	<x path="Void"/>
 </f></new>
 		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="trilateral3.reShape.RangeShaper" params="" file="src/trilateral3/reShape/RangeShaper.hx">
+		<tri><c path="trilateral3.reShape.TrianglesShaper"/></tri>
+		<pen><c path="trilateral3.drawing.Pen"/></pen>
+		<indexRange public="1"><x path="trilateral3.shape.IndexRange"/></indexRange>
+		<px expr="10000000000">
+			<x path="Float"/>
+			<meta><m n=":value"><e>10000000000</e></m></meta>
+		</px>
+		<py expr="10000000000">
+			<x path="Float"/>
+			<meta><m n=":value"><e>10000000000</e></m></meta>
+		</py>
+		<pu expr="10000000000">
+			<x path="Float"/>
+			<meta><m n=":value"><e>10000000000</e></m></meta>
+		</pu>
+		<pv expr="10000000000">
+			<x path="Float"/>
+			<meta><m n=":value"><e>10000000000</e></m></meta>
+		</pv>
+		<setColor public="1" set="method" line="29"><f a="col">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></setColor>
+		<setXY public="1" set="method" line="35"><f a="xy">
+	<c path="trilateral3.structure.XY"/>
+	<x path="Void"/>
+</f></setXY>
+		<setUV public="1" set="method" line="46"><f a="xy">
+	<c path="trilateral3.structure.XY"/>
+	<x path="Void"/>
+</f></setUV>
+		<rotateAbout public="1" set="method" line="58"><f a="ax:ay:val">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></rotateAbout>
+		<new public="1" set="method" line="17"><f a="pen:indexRange">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="trilateral3.shape.IndexRange"/>
+	<x path="Void"/>
+</f></new>
 	</class>
 	<class path="trilateral3.reShape.TrianglesShaper" params="" file="src/trilateral3/reShape/TrianglesShaper.hx">
 		<pen><c path="trilateral3.drawing.Pen"/></pen>

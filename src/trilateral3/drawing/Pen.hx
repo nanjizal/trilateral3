@@ -11,6 +11,8 @@ import trilateral3.geom.Transformer;
 import trilateral3.structure.Triangle3D;
 import trilateral3.structure.TriInt;
 import trilateral3.structure.XYWH;
+import trilateral3.structure.XY;
+import trilateral3.math.Algebra;
 #if cpp
 import cpp.Float32;
 #end
@@ -135,6 +137,7 @@ class Pen {
                                , windAdjust );
         }
         //drawType.next();
+        return windAdjust;
     }
     #else 
     public inline 
@@ -157,8 +160,28 @@ class Pen {
                                , windAdjust );
         }
         //drawType.next();
+        return windAdjust;
     }
     #end
+    inline public
+    function triangle2DFillGrad( ax: Float, ay: Float
+                          , bx: Float, by: Float
+                          , cx: Float, cy: Float
+                          , col0: Int = -1, col1: Int = -1, gradCorner: Int = 0 ): Int {
+        if( col0 == -1 ) col0 = currentColor;
+        if( col1 == -1 ) col1 = currentColor;
+        var winding = addTriangle( ax, ay, z2D, bx, by, z2D, cx, cy, z2D );
+        switch( gradCorner ){
+            case 0:
+                cornerColors( col1, col0, col0 );
+            case 1:
+                ( winding )? cornerColors( col0, col0, col1 ): cornerColors( col0, col1, col0 );
+            case 2:
+                ( winding )? cornerColors( col0, col1, col0 ): cornerColors( col0, col0, col1 );
+        }
+        paintType.next();
+        return 1;
+    }
     inline public
     function triangle2DFill( ax: Float, ay: Float
                           , bx: Float, by: Float
@@ -216,6 +239,73 @@ class Pen {
         triangle2DFill( ax, ay, bx, by, dx, dy, color );
         triangle2DFill( bx, by, cx, cy, dx, dy, color );
         return 2;
+    }
+    //   A   B
+    //   D   C
+    public inline 
+    function quadGradient( pos:        XY, dim: XY
+                                            ,   col0:       Int = -1
+                                            ,   col1:       Int = -1
+                                            ,   horizontal: Bool = false
+                                            ,   theta:      Float = 0.
+                                            ,   pivotX:     Float = 0.
+                                            ,   pivotY:     Float = 0.
+                                            ): Int {
+
+        var line = rotateVectorLine( pos, dim, theta, pivotX, pivotY );
+        if( horizontal ){
+            triangle2DFillGrad( line.a.x, line.a.y, line.b.x, line.b.y, line.d.x, line.d.y, col0, col1, 1 );
+            triangle2DFillGrad( line.b.x, line.b.y, line.c.x, line.c.y, line.d.x, line.d.y, col1, col0, 2 );
+        } else {
+            triangle2DFillGrad( line.a.x, line.a.y, line.b.x, line.b.y, line.d.x, line.d.y, col0, col1, 2 );
+            triangle2DFillGrad( line.b.x, line.b.y, line.c.x, line.c.y, line.d.x, line.d.y, col1, col0, 0 );
+        }
+        return 2;
+    }
+    // converts normal tween equation for use with gradient
+    public static inline
+    function gradientFunction( tweenEquation: Float->Float->Float->Float->Float ): Float->Float {
+        return function( t: Float ): Float { return tweenEquation( t, 0, 1, 1 ); }
+    }
+    public inline
+    function multiGradient(    horizontal_: Bool
+                          ,   x_:         Float,      y_:  Float
+                          ,   wid_:       Float,      hi_: Float
+                          ,   colors:     Array<Int>
+                          ,   func:       Float -> Float = null
+                          ,   theta:      Float = 0.
+                          ,   pivotX:     Float = 0.
+                          ,   pivotY:     Float = 0.
+                          ): Int {
+        if( colors.length == 0 ) return 0;
+        var left = x_; 
+        var top  = y_;
+        var wid  = wid_;
+        var hi   = hi_;
+        if( colors.length == 1 ) colors.push( colors[ 0 ] );
+        var sections = colors.length - 1;
+        var loops = colors.length - 1;
+        if( func == null ) func = function( v: Float ): Float{ return v; }
+        if( horizontal_ ){
+            var step: Float = 1/sections;
+            var x0: Float;
+            var x1: Float;
+            for( i in 0...loops ){
+                x0 = func( i*step );
+                x1 = func( (i+1)*step );
+                var pos: XY = { x: left + x0*wid, y: top };
+                var dim: XY = { x: wid*(x1-x0), y: hi };
+                quadGradient( pos, dim, colors[ i ], colors[ i + 1 ], true, theta, pivotX, pivotY );
+            }
+        } else {
+            var step: Float = 1/sections;
+            var dim: XY = { x: wid, y: hi*func( step ) };
+            for( i in 0...loops ){
+                var pos: XY = { x: left, y: top + func( i*step )*hi };
+                quadGradient(  pos, dim, colors[ i ], colors[ i + 1 ], false, theta, pivotX, pivotY );
+            }
+        }
+        return 2*loops;
     }
     public var pos( get, set ): Float;
     inline 
