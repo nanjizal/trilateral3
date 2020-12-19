@@ -263,8 +263,8 @@ class Pen {
         return 2;
     }
     // converts normal tween equation for use with gradient
-    public static inline
-    function gradientFunction( tweenEquation: Float->Float->Float->Float->Float ): Float->Float {
+    public static
+    function tweenWrap( tweenEquation: Float->Float->Float->Float->Float ): Float->Float {
         return function( t: Float ): Float { return tweenEquation( t, 0, 1, 1 ); }
     }
     public inline
