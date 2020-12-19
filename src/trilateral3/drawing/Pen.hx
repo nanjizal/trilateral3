@@ -305,7 +305,7 @@ class Pen {
                 quadGradient(  pos, dim, colors[ i ], colors[ i + 1 ], false, theta, pivotX, pivotY );
             }
         }
-        return 2*loops;
+        return 2*(loops-1);
     }
     public var pos( get, set ): Float;
     inline 
