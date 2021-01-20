@@ -1,4 +1,6 @@
 package trilateral3.geom;
+// import copy string
+// import trilateral3.geom.Transformer;
 import trilateral3.matrix.MatrixDozen;
 import trilateral3.matrix.Vertex;
 inline

@@ -4,7 +4,8 @@ import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.TriangleAbstractUV;
 import trilateral3.drawing.Color3Abstract;
 import trilateral3.shape.IndexRange;
-
+import trilateral3.shape.IteratorRange;
+// Nymph will be removed in favour of reShape structures soon.
 class Nymph {
     var pen:         Pen;
     var curr:        TriangleAbstract;
@@ -29,6 +30,10 @@ class Nymph {
             su.push( u );
             sv.push( v );
         }
+    }
+    public static function iterNymph( pen: Pen, iteratorRange: IteratorRange ){
+        var ir: IndexRange = { start: iteratorRange.start, end: iteratorRange.max };
+        return new Nymph( pen, ir );
     }
     public function moveStart( sx_: Float, sy_: Float, su_: Float, sv_: Float ){
         var count = 0;

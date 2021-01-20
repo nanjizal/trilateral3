@@ -19,5 +19,11 @@ abstract DrawAbstract( DrawType ) to DrawType from DrawType {
     }
     inline function get_size(): Int {
         return this.get_size();
+    }    
+    inline function toStart( v: Int, len: Int ): Bool {
+        return this.toStart( v, len );
+    }
+    inline function toEnd( v: Int, len: Int ): Bool {
+        return this.toEnd( v, len );
     }
 }

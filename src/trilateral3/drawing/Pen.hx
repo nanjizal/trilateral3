@@ -3,6 +3,7 @@ import trilateral3.drawing.DrawAbstract;
 import trilateral3.drawing.ColorAbstract;
 import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.Color3Abstract;
+import trilateral3.shape.IteratorRange;
 import trilateral3.shape.IndexRange;
 import trilateral3.geom.FlatColorTriangles;
 import trilateral3.matrix.Vertex;
@@ -317,6 +318,30 @@ class Pen {
         paintType.pos  = v;
         //colorType.pos = v; assumes they are same
         return v;
+    }
+    public var size( get, set ): Int;
+    inline 
+    function get_size(): Int {
+        return paintType.size;
+    }
+    inline
+    function set_size( v: Int ){
+        paintType.size  = v;
+        return v;
+    }
+    /**
+     * sends pos to start of draw array ( bottom? )
+     **/
+    inline
+    public function setStartDepth( v: Int, len: Int ): Bool {
+        return paintType.toStart( v, len );
+    }
+    /**
+     * sends pos to end of draw array ( top? )
+     **/
+    inline
+    public function setEndDepth( v: Int, len: Int ): Bool {
+        return paintType.toEnd( v, len );
     }
     /**
      * Only optionally available use with care, works with PenNodule.

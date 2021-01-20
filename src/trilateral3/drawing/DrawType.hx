@@ -24,4 +24,6 @@ typedef DrawType = {
     public function set_pos( v: Float ): Float;
     public function get_size(): Int;
     public function set_size( v: Int ): Int;
+    public function toStart( v: Int, len: Int ): Bool;
+    public function toEnd( v: Int, len: Int ): Bool;
 }

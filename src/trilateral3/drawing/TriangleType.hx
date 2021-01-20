@@ -5,6 +5,7 @@ typedef TriangleType = {
     var rotate: ( x: Float, y: Float, theta: Float ) -> Void;
     var moveDelta: ( dx: Float, dy: Float ) -> Void;
     var rotateTrig: ( x: Float, y: Float, cos: Float, sin: Float ) -> Void;
+    #if trilateral_hitDebug var distHit: ( px: Float, py: Float ) -> Float; #end
     var fullHit: ( px: Float, py: Float ) -> Bool;
     var liteHit: ( px: Float, py: Float ) -> Bool;
     public function get_bottom(): Float;

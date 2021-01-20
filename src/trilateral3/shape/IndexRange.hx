@@ -19,4 +19,23 @@ abstract IndexRange( StartEnd ) from StartEnd to StartEnd {
     function get_length(): Int {
         return this.end - this.start + 1;
     }
+    inline
+    public function contains( v: Int ): Bool {
+        return ( v > ( this.start - 1 ) && ( v < this.end + 1 ) );
+    }
+    inline
+    public function isWithin( ir: IndexRange ): Bool {
+        return contains( ir.start ) && contains( ir.end );
+    }
+    inline
+    public function moveRange( v: Int ){
+        this.start += v;
+        this.end   += v;
+    }
+    inline
+    public function ifContainMove( v: Int, amount: Int ): Bool {
+        var ifHas = contains( v );
+        if( ifHas ) moveRange( amount );
+        return ifHas; 
+    }
 }

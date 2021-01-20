@@ -1,4 +1,6 @@
 package trilateral3.matrix;
+// copy import string
+// import trilateral3.matrix.Vertex;
 /** 
    { x, y, z, w }
 **/

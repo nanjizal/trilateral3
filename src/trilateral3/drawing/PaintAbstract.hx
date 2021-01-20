@@ -20,4 +20,12 @@ abstract PaintAbstract( PaintType ) to PaintType from PaintType {
     inline function get_size(): Int {
         return this.get_size();
     }
+    public inline
+    function toStart( v: Int, len: Int ): Bool {
+        return this.toStart( v, len );
+    }
+    public inline
+    function toEnd( v: Int, len: Int ): Bool {
+        return this.toEnd( v, len );
+    }
 }

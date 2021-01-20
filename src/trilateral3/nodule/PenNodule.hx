@@ -28,6 +28,7 @@ class PenNodule {
              rotate:        t.rotate
            , moveDelta:     t.moveDelta
            , rotateTrig:    t.rotateTrig
+           #if trilateral_hitDebug , distHit:       t.distHit #end
            , fullHit:       t.fullHit
            , liteHit:       t.liteHit
            , get_bottom:    t.get_bottom
@@ -69,6 +70,8 @@ class PenNodule {
             , set_pos:         t.set_pos
             , get_size:        t.get_size
             , set_size:        t.set_size
+            , toStart:         t.toStart
+            , toEnd:           t.toEnd
             , triangleCurrent: triangleAbstract
             , color3current:  color3Abstract
             };
