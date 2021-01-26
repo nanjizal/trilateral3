@@ -332,16 +332,23 @@ class Pen {
     /**
      * sends pos to start of draw array ( bottom? )
      **/
-    inline
-    public function setStartDepth( v: Int, len: Int ): Bool {
+    public inline
+    function setStartDepth( v: Int, len: Int ): Bool {
         return paintType.toStart( v, len );
     }
     /**
      * sends pos to end of draw array ( top? )
      **/
-    inline
-    public function setEndDepth( v: Int, len: Int ): Bool {
+    public inline
+    function setEndDepth( v: Int, len: Int ): Bool {
         return paintType.toEnd( v, len );
+    }
+    /**
+     * swaps positions within draw array
+     **/
+    public inline
+    function swapDepth( v0: Int, v1: Int, len: Int ): Bool {
+        return paintType.swap( v0, v1, len );
     }
     /**
      * Only optionally available use with care, works with PenNodule.

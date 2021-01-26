@@ -89,6 +89,7 @@ class PenPaint {
             , set_size:        t.set_size
             , toStart:         t.toStart
             , toEnd:           t.toEnd
+            , swap:            t.swap
             , triangleCurrent: triangleAbstract
             , triangleCurrentUV: triangleAbstractUV
             , color3current:  color3Abstract

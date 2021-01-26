@@ -154,6 +154,16 @@ class QuadDepth {
     function getPenultimate(): Int {
         return orderCount[ orderCount.length - 2 ];
     }
+    // unchecked
+    public
+    function swap( pieceNo0: Int, pieceNo1: Int ){
+        var startpos0 = depthPieces[ pieceNo0 ].begin;
+        var startpos1 = depthPieces[ pieceNo1 ].begin;
+        swapInternal( startpos0, startpos1, 2 );
+        depthPieces.rangeSwap( pieceNo0 + 1, pieceNo1 + 1, 1 );
+        orderCount.rangeSwap(  pieceNo0 + 1, pieceNo1 + 1, 1 );
+        // unsure starts need to be changed.
+    } 
     public
     function toTop( pieceNo: Int ){//, lastPos: Int ){
         //var lastPos = topLast;
@@ -191,6 +201,10 @@ class QuadDepth {
     inline
     function setEnd( v: Int, len: Int ): IteratorRange {
         return ( pen.setEndDepth( v, len ) )? ( v+1 )...( pen.size - len + 1 ): ( 0...0 );
+    }
+    inline
+    function swapInternal( v0: Int, v1: Int, len: Int ): Bool {
+        return pen.swapDepth( v0, v1, len );
     }
     // not ideal updates starts of all pieces not just the effected.
     function updateStarts(){

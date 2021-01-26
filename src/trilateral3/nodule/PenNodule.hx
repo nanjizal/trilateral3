@@ -72,6 +72,7 @@ class PenNodule {
             , set_size:        t.set_size
             , toStart:         t.toStart
             , toEnd:           t.toEnd
+            , swap:            t.swap
             , triangleCurrent: triangleAbstract
             , color3current:  color3Abstract
             };

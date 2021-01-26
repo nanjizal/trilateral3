@@ -55,4 +55,20 @@ abstract DepthArray<T>( Array<T> )to Array<T> from Array<T> {
         temp = null;
         return true;
     }
+    public inline
+    function rangeSwap( start0: Int, start1: Int, totalLen: Int ){
+        if( start0 + totalLen > this.length && start1 + totalLen > this.length ){
+            var temp0;
+            var temp1;
+            for( i in 0...totalLen ){
+                temp0 = this[ start0 + i ];
+                temp1 = this[ start1 + i ];
+                this[ start0 + i ] = temp1;
+                this[ start1 + i ] = temp0;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

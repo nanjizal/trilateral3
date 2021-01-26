@@ -28,4 +28,8 @@ abstract PaintAbstract( PaintType ) to PaintType from PaintType {
     function toEnd( v: Int, len: Int ): Bool {
         return this.toEnd( v, len );
     }
+    public inline
+    function swap( v0: Int, v1: Int, len: Int ): Bool {
+        return this.swap( v0, v1, len );
+    }
 }

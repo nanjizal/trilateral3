@@ -6098,7 +6098,7 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</_new>
-	<rangeToEnd public="1" set="method" line="11" static="1">
+	<rangeToEnd public="1" set="method" line="10" static="1">
 		<f a="this:starting:totalLen:section">
 			<x path="dsHelper.flat.io.Float32Flat"/>
 			<x path="Int"/>
@@ -6108,7 +6108,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</rangeToEnd>
-	<rangeToStart public="1" get="inline" set="null" line="30" static="1">
+	<rangeToStart public="1" get="inline" set="null" line="28" static="1">
 		<f a="this:starting:totalLen">
 			<x path="dsHelper.flat.io.Float32Flat"/>
 			<x path="Int"/>
@@ -6117,6 +6117,16 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</rangeToStart>
+	<rangeSwitch public="1" get="inline" set="null" line="53" static="1">
+		<f a="this:start0:start1:totalLen">
+			<x path="dsHelper.flat.io.Float32Flat"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</rangeSwitch>
 	<meta><m n=":directlyUsed"/></meta>
 </class></impl>
 	</abstract>
@@ -6131,7 +6141,7 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</_new>
-		<rangeToEnd public="1" set="method" line="11" static="1">
+		<rangeToEnd public="1" set="method" line="10" static="1">
 			<f a="this:starting:totalLen:section">
 				<x path="dsHelper.flat.io.Float32Flat"/>
 				<x path="Int"/>
@@ -6141,7 +6151,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</rangeToEnd>
-		<rangeToStart public="1" get="inline" set="null" line="30" static="1">
+		<rangeToStart public="1" get="inline" set="null" line="28" static="1">
 			<f a="this:starting:totalLen">
 				<x path="dsHelper.flat.io.Float32Flat"/>
 				<x path="Int"/>
@@ -6150,6 +6160,16 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</rangeToStart>
+		<rangeSwitch public="1" get="inline" set="null" line="53" static="1">
+			<f a="this:start0:start1:totalLen">
+				<x path="dsHelper.flat.io.Float32Flat"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</rangeSwitch>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="dsHelper.flatInterleave.FloatColorTriangles" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/FloatColorTriangles.hx">
@@ -9949,6 +9969,16 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toStart>
+	<swap public="1" get="inline" set="null" line="43" static="1">
+		<f a="this:id0:id1:len">
+			<x path="dsHelper.flat.io.Float32FlatDepth"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</swap>
 </class></impl>
 	</abstract>
 	<class path="dsHelper.flatInterleave.core._Flat3x7.Flat3x7_Impl_" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/core/Flat3x7.hx" private="1" module="dsHelper.flatInterleave.core.Flat3x7" final="1">
@@ -10029,6 +10059,16 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toStart>
+		<swap public="1" get="inline" set="null" line="43" static="1">
+			<f a="this:id0:id1:len">
+				<x path="dsHelper.flat.io.Float32FlatDepth"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</swap>
 	</class>
 	<abstract path="dsHelper.flatInterleave.core.Flat3x9" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/core/Flat3x9.hx">
 		<from><icast><x path="dsHelper.flat.io.Float32FlatDepth"/></icast></from>
@@ -10113,6 +10153,16 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toStart>
+	<swap public="1" get="inline" set="null" line="42" static="1">
+		<f a="this:id0:id1:len">
+			<x path="dsHelper.flat.io.Float32FlatDepth"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</swap>
 </class></impl>
 	</abstract>
 	<class path="dsHelper.flatInterleave.core._Flat3x9.Flat3x9_Impl_" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/flatInterleave/core/Flat3x9.hx" private="1" module="dsHelper.flatInterleave.core.Flat3x9" final="1">
@@ -10193,6 +10243,16 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toStart>
+		<swap public="1" get="inline" set="null" line="42" static="1">
+			<f a="this:id0:id1:len">
+				<x path="dsHelper.flat.io.Float32FlatDepth"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</swap>
 	</class>
 	<typedef path="dsHelper.haxe.io.Float32Array" params="" file="/usr/local/lib/haxeLibrary/dsHelper/git/src/dsHelper/haxe/io/Float32Array.hx">
 		<x path="lime.utils.Float32Array"/>
@@ -63117,6 +63177,16 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toEnd>
+	<swap public="1" get="inline" set="null" line="31" static="1">
+		<f a="this:v0:v1:len">
+			<t path="trilateral3.drawing.PaintType"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</swap>
 </class></impl>
 	</abstract>
 	<class path="trilateral3.drawing._PaintAbstract.PaintAbstract_Impl_" params="" file="src/trilateral3/drawing/PaintAbstract.hx" private="1" module="trilateral3.drawing.PaintAbstract" final="1">
@@ -63186,6 +63256,16 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toEnd>
+		<swap public="1" get="inline" set="null" line="31" static="1">
+			<f a="this:v0:v1:len">
+				<t path="trilateral3.drawing.PaintType"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</swap>
 	</class>
 	<typedef path="trilateral3.drawing.PaintType" params="" file="src/trilateral3/drawing/PaintType.hx"><a>
 	<triangleUV>
@@ -63240,6 +63320,12 @@
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></toEnd>
+	<swap set="method"><f a="v0:v1:len">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Bool"/>
+</f></swap>
 	<set_size set="method"><f a="v">
 	<x path="Int"/>
 	<x path="Int"/>
@@ -63547,22 +63633,31 @@
 			</f>
 			<haxe_doc>* sends pos to end of draw array ( top? )</haxe_doc>
 		</setEndDepth>
+		<swapDepth public="1" get="inline" set="null" line="349">
+			<f a="v0:v1:len">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* swaps positions within draw array</haxe_doc>
+		</swapDepth>
 		<triangleCurrent public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.TriangleAbstract"/>
 			<haxe_doc>* Only optionally available use with care, works with PenNodule.</haxe_doc>
 		</triangleCurrent>
-		<get_triangleCurrent get="inline" set="null" line="350"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
+		<get_triangleCurrent get="inline" set="null" line="357"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
 		<triangleCurrentUV public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.TriangleAbstractUV"/>
 			<haxe_doc>* Only optionally available use with care, works with PenNoduleUV.</haxe_doc>
 		</triangleCurrentUV>
-		<get_triangleCurrentUV get="inline" set="null" line="358"><f a=""><x path="trilateral3.drawing.TriangleAbstractUV"/></f></get_triangleCurrentUV>
+		<get_triangleCurrentUV get="inline" set="null" line="365"><f a=""><x path="trilateral3.drawing.TriangleAbstractUV"/></f></get_triangleCurrentUV>
 		<color3Current public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.Color3Abstract"/>
 			<haxe_doc>* Only possible if using interleave data structure !! use with care.</haxe_doc>
 		</color3Current>
-		<get_color3Current get="inline" set="null" line="366"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
-		<copyRange public="1" get="inline" set="null" line="370"><f a="otherPen:startEnd:vec">
+		<get_color3Current get="inline" set="null" line="373"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
+		<copyRange public="1" get="inline" set="null" line="377"><f a="otherPen:startEnd:vec">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<c path="trilateral3.matrix.Vertex"/>
@@ -65514,9 +65609,9 @@
 		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
 		<createPen public="1" set="method" line="24"><f a=""><c path="trilateral3.drawing.Pen"/></f></createPen>
 		<data public="1" get="accessor" set="null"><t path="dsHelper.haxe.io.Float32Array"/></data>
-		<get_data public="1" get="inline" set="null" line="82"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
+		<get_data public="1" get="inline" set="null" line="83"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
 		<size public="1" get="accessor" set="null"><x path="Int"/></size>
-		<get_size public="1" get="inline" set="null" line="87"><f a=""><x path="Int"/></f></get_size>
+		<get_size public="1" get="inline" set="null" line="88"><f a=""><x path="Int"/></f></get_size>
 		<new public="1" set="method" line="14">
 			<f a="?useGLScale" v="true">
 				<x path="Bool"/>
@@ -65538,9 +65633,9 @@
 		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
 		<createPen public="1" set="method" line="27"><f a=""><x path="Void"/></f></createPen>
 		<data public="1" get="accessor" set="null"><t path="dsHelper.haxe.io.Float32Array"/></data>
-		<get_data public="1" get="inline" set="null" line="99"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
+		<get_data public="1" get="inline" set="null" line="100"><f a=""><t path="dsHelper.haxe.io.Float32Array"/></f></get_data>
 		<size public="1" get="accessor" set="null"><x path="Int"/></size>
-		<get_size public="1" get="inline" set="null" line="104"><f a=""><x path="Int"/></f></get_size>
+		<get_size public="1" get="inline" set="null" line="105"><f a=""><x path="Int"/></f></get_size>
 		<new public="1" set="method" line="17">
 			<f a="?useGLScale" v="true">
 				<x path="Bool"/>
@@ -65583,6 +65678,16 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</rangeToStart>
+	<rangeSwap public="1" get="inline" set="null" line="58" static="1">
+		<f a="this:start0:start1:totalLen">
+			<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</rangeSwap>
 	<meta><m n=":directlyUsed"/></meta>
 </class></impl>
 	</abstract>
@@ -65615,6 +65720,16 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</rangeToStart>
+		<rangeSwap public="1" get="inline" set="null" line="58" static="1">
+			<f a="this:start0:start1:totalLen">
+				<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</rangeSwap>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="trilateral3.reShape.NineShaper" params="" file="src/trilateral3/reShape/NineShaper.hx">
@@ -65750,33 +65865,44 @@
 </f></toTopCount>
 		<getLast public="1" set="method" line="149"><f a=""><x path="Int"/></f></getLast>
 		<getPenultimate public="1" set="method" line="153"><f a=""><x path="Int"/></f></getPenultimate>
-		<toTop public="1" set="method" line="157"><f a="pieceNo">
+		<swap public="1" set="method" line="158"><f a="pieceNo0:pieceNo1">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></swap>
+		<toTop public="1" set="method" line="167"><f a="pieceNo">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></toTop>
-		<justLocalTop public="1" set="method" line="166"><f a="countNo">
+		<justLocalTop public="1" set="method" line="176"><f a="countNo">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></justLocalTop>
-		<toBottomCount public="1" set="method" line="173"><f a="countNo">
+		<toBottomCount public="1" set="method" line="183"><f a="countNo">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></toBottomCount>
-		<toBottom public="1" set="method" line="178"><f a="pieceNo">
+		<toBottom public="1" set="method" line="188"><f a="pieceNo">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></toBottom>
-		<setStart get="inline" set="null" line="187"><f a="v:len">
+		<setStart get="inline" set="null" line="197"><f a="v:len">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="trilateral3.shape.IteratorRange"/>
 </f></setStart>
-		<setEnd get="inline" set="null" line="191"><f a="v:len">
+		<setEnd get="inline" set="null" line="201"><f a="v:len">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="trilateral3.shape.IteratorRange"/>
 </f></setEnd>
-		<updateStarts set="method" line="196"><f a=""><x path="Void"/></f></updateStarts>
+		<swapInternal get="inline" set="null" line="205"><f a="v0:v1:len">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Bool"/>
+</f></swapInternal>
+		<updateStarts set="method" line="210"><f a=""><x path="Void"/></f></updateStarts>
 		<new public="1" set="method" line="17"><f a="pen_">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="Void"/>
