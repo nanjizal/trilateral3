@@ -18,18 +18,13 @@
 -lib hxPolyK
 -lib poly2trihx
 -lib hxGeomAlgo
--lib heaps
--lib openfl
--lib nme
---remap flash:nme
-#-lib nme ### have to comment out as nme is not dox safe.
 
 -v
 
---macro allowPackage("flash")
+
 -D trilateral3Doc
--D doc-gen
--D lime-doc-gen
+#-D doc-gen
+
 -D dsHelperDoc
 --macro include('trilateral3')
 -cp src

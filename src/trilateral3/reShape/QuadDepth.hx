@@ -64,10 +64,11 @@ class QuadDepth {
         quad.name = Std.string( col ) + 'x' + Std.string( row );
         quad.updatePos(); // make sure pen is after drawn quad.
     }
+    // onlyCreate used if you don't need the full grid of images.
     public
     function grid( x:  Float, y:  Float
                  , dw: Float, dh: Float
-                 , nW: Int,   nH: Int   ){
+                 , nW: Int,   nH: Int, ?onlyCreate: Array<Int> ){
         var u = 0.;
         var v = 0.;
         var count  = 0;
@@ -77,7 +78,13 @@ class QuadDepth {
         var startRange = cast pen.pos;
         for( row in 0...nH ){
             for( col in 0...nW ){
-                addQuad( x, y, dw, dh, u, v, col, row, count ); // assuming image is at 0, 0
+                if( onlyCreate != null ){
+                    if( onlyCreate.contains( count ) ){
+                        addQuad( x, y, dw, dh, u, v, col, row, count ); // assuming image is at 0, 0
+                    }
+                } else {
+                    addQuad( x, y, dw, dh, u, v, col, row, count ); // assuming image is at 0, 0
+                }
                 u += dw;  //  - 10; take away for debug.
                 count++;
             }
