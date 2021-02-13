@@ -1,6 +1,4 @@
 package trilateral3.geom;
-//import trilateral3.geom.flat.Flat3x7;
-import dsHelper.flatInterleave.core.Flat3x9;
 import trilateral3.structure.Triangle3D;
 import trilateral3.structure.TriangleUV;
 import trilateral3.matrix.MatrixDozen;
@@ -9,10 +7,20 @@ import trilateral3.matrix.Vertex;
 import trilateral3.matrix.UV;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
+
+#if useHyperKitGL
+import hyperKitGL.FloatColorTrianglesUV;
+import hyperKitGL.Float32Array;
+import hyperKitGL.Flat3x9;
+#else
 import dsHelper.flatInterleave.FloatColorTrianglesUV;
 import dsHelper.haxe.io.Float32Array;
+import dsHelper.flatInterleave.core.Flat3x9;
+#end
+
+@:transitive
 @:forward
-abstract FlatColorTrianglesUV( dsHelper.flatInterleave.FloatColorTrianglesUV ) from dsHelper.flatInterleave.FloatColorTrianglesUV to dsHelper.flatInterleave.FloatColorTrianglesUV {
+abstract FlatColorTrianglesUV( FloatColorTrianglesUV ) from FloatColorTrianglesUV to FloatColorTrianglesUV {
     @:to
     public inline
     function toArray(): Float32Array {

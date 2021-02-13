@@ -6,7 +6,12 @@ import trilateral3.shape.IndexRange;
 import trilateral3.matrix.Vertex;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
+#if useHyperKitGL
+import hyperKitGL.Float32FlatRGBA;
+#else
 import dsHelper.flat.f32.Float32FlatRGBA;
+#end
+@:transitive
 @:forward
 abstract FlatColors( dsHelper.flat.f32.Float32FlatRGBA ){
     public inline function new( len: Int ){

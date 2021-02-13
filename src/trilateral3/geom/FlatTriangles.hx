@@ -6,8 +6,18 @@ import trilateral3.matrix.Vertex;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 import dsHelper.flat.f32.Float32FlatTriangle;
+
+#if useHyperKitGL
+import hyperKitGL.Float32FlatTriangle;
+import hyperKitGL.Float32Array;
+#else
+import dsHelper.flat.f32.Float32FlatTriangle;
+import dsHelper.haxe.io.Float32Array;
+#end
+
+@:transitive
 @:forward
-abstract FlatTriangles( dsHelper.flat.f32.Float32FlatTriangle ){
+abstract FlatTriangles( Float32FlatTriangle ){
     public inline function new( len: Int ){
         this = new Float32FlatTriangle( len );
     }
