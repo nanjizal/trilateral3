@@ -2,8 +2,13 @@ package trilateral3.drawing;
 import justPath.IPathContext;
 import trilateral3.math.Algebra;
 import trilateral3.drawing.Contour;
-import dsHelper.splitter.SpaceSplitter;
 import trilateral3.color.ColorInt;
+
+#if useHyperKitGL
+import hyperKitGL.splitter.SpaceSplitter;
+#else
+import dsHelper.splitter.SpaceSplitter;
+#end
 
 // Assume converted to lower case
 enum abstract AIColorType ( String ) from String to String {

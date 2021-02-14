@@ -7,7 +7,7 @@ import trilateral3.matrix.Vertex;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 #if useHyperKitGL
-import hyperKitGL.Float32FlatRGBA;
+import hyperKitGL.io.Float32FlatRGBA;
 #else
 import dsHelper.flat.f32.Float32FlatRGBA;
 #end

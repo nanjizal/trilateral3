@@ -9,7 +9,13 @@ import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.TriangleAbstractUV;
 import trilateral3.drawing.Color3Abstract;
 import trilateral3.geom.FlatColorTrianglesUV;
+
+#if useHyperKitGL
+import hyperKitGL.io.Float32Array;
+#else
 import dsHelper.haxe.io.Float32Array;
+#end
+
 class PenPaint {
     static final largeEnough    = 20000000;
     public var colorTriangles   = new FlatColorTrianglesUV( largeEnough );

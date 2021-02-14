@@ -8,8 +8,8 @@ import trilateral3.structure.TriInt;
 import dsHelper.flat.f32.Float32FlatTriangle;
 
 #if useHyperKitGL
-import hyperKitGL.Float32FlatTriangle;
-import hyperKitGL.Float32Array;
+import hyperKitGL.io.Float32FlatTriangle;
+import hyperKitGL.io.Float32Array;
 #else
 import dsHelper.flat.f32.Float32FlatTriangle;
 import dsHelper.haxe.io.Float32Array;

@@ -2,11 +2,17 @@ package trilateral3.drawing;
 import org.poly2tri.VisiblePolygon;
 import hxGeomAlgo.Tess2;
 import hxPolyK.PolyK;
-import dsHelper.iterArr.ArrayTriple;
-import dsHelper.iterArr.ArrayPairs;
 import trilateral3.drawing.Pen;
 import trilateral3.drawing.Sketch;
 import trilateral3.drawing.StyleFill;
+
+#if useHyperKitGL
+import hyperKitGL.iterArr.ArrayTriple;
+import hyperKitGL.iterArr.ArrayPairs;
+#else
+import dsHelper.iterArr.ArrayTriple;
+import dsHelper.iterArr.ArrayPairs;
+#end
 
 function triangulate( pen: Pen, sketch: Sketch, fillForm: StyleFill ) {
     var vert: Array<Float>;

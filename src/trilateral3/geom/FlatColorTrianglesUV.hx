@@ -9,9 +9,9 @@ import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 
 #if useHyperKitGL
-import hyperKitGL.FloatColorTrianglesUV;
-import hyperKitGL.Float32Array;
-import hyperKitGL.Flat3x9;
+import hyperKitGL.io.FloatColorTrianglesUV;
+import hyperKitGL.io.Float32Array;
+import hyperKitGL.io.Flat3x9;
 #else
 import dsHelper.flatInterleave.FloatColorTrianglesUV;
 import dsHelper.haxe.io.Float32Array;

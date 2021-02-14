@@ -1,4 +1,11 @@
 package trilateral3.structure;
+
+// Not ideal but fixes issue.
+
+#if useHyperKitGL
+import hyperKitGL.XY;
+typedef XY = hyperKitGL.XY;
+#else
 /** 
    { x, y }
 **/
@@ -15,3 +22,4 @@ class XY {
         return { x: x, y: y };
     }
 }
+#end

@@ -6,7 +6,13 @@ import trilateral3.drawing.PaintAbstract;
 import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.Color3Abstract;
 import trilateral3.geom.FlatColorTriangles;
+
+#if useHyperKitGL
+import hyperKitGL.io.Float32Array;
+#else
 import dsHelper.haxe.io.Float32Array;
+#end
+
 class PenNodule {
     static final largeEnough    = 20000000;
     public var colorTriangles   = new FlatColorTriangles( largeEnough );

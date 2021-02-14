@@ -8,9 +8,9 @@ import trilateral3.matrix.Vertex;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 #if useHyperKitGL
-import hyperKitGL.FloatColorTriangles;
-import hyperKitGL.Float32Array;
-import hyperKitGL.Flat3x7;
+import hyperKitGL.io.FloatColorTriangles;
+import hyperKitGL.io.Float32Array;
+import hyperKitGL.io.Flat3x7;
 #else
 import dsHelper.flatInterleave.FloatColorTriangles;
 import dsHelper.haxe.io.Float32Array;
