@@ -15,7 +15,7 @@ class TrianglesShaper {
         this.wid        = wid;
         this.hi         = hi;
         curr            = pen.triangleCurrent;
-        currUV          = pen.triangleCurrentUV;
+        if( pen.triangleCurrentUV != null ) currUV          = pen.triangleCurrentUV;
         curr3color      = pen.color3Current;
     }
     #if trilateral_hitDebug

@@ -22,8 +22,10 @@ class RangeShaper {
             pen.pos  = i;
             if( tri.x < px ) px = tri.x;
             if( tri.y < py ) py = tri.y;
-            if( tri.u < pu ) pu = tri.u;
-            if( tri.v < pv ) pv = tri.v;
+            if( tri.currUV != null ){
+                if( tri.u < pu ) pu = tri.u;
+                if( tri.v < pv ) pv = tri.v;
+            }
         }
     }
     public
