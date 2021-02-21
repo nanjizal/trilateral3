@@ -117,6 +117,41 @@ class Pen {
         if( color == -1 ) color = currentColor;
         paintType.colorTriangles( color, times );
     }
+    inline public
+    function pieDifX( ax: Float, ay: Float
+                    , radius: Float, beta: Float, dif: Float
+                    , edgePoly: Array<Float>
+                    , ?sides: Int = 36 ): Int {
+        // choose a step size based on smoothness ie number of sides expected for a circle
+        var pi = Math.PI;
+        var step = pi*2/sides;
+        var positive = ( dif >= 0 );
+        var totalSteps = Math.ceil( Math.abs( dif )/step );
+        // adjust step with smaller value to fit the angle drawn.
+        var step = dif/totalSteps;
+        var angle: Float = beta;
+        var cx: Float;
+        var cy: Float;
+        var bx: Float = 0;
+        var by: Float = 0;
+        var p2 = edgePoly.length;
+        for( i in 0...totalSteps+1 ){
+            cx = ax + radius*Math.sin( angle );
+            cy = ay + radius*Math.cos( angle );
+            edgePoly[ p2++ ] = cx;
+            edgePoly[ p2++ ] = cy;
+            if( i != 0 ){ // start on second iteration after b is populated.
+                //var t = ( positive )? new Trilateral( ax, ay, bx, by, cx, cy ): new Trilateral( ax, ay, cx, cy, bx, by );
+                triangle2DFill( ax, ay, bx, by, cx, cy );
+            }
+            angle = angle + step;
+            bx = cx;
+            by = cy;
+        }
+        return totalSteps;
+    }
+    
+    
     #if cpp
     public inline
     function addTriangle( ax: Float32, ay: Float32, az: Float32
@@ -133,9 +168,9 @@ class Pen {
             cx = cx/2000;
             cy = cy/2000;
             paintType.triangleUV( ax, ay
-                               , bx, by
-                               , cx, cy
-                               , windAdjust );
+                                , bx, by
+                                , cx, cy
+                                , windAdjust );
         }
         //drawType.next();
         return windAdjust;

@@ -1,5 +1,5 @@
 package trilateral3.shape;
-import trilateral3.drawing.DrawType;
+import trilateral3.drawing.PaintType;
 import trilateral3.math.Algebra;
 import trilateral3.shape.IndexRange;
 import trilateral3.structure.Quad2D;
@@ -8,52 +8,54 @@ import trilateral3.Trilateral;
 import fracs.Angles;
 import trilateral3.shape.PolyEdge;
 
+
+
 /**
 Shaper provides static methods for drawing with triangles.
 the methods return the number of triangles added.
 **/
 inline
-function add2DTriangle( drawType: DrawType
+function add2DTriangle( paintType: PaintType
                       , ax: Float, ay: Float
                       , bx: Float, by: Float
                       , cx: Float, cy: Float ): Int {
     // don't need to reorder corners and Trilateral can do that!
-    drawType.triangle( ax, ay, 0, bx, by, 0, cx, cy, 0 );
+    paintType.triangle( ax, ay, 0, bx, by, 0, cx, cy, 0 );
     var m = Trilateral.transformMatrix;
-    if( m != null ) drawType.transform( m );
-    drawType.next();
+    if( m != null ) paintType.transform( m );
+    paintType.next();
     return 1;
 }
 inline
-function add2DQuad( drawType: DrawType
+function add2DQuad( paintType: PaintType
                   , ax: Float, ay: Float
                   , bx: Float, by: Float
                   , cx: Float, cy: Float
                   , dx: Float, dy: Float ): Int {
-    add2DTriangle( drawType, ax, ay, bx, by, dx, dy );
-    add2DTriangle( drawType, bx, by, cx, cy, dx, dy );
+    add2DTriangle( paintType, ax, ay, bx, by, dx, dy );
+    add2DTriangle( paintType, bx, by, cx, cy, dx, dy );
     return 2;
 }
 inline 
-function quad( drawType: DrawType, q: Quad2D ): Int {
-    return add2DQuad( drawType,  q.a.x, q.a.y, q.b.x, q.b.y, q.c.x, q.c.y, q.d.x, q.d.y );
+function quad( paintType: PaintType, q: Quad2D ): Int {
+    return add2DQuad( paintType,  q.a.x, q.a.y, q.b.x, q.b.y, q.c.x, q.c.y, q.d.x, q.d.y );
 }
 inline 
-function lineAB( drawType: DrawType
+function lineAB( paintType: PaintType
                , A: XY, B: XY
                , width: Float ): Int {
     var q = trilateral3.math.Algebra.lineAB( A, B, width );
-    return quad( drawType, q );
+    return quad( paintType, q );
 }
 inline 
-function lineXY( drawType: DrawType
+function lineXY( paintType: PaintType
                , ax: Float, ay: Float, bx: Float, by: Float
                , width: Float ): Int {
     var q = lineABCoord( ax, ay, bx, by, width );
-    return quad( drawType, q );
+    return quad( paintType, q );
 }
 inline
-function rectangle( drawType: DrawType
+function rectangle( paintType: PaintType
     , x: Float, y: Float, w: Float, h: Float ): Int {
     var ax = x;
     var ay = y;
@@ -63,12 +65,12 @@ function rectangle( drawType: DrawType
     var cy = ay + h;
     var dx = x;
     var dy = cy; 
-    return add2DQuad( drawType, ax, ay, bx, by, cx, cy, dx, dy );
+    return add2DQuad( paintType, ax, ay, bx, by, cx, cy, dx, dy );
 }
 //    a  b
 //    d  c
 inline
-function squareOutline( drawType: DrawType
+function squareOutline( paintType: PaintType
                       , px: Float, py: Float
                       , radius: Float, thick: Float, ?theta: Float = 0 ): Int {
     var ax = 0.;
@@ -150,25 +152,25 @@ function squareOutline( drawType: DrawType
     }// top 
     // c bx, b0y
     // d ax, a0y
-    add2DTriangle( drawType, ax, ay, bx, by, a0x, a0y );
-    add2DTriangle( drawType, bx, by, b0x, b0y, a0x, a0y );
+    add2DTriangle( paintType, ax, ay, bx, by, a0x, a0y );
+    add2DTriangle( paintType, bx, by, b0x, b0y, a0x, a0y );
     // bottom
     // a dx d0y
     // b cx c0y
-    add2DTriangle( drawType, d0x, d0y, c0x, c0y, dx, dy );
-    add2DTriangle( drawType, c0x, c0y, cx, cy, dx, dy  );
+    add2DTriangle( paintType, d0x, d0y, c0x, c0y, dx, dy );
+    add2DTriangle( paintType, c0x, c0y, cx, cy, dx, dy  );
     // left
-    add2DTriangle( drawType, ax, ay, a0x, a0y, d0x, d0y );
-    add2DTriangle( drawType, ax, ay, d0x, d0y, dx, dy );
+    add2DTriangle( paintType, ax, ay, a0x, a0y, d0x, d0y );
+    add2DTriangle( paintType, ax, ay, d0x, d0y, dx, dy );
     // right
-    add2DTriangle( drawType, b0x, b0y, bx, by, c0x, c0y );
-    add2DTriangle( drawType, bx, by, cx, cy, c0x, c0y );
+    add2DTriangle( paintType, b0x, b0y, bx, by, c0x, c0y );
+    add2DTriangle( paintType, bx, by, cx, cy, c0x, c0y );
     return 8;
 }
 //    a  b
 //    d  c
 inline
-function square( drawType: DrawType
+function square( paintType: PaintType
                , px: Float, py: Float
                , radius: Float, ?theta: Float = 0 ): Int {
     var ax = 0.;
@@ -212,24 +214,24 @@ function square( drawType: DrawType
         dx = ax;
         dy = cy;
     }
-    return add2DQuad( drawType, ax, ay, bx, by, cx, cy, dx, dy );
+    return add2DQuad( paintType, ax, ay, bx, by, cx, cy, dx, dy );
 }
 inline 
-function diamond( drawType: DrawType
+function diamond( paintType: PaintType
                 , x: Float, y: Float
                 , radius: Float, ?theta: Float = 0. ): Int {
-    return square( drawType, x, y, radius, Math.PI/4 + theta );
+    return square( paintType, x, y, radius, Math.PI/4 + theta );
 }
 inline 
-function diamondOutline( drawType: DrawType
+function diamondOutline( paintType: PaintType
                        , x: Float, y: Float
                        , thick: Float
                        , radius: Float, ?theta: Float = 0. ): Int {
-    return squareOutline( drawType, x, y, radius, thick, Math.PI/4 + theta );
+    return squareOutline( paintType, x, y, radius, thick, Math.PI/4 + theta );
 }
 // use two overlapping triangles to create a quick star, lighter than say a circle for denoting a point.
 inline
-function overlapStar( drawType: DrawType
+function overlapStar( paintType: PaintType
                     , px: Float, py: Float
                     , radius: Float, ?theta: Float = 0 ): Int {
     var pi = Math.PI;
@@ -254,12 +256,12 @@ function overlapStar( drawType: DrawType
     omega += pi/3;
     var c1x: Float = px + radius * Math.sin( omega );
     var c1y: Float = py + radius * Math.cos( omega );
-    add2DTriangle( drawType, a0x, a0y, b0x, b0y, c0x, c0y );
-    add2DTriangle( drawType, a1x, a1y, b1x, b1y, c1x, c1y );
+    add2DTriangle( paintType, a0x, a0y, b0x, b0y, c0x, c0y );
+    add2DTriangle( paintType, a1x, a1y, b1x, b1y, c1x, c1y );
     return 2;
 }
 inline
-function circle( drawType: DrawType
+function circle( paintType: PaintType
                , ax: Float, ay: Float
                , radius: Float
                , ?sides: Int = 36, ?omega: Float = 0. ): Int {
@@ -276,12 +278,12 @@ function circle( drawType: DrawType
         theta += step;
         cx = ax + radius*Math.sin( theta );
         cy = ay + radius*Math.cos( theta );
-        add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+        add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
     }
     return sides;
 }
 inline
-function circleRadial( drawType: DrawType
+function circleRadial( paintType: PaintType
                , ax: Float, ay: Float
                , rx: Float, ry: Float // -1 to 1 offset centre.
                , radius: Float
@@ -305,12 +307,12 @@ function circleRadial( drawType: DrawType
         theta += step;
         cx = ax + radius*Math.sin( theta );
         cy = ay + radius*Math.cos( theta );
-        add2DTriangle( drawType, mx, my, bx, by, cx, cy );
+        add2DTriangle( paintType, mx, my, bx, by, cx, cy );
     }
     return sides;
 }
 inline
-function circleRadialOnSide( drawType: DrawType
+function circleRadialOnSide( paintType: PaintType
                      , ax: Float, ay: Float
                      , rx: Float, ry: Float // -1 to 1 offset centre.
                      , radius: Float, ?sides: Int = 36
@@ -337,14 +339,14 @@ function circleRadialOnSide( drawType: DrawType
         theta += step;
         cx = ax + radius*Math.sin( theta );
         cy = ay + radius*Math.cos( theta );
-        add2DTriangle( drawType, mx, my, bx, by, cx, cy );
+        add2DTriangle( paintType, mx, my, bx, by, cx, cy );
     }
-    add2DTriangle( drawType, mx, my, cx, cy, dx, dy ); // will not render without?
-    //add2DTriangle( drawType, mx, my, cx, cy, dx, dy );
+    add2DTriangle( paintType, mx, my, cx, cy, dx, dy ); // will not render without?
+    //add2DTriangle( paintType, mx, my, cx, cy, dx, dy );
     return sides;
 }
 inline 
-function ellipse( drawType: DrawType
+function ellipse( paintType: PaintType
                 , ax: Float, ay: Float
                 , rx: Float, ry: Float
                 , sides: Int = 36 ): Int {
@@ -361,7 +363,7 @@ function ellipse( drawType: DrawType
         theta += step;
         cx = ax + rx*Math.sin( theta );
         cy = ay + ry*Math.cos( theta );
-        add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+        add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
     }
     return sides;
 }
@@ -370,7 +372,7 @@ function ellipse( drawType: DrawType
  * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .
  **/
 inline
-function pie( drawType: DrawType
+function pie( paintType: PaintType
             , ax: Float, ay: Float
             , radius: Float, beta: Float, gamma: Float
             , prefer: DifferencePreference 
@@ -393,7 +395,7 @@ function pie( drawType: DrawType
         cy = ay + radius*Math.cos( angle );
         if( i != 0 ){ // start on second iteration after b is populated.
             //var t = ( positive )? new Trilateral( ax, ay, bx, by, cx, cy ): new Trilateral( ax, ay, cx, cy, bx, by );
-            add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+            add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
         }
         angle = angle + step;
         bx = cx;
@@ -406,7 +408,7 @@ function pie( drawType: DrawType
  * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .
  **/
 inline
-function pieX( drawType: DrawType
+function pieX( paintType: PaintType
             , ax: Float, ay: Float
             , radius:   Float, beta: Float, gamma: Float
             , prefer:   DifferencePreference
@@ -433,7 +435,7 @@ function pieX( drawType: DrawType
         edgePoly[ p2++ ] = cy;
         if( i != 0 ){ // start on second iteration after b is populated.
             //var t = ( positive )? new Trilateral( ax, ay, bx, by, cx, cy ): new Trilateral( ax, ay, cx, cy, bx, by );
-            add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+            add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
         }
         angle = angle + step;
         bx = cx;
@@ -446,7 +448,7 @@ function pieX( drawType: DrawType
  * External edge also added
  **/
 inline
-function pieDifX( drawType: DrawType
+function pieDifX( paintType: PaintType
             , ax: Float, ay: Float
             , radius: Float, beta: Float, dif: Float
             , edgePoly: Array<Float>
@@ -471,7 +473,7 @@ function pieDifX( drawType: DrawType
         edgePoly[ p2++ ] = cy;
         if( i != 0 ){ // start on second iteration after b is populated.
             //var t = ( positive )? new Trilateral( ax, ay, bx, by, cx, cy ): new Trilateral( ax, ay, cx, cy, bx, by );
-            add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+            add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
         }
         angle = angle + step;
         bx = cx;
@@ -481,7 +483,7 @@ function pieDifX( drawType: DrawType
 }
 
 inline
-function ellipsePie( drawType: DrawType
+function ellipsePie( paintType: PaintType
                    , ax: Float, ay: Float
                    , rx: Float, ry: Float
                    , beta: Float, gamma: Float
@@ -505,7 +507,7 @@ function ellipsePie( drawType: DrawType
         cy = ay + ry*Math.cos( angle );
         if( i != 0 ){ // start on second iteration after b is populated.
             //var t = ( positive )? new Trilateral( ax, ay, bx, by, cx, cy ): new Trilateral( ax, ay, cx, cy, bx, by );
-            add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+            add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
         }
         angle = angle + step;
         bx = cx;
@@ -517,7 +519,7 @@ function ellipsePie( drawType: DrawType
  * Optimized Pie used in Contour, with dif pre-calculated
  **/
 inline
-function pieDif( drawType: DrawType
+function pieDif( paintType: PaintType
                , ax: Float, ay: Float
                , radius: Float, beta: Float
                , dif: Float, ?sides: Int = 36 ): Int {
@@ -537,7 +539,7 @@ function pieDif( drawType: DrawType
         cx = ax + radius*Math.sin( angle );
         cy = ay + radius*Math.cos( angle );
         if( i != 0 ){ // start on second iteration after b is populated.
-            add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+            add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
         }
         angle = angle + step;
         bx = cx;
@@ -546,7 +548,7 @@ function pieDif( drawType: DrawType
     return totalSteps;
 }
 inline
-function arc( drawType: DrawType
+function arc( paintType: PaintType
             , ax: Float, ay: Float
             , radius: Float, width: Float, beta: Float, gamma: Float
             , prefer: DifferencePreference, ?sides: Int = 36 ): Int {
@@ -574,8 +576,8 @@ function arc( drawType: DrawType
         ex = ax + r2*Math.sin( angle );
         ey = ay + r2*Math.cos( angle );
         if( i != 0 ){ // start on second iteration after b and d are populated.
-            add2DTriangle( drawType, dx, dy, bx, by, cx, cy );
-            add2DTriangle( drawType, dx, dy, cx, cy, ex, ey );
+            add2DTriangle( paintType, dx, dy, bx, by, cx, cy );
+            add2DTriangle( paintType, dx, dy, cx, cy, ex, ey );
         }
         angle = angle + step;
         bx = cx;
@@ -586,7 +588,7 @@ function arc( drawType: DrawType
     return totalSteps*2;
 }
 inline
-function circleOnSide( drawType: DrawType
+function circleOnSide( paintType: PaintType
                      , ax: Float, ay: Float
                      , radius: Float, ?sides: Int = 36
                      , ?omega: Float = 0. ): Int {
@@ -604,12 +606,12 @@ function circleOnSide( drawType: DrawType
         theta += step;
         cx = ax + radius*Math.sin( theta );
         cy = ay + radius*Math.cos( theta );
-        add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+        add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
     }
     return sides;
 }
 inline 
-function ellipseOnSide( drawType: DrawType
+function ellipseOnSide( paintType: PaintType
                       , ax: Float, ay: Float
                       , rx: Float, ry: Float
                       , sides: Int = 36 ): Int {
@@ -627,36 +629,36 @@ function ellipseOnSide( drawType: DrawType
         theta += step;
         cx = ax + rx*Math.sin( theta );
         cy = ay + ry*Math.cos( theta );
-        add2DTriangle( drawType, ax, ay, bx, by, cx, cy );
+        add2DTriangle( paintType, ax, ay, bx, by, cx, cy );
     }
     return sides;
 }
 inline
-function shape( drawType: DrawType
+function shape( paintType: PaintType
               , x: Float, y: Float
               , radius: Float, p: PolyEdge, ?omega: Float = 0. ): Int {
     return if( p & 1 == 0 ){
-        circleOnSide( drawType, x, y, radius, p, omega );
+        circleOnSide( paintType, x, y, radius, p, omega );
     } else {
-        circle( drawType, x, y, radius, p, omega );
+        circle( paintType, x, y, radius, p, omega );
     }
 }
 inline
-function shapeRadial( drawType: DrawType
+function shapeRadial( paintType: PaintType
               , x: Float, y: Float
               , rx: Float, ry: Float
               , radius: Float, p: PolyEdge, ?omega: Float = 0. ): Int {
     return if( ( p & 1 ) == 0 ){
         trace('even');
-        circleRadial( drawType, x, y, rx, ry, radius, p, omega );
+        circleRadial( paintType, x, y, rx, ry, radius, p, omega );
     } else {
         trace('odd');
-        trace( p & 1 );circleRadialOnSide( drawType, x, y, rx, ry, radius, p, omega );
+        trace( p & 1 );circleRadialOnSide( paintType, x, y, rx, ry, radius, p, omega );
         
     }
 }
 inline
-function roundedRectangle( drawType: DrawType
+function roundedRectangle( paintType: PaintType
                          , x: Float, y: Float
                          , width: Float, height: Float
                          , radius: Float ): Int {
@@ -675,18 +677,18 @@ function roundedRectangle( drawType: DrawType
     var dx = ax;
     var dy = cy;
     var count = 0;
-    count += rectangle( drawType, ax, y, width - radius*2, height );
+    count += rectangle( paintType, ax, y, width - radius*2, height );
     var dimY = height - 2*radius;
-    count += rectangle( drawType, x,  ay, radius, dimY );
-    count += rectangle( drawType, bx, by, radius, dimY );
-    count += pie( drawType, ax, ay, radius, -pi, -pi_2, CLOCKWISE );
-    count += pie( drawType, bx, by, radius, pi_2, pi,   CLOCKWISE );
-    count += pie( drawType, cx, cy, radius, pi_2, 0,  ANTICLOCKWISE );
-    count += pie( drawType, dx, dy, radius, 0, -pi_2, ANTICLOCKWISE );
+    count += rectangle( paintType, x,  ay, radius, dimY );
+    count += rectangle( paintType, bx, by, radius, dimY );
+    count += pie( paintType, ax, ay, radius, -pi, -pi_2, CLOCKWISE );
+    count += pie( paintType, bx, by, radius, pi_2, pi,   CLOCKWISE );
+    count += pie( paintType, cx, cy, radius, pi_2, 0,  ANTICLOCKWISE );
+    count += pie( paintType, dx, dy, radius, 0, -pi_2, ANTICLOCKWISE );
     return count;
 }
 inline
-function roundedRectangleOutline( drawType: DrawType
+function roundedRectangleOutline( paintType: PaintType
                                 , x: Float, y: Float
                                 , width: Float, height: Float
                                 , thick: Float, radius: Float ): Int {
@@ -705,26 +707,26 @@ function roundedRectangleOutline( drawType: DrawType
     var dx = ax;
     var dy = cy;
     var count = 0;
-    count += rectangle( drawType, ax, y, width - radius*2, thick );
-    count += rectangle( drawType, ax, y + height - thick, width - radius*2, thick );
+    count += rectangle( paintType, ax, y, width - radius*2, thick );
+    count += rectangle( paintType, ax, y + height - thick, width - radius*2, thick );
     var dimY = height - 2*radius;
-    count += rectangle( drawType, x,  ay, thick, dimY );
-    count += rectangle( drawType, x + width - thick, by, thick, dimY );
-    count += arc( drawType, ax, ay, radius, thick, -pi, -pi_2, CLOCKWISE );
-    count += arc( drawType, bx, by, radius, thick, pi_2, pi,   CLOCKWISE );
-    count += arc( drawType, cx, cy, radius, thick, pi_2, 0, ANTICLOCKWISE );
-    count += arc( drawType, dx, dy, radius, thick, 0, -pi_2,ANTICLOCKWISE );
+    count += rectangle( paintType, x,  ay, thick, dimY );
+    count += rectangle( paintType, x + width - thick, by, thick, dimY );
+    count += arc( paintType, ax, ay, radius, thick, -pi, -pi_2, CLOCKWISE );
+    count += arc( paintType, bx, by, radius, thick, pi_2, pi,   CLOCKWISE );
+    count += arc( paintType, cx, cy, radius, thick, pi_2, 0, ANTICLOCKWISE );
+    count += arc( paintType, dx, dy, radius, thick, 0, -pi_2,ANTICLOCKWISE );
     return count;
 }
 inline
-function spiralLines( drawType: DrawType
+function spiralLines( paintType: PaintType
                     , x: Float, y: Float
                     , radius: Float, nolines: Int
                     , startWid: Float, stepWid: Float ): Int {
     var theta = 0.;
     var wid = startWid;
     for( i in 0...nolines ){
-        lineXY( drawType, x, y
+        lineXY( paintType, x, y
               , x + radius*Math.sin( theta )
               , y + radius*Math.cos( theta ), wid+= stepWid );
         theta += (Math.PI*2)/nolines;
@@ -733,113 +735,113 @@ function spiralLines( drawType: DrawType
 }
 
 class Shaper {
-    public var add2DTriangle_: ( drawType: DrawType
+    public var add2DTriangle_: ( paintType: PaintType
                                , ax: Float, ay: Float
                                , bx: Float, by: Float
                                , cx: Float, cy: Float ) -> Int = add2DTriangle;
-    public var add2DQuad_: ( drawType: DrawType
+    public var add2DQuad_: ( paintType: PaintType
                            , ax: Float, ay: Float
                            , bx: Float, by: Float
                            , cx: Float, cy: Float
                            , dx: Float, dy: Float ) -> Int = add2DQuad;
-    public var quad_: ( drawType: DrawType, q: Quad2D ) -> Int = quad;
-    public var lineAB_: ( drawType: DrawType
+    public var quad_: ( paintType: PaintType, q: Quad2D ) -> Int = quad;
+    public var lineAB_: ( paintType: PaintType
                         , A: XY, B: XY
                         , width: Float ) -> Int = lineAB;
-    public var lineXY_: ( drawType: DrawType
+    public var lineXY_: ( paintType: PaintType
                      , ax: Float, ay: Float, bx: Float, by: Float
                      , width: Float ) -> Int = lineXY;
-    public var rectangle_: ( drawType: DrawType
+    public var rectangle_: ( paintType: PaintType
                            , x: Float, y: Float
                            , w: Float, h: Float ) -> Int = rectangle;
-    public var squareOutline_: ( drawType: DrawType
+    public var squareOutline_: ( paintType: PaintType
                                , px: Float, py: Float
                                , radius: Float, thick: Float, ?theta: Float ) -> Int = squareOutline;
-    public var square_: ( drawType: DrawType
+    public var square_: ( paintType: PaintType
                         , px: Float, py: Float
                         , radius: Float, ?theta: Float ) -> Int = square;
-    public var diamond_: ( drawType: DrawType
+    public var diamond_: ( paintType: PaintType
                          , x: Float, y: Float
                          , radius: Float, ?theta: Float ) -> Int = diamond;
-    public var diamondOutline_: ( drawType: DrawType
+    public var diamondOutline_: ( paintType: PaintType
                                 , x: Float, y: Float
                                 , thick: Float
                                 , radius: Float, ?theta: Float ) -> Int = diamondOutline;
-    public var overlapStar_: ( drawType: DrawType
+    public var overlapStar_: ( paintType: PaintType
                              , px: Float, py: Float
                              , radius: Float, ?theta: Float ) -> Int = overlapStar;
-    public var circle_: ( drawType: DrawType
+    public var circle_: ( paintType: PaintType
                         , ax: Float, ay: Float
                         , radius: Float
                         , ?sides: Int, ?omega: Float ) -> Int = circle;
-    public var circleRadial_: ( drawType: DrawType
+    public var circleRadial_: ( paintType: PaintType
                               , ax: Float, ay: Float
                               , rx: Float, ry: Float // -1 to 1 offset centre.
                               , radius: Float
                               , ?sides: Int, ?omega: Float ) -> Int = circleRadial;
-    public var circleRadialOnSide_: ( drawType: DrawType
+    public var circleRadialOnSide_: ( paintType: PaintType
                                     , ax: Float, ay: Float
                                     , rx: Float, ry: Float // -1 to 1 offset centre.
                                     , radius: Float, ?sides: Int
                                     , ?omega: Float ) -> Int = circleRadialOnSide;
-    public var ellipse_: ( drawType: DrawType
+    public var ellipse_: ( paintType: PaintType
                          , ax: Float, ay: Float
                          , rx: Float, ry: Float
                          , sides: Int ) -> Int = ellipse;
-    public var pie_: ( drawType: DrawType
+    public var pie_: ( paintType: PaintType
                      , ax: Float, ay: Float
                      , radius: Float, beta: Float, gamma: Float
                      , prefer: DifferencePreference 
                      , ?sides: Int ) -> Int = pie;
-    public var pieX_: ( drawType: DrawType
+    public var pieX_: ( paintType: PaintType
                       , ax: Float, ay: Float
                       , radius:   Float, beta: Float, gamma: Float
                       , prefer:   DifferencePreference
                       , edgePoly: Array<Float>
                       , ?sides: Int ) -> Int = pieX;
-    public var pieDifX_: ( drawType: DrawType
+    public var pieDifX_: ( paintType: PaintType
                         , ax: Float, ay: Float
                         , radius: Float, beta: Float, dif: Float
                         , edgePoly: Array<Float>
                         , ?sides: Int ) -> Int = pieDifX;
-    public var ellpisePie_: ( drawType: DrawType
+    public var ellpisePie_: ( paintType: PaintType
                             , ax: Float, ay: Float
                             , rx: Float, ry: Float
                             , beta: Float, gamma: Float
                             , prefer: DifferencePreference
                             , ?sides: Int ) -> Int = ellipsePie;
-    public var pieDif_: ( drawType: DrawType
+    public var pieDif_: ( paintType: PaintType
                         , ax: Float, ay: Float
                         , radius: Float, beta: Float
                         , dif: Float, ?sides: Int ) -> Int = pieDif;
-    public var arc_: ( drawType: DrawType
+    public var arc_: ( paintType: PaintType
                      , ax: Float, ay: Float
                      , radius: Float, width: Float, beta: Float, gamma: Float
                      , prefer: DifferencePreference, ?sides: Int ) -> Int = arc;
-    public var circleOnSide_: ( drawType: DrawType
+    public var circleOnSide_: ( paintType: PaintType
                               , ax: Float, ay: Float
                               , radius: Float, ?sides: Int
                               , ?omega: Float ) -> Int = circleOnSide;
-    public var ellipseOnSide_: ( drawType: DrawType
+    public var ellipseOnSide_: ( paintType: PaintType
                                , ax: Float, ay: Float
                                , rx: Float, ry: Float
                                , sides: Int ) -> Int = ellipseOnSide;
-    public var shape_: ( drawType: DrawType
+    public var shape_: ( paintType: PaintType
                        , x: Float, y: Float
                        , radius: Float, p: PolyEdge, ?omega: Float ) -> Int = shape;
-    public var shapeRadial_: ( drawType: DrawType
+    public var shapeRadial_: ( paintType: PaintType
                              , x: Float, y: Float
                              , rx: Float, ry: Float
                              , radius: Float, p: PolyEdge, ?omega: Float ) -> Int = shapeRadial;
-    public var roundedRectangle_: ( drawType: DrawType
+    public var roundedRectangle_: ( paintType: PaintType
                                   , x: Float, y: Float
                                   , width: Float, height: Float
                                   , radius: Float ) -> Int = roundedRectangle;
-    public var roundedRectangleOutline_: ( drawType: DrawType
+    public var roundedRectangleOutline_: ( paintType: PaintType
                                          , x: Float, y: Float
                                          , width: Float, height: Float
                                          , thick: Float, radius: Float ) -> Int = roundedRectangleOutline;
-    public var spiralLines_: ( drawType: DrawType
+    public var spiralLines_: ( paintType: PaintType
                              , x: Float, y: Float
                              , radius: Float, nolines: Int
                              , startWid: Float, stepWid: Float ) -> Int = spiralLines;

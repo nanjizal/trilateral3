@@ -256,14 +256,14 @@ class Contour {
             if( curveEnds ){
                 //joinArc
                 if( clockWise ){
-                    var len = pieDifX( pen.paintType, ax_, ay_, width_/2, theta0, dif, pointsClock );
+                    var len = pen.pieDifX( /*pen.paintType,*/ ax_, ay_, width_/2, theta0, dif, pointsClock );
                     // Problem here for texturing.
-                    pen.colorTriangles( -1, len );
+                    // pen.colorTriangles( -1, len );
                     //addArray( Poly.pieDifX( ax_, ay_, width_/2, theta0, dif, pointsClock ) );
                 } else {
-                    var len = pieDifX( pen.paintType, ax_, ay_, width_/2, theta0, dif, pointsAnti );
+                    var len = pen.pieDifX( /*pen.paintType,*/ ax_, ay_, width_/2, theta0, dif, pointsAnti );
                     // Problem here for texturing.
-                    pen.colorTriangles( -1, len );
+                    // pen.colorTriangles( -1, len );
                     //addArray( Poly.pieDifX( ax_, ay_, width_/2, theta0, dif, pointsAnti ) );
                 }
             } else {

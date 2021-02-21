@@ -19,6 +19,9 @@ class QuadShaper {
         this.start      = start;
         tri  = new TrianglesShaper( pen, wid, hi );
     }
+    public function drawQuad( u: Float, v: Float, w: Float, h: Float ){
+        pen.quad2DFill( u, v, w, h );
+    }
     public var begin( get, set ): Int;
     inline
     function get_begin(): Int {
