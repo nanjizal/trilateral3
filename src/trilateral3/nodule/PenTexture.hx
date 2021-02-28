@@ -9,6 +9,7 @@ import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.TriangleAbstractUV;
 import trilateral3.drawing.Color3Abstract;
 import trilateral3.geom.FlatColorTrianglesUV;
+import trilateral3.nodule.PenNodule;
 
 #if useHyperKitGL
 import hyperKitGL.io.Float32Array;
@@ -16,21 +17,12 @@ import hyperKitGL.io.Float32Array;
 import dsHelper.haxe.io.Float32Array;
 #end
 
-class PenPaint {
-    static final largeEnough    = 20000000;
-    public var colorTriangles   = new FlatColorTrianglesUV( largeEnough );
-    public var pen: Pen;
+class PenTexture extends PenNodule {
+    public var colorTriangles   = new FlatColorTrianglesUV( PenNodule.largeEnough );
     public function new( useGLScale: Bool = true ){
-        if( useGLScale ){
-            // assume scaling of 1000.
-            var transform1000: MatrixDozen = { a : 0.001, b : 0, c : 0, d : -1
-                                             , e : 0,  f : -0.001, g : 0, h : 1
-                                             , i : 0, j : 0,k : 0.001, l : 0 };
-            Trilateral.transformMatrix = transform1000;
-        }
-        createPen();
+        super( useGLScale );
     }
-    public function createPen() {
+    public function createPen(): Pen {
        var t = colorTriangles;
        @:privateAccess
        var triangleAbstract: TriangleAbstract = {
@@ -101,24 +93,14 @@ class PenPaint {
             , color3current:  color3Abstract
             };
         pen = new Pen( paintAbstract );
+        return pen;
     }
-    public var data( get, never ): Float32Array;
     public inline
     function get_data(): Float32Array {
         return colorTriangles.getArray();
     }
-    public var size( get, never ): Int;
-    public inline 
+    public inline
     function get_size(): Int{
         return Std.int( colorTriangles.size*3 );
     }
-    // geom math example - don't remove.
-    /*
-    function scaleToGL():Matrix4x3{
-        var scale = 1/(mainTexture.width);
-        var v = new Matrix1x4( { x: scale, y: -scale, z: scale, w: 1. } );
-        var m: Matrix4x3 = Matrix4x3.unit;
-        return ( Matrix4x3.unit.translateXYZ( -1., 1., 0. ) ).scaleByVector( v );
-    }
-    */
 }
