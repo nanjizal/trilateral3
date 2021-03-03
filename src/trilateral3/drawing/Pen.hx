@@ -230,6 +230,20 @@ class Pen {
         paintType.next();
         return 1; 
     }
+    inline public
+    function triangle2DFillColors( ax: Float, ay: Float
+                          , bx: Float, by: Float
+                          , cx: Float, cy: Float
+                          , colorA: Int = -1, colorB: Int = -1, colorC: Int = - 1 ): Int {
+        // if no color set use current default colour.
+        if( colorA == -1 ) colorA = currentColor;
+        if( colorB == -1 ) colorB = currentColor;
+        if( colorC == -1 ) colorC = currentColor;
+        addTriangle( ax, ay, z2D, bx, by, z2D, cx, cy, z2D );
+        cornerColors( colorA, colorB, colorC ); // next
+        paintType.next();
+        return 1; 
+    }
     // 1 2 3
     // 4 5 6
     // 7 8 9
@@ -274,6 +288,30 @@ class Pen {
                                 , color: Int = -1 ): Int {
         triangle2DFill( ax, ay, bx, by, dx, dy, color );
         triangle2DFill( bx, by, cx, cy, dx, dy, color );
+        return 2;
+    }
+    public inline
+    function quad2DFillColors( ax: Float, ay: Float
+                             , width: Float, height: Float
+                             , colorA: Int = -1, colorB: Int = -1
+                             , colorC: Int = -1, colorD: Int = -1 ): Int {
+        quad2DFillclockwiseColors( ax, ay, ax + width, ay, ax + width, ay + height, ax, ay + height, colorA, colorB, colorC, colorD );
+        return 2;
+    }
+    //   A   B
+    //   D   C
+    // A B D
+    // B C D
+    public inline
+    function quad2DFillclockwiseColors( ax: Float, ay: Float
+                                      , bx: Float, by: Float
+                                      , cx: Float, cy: Float
+                                      , dx: Float, dy: Float
+                                      , colorA: Int = -1, colorB: Int = -1
+                                      , colorC: Int = -1, colorD: Int = -1 ): Int {
+        // unsure why colors don't quite match sides, maybe it's flip thing.
+        triangle2DFillColors( ax, ay, bx, by, dx, dy, colorA, colorD, colorB );
+        triangle2DFillColors( bx, by, cx, cy, dx, dy, colorB, colorD, colorC );
         return 2;
     }
     //   A   B
