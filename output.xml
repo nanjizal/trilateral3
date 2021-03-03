@@ -15448,30 +15448,60 @@
 			<x path="Float"/>
 			<meta><m n=":value"><e>10000000000</e></m></meta>
 		</pv>
-		<fullHit public="1" set="method" line="32"><f a="x:y">
+		<lastXY public="1"><c path="trilateral3.structure.XY"/></lastXY>
+		<lastUV public="1"><c path="trilateral3.structure.XY"/></lastUV>
+		<oldStart><x path="Int"/></oldStart>
+		<start><x path="Int"/></start>
+		<name public="1"><c path="String"/></name>
+		<begin public="1" get="accessor" set="accessor"><x path="Int"/></begin>
+		<get_begin get="inline" set="null" line="42"><f a=""><x path="Int"/></f></get_begin>
+		<set_begin get="inline" set="null" line="46"><f a="val">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_begin>
+		<fullHit public="1" set="method" line="54"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<c path="Array"><x path="Int"/></c>
 </f></fullHit>
-		<setColor public="1" set="method" line="44"><f a="col">
+		<visible public="1" get="null" set="accessor"><x path="Bool"/></visible>
+		<set_visible get="inline" set="null" line="68"><f a="val">
+	<x path="Bool"/>
+	<x path="Bool"/>
+</f></set_visible>
+		<alpha public="1" get="null" set="accessor"><x path="Float"/></alpha>
+		<set_alpha get="inline" set="null" line="84"><f a="val">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_alpha>
+		<argb public="1" get="null" set="accessor"><x path="Int"/></argb>
+		<set_argb get="inline" set="null" line="93"><f a="col">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_argb>
+		<setColor public="1" set="method" line="100"><f a="col">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setColor>
-		<setXY public="1" set="method" line="50"><f a="xy">
+		<xy public="1" get="accessor" set="accessor"><c path="trilateral3.structure.XY"/></xy>
+		<get_xy get="inline" set="null" line="107"><f a=""><c path="trilateral3.structure.XY"/></f></get_xy>
+		<set_xy get="inline" set="null" line="110"><f a="xy">
 	<c path="trilateral3.structure.XY"/>
-	<x path="Void"/>
-</f></setXY>
-		<setUV public="1" set="method" line="61"><f a="xy">
 	<c path="trilateral3.structure.XY"/>
-	<x path="Void"/>
-</f></setUV>
-		<rotateAbout public="1" set="method" line="73"><f a="ax:ay:val">
+</f></set_xy>
+		<uv public="1" get="accessor" set="accessor"><c path="trilateral3.structure.XY"/></uv>
+		<get_uv get="inline" set="null" line="124"><f a=""><c path="trilateral3.structure.XY"/></f></get_uv>
+		<set_uv get="inline" set="null" line="127"><f a="xy">
+	<c path="trilateral3.structure.XY"/>
+	<c path="trilateral3.structure.XY"/>
+</f></set_uv>
+		<rotateAbout public="1" set="method" line="141"><f a="ax:ay:val">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></rotateAbout>
-		<new public="1" set="method" line="17">
+		<new public="1" set="method" line="24">
 			<f a="pen:iteratorRange:?wid:?hi" v="::1000:1000">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="trilateral3.shape.IteratorRange"/>
