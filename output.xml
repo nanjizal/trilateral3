@@ -17599,6 +17599,703 @@ the methods return the number of triangles added.</haxe_doc>
 </f></spiralLines>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
+	<class path="trilateral3.shape.ShaperPen" params="" file="src/trilateral3/shape/ShaperPen.hx">
+		<add2DTriangle_ public="1" expr="add2DTriangle">
+			<f a="pen:ax:ay:bx:by:cx:cy">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>add2DTriangle</e></m></meta>
+		</add2DTriangle_>
+		<add2DQuad_ public="1" expr="add2DQuad">
+			<f a="pen:ax:ay:bx:by:cx:cy:dx:dy">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>add2DQuad</e></m></meta>
+		</add2DQuad_>
+		<quad_ public="1" expr="quad">
+			<f a="pen:q">
+				<c path="trilateral3.drawing.Pen"/>
+				<c path="trilateral3.structure.Quad2D"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>quad</e></m></meta>
+		</quad_>
+		<lineAB_ public="1" expr="lineAB">
+			<f a="pen:A:B:width">
+				<c path="trilateral3.drawing.Pen"/>
+				<c path="trilateral3.structure.XY"/>
+				<c path="trilateral3.structure.XY"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>lineAB</e></m></meta>
+		</lineAB_>
+		<lineXY_ public="1" expr="lineXY">
+			<f a="pen:ax:ay:bx:by:width">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>lineXY</e></m></meta>
+		</lineXY_>
+		<rectangle_ public="1" expr="rectangle">
+			<f a="pen:x:y:w:h">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>rectangle</e></m></meta>
+		</rectangle_>
+		<squareOutline_ public="1" expr="squareOutline">
+			<f a="pen:px:py:radius:thick:?theta">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>squareOutline</e></m></meta>
+		</squareOutline_>
+		<square_ public="1" expr="square">
+			<f a="pen:px:py:radius:?theta">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>square</e></m></meta>
+		</square_>
+		<diamond_ public="1" expr="diamond">
+			<f a="pen:x:y:radius:?theta">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>diamond</e></m></meta>
+		</diamond_>
+		<diamondOutline_ public="1" expr="diamondOutline">
+			<f a="pen:x:y:thick:radius:?theta">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>diamondOutline</e></m></meta>
+		</diamondOutline_>
+		<overlapStar_ public="1" expr="overlapStar">
+			<f a="pen:px:py:radius:?theta">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>overlapStar</e></m></meta>
+		</overlapStar_>
+		<circle_ public="1" expr="circle">
+			<f a="pen:ax:ay:radius:?sides:?omega">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>circle</e></m></meta>
+		</circle_>
+		<circleRadial_ public="1" expr="circleRadial">
+			<f a="pen:ax:ay:rx:ry:radius:?sides:?omega">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>circleRadial</e></m></meta>
+		</circleRadial_>
+		<circleRadialOnSide_ public="1" expr="circleRadialOnSide">
+			<f a="pen:ax:ay:rx:ry:radius:?sides:?omega">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>circleRadialOnSide</e></m></meta>
+		</circleRadialOnSide_>
+		<ellipse_ public="1" expr="ellipse">
+			<f a="pen:ax:ay:rx:ry:sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>ellipse</e></m></meta>
+		</ellipse_>
+		<pie_ public="1" expr="pie">
+			<f a="pen:ax:ay:radius:beta:gamma:prefer:?sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>pie</e></m></meta>
+		</pie_>
+		<pieX_ public="1" expr="pieX">
+			<f a="pen:ax:ay:radius:beta:gamma:prefer:edgePoly:?sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>pieX</e></m></meta>
+		</pieX_>
+		<pieDifX_ public="1" expr="pieDifX">
+			<f a="pen:ax:ay:radius:beta:dif:edgePoly:?sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>pieDifX</e></m></meta>
+		</pieDifX_>
+		<ellpisePie_ public="1" expr="ellipsePie">
+			<f a="pen:ax:ay:rx:ry:beta:gamma:prefer:?sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>ellipsePie</e></m></meta>
+		</ellpisePie_>
+		<pieDif_ public="1" expr="pieDif">
+			<f a="pen:ax:ay:radius:beta:dif:?sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>pieDif</e></m></meta>
+		</pieDif_>
+		<arc_ public="1" expr="arc">
+			<f a="pen:ax:ay:radius:width:beta:gamma:prefer:?sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>arc</e></m></meta>
+		</arc_>
+		<circleOnSide_ public="1" expr="circleOnSide">
+			<f a="pen:ax:ay:radius:?sides:?omega">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>circleOnSide</e></m></meta>
+		</circleOnSide_>
+		<ellipseOnSide_ public="1" expr="ellipseOnSide">
+			<f a="pen:ax:ay:rx:ry:sides">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>ellipseOnSide</e></m></meta>
+		</ellipseOnSide_>
+		<shape_ public="1" expr="shape">
+			<f a="pen:x:y:radius:p:?omega">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="trilateral3.shape.PolyEdge"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>shape</e></m></meta>
+		</shape_>
+		<shapeRadial_ public="1" expr="shapeRadial">
+			<f a="pen:x:y:rx:ry:radius:p:?omega">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="trilateral3.shape.PolyEdge"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>shapeRadial</e></m></meta>
+		</shapeRadial_>
+		<roundedRectangle_ public="1" expr="roundedRectangle">
+			<f a="pen:x:y:width:height:radius">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>roundedRectangle</e></m></meta>
+		</roundedRectangle_>
+		<roundedRectangleOutline_ public="1" expr="roundedRectangleOutline">
+			<f a="pen:x:y:width:height:thick:radius">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>roundedRectangleOutline</e></m></meta>
+		</roundedRectangleOutline_>
+		<spiralLines_ public="1" expr="spiralLines">
+			<f a="pen:x:y:radius:nolines:startWid:stepWid">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>spiralLines</e></m></meta>
+		</spiralLines_>
+		<new public="1" set="method" line="751">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":compilerGenerated"/></meta>
+		</new>
+	</class>
+	<class path="trilateral3.shape._ShaperPen.ShaperPen_Fields_" params="" file="src/trilateral3/shape/ShaperPen.hx" private="1" module="trilateral3.shape.ShaperPen" final="1">
+		<add2DTriangle public="1" get="inline" set="null" line="21" static="1">
+			<f a="pen:ax:ay:bx:by:cx:cy">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Shaper provides static methods for drawing with triangles.
+the methods return the number of triangles added.</haxe_doc>
+		</add2DTriangle>
+		<add2DQuad public="1" get="inline" set="null" line="48" static="1"><f a="pen:ax:ay:bx:by:cx:cy:dx:dy">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></add2DQuad>
+		<quad public="1" get="inline" set="null" line="54" static="1"><f a="pen:q">
+	<c path="trilateral3.drawing.Pen"/>
+	<c path="trilateral3.structure.Quad2D"/>
+	<x path="Int"/>
+</f></quad>
+		<lineAB public="1" get="inline" set="null" line="60" static="1"><f a="pen:A:B:width">
+	<c path="trilateral3.drawing.Pen"/>
+	<c path="trilateral3.structure.XY"/>
+	<c path="trilateral3.structure.XY"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></lineAB>
+		<lineXY public="1" get="inline" set="null" line="67" static="1"><f a="pen:ax:ay:bx:by:width">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></lineXY>
+		<rectangle public="1" get="inline" set="null" line="73" static="1"><f a="pen:x:y:w:h">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></rectangle>
+		<squareOutline public="1" get="inline" set="null" line="89" static="1">
+			<f a="pen:px:py:radius:thick:?theta" v=":::::0">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ theta : 0 }</e></m></meta>
+		</squareOutline>
+		<square public="1" get="inline" set="null" line="189" static="1">
+			<f a="pen:px:py:radius:?theta" v="::::0">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ theta : 0 }</e></m></meta>
+		</square>
+		<diamond public="1" get="inline" set="null" line="236" static="1">
+			<f a="pen:x:y:radius:?theta" v="::::0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ theta : 0. }</e></m></meta>
+		</diamond>
+		<diamondOutline public="1" get="inline" set="null" line="243" static="1">
+			<f a="pen:x:y:thick:radius:?theta" v=":::::0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ theta : 0. }</e></m></meta>
+		</diamondOutline>
+		<overlapStar public="1" get="inline" set="null" line="250" static="1">
+			<f a="pen:px:py:radius:?theta" v="::::0">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ theta : 0 }</e></m></meta>
+		</overlapStar>
+		<circle public="1" get="inline" set="null" line="281" static="1">
+			<f a="pen:ax:ay:radius:?sides:?omega" v="::::36:0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
+		</circle>
+		<circleRadial public="1" get="inline" set="null" line="304" static="1">
+			<f a="pen:ax:ay:rx:ry:radius:?sides:?omega" v="::::::36:0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
+		</circleRadial>
+		<circleRadialOnSide public="1" get="inline" set="null" line="333" static="1">
+			<f a="pen:ax:ay:rx:ry:radius:?sides:?omega" v="::::::36:0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
+		</circleRadialOnSide>
+		<ellipse public="1" get="inline" set="null" line="366" static="1">
+			<f a="pen:ax:ay:rx:ry:?sides" v=":::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+		</ellipse>
+		<pie public="1" get="inline" set="null" line="393" static="1">
+			<f a="pen:ax:ay:radius:beta:gamma:prefer:?sides" v=":::::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
+ * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
+		</pie>
+		<pieX public="1" get="inline" set="null" line="430" static="1">
+			<f a="pen:ax:ay:radius:beta:gamma:prefer:edgePoly:?sides" v="::::::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
+ * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
+		</pieX>
+		<pieDifX public="1" get="inline" set="null" line="469" static="1">
+			<f a="pen:ax:ay:radius:beta:dif:edgePoly:?sides" v=":::::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+			<haxe_doc>* Optimized Pie used in Contour, with dif pre-calculated
+ * External edge also added</haxe_doc>
+		</pieDifX>
+		<ellipsePie public="1" get="inline" set="null" line="505" static="1">
+			<f a="pen:ax:ay:rx:ry:beta:gamma:prefer:?sides" v="::::::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+		</ellipsePie>
+		<pieDif public="1" get="inline" set="null" line="539" static="1">
+			<f a="pen:ax:ay:radius:beta:dif:?sides" v="::::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+			<haxe_doc>* Optimized Pie used in Contour, with dif pre-calculated</haxe_doc>
+		</pieDif>
+		<arc public="1" get="inline" set="null" line="568" static="1">
+			<f a="pen:ax:ay:radius:width:beta:gamma:prefer:?sides" v="::::::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+		</arc>
+		<circleOnSide public="1" get="inline" set="null" line="608" static="1">
+			<f a="pen:ax:ay:radius:?sides:?omega" v="::::36:0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
+		</circleOnSide>
+		<ellipseOnSide public="1" get="inline" set="null" line="631" static="1">
+			<f a="pen:ax:ay:rx:ry:?sides" v=":::::36">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
+		</ellipseOnSide>
+		<shape public="1" get="inline" set="null" line="653" static="1">
+			<f a="pen:x:y:radius:p:?omega" v=":::::0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="trilateral3.shape.PolyEdge"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ omega : 0. }</e></m></meta>
+		</shape>
+		<shapeRadial public="1" get="inline" set="null" line="664" static="1">
+			<f a="pen:x:y:rx:ry:radius:p:?omega" v=":::::::0.">
+				<c path="trilateral3.drawing.Pen"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="trilateral3.shape.PolyEdge"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ omega : 0. }</e></m></meta>
+		</shapeRadial>
+		<roundedRectangle public="1" get="inline" set="null" line="678" static="1"><f a="pen:x:y:width:height:radius">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></roundedRectangle>
+		<roundedRectangleOutline public="1" get="inline" set="null" line="708" static="1"><f a="pen:x:y:width:height:thick:radius">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></roundedRectangleOutline>
+		<spiralLines public="1" get="inline" set="null" line="739" static="1"><f a="pen:x:y:radius:nolines:startWid:stepWid">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+</f></spiralLines>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
 	<abstract path="trilateral3.shape.StyleRegular" params="" file="src/trilateral3/shape/StyleRegular.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
