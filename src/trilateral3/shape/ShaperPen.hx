@@ -36,9 +36,10 @@ function add2DTriangle( pen: Pen
     }
     //drawType.next();
     //return windAdjust;
+    pen.cornerColors( pen.currentColor, pen.currentColor, pen.currentColor ); // next
+    pen.paintType.next();
     return 1;
 }
-
 
 inline
 function add2DQuad( pen: Pen
