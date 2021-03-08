@@ -27,6 +27,13 @@ class QuadShaper {
                                    , colorC: Int = -1, colorD: Int = -1 ): Int {
         return pen.quad2DFillColors( u, v, w, h, colorA, colorB, colorC, colorD );
     }
+    public function modifyQuadColors( colorA: Int = -1, colorB: Int = -1
+                                    , colorC: Int = -1, colorD: Int = -1 ) {
+        this.pen.pos = start;
+        this.pen.paintType.cornerColors( colorA, colorD, colorB );
+        this.pen.pos = start+1;
+        this.pen.paintType.cornerColors( colorB, colorD, colorC );
+    }
     public var begin( get, set ): Int;
     inline
     function get_begin(): Int {

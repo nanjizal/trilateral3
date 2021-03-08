@@ -36,6 +36,7 @@ function add2DTriangle( pen: Pen
     }
     //drawType.next();
     //return windAdjust;
+    trace( 'add2DTriangle ShaperPen ' + pen.currentColor );
     pen.cornerColors( pen.currentColor, pen.currentColor, pen.currentColor ); // next
     pen.paintType.next();
     return 1;
