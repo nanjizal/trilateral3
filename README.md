@@ -32,7 +32,7 @@ Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can
 
 - [trilateral3 API code documentation](https://nanjizal.github.io/trilateral3/pages/)
 
-- For WebGL use [hyperKitGL(https://github.com/nanjizal/hyperKitGL#hyperkitgl) the default version.
+- For WebGL use [hyperKitGL](https://github.com/nanjizal/hyperKitGL#hyperkitgl) the default version.
 
 - example WIP use cases are contained on [TrilateralX](https://github.com/TrilateralX)
 
