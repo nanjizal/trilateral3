@@ -38,3 +38,9 @@ Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can
 
 - **target** folder to ease toolkits was moved to seperate repo to avoid **dox** issues.
 
+- currently setup for 1000x1000 pixels, this can be changed in theory, but cost of inverting scales, mostly tested on mac retina may need more testing elsewhere but mostly isolated from the actual shader implementation details.
+
+- the abstraction allow many shader setups, but it may make sense to remove the abstractions for speed and include more of the shader implementation.
+
+- **MatrixDozen** only provides matrix muliplication, really should use **geom** library with trilateral3 if you want to do real transformations and complex animations.
+
