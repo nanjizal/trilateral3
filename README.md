@@ -36,6 +36,8 @@ Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can
 
 - example WIP use cases are contained on [TrilateralX](https://github.com/TrilateralX)
 
+- [0.0.4-alpha](https://github.com/nanjizal/trilateral3/releases/tag/0.0.4-alpha) pre-release zip.
+
 - **target** folder to ease toolkits use, was moved to seperate repo to avoid **dox** issues. The issues with the toolkits were due to not being always well formed for **dox** or out of phase with latest haxe builds.
 
 - currently setup for 1000x1000 pixels, this can be changed in theory, but cost of inverting scales, mostly tested on mac retina may need more testing elsewhere but mostly isolated from the actual shader implementation details.
