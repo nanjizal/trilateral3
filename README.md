@@ -12,7 +12,7 @@ Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can
 
 ## Libraries likely to be needed.
 
--  **Triangulate libraries, need for fill, all have different advantages, [hxPolyK](https://github.com/nanjizal/hxPolyK),  [hxGeomAlgo](https://github.com/azrafe7/hxGeomAlgo), [poly2trihx](https://github.com/nerik/poly2trihx)
+-  **Triangulate libraries**, need for fill, and all have specific advantages, [hxPolyK](https://github.com/nanjizal/hxPolyK),  [hxGeomAlgo](https://github.com/azrafe7/hxGeomAlgo), [poly2trihx](https://github.com/nerik/poly2trihx)
 
  - [geom](https://github.com/nanjizal/geom), matrix/vector optional library not actually required, as minimal matrix implemention built in, but wired for normal use via a **-D** flag.
  
