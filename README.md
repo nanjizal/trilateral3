@@ -36,11 +36,20 @@ Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can
 
 - example WIP use cases are contained on [TrilateralX](https://github.com/TrilateralX)
 
-- **target** folder to ease toolkits use was moved to seperate repo to avoid **dox** issues with the toolkits not being always well formed for **dox** or out of phase with latest haxe builds.
+- **target** folder to ease toolkits use, was moved to seperate repo to avoid **dox** issues. The issues with the toolkits were due to not being always well formed for **dox** or out of phase with latest haxe builds.
 
 - currently setup for 1000x1000 pixels, this can be changed in theory, but cost of inverting scales, mostly tested on mac retina may need more testing elsewhere but mostly isolated from the actual shader implementation details.
 
 - the abstraction allow many shader setups, but it may make sense to remove the abstractions for speed and include more of the shader implementation.
 
 - **MatrixDozen** only provides matrix muliplication, really should use **geom** library with trilateral3 if you want to do real transformations and complex animations.
+
+- examples currently only use a single texture and don't have any draw to image then screen examples, scaling is currently setup for only one texture. With various toolkits it maybe easier to rely on them for this feature.
+
+- toolkits, originally the concept was developed in haxe flash, then evolved to support all toolkits ( Luxe, Nme, Openfl, Kha, Heaps, Canvas, Flash, WebGL ). In early versions the most extensive examples used Kha, but in trilateral3 the focus has been on WebGL direct, with color only tests with Gluon/Glut, NME, Lime and less optimally other toolkits.
+
+- The concept is to use low level **Contour** to provide basic curve drawing with optional smooth joins, drawing to abstract type structures above Float32Array buffer, with a triangle pointer to allow easy update. Examples include mix of Color and Texture.
+
+- For drawing texture apply the unit transform as required, draw shape above the texture you need and then reshape properties to required position, uv and colors.
+
 
