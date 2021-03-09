@@ -40,7 +40,6 @@ abstract DepthArray<T>( Array<T> )to Array<T> from Array<T> {
             temp[ count ] = this[ i ];
             count++;
         }
-        trace( temp );
         // shift bottom half values up to fill hole from top
         count = totalLen;
         for( i in 0...starting ){

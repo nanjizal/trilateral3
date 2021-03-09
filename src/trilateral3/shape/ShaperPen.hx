@@ -36,7 +36,6 @@ function add2DTriangle( pen: Pen
     }
     //drawType.next();
     //return windAdjust;
-    trace( 'add2DTriangle ShaperPen ' + pen.currentColor );
     pen.cornerColors( pen.currentColor, pen.currentColor, pen.currentColor ); // next
     pen.paintType.next();
     return 1;
@@ -665,11 +664,12 @@ function shapeRadial( pen: Pen
               , rx: Float, ry: Float
               , radius: Float, p: PolyEdge, ?omega: Float = 0. ): Int {
     return if( ( p & 1 ) == 0 ){
-        trace('even');
+        //trace('even');
         circleRadial( pen, x, y, rx, ry, radius, p, omega );
     } else {
-        trace('odd');
-        trace( p & 1 );circleRadialOnSide( pen, x, y, rx, ry, radius, p, omega );
+        //trace('odd');
+        //trace( p & 1 );
+        circleRadialOnSide( pen, x, y, rx, ry, radius, p, omega );
         
     }
 }
