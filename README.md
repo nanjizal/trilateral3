@@ -1,12 +1,40 @@
 # trilateral3 
-### Requires Haxe 4.2 or greater.
 
-Drawing engine suitable for use with GPU.
+Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can be used with other haxe toolkits and libraries to also target c++.
 
-[trilateral3 API code documentation](https://nanjizal.github.io/trilateral3/pages/)
+## Library dependancies
 
-Have added some simple examples.
+- [hyperKitGL](https://github.com/nanjizal/hyperKitGL), optional library for use with WebGL alternatively [kitGL](https://github.com/nanjizal/kitGL) and [dsHelper](https://github.com/nanjizal/dsHelper) can be used instead.
 
-https://github.com/TrilateralX
+- [fracs](https://github.com/nanjizal/fracs), Fast Decimal to Fraction Approximations for Haxe, used mostly for simplifying rotations, potentially could be factored out.
 
-Remove 'target' folder from trilateral3 when generating dox it's just simple at moment.
+- [justPath](https://github.com/nanjizal/justPath), justPath is quick parsing of a string from an svg path.
+
+## Libraries likely to be needed.
+
+-  **Triangulate libraries, need for fill, all have different advantages, [hxPolyK](https://github.com/nanjizal/hxPolyK),  [hxGeomAlgo](https://github.com/azrafe7/hxGeomAlgo), [poly2trihx](https://github.com/nerik/poly2trihx)
+
+ - [geom](https://github.com/nanjizal/geom), matrix/vector optional library not actually required, as minimal matrix implemention built in, but wired for normal use via a **-D** flag.
+ 
+- [pallette](https://github.com/nanjizal/pallette), setup to provide helpers for colors.
+
+## Additional libraries very useful.
+
+- [hxPixels](https://github.com/azrafe7/hxPixels) useful for pixel drawing and manipulation.
+
+- [hxDaedalus](https://github.com/hxDaedalus/hxDaedalus) useful for pathfinding.
+
+- [gluon](https://github.com/haxiomic/gluon) and [linc_glfw](https://github.com/Sunjammer/linc_glfw) for direct OpenGL.
+
+- [hxRectPack2D](https://github.com/nanjizal/hxRectPack2D) useful for atlas / and texturepacking.
+
+## notes
+
+- [trilateral3 API code documentation](https://nanjizal.github.io/trilateral3/pages/)
+
+- [For WebGL use hyperKitGL](https://github.com/nanjizal/hyperKitGL#hyperkitgl)
+
+- example WIP use cases are contained on [TrilateralX](https://github.com/TrilateralX)
+
+- **target** folder to ease toolkits was moved to seperate repo to avoid **dox** issues.
+

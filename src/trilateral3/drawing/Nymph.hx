@@ -8,6 +8,9 @@ import trilateral3.shape.IteratorRange;
 // Nymph will be removed in favour of reShape structures soon.
 // Currently still used in TrilateralX/trilateralSamples/HTextureBasic but
 // do not use for new code.
+/**
+ * Depreciated
+ */
 class Nymph {
     var pen:         Pen;
     var curr:        TriangleAbstract;

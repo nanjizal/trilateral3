@@ -12748,7 +12748,7 @@
 	<x path="Void"/>
 </f></triangulate></class>
 	<class path="trilateral3.drawing.Nymph" params="" file="src/trilateral3/drawing/Nymph.hx">
-		<iterNymph public="1" set="method" line="34" static="1"><f a="pen:iteratorRange">
+		<iterNymph public="1" set="method" line="39" static="1"><f a="pen:iteratorRange">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="trilateral3.shape.IteratorRange"/>
 	<c path="trilateral3.drawing.Nymph"/>
@@ -12778,45 +12778,45 @@
 			<x path="Float"/>
 			<meta><m n=":value"><e>0.</e></m></meta>
 		</theta>
-		<moveStart public="1" set="method" line="38"><f a="sx_:sy_:su_:sv_">
+		<moveStart public="1" set="method" line="43"><f a="sx_:sy_:su_:sv_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></moveStart>
-		<dMoveXY public="1" set="method" line="54"><f a="dx:dy">
+		<dMoveXY public="1" set="method" line="59"><f a="dx:dy">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dMoveXY>
-		<dMoveUV public="1" set="method" line="63"><f a="du:dv">
+		<dMoveUV public="1" set="method" line="68"><f a="du:dv">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dMoveUV>
-		<dMoveXYUV public="1" set="method" line="72"><f a="dx:dy:du:dv">
+		<dMoveXYUV public="1" set="method" line="77"><f a="dx:dy:du:dv">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dMoveXYUV>
-		<setColor public="1" set="method" line="83"><f a="col">
+		<setColor public="1" set="method" line="88"><f a="col">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setColor>
-		<setRndColor public="1" set="method" line="89"><f a="col">
+		<setRndColor public="1" set="method" line="94"><f a="col">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setRndColor>
-		<dRotate public="1" set="method" line="95"><f a="dx:dy:dr">
+		<dRotate public="1" set="method" line="100"><f a="dx:dy:dr">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dRotate>
-		<rotateCentre2 public="1" set="method" line="103"><f a="vx:vy:ax:ay:val">
+		<rotateCentre2 public="1" set="method" line="108"><f a="vx:vy:ax:ay:val">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -12824,33 +12824,33 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></rotateCentre2>
-		<rotateCentre public="1" set="method" line="107"><f a="vx:vy:val">
+		<rotateCentre public="1" set="method" line="112"><f a="vx:vy:val">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></rotateCentre>
 		<x get="accessor" set="accessor"><x path="Float"/></x>
-		<get_x public="1" set="method" line="111"><f a=""><x path="Float"/></f></get_x>
-		<set_x public="1" set="method" line="114"><f a="val">
+		<get_x public="1" set="method" line="116"><f a=""><x path="Float"/></f></get_x>
+		<set_x public="1" set="method" line="119"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_x>
 		<y get="accessor" set="accessor"><x path="Float"/></y>
-		<get_y public="1" set="method" line="120"><f a=""><x path="Float"/></f></get_y>
-		<set_y public="1" set="method" line="123"><f a="val">
+		<get_y public="1" set="method" line="125"><f a=""><x path="Float"/></f></get_y>
+		<set_y public="1" set="method" line="128"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_y>
 		<u get="accessor" set="accessor"><x path="Float"/></u>
-		<get_u public="1" set="method" line="129"><f a=""><x path="Float"/></f></get_u>
-		<set_u public="1" set="method" line="132"><f a="val">
+		<get_u public="1" set="method" line="134"><f a=""><x path="Float"/></f></get_u>
+		<set_u public="1" set="method" line="137"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_u>
 		<v get="accessor" set="accessor"><x path="Float"/></v>
-		<get_v public="1" set="method" line="138"><f a=""><x path="Float"/></f></get_v>
-		<set_v public="1" set="method" line="141"><f a="val">
+		<get_v public="1" set="method" line="143"><f a=""><x path="Float"/></f></get_v>
+		<set_v public="1" set="method" line="146"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_v>
@@ -12859,16 +12859,17 @@
 			<x path="Int"/>
 			<meta><m n=":value"><e>0xFFFFFFFF</e></m></meta>
 		</_argb>
-		<set_argb get="inline" set="null" line="149"><f a="col">
+		<set_argb get="inline" set="null" line="154"><f a="col">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_argb>
-		<get_argb get="inline" set="null" line="155"><f a=""><x path="Int"/></f></get_argb>
-		<new public="1" set="method" line="20"><f a="pen:indexRange">
+		<get_argb get="inline" set="null" line="160"><f a=""><x path="Int"/></f></get_argb>
+		<new public="1" set="method" line="25"><f a="pen:indexRange">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="trilateral3.shape.IndexRange"/>
 	<x path="Void"/>
 </f></new>
+		<haxe_doc>* Depreciated</haxe_doc>
 	</class>
 	<abstract path="trilateral3.drawing.PaintAbstract" params="" file="src/trilateral3/drawing/PaintAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.PaintType"/></icast></from>
@@ -15159,7 +15160,7 @@
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></rangeToStart>
-	<rangeSwap public="1" get="inline" set="null" line="59" static="1"><f a="this:start0:start1:totalLen">
+	<rangeSwap public="1" get="inline" set="null" line="58" static="1"><f a="this:start0:start1:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -15189,7 +15190,7 @@
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></rangeToStart>
-		<rangeSwap public="1" get="inline" set="null" line="59" static="1"><f a="this:start0:start1:totalLen">
+		<rangeSwap public="1" get="inline" set="null" line="58" static="1"><f a="this:start0:start1:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -15199,15 +15200,15 @@
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="trilateral3.reShape.GradientGrid" params="" file="src/trilateral3/reShape/GradientGrid.hx">
-		<radAdj public="1" get="inline" set="null" line="23" static="1"><f a="r">
+		<radAdj public="1" get="inline" set="null" line="22" static="1"><f a="r">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></radAdj>
-		<sin01 public="1" get="inline" set="null" line="27" static="1"><f a="r">
+		<sin01 public="1" get="inline" set="null" line="26" static="1"><f a="r">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></sin01>
-		<cos01 public="1" get="inline" set="null" line="31" static="1"><f a="r">
+		<cos01 public="1" get="inline" set="null" line="30" static="1"><f a="r">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></cos01>
@@ -15241,13 +15242,15 @@
 		<row public="1"><x path="Int"/></row>
 		<quadRange public="1"><x path="trilateral3.shape.IteratorRange"/></quadRange>
 		<arrShaper public="1"><c path="Array"><c path="trilateral3.reShape.QuadShaper"/></c></arrShaper>
-		<addGrid public="1" set="method" line="40"><f a="x:y:wid:hi:col:row:fRed:fGreen:fBlue">
+		<addGrid public="1" set="method" line="40"><f a="x:y:wid:hi:col:row:dX:dY:fRed:fGreen:fBlue">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<x path="Float"/>
+	<x path="Float"/>
 	<f a="x:y">
 		<x path="Float"/>
 		<x path="Float"/>
@@ -15265,7 +15268,9 @@
 	</f>
 	<x path="trilateral3.shape.IteratorRange"/>
 </f></addGrid>
-		<modifyColor public="1" set="method" line="95"><f a="fRed:fGreen:fBlue">
+		<modifyColor public="1" set="method" line="96"><f a="dX:dY:fRed:fGreen:fBlue">
+	<x path="Float"/>
+	<x path="Float"/>
 	<f a="x:y">
 		<x path="Float"/>
 		<x path="Float"/>
@@ -15283,7 +15288,7 @@
 	</f>
 	<x path="Void"/>
 </f></modifyColor>
-		<new public="1" set="method" line="19"><f a="pen_">
+		<new public="1" set="method" line="18"><f a="pen_">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="Void"/>
 </f></new>
@@ -17355,7 +17360,7 @@
 			</f>
 			<meta><m n=":value"><e>spiralLines</e></m></meta>
 		</spiralLines_>
-		<new public="1" set="method" line="737">
+		<new public="1" set="method" line="738">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":compilerGenerated"/></meta>
 		</new>
@@ -17668,7 +17673,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ omega : 0. }</e></m></meta>
 		</shapeRadial>
-		<roundedRectangle public="1" get="inline" set="null" line="664" static="1"><f a="paintType:x:y:width:height:radius">
+		<roundedRectangle public="1" get="inline" set="null" line="665" static="1"><f a="paintType:x:y:width:height:radius">
 	<t path="trilateral3.drawing.PaintType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -17677,7 +17682,7 @@ the methods return the number of triangles added.</haxe_doc>
 	<x path="Float"/>
 	<x path="Int"/>
 </f></roundedRectangle>
-		<roundedRectangleOutline public="1" get="inline" set="null" line="694" static="1"><f a="paintType:x:y:width:height:thick:radius">
+		<roundedRectangleOutline public="1" get="inline" set="null" line="695" static="1"><f a="paintType:x:y:width:height:thick:radius">
 	<t path="trilateral3.drawing.PaintType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -17687,7 +17692,7 @@ the methods return the number of triangles added.</haxe_doc>
 	<x path="Float"/>
 	<x path="Int"/>
 </f></roundedRectangleOutline>
-		<spiralLines public="1" get="inline" set="null" line="725" static="1"><f a="paintType:x:y:radius:nolines:startWid:stepWid">
+		<spiralLines public="1" get="inline" set="null" line="726" static="1"><f a="paintType:x:y:radius:nolines:startWid:stepWid">
 	<t path="trilateral3.drawing.PaintType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -18072,7 +18077,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<haxe_doc>Shaper provides static methods for drawing with triangles.
 the methods return the number of triangles added.</haxe_doc>
 		</add2DTriangle>
-		<add2DQuad public="1" get="inline" set="null" line="50" static="1"><f a="pen:ax:ay:bx:by:cx:cy:dx:dy">
+		<add2DQuad public="1" get="inline" set="null" line="49" static="1"><f a="pen:ax:ay:bx:by:cx:cy:dx:dy">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -18084,19 +18089,19 @@ the methods return the number of triangles added.</haxe_doc>
 	<x path="Float"/>
 	<x path="Int"/>
 </f></add2DQuad>
-		<quad public="1" get="inline" set="null" line="56" static="1"><f a="pen:q">
+		<quad public="1" get="inline" set="null" line="55" static="1"><f a="pen:q">
 	<c path="trilateral3.drawing.Pen"/>
 	<c path="trilateral3.structure.Quad2D"/>
 	<x path="Int"/>
 </f></quad>
-		<lineAB public="1" get="inline" set="null" line="62" static="1"><f a="pen:A:B:width">
+		<lineAB public="1" get="inline" set="null" line="61" static="1"><f a="pen:A:B:width">
 	<c path="trilateral3.drawing.Pen"/>
 	<c path="trilateral3.structure.XY"/>
 	<c path="trilateral3.structure.XY"/>
 	<x path="Float"/>
 	<x path="Int"/>
 </f></lineAB>
-		<lineXY public="1" get="inline" set="null" line="69" static="1"><f a="pen:ax:ay:bx:by:width">
+		<lineXY public="1" get="inline" set="null" line="68" static="1"><f a="pen:ax:ay:bx:by:width">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -18105,7 +18110,7 @@ the methods return the number of triangles added.</haxe_doc>
 	<x path="Float"/>
 	<x path="Int"/>
 </f></lineXY>
-		<rectangle public="1" get="inline" set="null" line="75" static="1"><f a="pen:x:y:w:h">
+		<rectangle public="1" get="inline" set="null" line="74" static="1"><f a="pen:x:y:w:h">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -18113,7 +18118,7 @@ the methods return the number of triangles added.</haxe_doc>
 	<x path="Float"/>
 	<x path="Int"/>
 </f></rectangle>
-		<squareOutline public="1" get="inline" set="null" line="91" static="1">
+		<squareOutline public="1" get="inline" set="null" line="90" static="1">
 			<f a="pen:px:py:radius:thick:?theta" v=":::::0">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18125,7 +18130,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ theta : 0 }</e></m></meta>
 		</squareOutline>
-		<square public="1" get="inline" set="null" line="191" static="1">
+		<square public="1" get="inline" set="null" line="190" static="1">
 			<f a="pen:px:py:radius:?theta" v="::::0">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18136,7 +18141,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ theta : 0 }</e></m></meta>
 		</square>
-		<diamond public="1" get="inline" set="null" line="238" static="1">
+		<diamond public="1" get="inline" set="null" line="237" static="1">
 			<f a="pen:x:y:radius:?theta" v="::::0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18147,7 +18152,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ theta : 0. }</e></m></meta>
 		</diamond>
-		<diamondOutline public="1" get="inline" set="null" line="245" static="1">
+		<diamondOutline public="1" get="inline" set="null" line="244" static="1">
 			<f a="pen:x:y:thick:radius:?theta" v=":::::0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18159,7 +18164,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ theta : 0. }</e></m></meta>
 		</diamondOutline>
-		<overlapStar public="1" get="inline" set="null" line="252" static="1">
+		<overlapStar public="1" get="inline" set="null" line="251" static="1">
 			<f a="pen:px:py:radius:?theta" v="::::0">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18170,7 +18175,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ theta : 0 }</e></m></meta>
 		</overlapStar>
-		<circle public="1" get="inline" set="null" line="283" static="1">
+		<circle public="1" get="inline" set="null" line="282" static="1">
 			<f a="pen:ax:ay:radius:?sides:?omega" v="::::36:0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18182,7 +18187,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
 		</circle>
-		<circleRadial public="1" get="inline" set="null" line="306" static="1">
+		<circleRadial public="1" get="inline" set="null" line="305" static="1">
 			<f a="pen:ax:ay:rx:ry:radius:?sides:?omega" v="::::::36:0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18196,7 +18201,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
 		</circleRadial>
-		<circleRadialOnSide public="1" get="inline" set="null" line="335" static="1">
+		<circleRadialOnSide public="1" get="inline" set="null" line="334" static="1">
 			<f a="pen:ax:ay:rx:ry:radius:?sides:?omega" v="::::::36:0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18210,7 +18215,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
 		</circleRadialOnSide>
-		<ellipse public="1" get="inline" set="null" line="368" static="1">
+		<ellipse public="1" get="inline" set="null" line="367" static="1">
 			<f a="pen:ax:ay:rx:ry:?sides" v=":::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18222,7 +18227,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</ellipse>
-		<pie public="1" get="inline" set="null" line="395" static="1">
+		<pie public="1" get="inline" set="null" line="394" static="1">
 			<f a="pen:ax:ay:radius:beta:gamma:prefer:?sides" v=":::::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18238,7 +18243,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
  * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
 		</pie>
-		<pieX public="1" get="inline" set="null" line="432" static="1">
+		<pieX public="1" get="inline" set="null" line="431" static="1">
 			<f a="pen:ax:ay:radius:beta:gamma:prefer:edgePoly:?sides" v="::::::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18255,7 +18260,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
  * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
 		</pieX>
-		<pieDifX public="1" get="inline" set="null" line="471" static="1">
+		<pieDifX public="1" get="inline" set="null" line="470" static="1">
 			<f a="pen:ax:ay:radius:beta:dif:edgePoly:?sides" v=":::::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18271,7 +18276,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<haxe_doc>* Optimized Pie used in Contour, with dif pre-calculated
  * External edge also added</haxe_doc>
 		</pieDifX>
-		<ellipsePie public="1" get="inline" set="null" line="507" static="1">
+		<ellipsePie public="1" get="inline" set="null" line="506" static="1">
 			<f a="pen:ax:ay:rx:ry:beta:gamma:prefer:?sides" v="::::::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18286,7 +18291,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</ellipsePie>
-		<pieDif public="1" get="inline" set="null" line="541" static="1">
+		<pieDif public="1" get="inline" set="null" line="540" static="1">
 			<f a="pen:ax:ay:radius:beta:dif:?sides" v="::::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18300,7 +18305,7 @@ the methods return the number of triangles added.</haxe_doc>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 			<haxe_doc>* Optimized Pie used in Contour, with dif pre-calculated</haxe_doc>
 		</pieDif>
-		<arc public="1" get="inline" set="null" line="570" static="1">
+		<arc public="1" get="inline" set="null" line="569" static="1">
 			<f a="pen:ax:ay:radius:width:beta:gamma:prefer:?sides" v="::::::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18315,7 +18320,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</arc>
-		<circleOnSide public="1" get="inline" set="null" line="610" static="1">
+		<circleOnSide public="1" get="inline" set="null" line="609" static="1">
 			<f a="pen:ax:ay:radius:?sides:?omega" v="::::36:0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18327,7 +18332,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ omega : 0., sides : 36 }</e></m></meta>
 		</circleOnSide>
-		<ellipseOnSide public="1" get="inline" set="null" line="633" static="1">
+		<ellipseOnSide public="1" get="inline" set="null" line="632" static="1">
 			<f a="pen:ax:ay:rx:ry:?sides" v=":::::36">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18339,7 +18344,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ sides : 36 }</e></m></meta>
 		</ellipseOnSide>
-		<shape public="1" get="inline" set="null" line="655" static="1">
+		<shape public="1" get="inline" set="null" line="654" static="1">
 			<f a="pen:x:y:radius:p:?omega" v=":::::0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
@@ -18351,7 +18356,7 @@ the methods return the number of triangles added.</haxe_doc>
 			</f>
 			<meta><m n=":value"><e>{ omega : 0. }</e></m></meta>
 		</shape>
-		<shapeRadial public="1" get="inline" set="null" line="666" static="1">
+		<shapeRadial public="1" get="inline" set="null" line="665" static="1">
 			<f a="pen:x:y:rx:ry:radius:p:?omega" v=":::::::0.">
 				<c path="trilateral3.drawing.Pen"/>
 				<x path="Float"/>
