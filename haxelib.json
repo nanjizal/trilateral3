@@ -4,7 +4,7 @@
     "license"      : "MIT",
     "tags"         : ["cross", "drawing","2d","WebGL" ],
     "description"  : "trilateral3 rework of Trilateral and Trilateral2",
-    "version"      : "0.0.3",
+    "version"      : "0.0.4-alpha",
     "releasenote"  : "See https://github.com/nanjizal/trilateral3/blob/master/CHANGELOG.md",
     "contributors" : ["Nanjizal"],
     "classPath"    : "src",
