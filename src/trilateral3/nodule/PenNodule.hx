@@ -14,7 +14,8 @@ import dsHelper.haxe.io.Float32Array;
 #end
 
 abstract class PenNodule {
-    static final largeEnough    = 20000000;
+    // assume that Float32Array structures are setup with inbuilt size.
+    static final largeEnough    = 1352; // assumes minimum of say about 50 triangles seems fair?
     public var pen: Pen;
     public function new( useGLScale: Bool = true ){
         if( useGLScale ){
