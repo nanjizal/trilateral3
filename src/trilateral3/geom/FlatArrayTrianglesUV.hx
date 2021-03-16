@@ -1,34 +1,36 @@
 package trilateral3.geom;
-//import trilateral3.geom.flat.Flat3x7;
-
 import trilateral3.structure.Triangle3D;
+import trilateral3.structure.TriangleUV;
 import trilateral3.matrix.MatrixDozen;
 import trilateral3.shape.IndexRange;
 import trilateral3.matrix.Vertex;
+import trilateral3.matrix.UV;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 
-#if useHyperKitGL
-import hyperKitGL.io.FloatColorTriangles;
+//#if useHyperKitGL
+import hyperKitGL.io.ArrayColorTrianglesUV;
 import hyperKitGL.io.Float32Array;
-import hyperKitGL.io.Flat3x7;
-#else
-import dsHelper.flatInterleave.FloatColorTriangles;
-import dsHelper.haxe.io.Float32Array;
-import dsHelper.flatInterleave.core.Flat3x7;
-#end
+import hyperKitGL.io.Array3x9;
+//#else
+//import dsHelper.flatInterleave.FloatColorTrianglesUV;
+//import dsHelper.haxe.io.Float32Array;
+//import dsHelper.flatInterleave.core.Flat3x9;
+//#end
 
 @:transitive
 @:forward
-abstract FlatColorTriangles( FloatColorTriangles ){
+abstract FlatArrayTrianglesUV( ArrayColorTrianglesUV ) from ArrayColorTrianglesUV to ArrayColorTrianglesUV {
+    /*
     @:to
     public inline
     function toArray(): Float32Array {
         throw 'use getArray()';
         return null;
     }
-    public inline function new( len: Int ){
-        this = new FloatColorTriangles( len );
+    */
+    public inline function new(){
+        this = new ArrayColorTrianglesUV();
     }
     public
     function transform( m: MatrixDozen ){
@@ -73,6 +75,13 @@ abstract FlatColorTriangles( FloatColorTriangles ){
         var pb: Vertex = { x: this.bx, y: this.by, z: this.bz, w: 1. };
         var pc: Vertex = { x: this.cx, y: this.cy, z: this.cz, w: 1. };
         return { a: pa, b: pb, c: pc };
+    }
+    public inline
+    function getTriangleUV(): TriangleUV {
+        var ta: UV = { u: this.uA, v: this.vA };
+        var tb: UV = { u: this.uB, v: this.vB };
+        var tc: UV = { u: this.uC, v: this.vC };
+        return { a: ta, b: tb, c: tc };
     }
     public inline
     function getTriInt(): TriInt {

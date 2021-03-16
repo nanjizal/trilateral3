@@ -9,26 +9,28 @@ import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 
 #if useHyperKitGL
-import hyperKitGL.io.FloatColorTriangles;
+import hyperKitGL.io.ArrayColorTriangles;
 import hyperKitGL.io.Float32Array;
-import hyperKitGL.io.Flat3x7;
+import hyperKitGL.io.Array3x7;
 #else
-import dsHelper.flatInterleave.FloatColorTriangles;
-import dsHelper.haxe.io.Float32Array;
-import dsHelper.flatInterleave.core.Flat3x7;
+//import dsHelper.flatInterleave.FloatColorTriangles;
+//import dsHelper.haxe.io.Float32Array;
+//import dsHelper.flatInterleave.core.Flat3x7;
 #end
 
 @:transitive
 @:forward
-abstract FlatColorTriangles( FloatColorTriangles ){
+abstract FlatArrayTriangles( ArrayColorTriangles ){
+    /*
     @:to
     public inline
     function toArray(): Float32Array {
         throw 'use getArray()';
         return null;
     }
-    public inline function new( len: Int ){
-        this = new FloatColorTriangles( len );
+    */
+    public inline function new(){
+        this = new ArrayColorTriangles();
     }
     public
     function transform( m: MatrixDozen ){
