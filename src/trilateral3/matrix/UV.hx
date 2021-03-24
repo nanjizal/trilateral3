@@ -6,10 +6,15 @@ package trilateral3.matrix;
 #if nanjizal_geom 
 import geom.structure.Mat1x2;
 @:forward
+@:transitive
 abstract UV( geom.structure.Mat1x2 ) from geom.structure.Mat1x2 to geom.structure.Mat1x2 {
     public inline
-    function new( u: Float, y: Float ){
-        this = { x: u, y: u };
+    function new( u_: Float, v_: Float ){
+        this = { x: u_, y: v_ };
+    }
+    @:from
+    static public function fromUV( uv:{ u: Float, v: Float } ): UV {
+        return new UV( uv.u, uv.v );
     }
     public var u( get, set ): Float;
     inline
