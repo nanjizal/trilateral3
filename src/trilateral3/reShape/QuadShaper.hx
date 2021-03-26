@@ -11,16 +11,87 @@ class QuadShaper {
     var pen:         Pen;
     public var lastXY: XY;
     public var lastUV: XY;
-    var oldStart:    Int;
-    var start:       Int;
+    var oldStart:    Float;
+    var start:       Float;
+    // TODO: startU, startV need more thought, used for setting up offset rotation.
+    public var startU: Float;
+    public var startV: Float;
+    public var width: Float;
+    public var height: Float;
     public var name:        String;
-    public function new( pen: Pen, start: Int, wid: Float = 1000, hi: Float = 1000 ){
+    public function new( pen: Pen, start: Float = -1., wid: Float = 1000, hi: Float = 1000 ){
+        if( start == -1 ) start = pen.pos;
         this.pen        = pen;
         this.start      = start;
         tri  = new TrianglesShaper( pen, wid, hi );
     }
     public function drawQuad( u: Float, v: Float, w: Float, h: Float ): Int {
-        return pen.quad2DFill( u, v, w, h );
+        width = w;
+        height = h;
+        startU = u;
+        startV = v;
+        var q = pen.quad2DFill( u, v, w, h );
+        return q;
+    }
+    public function rook_90(){
+        rotateLockTopLeft( -Math.PI/2 );
+    }
+    public function rook90(){
+        rotateLockTopLeft( Math.PI/2 );
+    }
+    // only use from 0 to Math.PI/2;
+    public function rotateLockTopLeft( theta: Float ){
+        if( theta > Math.PI/2 || theta < -Math.PI/2 ){
+            // may need more consideration
+            throw new haxe.Exception( 'theta needs to be between 0 and pi/2' );
+        }
+        var p = pen.pos;
+        pen.pos    = start;
+        tri.curr = pen.triangleCurrent;
+        var curr   = tri.curr;
+        var ax = tri.x;
+        var ay = tri.y;
+        //var az = tri.z;
+        var w      = tri.right   - ax;
+        var h      = tri.bottom  - ay;
+        tri.rotateCentre( ax + w/2, ay + h/2, theta );
+        pen.pos = start + 1;
+        tri.rotateCentre( ax + w/2, ay + h/2, theta );
+        pen.pos = start;
+        var nx = tri.x;
+        var ny = tri.y;
+        tri.x = ax;
+        tri.y = ay;
+        var dx = ax - nx;
+        var dy = ay - ny;
+        pen.pos = start + 1;
+        tri.x = tri.x + dx;
+        tri.y = tri.y + dy;
+        pen.pos = p;
+    }
+    public function rotateFromCentre( dx: Float, dy: Float, theta: Float ){
+        var p = pen.pos;
+        pen.pos    = start;
+        var curr   = tri.curr;
+        var ax = tri.x;
+        var ay = tri.y;
+        tri.rotateCentre( startU + dx, startV + dy, theta );
+        pen.pos = start + 1;
+        tri.rotateCentre( startU + dx, startV + dy, theta );
+        pen.pos = p;
+    }
+    public function getDeltaAX( ax: Float, ay: Float ): {x: Float, y: Float }{
+        var p = pen.pos;
+        pen.pos = start;
+        var nx = tri.x;
+        var ny = tri.y;
+        tri.x = ax;
+        tri.y = ay;
+        var dx = ax - nx;
+        var dy = ay - ny;
+        pen.pos = p;
+        var deltaAX = { x: dx, y: dy };
+        return deltaAX;
     }
     public function drawQuadColors(  u: Float, v: Float, w: Float, h: Float
                                    , colorA: Int = -1, colorB: Int = -1
@@ -37,13 +108,13 @@ class QuadShaper {
     public var begin( get, set ): Int;
     inline
     function get_begin(): Int {
-        return start;
+        return Std.int( start );
     }
     inline
     function set_begin( val: Int ){
         oldStart = start;
-        start = val;
-        return start;
+        start = cast val;
+        return cast start;
     }
     #if trilateral_hitDebug
     public function distHit( x: Float, y: Float ): Float {
@@ -102,6 +173,7 @@ class QuadShaper {
         return tri.xy;
     }
     inline function set_xy( val: XY ): XY {
+        var p = pen.pos;
         pen.pos = start;
         #if target.static
         lastXY = { x: tri.x, y: tri.y };
@@ -111,6 +183,7 @@ class QuadShaper {
         tri.xy = val;
         pen.pos = start+1;
         tri.xy = val;
+        pen.pos = p;
         return val;
     }
     public var xy0( get, set ): XY0;

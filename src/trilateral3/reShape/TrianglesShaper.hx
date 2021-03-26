@@ -75,7 +75,7 @@ class TrianglesShaper {
     }
     inline
     function toGLy( val: Float ){
-        return -(val-wid)/wid;
+        return -(val-hi)/hi;
     }
     inline
     function fromGLx( val: Float ){
@@ -167,6 +167,20 @@ class TrianglesShaper {
     function get_bottom(): Float {
         return fromGLy( curr.bottom );
     }
+    /*
+    public var rightU( get, never ): Float;
+    inline
+    function get_rightU(): Float {
+        return fromGLx( currUV.rightU );
+    }
+    public var bottomV( get, never ): Float;
+    inline
+    function get_bottomV(): Float {
+        return fromGLy( currUV.bottomV );
+    }
+    */
+    // TODO: U and V are not normally scaled like this...
+    // needs more thought.
     public var uv( get, set ): XY;
     inline
     function get_uv(): XY {
