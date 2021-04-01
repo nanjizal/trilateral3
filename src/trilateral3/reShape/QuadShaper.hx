@@ -44,9 +44,6 @@ class QuadShaper {
         var q = pen.quad2DFill( u, v, w, h );
         return q;
     }
-    // the orientation of a,b,c,d is strange and perhaps is due to the render approach
-    // so aspects may not be intuative. May require changes if engine is improved.
-    // addTriangle internally swaps b,c to avoid winding, posTriangle doesn't!
     public function dim( dx: Float, dy: Float ){
         //
         //   A          C
@@ -61,7 +58,6 @@ class QuadShaper {
         var by = origY + dy;
         var cx = origX + dx;
         pen.posTriangle2D( origX, o.a.y, o.b.x, by, cx, o.c.y );
-        //pen.posTriangle2D( 0, 0, 0, 0, 0, 0 );
         //              A
         //               
         //   B          C
@@ -75,50 +71,6 @@ class QuadShaper {
         var cy = origY + dy;
         pen.posTriangle2D( ax, o.a.y, o.b.x, by, cx, cy );
         
-        pen.pos = p;
-    }
-    public function dim_( dx: Float, dy: Float ){
-        //
-        //   A          C
-        //               
-        //   B          .
-        // 
-        var p = pen.pos;
-        pen.pos    = start;
-        var o = tri.fromGLTriangle( tri.tri3D() );
-        var origX = o.a.x;
-        var origY = o.a.y;
-        var cx = origX + dx;
-        var by = origY + dy;
-        pen.posTriangle2D( origX, o.a.y, o.b.x, by, cx, o.c.y );
-        //pen.posTriangle2D( 0, 0, 0, 0, 0, 0 );
-        //              A
-        //               
-        //   B          C
-        //
-        
-        pen.pos    = start + 1;
-        /*
-        var o = tri.fromGLTriangle( tri.tri3D() );
-        o.a.x += b.x;
-        o.a.y += b.y;
-        o.b.x += d.x;
-        o.b.y += d.y;
-        o.c.x += c.x;
-        o.c.y += c.y;
-        pen.posTriangle2D( o.a.x, o.a.y
-                         , o.b.x + 20, o.b.y + 20
-                         , o.c.x, o.c.y );
-        
-                         */
-        var o = tri.fromGLTriangle( tri.tri3D() );
-        var ax = origX + dx;
-        var cx = origX + dx;
-        var by = origY + dy;
-        var cy = origY + dy;
-        pen.posTriangle2D( ax, o.a.y, o.b.x, by, cx, cy );
-        //pen.posTriangle2D( 0, 0, 0, 0, 0, 0 );
-                         
         pen.pos = p;
     }
     /*
