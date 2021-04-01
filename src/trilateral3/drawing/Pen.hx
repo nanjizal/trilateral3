@@ -150,8 +150,34 @@ class Pen {
         }
         return totalSteps;
     }
-    
-    
+    public inline
+    function posTriangle2D( ax: Float, ay: Float
+                          , bx: Float, by: Float
+                          , cx: Float, cy: Float ){
+        posTriangle( ax, ay, z2D, bx, by, z2D, cx, cy, z2D );
+    }
+    #if cpp
+    public inline
+    function posTriangle( ax: Float32, ay: Float32, az: Float32
+                        , bx: Float32, by: Float32, bz: Float32
+                        , cx: Float32, cy: Float32, cz: Float32 ){
+        // don't need to reorder corners and Trilateral can do that!
+        var windAdjust = paintType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        if( Trilateral.transformMatrix != null ) paintType.transform( Trilateral.transformMatrix );
+        return windAdjust;
+    }
+    #else
+    public inline
+    function posTriangle( ax: Float, ay: Float, az: Float
+                        , bx: Float, by: Float, bz: Float
+                        , cx: Float, cy: Float, cz: Float ){
+        // don't need to reorder corners and Trilateral can do that!
+        var windAdjust = paintType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        //trace( 'windAdjust ' + windAdjust );
+        if( Trilateral.transformMatrix != null ) paintType.transform( Trilateral.transformMatrix );
+        return windAdjust;
+    }
+    #end
     #if cpp
     public inline
     function addTriangle( ax: Float32, ay: Float32, az: Float32
@@ -182,6 +208,7 @@ class Pen {
                         , cx: Float, cy: Float, cz: Float ){
         // don't need to reorder corners and Trilateral can do that!
         var windAdjust = paintType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
+        //trace( 'windAdjust' + windAdjust );
         if( Trilateral.transformMatrix != null ) paintType.transform( Trilateral.transformMatrix );
         if( useTexture ) {
             ax = ax/2000;
@@ -191,9 +218,9 @@ class Pen {
             cx = cx/2000;
             cy = cy/2000;
             paintType.triangleUV( ax, ay
-                               , bx, by
-                               , cx, cy
-                               , windAdjust );
+                                , bx, by
+                                , cx, cy
+                                , windAdjust );
         }
         //drawType.next();
         return windAdjust;

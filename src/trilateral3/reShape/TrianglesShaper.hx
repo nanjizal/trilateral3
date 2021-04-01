@@ -2,6 +2,8 @@ package trilateral3.reShape;
 import trilateral3.drawing.*;
 import trilateral3.structure.XY;
 import trilateral3.structure.XY0;
+import trilateral3.matrix.Vertex;
+import trilateral3.structure.Triangle3D;
 class TrianglesShaper {
     var pen:               Pen;
     var hi:                Float;
@@ -132,7 +134,7 @@ class TrianglesShaper {
     }
     inline
     function set_x( val: Float ): Float {
-        var val_ = toGLx( val);
+        var val_ = toGLx( val );
         curr.x = val_;
         return val;
     }
@@ -166,6 +168,32 @@ class TrianglesShaper {
     inline
     function get_bottom(): Float {
         return fromGLy( curr.bottom );
+    }
+    inline
+    public function fromGL( v: Vertex ): Vertex {
+        var fv = v.clone();
+        fv.x = fromGLx( fv.x );
+        fv.y = fromGLy( fv.y );
+        return fv;
+    }
+    inline
+    public function toGL( v: Vertex ): Vertex {
+        var tv = v.clone();
+        tv.x = toGLx( tv.x );
+        tv.y = toGLy( tv.y );
+        return tv;
+    }
+    inline
+    public function fromGLTriangle( t: Triangle3D ): Triangle3D {
+        return { a: fromGL( t.a ), b: fromGL( t.b ), c: fromGL( t.c ) };
+    }
+    inline
+    public function toGLTriangle( t: Triangle3D ): Triangle3D {
+        return { a: toGL( t.a ), b: toGL( t.b ), c: toGL( t.c ) };
+    }
+    inline
+    public function tri3D(){
+       return pen.paintType.getTriangle3D();
     }
     /*
     public var rightU( get, never ): Float;

@@ -13,9 +13,9 @@ import hyperKitGL.io.ArrayColorTriangles;
 import hyperKitGL.io.Float32Array;
 import hyperKitGL.io.Array3x7;
 #else
-//import dsHelper.flatInterleave.FloatColorTriangles;
-//import dsHelper.haxe.io.Float32Array;
-//import dsHelper.flatInterleave.core.Flat3x7;
+import dsHelper.flatInterleave.ArrayColorTriangles;
+import dsHelper.haxe.io.Float32Array;
+import dsHelper.flatInterleave.core.Flat3x7;
 #end
 
 @:transitive

@@ -25,5 +25,8 @@ class Vertex {
     public function values(){
         return x + ' ' + y + ' ' + z + ' ' + w;
     }
+    public function clone(): Vertex {
+        return { x: this.x, y: this.y, z: this.z, w: this.w };
+    }
 }
 #end

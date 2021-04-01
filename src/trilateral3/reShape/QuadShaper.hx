@@ -5,7 +5,8 @@ import trilateral3.structure.XY;
 import trilateral3.structure.XY0;
 import trilateral3.structure.XYWH;
 import trilateral3.structure.WH;
-
+import trilateral3.matrix.Vertex;
+import trilateral3.structure.Triangle3D;
 class QuadShaper {
     var tri: TrianglesShaper;
     var pen:         Pen;
@@ -25,6 +26,16 @@ class QuadShaper {
         this.start      = start;
         tri  = new TrianglesShaper( pen, wid, hi );
     }
+    public function drawQuadStart( u: Float, v: Float, w: Float, h: Float ): Int {
+        var p = pen.pos;
+        pen.pos    = start;
+        width = w;
+        height = h;
+        startU = u;
+        startV = v;
+        var q = pen.quad2DFill( u, v, w, h );
+        return q;
+    }
     public function drawQuad( u: Float, v: Float, w: Float, h: Float ): Int {
         width = w;
         height = h;
@@ -33,6 +44,124 @@ class QuadShaper {
         var q = pen.quad2DFill( u, v, w, h );
         return q;
     }
+    // the orientation of a,b,c,d is strange and perhaps is due to the render approach
+    // so aspects may not be intuative. May require changes if engine is improved.
+    // addTriangle internally swaps b,c to avoid winding, posTriangle doesn't!
+    public function dim( dx: Float, dy: Float ){
+        //
+        //   A          C
+        //               
+        //   B          .
+        // 
+        var p = pen.pos;
+        pen.pos    = start;
+        var o = tri.fromGLTriangle( tri.tri3D() );
+        var origX = o.a.x;
+        var origY = o.a.y;
+        var by = origY + dy;
+        var cx = origX + dx;
+        pen.posTriangle2D( origX, o.a.y, o.b.x, by, cx, o.c.y );
+        //pen.posTriangle2D( 0, 0, 0, 0, 0, 0 );
+        //              A
+        //               
+        //   B          C
+        //
+        
+        pen.pos    = start + 1;
+        var o = tri.fromGLTriangle( tri.tri3D() );
+        var ax = origX + dx;
+        var cx = origX + dx;
+        var by = origY + dy;
+        var cy = origY + dy;
+        pen.posTriangle2D( ax, o.a.y, o.b.x, by, cx, cy );
+        
+        pen.pos = p;
+    }
+    public function dim_( dx: Float, dy: Float ){
+        //
+        //   A          C
+        //               
+        //   B          .
+        // 
+        var p = pen.pos;
+        pen.pos    = start;
+        var o = tri.fromGLTriangle( tri.tri3D() );
+        var origX = o.a.x;
+        var origY = o.a.y;
+        var cx = origX + dx;
+        var by = origY + dy;
+        pen.posTriangle2D( origX, o.a.y, o.b.x, by, cx, o.c.y );
+        //pen.posTriangle2D( 0, 0, 0, 0, 0, 0 );
+        //              A
+        //               
+        //   B          C
+        //
+        
+        pen.pos    = start + 1;
+        /*
+        var o = tri.fromGLTriangle( tri.tri3D() );
+        o.a.x += b.x;
+        o.a.y += b.y;
+        o.b.x += d.x;
+        o.b.y += d.y;
+        o.c.x += c.x;
+        o.c.y += c.y;
+        pen.posTriangle2D( o.a.x, o.a.y
+                         , o.b.x + 20, o.b.y + 20
+                         , o.c.x, o.c.y );
+        
+                         */
+        var o = tri.fromGLTriangle( tri.tri3D() );
+        var ax = origX + dx;
+        var cx = origX + dx;
+        var by = origY + dy;
+        var cy = origY + dy;
+        pen.posTriangle2D( ax, o.a.y, o.b.x, by, cx, cy );
+        //pen.posTriangle2D( 0, 0, 0, 0, 0, 0 );
+                         
+        pen.pos = p;
+    }
+    /*
+    // a  b
+    // d  c
+    // used to adjust corners of current triangle, mostly as example for future extensions.
+    public function dCorners( a: Vertex, b: Vertex, c: Vertex, d: Vertex ){
+        //
+        //   A          C
+        //               
+        //   B          .
+        // 
+        var p = pen.pos;
+        pen.pos    = start;
+        var o = tri.fromGLTriangle( tri.tri3D() );
+        o.a.x += a.x;
+        o.a.y += a.y;
+        o.b.x += d.x;
+        o.b.y += d.y;
+        o.c.x += b.x;
+        o.c.y += b.y;
+        pen.posTriangle2D( o.a.x, o.a.y
+                         , o.b.x, o.b.y
+                         , o.c.x, o.c.y );
+        //
+        //              A
+        //               
+        //   B          C
+        //
+        pen.pos    = start + 1;
+        var o = tri.fromGLTriangle( tri.tri3D() );
+        o.a.x += b.x;
+        o.a.y += b.y;
+        o.b.x += d.x;
+        o.b.y += d.y;
+        o.c.x += c.x;
+        o.c.y += c.y;
+        pen.posTriangle2D( o.a.x, o.a.y
+                         , o.b.x, o.b.y
+                         , o.c.x, o.c.y );
+        pen.pos = p;
+    }
+    */
     public function rook_90(){
         rotateLockTopLeft( -Math.PI/2 );
     }
@@ -167,6 +296,26 @@ class QuadShaper {
         tri.argb = col;
         return col;
     }
+    public var x( get, set ): Float;
+    inline function get_x(): Float {
+        var _xy = xy;
+        return _xy.x;
+    }
+    inline function set_x( v: Float ): Float {
+        var _xy = xy;
+        xy = { x: v, y: xy.y };
+        return v;
+    }
+    public var y( get, set ): Float;
+    inline function get_y(): Float {
+        var _xy = xy;
+        return _xy.y;
+    }
+    inline function set_y( v: Float ): Float {
+        var _xy = xy;
+        xy = { x: xy.x, y: v };
+        return v;
+    }
     public var xy( get, set ): XY;
     inline function get_xy(): XY {
         pen.pos = start;
@@ -252,6 +401,8 @@ class QuadShaper {
         tri.uv = val;
         return val;
     }
+    /*
+    use drawQuad... potentially this is redunant, keep for now.
     // add setter change type?
     public function setXYWH( xywh: { x: Float, y: Float, w: Float, h: Float } ){
         var ax = xywh.x;
@@ -277,6 +428,7 @@ class QuadShaper {
         var xywh = { x: tri.x, y: tri.y, w: wh.w, h: wh.h };
         setXYWH( xywh );
     }
+    */
     public function updatePos(){
         pen.pos = start + 2;
     }

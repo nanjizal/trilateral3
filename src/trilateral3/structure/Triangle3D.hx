@@ -10,4 +10,7 @@ class Triangle3D {
         this.b = b;
         this.c = c;
     }
+    public function clone(): Triangle3D {
+        return { a: this.a.clone(), b: this.b.clone(), c: this.c.clone() };
+    }
 }

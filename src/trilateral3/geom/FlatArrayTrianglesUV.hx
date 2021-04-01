@@ -8,15 +8,15 @@ import trilateral3.matrix.UV;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;
 
-//#if useHyperKitGL
+#if useHyperKitGL
 import hyperKitGL.io.ArrayColorTrianglesUV;
 import hyperKitGL.io.Float32Array;
 import hyperKitGL.io.Array3x9;
-//#else
-//import dsHelper.flatInterleave.FloatColorTrianglesUV;
-//import dsHelper.haxe.io.Float32Array;
-//import dsHelper.flatInterleave.core.Flat3x9;
-//#end
+#else
+import dsHelper.flatInterleave.ArrayColorTrianglesUV;
+import dsHelper.haxe.io.Float32Array;
+import dsHelper.flatInterleave.core.Array3x9;
+#end
 
 @:transitive
 @:forward

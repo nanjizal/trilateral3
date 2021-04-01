@@ -1,5 +1,4 @@
 package trilateral3.geom;
-//import trilateral3.geom.flat.Flat3x7;
 
 import trilateral3.structure.Triangle3D;
 import trilateral3.matrix.MatrixDozen;

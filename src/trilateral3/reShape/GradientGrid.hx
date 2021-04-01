@@ -58,16 +58,20 @@ class GradientGrid {
             var ix = 0;
             arrShaper = new Array<QuadShaper>();
             var count = 0;
+            var ix1: Int;
+            var iy1: Int;
             for( iy in 0...row ){
                 for( ix in 0...col ){
                     // creates four color gradient square
                     var quadShaper       = new QuadShaper( pen, ds );
                     arrShaper[ arrShaper.length ] = quadShaper;
                     ds+=2;
-                    var colorA = genColors( ix * dX, iy * dY, fRed, fGreen, fBlue );
-                    var colorB = genColors( (ix + 1 )* dX, iy * dY, fRed, fGreen, fBlue );
-                    var colorC = genColors( ( ix + 1 ) * dX, ( iy + 1 ) * dY, fRed, fGreen, fBlue );
-                    var colorD = genColors( ix * dX, ( iy + 1 ) * dY, fRed, fGreen, fBlue );
+                    ix1 = ix + 1;
+                    iy1 = iy + 1;
+                    var colorA = genColors( ix  * dX, iy  * dY, fRed, fGreen, fBlue );
+                    var colorB = genColors( ix1 * dX, iy  * dY, fRed, fGreen, fBlue );
+                    var colorC = genColors( ix1 * dX, iy1 * dY, fRed, fGreen, fBlue );
+                    var colorD = genColors( ix  * dX, iy1 * dY, fRed, fGreen, fBlue );
                     quadShaper.drawQuadColors( px, py, dx, dy
                                              , colorA, colorB, colorC, colorD );
                     px += dx;
