@@ -17187,12 +17187,41 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></modifyColors>
-		<dim public="1" set="method" line="149"><f a="w:h">
+		<getBorder public="1" set="method" line="150"><f a=""><a>
+	<bTop><x path="Float"/></bTop>
+	<bRight><x path="Float"/></bRight>
+	<bLeft><x path="Float"/></bLeft>
+	<bBottom><x path="Float"/></bBottom>
+</a></f></getBorder>
+		<scaleBorder public="1" set="method" line="154"><f a="s:keepDim">
+	<x path="Float"/>
+	<x path="Bool"/>
+	<x path="Void"/>
+</f></scaleBorder>
+		<setBorder public="1" set="method" line="159"><f a="b:keepDim">
+	<a>
+		<bTop><x path="Float"/></bTop>
+		<bRight><x path="Float"/></bRight>
+		<bLeft><x path="Float"/></bLeft>
+		<bBottom><x path="Float"/></bBottom>
+	</a>
+	<x path="Bool"/>
+	<x path="Void"/>
+</f></setBorder>
+		<adjustBorder public="1" set="method" line="164"><f a="bLeft:bRight:bTop:bBottom:keepDim">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+	<x path="Void"/>
+</f></adjustBorder>
+		<dim public="1" set="method" line="216"><f a="w:h">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dim>
-		<addEqualGrid public="1" set="method" line="207"><f a="x:y:wid:hi:color">
+		<addEqualGrid public="1" set="method" line="272"><f a="x:y:wid:hi:color">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -17379,29 +17408,24 @@
 	<x path="Float"/>
 	<x path="Int"/>
 </f></drawQuad>
-		<dim public="1" set="method" line="50"><f a="dx:dy">
+		<dim public="1" set="method" line="47"><f a="dx:dy">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dim>
-		<dim_ public="1" set="method" line="80"><f a="dx:dy">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></dim_>
-		<rook_90 public="1" set="method" line="165"><f a=""><x path="Void"/></f></rook_90>
-		<rook90 public="1" set="method" line="168"><f a=""><x path="Void"/></f></rook90>
-		<rotateLockTopLeft public="1" set="method" line="172"><f a="theta">
+		<rook_90 public="1" set="method" line="117"><f a=""><x path="Void"/></f></rook_90>
+		<rook90 public="1" set="method" line="120"><f a=""><x path="Void"/></f></rook90>
+		<rotateLockTopLeft public="1" set="method" line="124"><f a="theta">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></rotateLockTopLeft>
-		<rotateFromCentre public="1" set="method" line="201"><f a="dx:dy:theta">
+		<rotateFromCentre public="1" set="method" line="153"><f a="dx:dy:theta">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></rotateFromCentre>
-		<getDeltaAX public="1" set="method" line="212"><f a="ax:ay">
+		<getDeltaAX public="1" set="method" line="164"><f a="ax:ay">
 	<x path="Float"/>
 	<x path="Float"/>
 	<a>
@@ -17409,7 +17433,7 @@
 		<x><x path="Float"/></x>
 	</a>
 </f></getDeltaAX>
-		<drawQuadColors public="1" set="method" line="227">
+		<drawQuadColors public="1" set="method" line="179">
 			<f a="u:v:w:h:?colorA:?colorB:?colorC:?colorD" v="::::-1:-1:-1:-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -17423,7 +17447,7 @@
 			</f>
 			<meta><m n=":value"><e>{ colorD : -1, colorC : -1, colorB : -1, colorA : -1 }</e></m></meta>
 		</drawQuadColors>
-		<modifyQuadColors public="1" set="method" line="231">
+		<modifyQuadColors public="1" set="method" line="183">
 			<f a="?colorA:?colorB:?colorC:?colorD" v="-1:-1:-1:-1">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -17434,74 +17458,74 @@
 			<meta><m n=":value"><e>{ colorD : -1, colorC : -1, colorB : -1, colorA : -1 }</e></m></meta>
 		</modifyQuadColors>
 		<begin public="1" get="accessor" set="accessor"><x path="Int"/></begin>
-		<get_begin get="inline" set="null" line="239"><f a=""><x path="Int"/></f></get_begin>
-		<set_begin get="inline" set="null" line="243"><f a="val">
+		<get_begin get="inline" set="null" line="191"><f a=""><x path="Int"/></f></get_begin>
+		<set_begin get="inline" set="null" line="195"><f a="val">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_begin>
-		<fullHit public="1" set="method" line="257"><f a="x:y">
+		<fullHit public="1" set="method" line="209"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Bool"/>
 </f></fullHit>
 		<visible public="1" get="null" set="accessor"><x path="Bool"/></visible>
-		<set_visible get="inline" set="null" line="267"><f a="val">
+		<set_visible get="inline" set="null" line="219"><f a="val">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_visible>
 		<alpha public="1" get="null" set="accessor"><x path="Float"/></alpha>
-		<set_alpha get="inline" set="null" line="283"><f a="val">
+		<set_alpha get="inline" set="null" line="235"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_alpha>
 		<argb public="1" get="null" set="accessor"><x path="Int"/></argb>
-		<set_argb get="inline" set="null" line="292"><f a="col">
+		<set_argb get="inline" set="null" line="244"><f a="col">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_argb>
 		<x public="1" get="accessor" set="accessor"><x path="Float"/></x>
-		<get_x get="inline" set="null" line="300"><f a=""><x path="Float"/></f></get_x>
-		<set_x get="inline" set="null" line="304"><f a="v">
+		<get_x get="inline" set="null" line="252"><f a=""><x path="Float"/></f></get_x>
+		<set_x get="inline" set="null" line="256"><f a="v">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_x>
 		<y public="1" get="accessor" set="accessor"><x path="Float"/></y>
-		<get_y get="inline" set="null" line="310"><f a=""><x path="Float"/></f></get_y>
-		<set_y get="inline" set="null" line="314"><f a="v">
+		<get_y get="inline" set="null" line="262"><f a=""><x path="Float"/></f></get_y>
+		<set_y get="inline" set="null" line="266"><f a="v">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_y>
 		<xy public="1" get="accessor" set="accessor"><t path="trilateral3.structure.XY"/></xy>
-		<get_xy get="inline" set="null" line="320"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy>
-		<set_xy get="inline" set="null" line="324"><f a="val">
+		<get_xy get="inline" set="null" line="272"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy>
+		<set_xy get="inline" set="null" line="276"><f a="val">
 	<t path="trilateral3.structure.XY"/>
 	<t path="trilateral3.structure.XY"/>
 </f></set_xy>
 		<xy0 public="1" get="accessor" set="accessor"><c path="trilateral3.structure.XY0"/></xy0>
-		<get_xy0 get="inline" set="null" line="339"><f a=""><c path="trilateral3.structure.XY0"/></f></get_xy0>
-		<set_xy0 get="inline" set="null" line="343"><f a="val">
+		<get_xy0 get="inline" set="null" line="291"><f a=""><c path="trilateral3.structure.XY0"/></f></get_xy0>
+		<set_xy0 get="inline" set="null" line="295"><f a="val">
 	<c path="trilateral3.structure.XY0"/>
 	<c path="trilateral3.structure.XY0"/>
 </f></set_xy0>
 		<xy1 public="1" get="accessor" set="accessor"><t path="trilateral3.structure.XY"/></xy1>
-		<get_xy1 get="inline" set="null" line="356"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy1>
-		<set_xy1 get="inline" set="null" line="359"><f a="val">
+		<get_xy1 get="inline" set="null" line="308"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy1>
+		<set_xy1 get="inline" set="null" line="311"><f a="val">
 	<t path="trilateral3.structure.XY"/>
 	<t path="trilateral3.structure.XY"/>
 </f></set_xy1>
 		<xy2 public="1" get="accessor" set="accessor"><t path="trilateral3.structure.XY"/></xy2>
-		<get_xy2 get="inline" set="null" line="372"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy2>
-		<set_xy2 get="inline" set="null" line="375"><f a="val">
+		<get_xy2 get="inline" set="null" line="324"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy2>
+		<set_xy2 get="inline" set="null" line="327"><f a="val">
 	<t path="trilateral3.structure.XY"/>
 	<t path="trilateral3.structure.XY"/>
 </f></set_xy2>
 		<uv public="1" get="accessor" set="accessor"><t path="trilateral3.structure.XY"/></uv>
-		<get_uv get="inline" set="null" line="388"><f a=""><t path="trilateral3.structure.XY"/></f></get_uv>
-		<set_uv get="inline" set="null" line="392"><f a="val">
+		<get_uv get="inline" set="null" line="340"><f a=""><t path="trilateral3.structure.XY"/></f></get_uv>
+		<set_uv get="inline" set="null" line="344"><f a="val">
 	<t path="trilateral3.structure.XY"/>
 	<t path="trilateral3.structure.XY"/>
 </f></set_uv>
-		<updatePos public="1" set="method" line="432"><f a=""><x path="Void"/></f></updatePos>
+		<updatePos public="1" set="method" line="384"><f a=""><x path="Void"/></f></updatePos>
 		<new public="1" set="method" line="23">
 			<f a="pen:?start:?wid:?hi" v=":-1.:1000:1000">
 				<c path="trilateral3.drawing.Pen"/>

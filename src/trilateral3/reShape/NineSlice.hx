@@ -146,6 +146,73 @@ class NineSlice {
          quadShaper.modifyQuadColors( color10, color11, color15, color14 );
     }
     public
+    function getBorder():{ bLeft: Float, bRight: Float
+                         , bTop: Float, bBottom: Float }{
+        return { bLeft: left, bRight: rightW, bTop: top, bBottom: bottomH }; 
+    }
+    public
+    function scaleBorder( s: Float, keepDim: Bool ){
+        var b = getBorder();
+        adjustBorder( b.bLeft*s, b.bRight*s, b.bTop*s, b.bBottom*s, keepDim );
+    }
+    public
+    function setBorder( b: { bLeft: Float, bRight: Float, bTop: Float, bBottom: Float }, keepDim ){
+        adjustBorder( b.bLeft, b.bRight, b.bTop, b.bBottom, keepDim );
+    }
+    public
+    function adjustBorder( bLeft: Float, bRight: Float
+                         , bTop: Float, bBottom: Float, keepDim: Bool ){
+        var p = pen.pos;
+        var quadShaper: QuadShaper;
+        var dLeft   = left    - bLeft;
+        var dRight  = rightW  - bRight;
+        var dTop    = top     - bTop;
+        var dBottom = bottomH - bBottom;
+        var oldWid  = wid;
+        var oldHi   = hi;
+        wid         = wid     - dLeft - dRight;
+        hi          = hi      - dTop  - dBottom;
+        left        = bLeft;
+        top         = bTop;
+        // A
+        quadShaper = arrShaper[0];
+        quadShaper.dim( bLeft, bTop );
+        // B 
+        quadShaper = arrShaper[1];
+        quadShaper.x -= dLeft;
+        // C
+        quadShaper = arrShaper[ 2 ];
+        quadShaper.dim( bRight, bTop );
+        quadShaper.x -= bRight;
+        // D
+        quadShaper = arrShaper[ 3 ];
+        quadShaper.y -= dTop;
+        // E -- Middle
+        quadShaper = arrShaper[ 4 ];
+        quadShaper.x -= dLeft;
+        quadShaper.y -= dTop;
+        // F
+        quadShaper = arrShaper[ 5 ];
+        quadShaper.x -= dLeft;
+        quadShaper.y -= dTop;
+        // G
+        quadShaper = arrShaper[ 6 ];
+        quadShaper.dim( bLeft, bBottom );
+        // H 
+        quadShaper = arrShaper[7];
+        quadShaper.x -= dLeft;
+        quadShaper.y -= dTop;
+        // I
+        quadShaper = arrShaper[8];
+        quadShaper.dim( bRight, bBottom );
+        pen.pos = p;
+        if( keepDim ) {
+            dim( oldWid, oldHi );
+        } else {
+            dim( wid, hi );
+        }
+    }
+    public
     function dim( w: Float, h: Float ){
         var p = pen.pos;
         //pen.pos = posMin;
@@ -189,12 +256,10 @@ class NineSlice {
         quadShaper.dim( left, bottomH ); // 
         quadShaper.y = bottomY;
         // H 
-        var ds = posMin;
         quadShaper = arrShaper[7];
         quadShaper.dim( fat, bottomH );
         quadShaper.y = bottomY;
         // I
-        var ds = posMin;
         quadShaper = arrShaper[8];
         quadShaper.dim( rightW, bottomH ); // 
         quadShaper.x = rightX;
