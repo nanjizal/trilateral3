@@ -174,6 +174,22 @@ class QuadShaper {
         var deltaAX = { x: dx, y: dy };
         return deltaAX;
     }
+    public function drawQuadTint(  u: Float, v: Float, w: Float, h: Float
+                                   , color: Int = -1 ): Int {
+        return pen.quad2DFillColors( u, v, w, h, color, color, color, color );
+    }
+    public function drawQuadHorizontalGrad(  u: Float, v: Float, w: Float, h: Float
+                                   , colorA: Int = -1, colorB: Int = -1 ): Int {
+        return pen.quad2DFillColors( u, v, w, h, colorA, colorB, colorB, colorA );
+    }
+    public function drawQuadVerticalGrad(  u: Float, v: Float, w: Float, h: Float
+                                   , colorA: Int = -1, colorD: Int = -1 ): Int {
+        return pen.quad2DFillColors( u, v, w, h, colorA, colorA, colorD, colorD );
+    }
+    public function drawQuadColor(  u: Float, v: Float, w: Float, h: Float
+                                   , color: Int = -1 ): Int {
+        return pen.quad2DFillColors( u, v, w, h, color, color, color, color );
+    }
     public function drawQuadColors(  u: Float, v: Float, w: Float, h: Float
                                    , colorA: Int = -1, colorB: Int = -1
                                    , colorC: Int = -1, colorD: Int = -1 ): Int {

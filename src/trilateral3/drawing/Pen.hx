@@ -322,7 +322,10 @@ class Pen {
                              , width: Float, height: Float
                              , colorA: Int = -1, colorB: Int = -1
                              , colorC: Int = -1, colorD: Int = -1 ): Int {
-        quad2DFillclockwiseColors( ax, ay, ax + width, ay, ax + width, ay + height, ax, ay + height, colorA, colorB, colorC, colorD );
+        quad2DFillclockwiseColors( ax, ay
+                                 , ax + width, ay
+                                 , ax + width, ay + height
+                                 , ax, ay + height, colorA, colorB, colorC, colorD );
         return 2;
     }
     //   A   B
