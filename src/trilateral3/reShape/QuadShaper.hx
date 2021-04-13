@@ -197,10 +197,13 @@ class QuadShaper {
     }
     public function modifyQuadColors( colorA: Int = -1, colorB: Int = -1
                                     , colorC: Int = -1, colorD: Int = -1 ) {
-        this.pen.pos = start;
-        this.pen.paintType.cornerColors( colorA, colorD, colorB );
-        this.pen.pos = start+1;
-        this.pen.paintType.cornerColors( colorB, colorD, colorC );
+        var p = pen.pos;
+        pen.pos    = start;
+        pen.pos = start;
+        pen.paintType.cornerColors( colorA, colorD, colorB );
+        pen.pos = start+1;
+        pen.paintType.cornerColors( colorB, colorD, colorC );
+        pen.pos = p;
     }
     public var begin( get, set ): Int;
     inline
@@ -249,10 +252,13 @@ class QuadShaper {
     public var alpha( never, set ): Float;
     inline
     function set_alpha( val: Float ){
+        var p = pen.pos;
+        pen.pos    = start;
         pen.pos = start;
         tri.alpha = val;
         pen.pos = start + 1;
         tri.alpha = val;
+        pen.pos = p;
         return val;
     }
     public var argb( never, set ): Int;
