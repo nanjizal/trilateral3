@@ -55,12 +55,14 @@ class RangeShaper {
         var hitArray = new Array<Int>();
         var count = 0;
         var hit: Bool = false;
+        var p = pen.pos;
         for( t in range ){
             pen.pos = t;
             hit = tri.fullHit( x, y );
             if( hit ) hitArray[ hitArray.length ] = count;
             count++;
         }
+        pen.pos = p;
         return hitArray;
     }
     public var visible( never, set ): Bool;
@@ -68,13 +70,17 @@ class RangeShaper {
     function set_visible( val: Bool ): Bool {
         if( val ){
             for( i in range ){
+                var p = pen.pos;
                 pen.pos = i;
                 tri.show();
+                pen.pos = p;
             }
         } else {
             for( i in range ){
+                var p = pen.pos;
                 pen.pos = i;
                 tri.hide();
+                pen.pos = p;
             }
         }
         return val;
@@ -82,26 +88,32 @@ class RangeShaper {
     public var alpha( never, set ): Float;
     inline
     function set_alpha( val: Float ){
+        var p = pen.pos;
         for( i in range ){
             pen.pos = i;
             tri.alpha = val;
         }
+        pen.pos = p;
         return val;
     }
     public var argb( never, set ): Int;
     inline 
     function set_argb( col: Int ): Int {
+        var p = pen.pos;
         for( i in range ){
             pen.pos = i;
             tri.argb = col;
         }
+        pen.pos = p;
         return col;
     }
     public function setColor( col: Int ){
+        var p = pen.pos;
         for( i in range ){
             pen.pos = i;
             tri.argb = col;
         }
+        pen.pos = p;
     }
     public var xy( get, set ): XY;
     inline function get_xy(): XY {
@@ -111,11 +123,13 @@ class RangeShaper {
         lastXY = { x: px, y: py };
         var dx = px - xy.x;
         var dy = py - xy.y;
+        var p = pen.pos;
         for( i in range ){
             pen.pos = i;
             tri.x = tri.x + dx;
             tri.y = tri.y + dy;
         }
+        pen.pos = p;
         px = xy.x;
         py = xy.y;
         return xy;
@@ -128,20 +142,24 @@ class RangeShaper {
         lastUV = { x: pu, y: pv };
         var du = pu - xy.x;
         var dv = pv - xy.y;
+        var p = pen.pos;
         for( i in range ){
             pen.pos = i;
             tri.u = tri.u + du;
             tri.v = tri.v + dv;
         }
+        p = pen.pos;
         pu = xy.x;
         pv = xy.y;
         return xy;
     }
     // untested.
     public function rotateAbout( ax: Float, ay: Float, val: Float ){
+        var p = pen.pos;
         for( i in range ){
             pen.pos = i;
             tri.rotateCentre2( tri.x, tri.y, ax, ay, val );
         }
+        pen.pos = p;
     }
 }

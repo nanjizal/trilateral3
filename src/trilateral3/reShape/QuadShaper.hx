@@ -218,34 +218,42 @@ class QuadShaper {
     }
     #if trilateral_hitDebug
     public function distHit( x: Float, y: Float ): Float {
+        var p = pen.pos;
         pen.pos = start;
         var dist0 = tri.distHit( x, y );
         pen.pos = start + 1;
         var dist1 = tri.distHit( x, y ); 
+        pen.pos = p;
         return Math.min( dist0, dist1 );
     }
     #end
     public function fullHit( x: Float, y: Float ){
         var hit = false;
+        var p = pen.pos;
         pen.pos = start;
         hit = tri.fullHit( x, y );
         pen.pos = start + 1;
         if( hit!= true ) hit = tri.fullHit( x, y ); 
+        pen.pos = p;
         return hit;
     }
     public var visible( never, set ): Bool;
     inline
     function set_visible( val: Bool ): Bool {
         if( val ){
+            var p = pen.pos;
             pen.pos = start;
             tri.show();
             pen.pos = start+1;
             tri.show();
+            p = pen.pos;
         } else {
+            var p = pen.pos;
             pen.pos = start;
             tri.hide();
             pen.pos = start+1;
             tri.hide();
+            p = pen.pos;
         }
         return val;
     }
@@ -264,10 +272,12 @@ class QuadShaper {
     public var argb( never, set ): Int;
     inline 
     function set_argb( col: Int ): Int {
+        var p = pen.pos;
         pen.pos = start;
         tri.argb = col;
         pen.pos = start + 1;
         tri.argb = col;
+        pen.pos = p;
         return col;
     }
     public var x( get, set ): Float;
