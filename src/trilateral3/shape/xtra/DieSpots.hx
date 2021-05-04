@@ -10,7 +10,7 @@ abstract DieSpots( Regular ) from Regular to Regular {
         this = regular;
     }
     public inline
-    function six2( rs: RegularShape, dx: Float = 25, dy: Float = 35 ): IndexRange {
+    function six2( rs: RegularShape, dx: Float = 25, dy: Float = 35 ): IteratorRange {
         var s0 = rs.clone();
         s0.x -= dx;
         s0.y -= dy;
@@ -39,10 +39,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         s5.x += dx;
         var c5 = this.circle2( s5 );
         
-        return c0 + c5;
+        return this.range.end();
     }
     public inline
-    function colorSix( rs: RegularShape, dx: Float = 25, dy: Float = 35 ): IndexRange {
+    function colorSix( rs: RegularShape, dx: Float = 25, dy: Float = 35 ): IteratorRange {
         var s0 = rs.clone();
         s0.x -= dx;
         s0.y -= dy;
@@ -71,10 +71,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         s5.x += dx;
         var c5 = this.polygonMultiCorners( s5, ColorWheel24.getWheel(), -0.25, 0.25, 47 );
         
-        return c0 + c5;
+        return this.range.end();
     }
     public inline
-    function five2( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IndexRange {
+    function five2( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IteratorRange {
         var s0 = rs.clone();
         s0.x -= dx;
         s0.y -= dy;
@@ -98,10 +98,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         var s4 = rs.clone();
         var c4 = this.circle2( s4 );
         
-        return c0 + c4;
+        return this.range.end();
     }
     public inline
-    function four2( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IndexRange {
+    function four2( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IteratorRange {
         var s0 = rs.clone();
         s0.x -= dx;
         s0.y -= dy;
@@ -122,10 +122,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         s3.y += dy;
         var c3 = this.circle2( s3 );
         
-        return c0 + c3;
+        return this.range.end();
     }
     public inline
-    function three2( rs: RegularShape, dx: Float =  25, dy: Float = 25 ): IndexRange {
+    function three2( rs: RegularShape, dx: Float =  25, dy: Float = 25 ): IteratorRange {
         var s0 = rs.clone();
         s0.x += dx;
         s0.y -= dy;
@@ -139,10 +139,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         var s2 = rs.clone();
         var c2 = this.circle2( s2 );
         
-        return c0 + c2;
+        return this.range.end();
     }
     public inline
-    function two2( rs: RegularShape, dx: Float =  20, dy: Float = 20 ): IndexRange {
+    function two2( rs: RegularShape, dx: Float =  20, dy: Float = 20 ): IteratorRange {
         var s0 = rs.clone();
         s0.x += dx;
         s0.y -= dy;
@@ -153,16 +153,16 @@ abstract DieSpots( Regular ) from Regular to Regular {
         s1.y += dy;
         var c1 = this.circle2( s1 );
         
-        return c0 + c1;
+        return this.range.end();
     }
     public inline
-    function one2( rs: RegularShape ): IndexRange {
+    function one2( rs: RegularShape ): IteratorRange {
         var s0 = rs.clone();
         var c0 = this.circle2( s0 );
-        return c0;
+        return this.range.end();
     }
     public inline
-    function six( rs: RegularShape, dx: Float = 25, dy: Float = 35 ): IndexRange {
+    function six( rs: RegularShape, dx: Float = 25, dy: Float = 35 ): IteratorRange {
         var s0 = rs.clone();
         s0.x -= dx;
         s0.y -= dy;
@@ -191,10 +191,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         s5.x += dx;
         var c5 = this.circle( s5 );
         
-        return c0 + c5;
+        return this.range.end();
     }
     public inline
-    function five( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IndexRange {
+    function five( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IteratorRange {
         var s0 = rs.clone();
         s0.x -= dx;
         s0.y -= dy;
@@ -218,10 +218,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         var s4 = rs.clone();
         var c4 = this.circle( s4 );
         
-        return c0 + c4;
+        return this.range.end();
     }
     public inline
-    function four( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IndexRange {
+    function four( rs: RegularShape, dx: Float =  30, dy: Float = 30 ): IteratorRange {
         var s0 = rs.clone();
         s0.x -= dx;
         s0.y -= dy;
@@ -242,10 +242,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         s3.y += dy;
         var c3 = this.circle( s3 );
         
-        return c0 + c3;
+        return this.range.end();
     }
     public inline
-    function three( rs: RegularShape, dx: Float =  25, dy: Float = 25 ): IndexRange {
+    function three( rs: RegularShape, dx: Float =  25, dy: Float = 25 ): IteratorRange {
         var s0 = rs.clone();
         s0.x += dx;
         s0.y -= dy;
@@ -259,10 +259,10 @@ abstract DieSpots( Regular ) from Regular to Regular {
         var s2 = rs.clone();
         var c2 = this.circle( s2 );
         
-        return c0 + c2;
+        return this.range.end();
     }
     public inline
-    function two( rs: RegularShape, dx: Float =  20, dy: Float = 20 ): IndexRange {
+    function two( rs: RegularShape, dx: Float =  20, dy: Float = 20 ): IteratorRange {
         var s0 = rs.clone();
         s0.x += dx;
         s0.y -= dy;
@@ -273,24 +273,24 @@ abstract DieSpots( Regular ) from Regular to Regular {
         s1.y += dy;
         var c1 = this.circle( s1 );
         
-        return c0 + c1;
+        return this.range.end();
     }
     public inline
-    function one( rs: RegularShape ): IndexRange {
+    function one( rs: RegularShape ): IteratorRange {
         var s0 = rs.clone();
         var c0 = this.circle( s0 );
-        return c0;
+        return this.range.end();
     }
     public inline
-    function colorOne( rs: RegularShape ): IndexRange {
+    function colorOne( rs: RegularShape ): IteratorRange {
         var s0 = rs.clone();
         var c0 = this.polygonMultiCorners( s0, ColorWheel24.getWheel(), -0.25, 0.25, 47 );
-        return c0;
+        return this.range.end();
     }
     public inline
-    function goldOne( rs: RegularShape ): IndexRange {
+    function goldOne( rs: RegularShape ): IteratorRange {
         var s0 = rs.clone();
         var c0 = this.polygonMultiCorners( s0, [0xffA37E2C,0xffD5A848,0xffE4B77D,0xffD4AF37,0xffFFDF00,0xffFCC200,0xffFFC627,0xffFFCC00,0xffFD8515,0xffC6930A,0xffFFd100,0xffF1B82D,0xffE6BE8A,0xffFFCC33,0xffDA9100,0xffDAA520,0xffC5B358,0xffCBA135, 0xff996515], 0.5, 0.5, 47 );
-        return c0;
+        return this.range.end();
     }
 }

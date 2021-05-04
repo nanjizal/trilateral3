@@ -2,7 +2,6 @@ package trilateral3.geom;
 
 import trilateral3.structure.Triangle3D;
 import trilateral3.matrix.MatrixDozen;
-import trilateral3.shape.IndexRange;
 import trilateral3.matrix.Vertex;
 import trilateral3.geom.Transformer;
 import trilateral3.structure.TriInt;

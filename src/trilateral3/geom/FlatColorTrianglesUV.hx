@@ -2,7 +2,7 @@ package trilateral3.geom;
 import trilateral3.structure.Triangle3D;
 import trilateral3.structure.TriangleUV;
 import trilateral3.matrix.MatrixDozen;
-import trilateral3.shape.IndexRange;
+import trilateral3.shape.IteratorRange;
 import trilateral3.matrix.Vertex;
 import trilateral3.matrix.UV;
 import trilateral3.geom.Transformer;
@@ -57,9 +57,9 @@ abstract FlatColorTrianglesUV( FloatColorTrianglesUV ) from FloatColorTrianglesU
         }
     }
     public
-    function transformRange( m: MatrixDozen, startEnd: IndexRange ){
+    function transformRange( m: MatrixDozen, startEnd: IteratorRange ){
         var start = startEnd.start;
-        var end = startEnd.end;
+        var end = startEnd.max;
         this.pos = start;
         if( end > this.size - 1 ) end == this.size - 1;
         for( i in start...( end + 1 ) ){

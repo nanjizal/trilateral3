@@ -8,7 +8,7 @@ abstract Regular( Pen ) from Pen to Pen {
         this = pen_;
     }
     public inline 
-    function addRegular( rs: RegularShape, style: StyleRegular ): IndexRange {
+    function addRegular( rs: RegularShape, style: StyleRegular ): IteratorRange {
         return switch( style ){
             case TRIANGLE:
                 triangle( rs );
@@ -30,35 +30,34 @@ abstract Regular( Pen ) from Pen to Pen {
     }
     // All shape centred, quick equalateral shapes for simple graphs.
     public inline
-    function triangle( rs: RegularShape ): IndexRange {
+    function triangle( rs: RegularShape ): IteratorRange {
         return polygon( rs, PolyEdge.triangle );
     }
     public inline
-    function triangle2( rs: RegularShape ): IndexRange {
+    function triangle2( rs: RegularShape ): IteratorRange {
         var se0 = triangle( rs );
         var se1 = triangle( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function square( rs: RegularShape ): IndexRange {
+    function square( rs: RegularShape ): IteratorRange {
         return polygon( rs, PolyEdge.tetragon );
     }
     public inline
-    function square2( rs: RegularShape ): IndexRange {
+    function square2( rs: RegularShape ): IteratorRange {
         var se0 = square( rs );
         var se1 = square( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function bar( rs: RegularShape ): IndexRange {
-        var start = this.paintType.size;
+    function bar( rs: RegularShape ): IteratorRange {
+        var start = this.range.current();//this.paintType.size;
         var len = Shaper.rectangle( this.paintType, rs.x - rs.radius, rs.y - rs.radius/4
                                   , rs.radius*2, rs.radius/3 );
         colorTrianglesPos( start, rs.color, len );
-        var end = start + len - 1 ;
-        return { start: start, end: end};
+        return this.range.end();
     }
     // reset pos when interleave TODO: must rethink for non inteleave case
     public inline 
@@ -67,113 +66,110 @@ abstract Regular( Pen ) from Pen to Pen {
         this.colorTriangles( col, len );
     }
     public inline
-    function bar2( rs: RegularShape ): IndexRange {
+    function bar2( rs: RegularShape ): IteratorRange {
         var se0 = bar( rs );
         var se1 = bar( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function pentagon( rs: RegularShape ): IndexRange {
+    function pentagon( rs: RegularShape ): IteratorRange {
         return polygon( rs, PolyEdge.pentagon );
     }
     public inline
-    function pentagon2( rs: RegularShape ): IndexRange {
+    function pentagon2( rs: RegularShape ): IteratorRange {
         var se0 = pentagon( rs );
         var se1 = pentagon( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function hexagon( rs: RegularShape ): IndexRange {
+    function hexagon( rs: RegularShape ): IteratorRange {
         return polygon( rs, PolyEdge.hexagon );
     }
     public inline
-    function hexagon2( rs: RegularShape ): IndexRange {
+    function hexagon2( rs: RegularShape ): IteratorRange {
         var se0 = hexagon( rs );
         var se1 = hexagon( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function circle( rs: RegularShape ): IndexRange {
+    function circle( rs: RegularShape ): IteratorRange {
         return polygon( rs );
     }
     public inline
-    function circle2( rs: RegularShape ): IndexRange {
+    function circle2( rs: RegularShape ): IteratorRange {
         var se0 = circle( rs );
         var se1 = circle( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function circleRadial( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float ): IndexRange {
+    function circleRadial( rs: RegularShape, colorCentre: Int
+                         , rx: Float, ry: Float ):  IteratorRange {
         return polygonRadial( rs, colorCentre, rx, ry );
     }
     public inline
-    function circleRadial2( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float ): IndexRange {
+    function circleRadial2( rs: RegularShape, colorCentre: Int
+                          , rx: Float, ry: Float ):  IteratorRange {
         var se0 = circleRadial( rs, colorCentre, rx, ry );
         var se1 = circleRadial( rs, colorCentre, -rx, -ry );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function roundedSquare( rs: RegularShape  ): IndexRange {
-        var start = this.paintType.size;
+    function roundedSquare( rs: RegularShape  ):  IteratorRange {
+        var start = this.range.current();//this.paintType.size;
         var len = Shaper.roundedRectangle( this.paintType, rs.x - rs.radius, rs.y - rs.radius
                                          , rs.radius*2, rs.radius*2, this.rounded );
         colorTrianglesPos( start, rs.color, len );
-        var end = start + len - 1 ;
-        return { start: start, end: end};
+        return this.range.end();
     }
     public inline
-    function roundedSquare2( rs: RegularShape ): IndexRange {
+    function roundedSquare2( rs: RegularShape ):  IteratorRange {
         var se0 = roundedSquare( rs );
         var se1 = roundedSquare( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline 
-    function star( rs: RegularShape ): IndexRange {
-        var start = this.paintType.size;
+    function star( rs: RegularShape ):  IteratorRange {
+        var start = this.range.current();
         var len = Shaper.overlapStar( this.paintType, rs.x - rs.radius, rs.y - rs.radius
                                     , rs.radius*2, rs.radius*2 );
         colorTrianglesPos( start, rs.color, len );
-        var end = start + len - 1 ;
-        return { start: start, end: end};
+        return this.range.end();
     }
     public inline
-    function star2( rs: RegularShape ): IndexRange {
+    function star2( rs: RegularShape ): IteratorRange {
         var se0 = star( rs );
         var se1 = star( rs );
         this.back( se1 );
-        return se0 + se1;
+        return this.range.end();
     }
     public inline
-    function polygon( rs: RegularShape, sides: Int = 36 ): IndexRange {
-        var start = this.paintType.size;
+    function polygon( rs: RegularShape, sides: Int = 36 ): IteratorRange {
+        var start = this.range.current();
         var len = Shaper.circle( this.paintType, rs.x, rs.y, rs.radius, sides );
         colorTrianglesPos( start, rs.color, len );
-        var end: Int = start + len - 1;
-        var startEnd: IndexRange = { start: start, end: end };
-        return startEnd;
+        return this.range.end();
     }
     public inline
-    function polygonRadial( rs: RegularShape, colorCentre: Int, rx: Float, ry: Float, sides: Int = 36 ): IndexRange {
-        var start = this.paintType.size;
+    function polygonRadial( rs: RegularShape, colorCentre: Int
+                          , rx: Float, ry: Float, sides: Int = 36 ): IteratorRange {
+        var start = this.range.current();
         var len = Shaper.shapeRadial( this.paintType, rs.x, rs.y, rx, ry, rs.radius, sides );
         this.middleColors( colorCentre, rs.color, len );
-        var end: Int = start + len - 1;
-        var startEnd: IndexRange = { start: start, end: end };
-        return startEnd;
+        return this.range.end();
     }
     public inline
-    function circleMultiCorners( rs: RegularShape, arr: Array<Int>, rx: Float = 0, ry: Float = 0 ):IndexRange {
+    function circleMultiCorners( rs: RegularShape, arr: Array<Int>, rx: Float = 0, ry: Float = 0 ): IteratorRange {
         return polygonMultiCorners( rs, arr, rx, ry );
     }
     public inline
-    function polygonMultiCorners( rs: RegularShape, arr: Array<Int>, rx: Float = 0, ry: Float = 0, sides: Int = 36 ): IndexRange {
-        var start = this.paintType.size;
+    function polygonMultiCorners( rs: RegularShape, arr: Array<Int>, rx: Float = 0, ry: Float = 0, sides: Int = 36 ): IteratorRange {
+        var start = this.range.current();
         var len = Shaper.shapeRadial( this.paintType, rs.x, rs.y, rx, ry, rs.radius, sides );
         //this.middleColors( arr[0], rs.color, len );
         var k = 1;
@@ -189,7 +185,6 @@ abstract Regular( Pen ) from Pen to Pen {
             }
         }
         this.cornerColors( rs.color, arr_[k-1], arr[0] );
-        var startEnd: IndexRange = { start: start, end: end };
-        return startEnd;
+        return this.range.end();
     }
 }

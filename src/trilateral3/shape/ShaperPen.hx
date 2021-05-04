@@ -1,7 +1,6 @@
 package trilateral3.shape;
 import trilateral3.drawing.PaintType;
 import trilateral3.math.Algebra;
-import trilateral3.shape.IndexRange;
 import trilateral3.structure.Quad2D;
 import trilateral3.structure.XY;
 import trilateral3.Trilateral;

@@ -4,7 +4,6 @@ import trilateral3.drawing.ColorAbstract;
 import trilateral3.drawing.TriangleAbstract;
 import trilateral3.drawing.Color3Abstract;
 import trilateral3.shape.IteratorRange;
-import trilateral3.shape.IndexRange;
 import trilateral3.geom.FlatColorTriangles;
 import trilateral3.matrix.Vertex;
 import trilateral3.matrix.MatrixDozen;
@@ -39,10 +38,11 @@ class Pen {
     public var range:        PenRangeFactory;
     public function new( paintType_: PaintAbstract ){
         paintType  = paintType_;
+        trace( 'init pen ' );
         range = new PenRangeFactory( this );
     }
     public inline
-    function transformRange( trans: MatrixDozen, ir: IndexRange ) {
+    function transformRange( trans: MatrixDozen, ir: IteratorRange ) {
         this.paintType.transformRange( trans, ir );
     }
     public var textureXYWH( never, set ): XYWH;
@@ -53,17 +53,17 @@ class Pen {
         return r;
     }
     public inline
-    function up( ir: IndexRange ){
+    function up( ir: IteratorRange ){
         var trans = translateZ( dz/2 );
         transformRange( trans, ir );
     }
     public inline
-    function down( ir: IndexRange ){
+    function down( ir: IteratorRange ){
         var trans = translateZ( -dz/2 );
         transformRange( trans, ir );
     }
     public inline
-    function back( ir: IndexRange ){
+    function back( ir: IteratorRange ){
         transformRange( transBack(), ir );
     }
     inline
@@ -481,11 +481,11 @@ class Pen {
         return paintType.color3current;
     } 
     inline public
-    function copyRange( otherPen: Pen, startEnd: IndexRange, vec: Vertex ): IndexRange     {
+    function copyRange( otherPen: Pen, startEnd: IteratorRange, vec: Vertex ): IteratorRange {
         var start = this.pos;
         otherPen.pos = startEnd.start;
         var colors: TriInt;
-        for( i in startEnd.start...(startEnd.end+1) ){
+        for( i in startEnd.start...(startEnd.max+1) ){
             var tri: Triangle3D = otherPen.paintType.getTriangle3D();
             this.paintType.triangle( tri.a.x + vec.x, tri.a.y + vec.y, tri.a.z + vec.z
                        , tri.b.x + vec.x, tri.b.y + vec.y, tri.b.z + vec.z
@@ -494,8 +494,6 @@ class Pen {
             //colors = otherPen.colorType.getTriInt();
             //cornerColors( colors.a, colors.b, colors.c );
         }
-        var end = Std.int( this.pos - 1 );
-        var s0: IndexRange = { start: Std.int( start ), end: end };
-        return s0;
+        return Std.int( start )...Std.int( this.pos - 1 );
     }
 }

@@ -3,7 +3,7 @@ import trilateral3.matrix.MatrixDozen;
 import trilateral3.structure.Triangle3D;
 import trilateral3.structure.TriangleUV;
 import trilateral3.drawing.TriangleAbstract;
-import trilateral3.shape.IndexRange;
+import trilateral3.shape.IteratorRange;
 typedef DrawType = {
     var triangle: ( ax_: Float, ay_: Float, az_: Float
                   , bx_: Float, by_: Float, bz_: Float
@@ -15,7 +15,7 @@ typedef DrawType = {
     var getTriangle3D:()->Triangle3D;
     var ?getTriangleUV:()->TriangleUV;
     var transform: ( MatrixDozen ) -> Void;
-    var transformRange: ( m: MatrixDozen, startEnd: IndexRange ) -> Void;
+    var transformRange: ( m: MatrixDozen, startEnd: IteratorRange ) -> Void;
     var next: ()->Float;
     var hasNext: ()->Bool;
     var ?triangleCurrent:   TriangleAbstract;
