@@ -17,8 +17,8 @@ class QuadShaper {
     // TODO: startU, startV need more thought, used for setting up offset rotation.
     public var startU: Float;
     public var startV: Float;
-    public var width: Float;
-    public var height: Float;
+    var width: Float;
+    var height: Float;
     public var name:        String;
     public function new( pen: Pen, start: Float = -1., wid: Float = 1000, hi: Float = 1000 ){
         if( start == -1 ) start = pen.pos;
@@ -44,6 +44,26 @@ class QuadShaper {
         var q = pen.quad2DFill( u, v, w, h );
         return q;
     }
+    public var w( get, set ): Float;
+    inline
+    function get_w(): Float {
+        return width;
+    }
+    inline
+    function set_w( w: Float ): Float {
+        dim( w, height );
+        return width;
+    }
+    public var h( get, set ): Float;
+    inline
+    function get_h(): Float {
+        return height;
+    }
+    inline
+    function set_h( h: Float ){
+        dim( width, h );
+        return height;
+    }
     public function dim( dx: Float, dy: Float ){
         //
         //   A          C
@@ -57,7 +77,7 @@ class QuadShaper {
         var origY = o.a.y;
         var by = origY + dy;
         var cx = origX + dx;
-        pen.posTriangle2D( origX, o.a.y, o.b.x, by, cx, o.c.y );
+        pen.posTriangle2D( origX, origY, o.b.x, by, cx, o.c.y );
         //              A
         //               
         //   B          C
@@ -70,7 +90,8 @@ class QuadShaper {
         var by = origY + dy;
         var cy = origY + dy;
         pen.posTriangle2D( ax, o.a.y, o.b.x, by, cx, cy );
-        
+        width = dx;
+        height = dy;
         pen.pos = p;
     }
     /*

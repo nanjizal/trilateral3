@@ -14,6 +14,7 @@ import trilateral3.structure.TriInt;
 import trilateral3.structure.XYWH;
 import trilateral3.structure.XY;
 import trilateral3.math.Algebra;
+import trilateral3.shape.PenRangeFactory;
 #if cpp
 import cpp.Float32;
 #end
@@ -35,8 +36,10 @@ class Pen {
     public var rotateY:      Float -> MatrixDozen;
     public var rotateZ:      Float -> MatrixDozen;
     public var indices:      Array<Int> = [];
+    public var range:        PenRangeFactory;
     public function new( paintType_: PaintAbstract ){
         paintType  = paintType_;
+        range = new PenRangeFactory( this );
     }
     public inline
     function transformRange( trans: MatrixDozen, ir: IndexRange ) {

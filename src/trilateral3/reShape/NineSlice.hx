@@ -212,20 +212,40 @@ class NineSlice {
             dim( wid, hi );
         }
     }
+    public var w( get, set ): Float;
+    inline
+    function get_w(): Float {
+        return wid;
+    }
+    inline
+    function set_w( w: Float ): Float {
+        dim( w, hi );
+        return wid;
+    }
+    public var h( get, set ): Float;
+    inline
+    function get_h(): Float {
+        return hi;
+    }
+    inline
+    function set_h( h: Float ){
+        dim( wid, h );
+        return hi;
+    }
     public
-    function dim( w: Float, h: Float ){
+    function dim( w_: Float, h_: Float ){
         var p = pen.pos;
         //pen.pos = posMin;
         var rW = rightW;
         var bH = bottomH;
         var borderW = left + rW;
         var borderH = top + bH;
-        if( w < borderW || h < borderH ) 
+        if( w_ < borderW || h_ < borderH ) 
             throw new haxe.Exception( 'dimensions need to be larger');
-        fat  = w - borderW;
-        tall = h - borderH;
-        wid = w;
-        hi = h;
+        fat  = w_ - borderW;
+        tall = h_ - borderH;
+        wid = w_;
+        hi = h_;
         //   note  '///' lines needed in scale implementations..
         var quadShaper: QuadShaper;
         // A

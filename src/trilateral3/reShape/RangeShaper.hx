@@ -10,10 +10,12 @@ class RangeShaper {
     var tri: TrianglesShaper;
     var pen:         Pen;
     public var range:  IteratorRange;
-    var px = 10000000000;
-    var py = 10000000000;
-    var pu = 10000000000;
-    var pv = 10000000000;
+    var px = 10000000000.;
+    var py = 10000000000.;
+    var pw = 0.;
+    var ph = 0.;
+    var pu = 10000000000.;
+    var pv = 10000000000.;
     
     public var lastXY: XY;
     public var lastUV: XY;
@@ -28,8 +30,21 @@ class RangeShaper {
         tri  = new TrianglesShaper( pen, wid, hi );
         for( i in range ){
             pen.pos  = i;
-            if( tri.x < px ) px = tri.x;
-            if( tri.y < py ) py = tri.y;
+            var tx = tri.x;
+            var ty = tri.y;
+            // TODO: check py and ph code is not negative
+            if( tx < px ) {
+                px = tx;
+            } else {
+                var tw = tx - px;
+                if( tw > pw ) pw = tw; 
+            }
+            if( ty < py ) {
+                py = ty;
+            } else {
+                var th = ty - py;
+                if( th > ph ) ph = th; 
+            }
             if( tri.currUV != null ){
                 if( tri.u < pu ) pu = tri.u;
                 if( tri.v < pv ) pv = tri.v;
