@@ -1,9 +1,73 @@
 package trilateral3.reShape;
 
+class DepthArrayLen<T>{
+    var rangeLen: Int;
+    var depthArray: DepthArray<T>;
+    public function new( rangeLen: Int ){
+        depthArray = [];
+        this.rangeLen = rangeLen;
+    }
+    public inline 
+    function total(): Int {
+        var len = depthArray.length;
+        return ( len == 0 )? len: Std.int( len / rangeLen );
+    }
+    public inline
+    function getItem( start: Int ){
+        return depthArray.getItem( start, rangeLen );
+    }
+    public inline
+    function getIndex( i: Int ){
+        return i*rangeLen;
+    }
+    public inline
+    function sendForwad( start: Int ){
+        depthArray.rangeToStart( start, rangeLen );
+    }
+    public inline
+    function sendBack( start: Int ){
+        depthArray.rangeToEnd( start, rangeLen );
+    }
+    public inline
+    function swap( a: Int, b: Int ){
+        depthArray.rangeSwap( a, b, rangeLen );
+    }
+}
+
+class DepthArray1<T> extends DepthArrayLen<T> {
+    public function new(){
+        super(1);
+    }
+}
+
+class DepthArray2<T> extends DepthArrayLen<T> {
+    public function new(){
+        super(2);
+    }
+}
+class DepthArray24<T> extends DepthArrayLen<T> {
+    public function new(){
+        super(24);
+    }
+}
+
+
 @:forward
 abstract DepthArray<T>( Array<T> )to Array<T> from Array<T> {
     public inline function new( arr: Array<T> ){
         this = arr;
+    }
+    public inline
+    function getItem( starting: Int, totalLen: Int  ){
+        var ending = starting + totalLen;
+        var temp = [];
+        var count = 0;
+        // store values to move
+        for( i in starting...ending ){
+            temp[ count ] = this[ i ];
+            count++;
+        }
+        return temp;
     }
     // depth sort, ugly low level
     public

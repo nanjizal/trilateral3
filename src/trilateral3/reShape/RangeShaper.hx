@@ -50,6 +50,7 @@ class RangeShaper {
                 if( tri.v < pv ) pv = tri.v;
             }
         }
+        pen.pos = range.max;
     }
     
     public var begin( get, set ): Int;
@@ -79,6 +80,11 @@ class RangeShaper {
         }
         pen.pos = p;
         return hitArray;
+    }
+    public
+    function wasHit( x: Float, y: Float ){
+        var hits = fullHit( x, y );
+        return hits.length != 0;
     }
     public var visible( never, set ): Bool;
     inline
@@ -141,8 +147,8 @@ class RangeShaper {
         var p = pen.pos;
         for( i in range ){
             pen.pos = i;
-            tri.x = tri.x + dx;
-            tri.y = tri.y + dy;
+            tri.x = tri.x - dx;
+            tri.y = tri.y - dy;
         }
         pen.pos = p;
         px = xy.x;

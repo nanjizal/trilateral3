@@ -16849,32 +16849,80 @@
 			<meta><m n=":value"><e>{ useGLScale : true }</e></m></meta>
 		</new>
 	</class>
+	<class path="trilateral3.reShape.DepthArrayLen" params="T" file="src/trilateral3/reShape/DepthArray.hx" module="trilateral3.reShape.DepthArray">
+		<rangeLen><x path="Int"/></rangeLen>
+		<depthArray><x path="trilateral3.reShape.DepthArray"><c path="trilateral3.reShape.DepthArrayLen.T"/></x></depthArray>
+		<total public="1" get="inline" set="null" line="11"><f a=""><x path="Int"/></f></total>
+		<getItem public="1" get="inline" set="null" line="16"><f a="start">
+	<x path="Int"/>
+	<c path="Array"><c path="trilateral3.reShape.DepthArrayLen.T"/></c>
+</f></getItem>
+		<getIndex public="1" get="inline" set="null" line="20"><f a="i">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></getIndex>
+		<sendForwad public="1" get="inline" set="null" line="24"><f a="start">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></sendForwad>
+		<sendBack public="1" get="inline" set="null" line="28"><f a="start">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></sendBack>
+		<swap public="1" get="inline" set="null" line="32"><f a="a:b">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></swap>
+		<new public="1" set="method" line="6"><f a="rangeLen">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<class path="trilateral3.reShape.DepthArray1" params="T" file="src/trilateral3/reShape/DepthArray.hx" module="trilateral3.reShape.DepthArray">
+		<extends path="trilateral3.reShape.DepthArrayLen"><c path="trilateral3.reShape.DepthArray1.T"/></extends>
+		<new public="1" set="method" line="38"><f a=""><x path="Void"/></f></new>
+	</class>
+	<class path="trilateral3.reShape.DepthArray2" params="T" file="src/trilateral3/reShape/DepthArray.hx" module="trilateral3.reShape.DepthArray">
+		<extends path="trilateral3.reShape.DepthArrayLen"><c path="trilateral3.reShape.DepthArray2.T"/></extends>
+		<new public="1" set="method" line="44"><f a=""><x path="Void"/></f></new>
+	</class>
+	<class path="trilateral3.reShape.DepthArray24" params="T" file="src/trilateral3/reShape/DepthArray.hx" module="trilateral3.reShape.DepthArray">
+		<extends path="trilateral3.reShape.DepthArrayLen"><c path="trilateral3.reShape.DepthArray24.T"/></extends>
+		<new public="1" set="method" line="49"><f a=""><x path="Void"/></f></new>
+	</class>
 	<abstract path="trilateral3.reShape.DepthArray" params="T" file="src/trilateral3/reShape/DepthArray.hx">
 		<from><icast><c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c></icast></from>
 		<this><c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c></this>
 		<to><icast><c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c></icast></to>
 		<meta><m n=":forward"/></meta>
 		<impl><class path="trilateral3.reShape._DepthArray.DepthArray_Impl_" params="" file="src/trilateral3/reShape/DepthArray.hx" private="1" module="trilateral3.reShape.DepthArray" final="1">
-	<_new public="1" get="inline" set="null" line="5" static="1">
+	<_new public="1" get="inline" set="null" line="57" static="1">
 		<f a="arr">
 			<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 			<x path="trilateral3.reShape.DepthArray"><c path="trilateral3.reShape.DepthArray.T"/></x>
 		</f>
 		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<rangeToEnd public="1" set="method" line="10" static="1"><f a="this:starting:totalLen">
+	<getItem public="1" get="inline" set="null" line="61" static="1"><f a="this:starting:totalLen">
+	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
+	<x path="Int"/>
+	<x path="Int"/>
+	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
+</f></getItem>
+	<rangeToEnd public="1" set="method" line="74" static="1"><f a="this:starting:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></rangeToEnd>
-	<rangeToStart public="1" get="inline" set="null" line="31" static="1"><f a="this:starting:totalLen">
+	<rangeToStart public="1" get="inline" set="null" line="95" static="1"><f a="this:starting:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></rangeToStart>
-	<rangeSwap public="1" get="inline" set="null" line="58" static="1"><f a="this:start0:start1:totalLen">
+	<rangeSwap public="1" get="inline" set="null" line="122" static="1"><f a="this:start0:start1:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -16885,26 +16933,32 @@
 </class></impl>
 	</abstract>
 	<class path="trilateral3.reShape._DepthArray.DepthArray_Impl_" params="" file="src/trilateral3/reShape/DepthArray.hx" private="1" module="trilateral3.reShape.DepthArray" final="1">
-		<_new public="1" get="inline" set="null" line="5" static="1">
+		<_new public="1" get="inline" set="null" line="57" static="1">
 			<f a="arr">
 				<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 				<x path="trilateral3.reShape.DepthArray"><c path="trilateral3.reShape.DepthArray.T"/></x>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<rangeToEnd public="1" set="method" line="10" static="1"><f a="this:starting:totalLen">
+		<getItem public="1" get="inline" set="null" line="61" static="1"><f a="this:starting:totalLen">
+	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
+	<x path="Int"/>
+	<x path="Int"/>
+	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
+</f></getItem>
+		<rangeToEnd public="1" set="method" line="74" static="1"><f a="this:starting:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></rangeToEnd>
-		<rangeToStart public="1" get="inline" set="null" line="31" static="1"><f a="this:starting:totalLen">
+		<rangeToStart public="1" get="inline" set="null" line="95" static="1"><f a="this:starting:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></rangeToStart>
-		<rangeSwap public="1" get="inline" set="null" line="58" static="1"><f a="this:start0:start1:totalLen">
+		<rangeSwap public="1" get="inline" set="null" line="122" static="1"><f a="this:start0:start1:totalLen">
 	<c path="Array"><c path="trilateral3.reShape.DepthArray.T"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -17604,6 +17658,132 @@
 		</new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
+	<class path="trilateral3.reShape.RangeDepth" params="" file="src/trilateral3/reShape/RangeDepth.hx">
+		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
+		<orderCount public="1" expr="new DepthArray(new Array&lt;Int&gt;())">
+			<x path="trilateral3.reShape.DepthArray"><x path="Int"/></x>
+			<meta><m n=":value"><e><![CDATA[new DepthArray(new Array<Int>())]]></e></m></meta>
+		</orderCount>
+		<depthPieces public="1" expr="new DepthArray(new Array&lt;RangeShaper&gt;())">
+			<x path="trilateral3.reShape.DepthArray"><c path="trilateral3.reShape.RangeShaper"/></x>
+			<meta><m n=":value"><e><![CDATA[new DepthArray(new Array<RangeShaper>())]]></e></m></meta>
+		</depthPieces>
+		<rangeLen public="1"><x path="Int"/></rangeLen>
+		<count public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</count>
+		<startRange public="1"><x path="Int"/></startRange>
+		<range public="1"><x path="trilateral3.shape.IteratorRange"/></range>
+		<traceBegins public="1" set="method" line="23"><f a="w">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></traceBegins>
+		<traceOrderCount public="1" set="method" line="37"><f a="w">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></traceOrderCount>
+		<addShape public="1" set="method" line="51"><f a="rangeShaper">
+	<c path="trilateral3.reShape.RangeShaper"/>
+	<x path="Void"/>
+</f></addShape>
+		<getShape public="1" set="method" line="60"><f a="countNo">
+	<x path="Int"/>
+	<c path="trilateral3.reShape.RangeShaper"/>
+</f></getShape>
+		<depthIndex public="1" get="inline" set="null" line="64"><f a="countNo">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></depthIndex>
+		<deltaXY public="1" set="method" line="68"><f a="id:dx:dy">
+	<x path="Int"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></deltaXY>
+		<setXY public="1" set="method" line="75"><f a="id:x:y">
+	<x path="Int"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></setXY>
+		<getXY public="1" set="method" line="78"><f a="id">
+	<x path="Int"/>
+	<t path="trilateral3.structure.XY"/>
+</f></getXY>
+		<argbShape public="1" set="method" line="81"><f a="id:argb">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></argbShape>
+		<alphaShape public="1" set="method" line="84"><f a="id:alpha">
+	<x path="Int"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></alphaShape>
+		<hideShape public="1" set="method" line="87"><f a="id">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></hideShape>
+		<showShape public="1" set="method" line="90"><f a="id">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></showShape>
+		<fullHit public="1" set="method" line="94"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<c path="Array"><x path="Int"/></c>
+</f></fullHit>
+		<toTopCount public="1" set="method" line="109"><f a="countNo">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></toTopCount>
+		<getLast public="1" set="method" line="114"><f a=""><x path="Int"/></f></getLast>
+		<getPenultimate public="1" set="method" line="118"><f a=""><x path="Int"/></f></getPenultimate>
+		<swap public="1" set="method" line="122"><f a="pieceNo0:pieceNo1">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></swap>
+		<toTop public="1" set="method" line="131"><f a="pieceNo">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></toTop>
+		<justLocalTop public="1" set="method" line="140"><f a="countNo">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></justLocalTop>
+		<toBottomCount public="1" set="method" line="147"><f a="countNo">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></toBottomCount>
+		<toBottom public="1" set="method" line="152"><f a="pieceNo">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></toBottom>
+		<updateStarts set="method" line="161"><f a=""><x path="Void"/></f></updateStarts>
+		<setStart get="inline" set="null" line="171"><f a="v:len">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="trilateral3.shape.IteratorRange"/>
+</f></setStart>
+		<setEnd get="inline" set="null" line="175"><f a="v:len">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="trilateral3.shape.IteratorRange"/>
+</f></setEnd>
+		<swapInternal get="inline" set="null" line="179"><f a="v0:v1:len">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Bool"/>
+</f></swapInternal>
+		<new public="1" set="method" line="15"><f a="pen_:rangeLen_">
+	<c path="trilateral3.drawing.Pen"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
+	</class>
 	<class path="trilateral3.reShape.RangeShaper" params="" file="src/trilateral3/reShape/RangeShaper.hx">
 		<tri><c path="trilateral3.reShape.TrianglesShaper"/></tri>
 		<pen><c path="trilateral3.drawing.Pen"/></pen>
@@ -17638,48 +17818,53 @@
 		<start><x path="Int"/></start>
 		<name public="1"><c path="String"/></name>
 		<begin public="1" get="accessor" set="accessor"><x path="Int"/></begin>
-		<get_begin get="inline" set="null" line="57"><f a=""><x path="Int"/></f></get_begin>
-		<set_begin get="inline" set="null" line="61"><f a="val">
+		<get_begin get="inline" set="null" line="58"><f a=""><x path="Int"/></f></get_begin>
+		<set_begin get="inline" set="null" line="62"><f a="val">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_begin>
-		<fullHit public="1" set="method" line="69"><f a="x:y">
+		<fullHit public="1" set="method" line="70"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<c path="Array"><x path="Int"/></c>
 </f></fullHit>
+		<wasHit public="1" set="method" line="85"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></wasHit>
 		<visible public="1" get="null" set="accessor"><x path="Bool"/></visible>
-		<set_visible get="inline" set="null" line="85"><f a="val">
+		<set_visible get="inline" set="null" line="91"><f a="val">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_visible>
 		<alpha public="1" get="null" set="accessor"><x path="Float"/></alpha>
-		<set_alpha get="inline" set="null" line="105"><f a="val">
+		<set_alpha get="inline" set="null" line="111"><f a="val">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_alpha>
 		<argb public="1" get="null" set="accessor"><x path="Int"/></argb>
-		<set_argb get="inline" set="null" line="116"><f a="col">
+		<set_argb get="inline" set="null" line="122"><f a="col">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_argb>
-		<setColor public="1" set="method" line="125"><f a="col">
+		<setColor public="1" set="method" line="131"><f a="col">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setColor>
 		<xy public="1" get="accessor" set="accessor"><t path="trilateral3.structure.XY"/></xy>
-		<get_xy get="inline" set="null" line="134"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy>
-		<set_xy get="inline" set="null" line="137"><f a="xy">
+		<get_xy get="inline" set="null" line="140"><f a=""><t path="trilateral3.structure.XY"/></f></get_xy>
+		<set_xy get="inline" set="null" line="143"><f a="xy">
 	<t path="trilateral3.structure.XY"/>
 	<t path="trilateral3.structure.XY"/>
 </f></set_xy>
 		<uv public="1" get="accessor" set="accessor"><t path="trilateral3.structure.XY"/></uv>
-		<get_uv get="inline" set="null" line="153"><f a=""><t path="trilateral3.structure.XY"/></f></get_uv>
-		<set_uv get="inline" set="null" line="156"><f a="xy">
+		<get_uv get="inline" set="null" line="159"><f a=""><t path="trilateral3.structure.XY"/></f></get_uv>
+		<set_uv get="inline" set="null" line="162"><f a="xy">
 	<t path="trilateral3.structure.XY"/>
 	<t path="trilateral3.structure.XY"/>
 </f></set_uv>
-		<rotateAbout public="1" set="method" line="172"><f a="ax:ay:val">
+		<rotateAbout public="1" set="method" line="178"><f a="ax:ay:val">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
