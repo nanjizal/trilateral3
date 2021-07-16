@@ -1290,6 +1290,1023 @@
 		<meta><m n=":transitive"/></meta>
 		<impl><class path="_UInt.UInt_Impl_" params="" file="/usr/local/lib/haxe/std/UInt.hx" private="1" module="UInt" final="1"><meta><m n=":keep"/></meta></class></impl>
 	</abstract>
+	<abstract path="cornerContour.ColorWheel24" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/ColorWheel24.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="cornerContour._ColorWheel24.ColorWheel24_Impl_" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/ColorWheel24.hx" private="1" module="cornerContour.ColorWheel24" extern="1" final="1">
+	<redRadish public="1" get="inline" set="null" expr="cast 0xffef3c42" line="5" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xffef3c42</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</redRadish>
+	<orangeSoda public="1" get="inline" set="null" expr="cast 0xfff25e40" line="6" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xfff25e40</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</orangeSoda>
+	<gokuOrange public="1" get="inline" set="null" expr="cast 0xfff2823a" line="7" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xfff2823a</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</gokuOrange>
+	<highlighterOrange public="1" get="inline" set="null" expr="cast 0xfff69537" line="8" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xfff69537</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</highlighterOrange>
+	<carona public="1" get="inline" set="null" expr="cast 0xfff4aa2f" line="9" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xfff4aa2f</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</carona>
+	<solarPower public="1" get="inline" set="null" expr="cast 0xfff6c137" line="10" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xfff6c137</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</solarPower>
+	<flirtatious public="1" get="inline" set="null" expr="cast 0xfffad435" line="11" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xfffad435</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</flirtatious>
+	<yellowBellied public="1" get="inline" set="null" expr="cast 0xfffdf32f" line="12" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xfffdf32f</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</yellowBellied>
+	<daffodil public="1" get="inline" set="null" expr="cast 0xffffff2d" line="13" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xffffff2d</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</daffodil>
+	<spoiledEgg public="1" get="inline" set="null" expr="cast 0xffdff429" line="14" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xffdff429</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</spoiledEgg>
+	<peraRocha public="1" get="inline" set="null" expr="cast 0xffa7d52a" line="15" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xffa7d52a</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</peraRocha>
+	<appleGreen public="1" get="inline" set="null" expr="cast 0xff79c725" line="16" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff79c725</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</appleGreen>
+	<fieldGreen public="1" get="inline" set="null" expr="cast 0xff53c025" line="17" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff53c025</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</fieldGreen>
+	<parisGreen public="1" get="inline" set="null" expr="cast 0xff52c67f" line="18" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff52c67f</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</parisGreen>
+	<maximumBlue public="1" get="inline" set="null" expr="cast 0xff4daecf" line="19" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff4daecf</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</maximumBlue>
+	<blueTourmaline public="1" get="inline" set="null" expr="cast 0xff4592ca" line="20" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff4592ca</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</blueTourmaline>
+	<celestialPlum public="1" get="inline" set="null" expr="cast 0xff3f77c4" line="21" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff3f77c4</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</celestialPlum>
+	<freeSpeechBlue public="1" get="inline" set="null" expr="cast 0xff3a57bf" line="22" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff3a57bf</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</freeSpeechBlue>
+	<earlySpringNight public="1" get="inline" set="null" expr="cast 0xff3438bd" line="23" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff3438bd</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</earlySpringNight>
+	<blueDepression public="1" get="inline" set="null" expr="cast 0xff4b27bd" line="24" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff4b27bd</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</blueDepression>
+	<nebulaFuchsia public="1" get="inline" set="null" expr="cast 0xff7328b6" line="25" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xff7328b6</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</nebulaFuchsia>
+	<fuchsiaFlair public="1" get="inline" set="null" expr="cast 0xffb528c5" line="26" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xffb528c5</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</fuchsiaFlair>
+	<royalFuchsia public="1" get="inline" set="null" expr="cast 0xffc32a94" line="27" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xffc32a94</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</royalFuchsia>
+	<fuchsiaPurple public="1" get="inline" set="null" expr="cast 0xffdd3371" line="28" static="1">
+		<x path="cornerContour.ColorWheel24"/>
+		<meta>
+			<m n=":value"><e>cast 0xffdd3371</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</fuchsiaPurple>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="cornerContour._ColorWheel24.ColorWheel24_Impl_" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/ColorWheel24.hx" private="1" module="cornerContour.ColorWheel24" extern="1" final="1">
+		<redRadish public="1" get="inline" set="null" expr="cast 0xffef3c42" line="5" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xffef3c42</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</redRadish>
+		<orangeSoda public="1" get="inline" set="null" expr="cast 0xfff25e40" line="6" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xfff25e40</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</orangeSoda>
+		<gokuOrange public="1" get="inline" set="null" expr="cast 0xfff2823a" line="7" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xfff2823a</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</gokuOrange>
+		<highlighterOrange public="1" get="inline" set="null" expr="cast 0xfff69537" line="8" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xfff69537</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</highlighterOrange>
+		<carona public="1" get="inline" set="null" expr="cast 0xfff4aa2f" line="9" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xfff4aa2f</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</carona>
+		<solarPower public="1" get="inline" set="null" expr="cast 0xfff6c137" line="10" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xfff6c137</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</solarPower>
+		<flirtatious public="1" get="inline" set="null" expr="cast 0xfffad435" line="11" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xfffad435</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</flirtatious>
+		<yellowBellied public="1" get="inline" set="null" expr="cast 0xfffdf32f" line="12" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xfffdf32f</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</yellowBellied>
+		<daffodil public="1" get="inline" set="null" expr="cast 0xffffff2d" line="13" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xffffff2d</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</daffodil>
+		<spoiledEgg public="1" get="inline" set="null" expr="cast 0xffdff429" line="14" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xffdff429</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</spoiledEgg>
+		<peraRocha public="1" get="inline" set="null" expr="cast 0xffa7d52a" line="15" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xffa7d52a</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</peraRocha>
+		<appleGreen public="1" get="inline" set="null" expr="cast 0xff79c725" line="16" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff79c725</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</appleGreen>
+		<fieldGreen public="1" get="inline" set="null" expr="cast 0xff53c025" line="17" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff53c025</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</fieldGreen>
+		<parisGreen public="1" get="inline" set="null" expr="cast 0xff52c67f" line="18" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff52c67f</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</parisGreen>
+		<maximumBlue public="1" get="inline" set="null" expr="cast 0xff4daecf" line="19" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff4daecf</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</maximumBlue>
+		<blueTourmaline public="1" get="inline" set="null" expr="cast 0xff4592ca" line="20" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff4592ca</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</blueTourmaline>
+		<celestialPlum public="1" get="inline" set="null" expr="cast 0xff3f77c4" line="21" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff3f77c4</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</celestialPlum>
+		<freeSpeechBlue public="1" get="inline" set="null" expr="cast 0xff3a57bf" line="22" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff3a57bf</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</freeSpeechBlue>
+		<earlySpringNight public="1" get="inline" set="null" expr="cast 0xff3438bd" line="23" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff3438bd</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</earlySpringNight>
+		<blueDepression public="1" get="inline" set="null" expr="cast 0xff4b27bd" line="24" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff4b27bd</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</blueDepression>
+		<nebulaFuchsia public="1" get="inline" set="null" expr="cast 0xff7328b6" line="25" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xff7328b6</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</nebulaFuchsia>
+		<fuchsiaFlair public="1" get="inline" set="null" expr="cast 0xffb528c5" line="26" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xffb528c5</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</fuchsiaFlair>
+		<royalFuchsia public="1" get="inline" set="null" expr="cast 0xffc32a94" line="27" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xffc32a94</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</royalFuchsia>
+		<fuchsiaPurple public="1" get="inline" set="null" expr="cast 0xffdd3371" line="28" static="1">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta>
+				<m n=":value"><e>cast 0xffdd3371</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</fuchsiaPurple>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<class path="cornerContour.Contour" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/Contour.hx">
+		<smallDotScale get="inline" set="null" expr="0.07" line="83" static="1">
+			<x path="Float"/>
+			<meta><m n=":value"><e>0.07</e></m></meta>
+		</smallDotScale>
+		<thetaCompute get="inline" set="null" line="165" static="1"><f a="px:py:qx:qy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></thetaCompute>
+		<dist get="inline" set="null" line="169" static="1"><f a="px:py:qx:qy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></dist>
+		<debugCol0 public="1" expr="redRadish">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>redRadish</e></m></meta>
+		</debugCol0>
+		<debugCol1 public="1" expr="gokuOrange">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>gokuOrange</e></m></meta>
+		</debugCol1>
+		<debugCol2 public="1" expr="carona">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>carona</e></m></meta>
+		</debugCol2>
+		<debugCol3 public="1" expr="flirtatious">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>flirtatious</e></m></meta>
+		</debugCol3>
+		<debugCol4 public="1" expr="daffodil">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>daffodil</e></m></meta>
+		</debugCol4>
+		<debugCol5 public="1" expr="peraRocha">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>peraRocha</e></m></meta>
+		</debugCol5>
+		<debugCol6 public="1" expr="fieldGreen">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>fieldGreen</e></m></meta>
+		</debugCol6>
+		<debugCol7 public="1" expr="maximumBlue">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>maximumBlue</e></m></meta>
+		</debugCol7>
+		<debugCol8 public="1" expr="celestialPlum">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>celestialPlum</e></m></meta>
+		</debugCol8>
+		<debugCol9 public="1" expr="earlySpringNight">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>earlySpringNight</e></m></meta>
+		</debugCol9>
+		<debugCol10 public="1" expr="nebulaFuchsia">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>nebulaFuchsia</e></m></meta>
+		</debugCol10>
+		<debugCol11 public="1" expr="royalFuchsia">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>royalFuchsia</e></m></meta>
+		</debugCol11>
+		<debugCol12 public="1" expr="orangeSoda">
+			<x path="cornerContour.ColorWheel24"/>
+			<meta><m n=":value"><e>orangeSoda</e></m></meta>
+		</debugCol12>
+		<pointsClock public="1" expr="[]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</pointsClock>
+		<pointsAnti public="1" expr="[]">
+			<c path="Array"><x path="Float"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</pointsAnti>
+		<penultimateCX public="1"><x path="Float"/></penultimateCX>
+		<penultimateCY public="1"><x path="Float"/></penultimateCY>
+		<lastClockX public="1"><x path="Float"/></lastClockX>
+		<lastClockY public="1"><x path="Float"/></lastClockY>
+		<penultimateAX public="1"><x path="Float"/></penultimateAX>
+		<penultimateAY public="1"><x path="Float"/></penultimateAY>
+		<lastAntiX public="1"><x path="Float"/></lastAntiX>
+		<lastAntiY public="1"><x path="Float"/></lastAntiY>
+		<pen><c path="cornerContour.IPen"/></pen>
+		<endLine><x path="cornerContour.StyleEndLine"/></endLine>
+		<ax><x path="Float"/></ax>
+		<ay><x path="Float"/></ay>
+		<bx><x path="Float"/></bx>
+		<by><x path="Float"/></by>
+		<cx><x path="Float"/></cx>
+		<cy><x path="Float"/></cy>
+		<dx><x path="Null"><x path="Float"/></x></dx>
+		<dy><x path="Null"><x path="Float"/></x></dy>
+		<ex><x path="Null"><x path="Float"/></x></ex>
+		<ey><x path="Null"><x path="Float"/></x></ey>
+		<dxPrev><x path="Null"><x path="Float"/></x></dxPrev>
+		<dyPrev><x path="Null"><x path="Float"/></x></dyPrev>
+		<exPrev><x path="Null"><x path="Float"/></x></exPrev>
+		<eyPrev><x path="Null"><x path="Float"/></x></eyPrev>
+		<dxOld><x path="Null"><x path="Float"/></x></dxOld>
+		<dyOld><x path="Null"><x path="Float"/></x></dyOld>
+		<exOld><x path="Null"><x path="Float"/></x></exOld>
+		<eyOld><x path="Null"><x path="Float"/></x></eyOld>
+		<jx><x path="Float"/></jx>
+		<jy><x path="Float"/></jy>
+		<lastClock><x path="Bool"/></lastClock>
+		<jxOld><x path="Float"/></jxOld>
+		<jyOld><x path="Float"/></jyOld>
+		<kax><x path="Float"/></kax>
+		<kay><x path="Float"/></kay>
+		<kbx><x path="Float"/></kbx>
+		<kby><x path="Float"/></kby>
+		<kcx><x path="Float"/></kcx>
+		<kcy><x path="Float"/></kcy>
+		<ncx><x path="Float"/></ncx>
+		<ncy><x path="Float"/></ncy>
+		<quadIndex><x path="Float"/></quadIndex>
+		<angleA public="1"><x path="Float"/></angleA>
+		<halfA public="1"><x path="Float"/></halfA>
+		<beta public="1"><x path="Float"/></beta>
+		<r><x path="Float"/></r>
+		<theta public="1"><x path="Float"/></theta>
+		<angle1 public="1"><x path="Null"><x path="Float"/></x></angle1>
+		<angle2 public="1"><x path="Float"/></angle2>
+		<reset public="1" set="method" line="85"><f a=""><x path="Void"/></f></reset>
+		<count public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</count>
+		<computeDE public="1" get="inline" set="null" line="124"><f a=""><x path="Void"/></f></computeDE>
+		<anglesCompute get="inline" set="null" line="140"><f a=""><x path="Void"/></f></anglesCompute>
+		<thetaComputeAdj get="inline" set="null" line="161"><f a="qx:qy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+</f></thetaComputeAdj>
+		<triangleJoin public="1" get="inline" set="null" line="178">
+			<f a="ax_:ay_:bx_:by_:width_:?curveEnds:?overlap" v=":::::false:false">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ overlap : false, curveEnds : false }</e></m></meta>
+		</triangleJoin>
+		<overlapQuad get="inline" set="null" line="260"><f a=""><x path="Void"/></f></overlapQuad>
+		<end public="1" get="inline" set="null" line="268"><f a="width_">
+	<x path="Float"/>
+	<x path="Void"/>
+</f></end>
+		<triangle2DFill get="inline" set="null" line="273">
+			<f a="ax_:ay_:bx_:by_:cx_:cy_:?color_" v="::::::-1">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ color_ : -1 }</e></m></meta>
+		</triangle2DFill>
+		<addPieXstart get="inline" set="null" line="277">
+			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::-1:36">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36, mark : -1 }</e></m></meta>
+		</addPieXstart>
+		<addPieX get="inline" set="null" line="295">
+			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::0:36">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36, mark : 0 }</e></m></meta>
+		</addPieX>
+		<addPie get="inline" set="null" line="311">
+			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::0:36">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36, mark : 0 }</e></m></meta>
+		</addPie>
+		<computeJ get="inline" set="null" line="315"><f a="width_:theta0:dif">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></computeJ>
+		<addDot get="inline" set="null" line="325"><f a="x:y:color:width_">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></addDot>
+		<addSmallTriangles get="inline" set="null" line="348"><f a="clockWise:width_">
+	<x path="Bool"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></addSmallTriangles>
+		<triangle2DFillangleCorners get="inline" set="null" line="360"><f a="oldx_:oldy_:prevx_:prevy_:width_">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></triangle2DFillangleCorners>
+		<triangle2DFillangleCornersLess get="inline" set="null" line="368"><f a="oldx_:oldy_:prevx_:prevy_:width_">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></triangle2DFillangleCornersLess>
+		<connectQuadsWhenQuadsOverlay get="inline" set="null" line="376"><f a="clockWise:width_">
+	<x path="Bool"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></connectQuadsWhenQuadsOverlay>
+		<connectQuads get="inline" set="null" line="391"><f a="clockWise:width_">
+	<x path="Bool"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></connectQuads>
+		<addInitialQuads get="inline" set="null" line="407"><f a="clockWise:width_">
+	<x path="Bool"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></addInitialQuads>
+		<endEdges public="1" set="method" line="490"><f a=""><x path="Void"/></f></endEdges>
+		<counter expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</counter>
+		<addQuads set="method" line="516"><f a="clockWise:width_">
+	<x path="Bool"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></addQuads>
+		<storeLastQuads get="inline" set="null" line="682"><f a=""><x path="Void"/></f></storeLastQuads>
+		<isClockwise get="inline" set="null" line="692"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></isClockwise>
+		<line public="1" get="inline" set="null" line="697">
+			<f a="ax_:ay_:bx_:by_:width_:?endLineCurve" v=":::::no">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="cornerContour.StyleEndLine"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ endLineCurve : no }</e></m></meta>
+		</line>
+		<circle public="1" get="inline" set="null" line="738">
+			<f a="ax:ay:radius:?color:?sides:?omega" v=":::-1:36:0.">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Float"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ omega : 0., sides : 36, color : -1 }</e></m></meta>
+		</circle>
+		<pie public="1" get="inline" set="null" line="765">
+			<f a="ax:ay:radius:beta:gamma:prefer:?color:?sides" v="::::::-1:36">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36, color : -1 }</e></m></meta>
+			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
+     * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
+		</pie>
+		<pieX public="1" get="inline" set="null" line="801">
+			<f a="ax:ay:radius:beta:gamma:prefer:edgePoly:?color:?sides" v=":::::::-1:36">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<e path="fracs.DifferencePreference"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36, color : -1 }</e></m></meta>
+			<haxe_doc>* When calling Pie you can specify the DifferencePreference of what should be colored in terms of the two angles provided.
+     * For example for drawing a packman shape you would want the use DifferencePreference.LARGE .</haxe_doc>
+		</pieX>
+		<pieDifX public="1" get="inline" set="null" line="835">
+			<f a="ax:ay:radius:beta:dif:edgePoly:?color:?sides" v="::::::-1:36">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<c path="Array"><x path="Float"/></c>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":value"><e>{ sides : 36, color : -1 }</e></m></meta>
+		</pieDifX>
+		<new public="1" set="method" line="118">
+			<f a="pen_:?endLine_" v=":no">
+				<c path="cornerContour.IPen"/>
+				<x path="cornerContour.StyleEndLine"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":value"><e>{ endLine_ : no }</e></m></meta>
+		</new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="cornerContour.IPen" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/IPen.hx" interface="1">
+		<get_pos public="1" set="method">
+			<f a=""><x path="Float"/></f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</get_pos>
+		<set_pos public="1" set="method">
+			<f a="value">
+				<x path="Float"/>
+				<x path="Float"/>
+			</f>
+			<meta>
+				<m n=":compilerGenerated"/>
+				<m n=":noCompletion"/>
+			</meta>
+		</set_pos>
+		<triangle2DFill public="1" set="method"><f a="ax:ay:bx:by:cx:cy:?color">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></triangle2DFill>
+		<pos public="1" get="accessor" set="accessor"><x path="Float"/></pos>
+	</class>
+	<abstract path="cornerContour.StyleEndLine" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/StyleEndLine.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="cornerContour._StyleEndLine.StyleEndLine_Impl_" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/StyleEndLine.hx" private="1" module="cornerContour.StyleEndLine" extern="1" final="1">
+	<no public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
+		<x path="cornerContour.StyleEndLine"/>
+		<meta>
+			<m n=":value"><e>cast 0</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</no>
+	<begin public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
+		<x path="cornerContour.StyleEndLine"/>
+		<meta>
+			<m n=":value"><e>cast 1</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</begin>
+	<end public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+		<x path="cornerContour.StyleEndLine"/>
+		<meta>
+			<m n=":value"><e>cast 2</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</end>
+	<both public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+		<x path="cornerContour.StyleEndLine"/>
+		<meta>
+			<m n=":value"><e>cast 3</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</both>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="cornerContour._StyleEndLine.StyleEndLine_Impl_" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/StyleEndLine.hx" private="1" module="cornerContour.StyleEndLine" extern="1" final="1">
+		<no public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
+			<x path="cornerContour.StyleEndLine"/>
+			<meta>
+				<m n=":value"><e>cast 0</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</no>
+		<begin public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
+			<x path="cornerContour.StyleEndLine"/>
+			<meta>
+				<m n=":value"><e>cast 1</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</begin>
+		<end public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+			<x path="cornerContour.StyleEndLine"/>
+			<meta>
+				<m n=":value"><e>cast 2</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</end>
+		<both public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+			<x path="cornerContour.StyleEndLine"/>
+			<meta>
+				<m n=":value"><e>cast 3</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</both>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="cornerContour.StyleSketch" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/StyleSketch.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="cornerContour._StyleSketch.StyleSketch_Impl_" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/StyleSketch.hx" private="1" module="cornerContour.StyleSketch" extern="1" final="1">
+	<Tracer public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 0</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</Tracer>
+	<Base public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 1</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</Base>
+	<Crude public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 2</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</Crude>
+	<FillOnly public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 3</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</FillOnly>
+	<Fine public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 4</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</Fine>
+	<FineOverlap public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 5</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</FineOverlap>
+	<Medium public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 6</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</Medium>
+	<MediumOverlap public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 7</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</MediumOverlap>
+	<RoundEnd public="1" get="inline" set="null" expr="cast 8" line="1" static="1">
+		<x path="cornerContour.StyleSketch"/>
+		<meta>
+			<m n=":value"><e>cast 8</e></m>
+			<m n=":impl"/>
+			<m n=":enum"/>
+		</meta>
+	</RoundEnd>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="cornerContour._StyleSketch.StyleSketch_Impl_" params="" file="/usr/local/lib/haxeLibrary/cornerContour/git/src/cornerContour/StyleSketch.hx" private="1" module="cornerContour.StyleSketch" extern="1" final="1">
+		<Tracer public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 0</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</Tracer>
+		<Base public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 1</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</Base>
+		<Crude public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 2</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</Crude>
+		<FillOnly public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 3</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</FillOnly>
+		<Fine public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 4</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</Fine>
+		<FineOverlap public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 5</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</FineOverlap>
+		<Medium public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 6</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</Medium>
+		<MediumOverlap public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 7</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</MediumOverlap>
+		<RoundEnd public="1" get="inline" set="null" expr="cast 8" line="1" static="1">
+			<x path="cornerContour.StyleSketch"/>
+			<meta>
+				<m n=":value"><e>cast 8</e></m>
+				<m n=":impl"/>
+				<m n=":enum"/>
+			</meta>
+		</RoundEnd>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<class path="cpp.ArrayBase" params="" file="/usr/local/lib/haxe/std/cpp/ArrayBase.hx" extern="1">
 		<length public="1" set="null"><x path="Int"/></length>
 		<getElementSize public="1" set="method"><f a=""><x path="Int"/></f></getElementSize>
@@ -14013,306 +15030,6 @@
 		<meta><m n=":optional"/></meta>
 	</color3current>
 </a></typedef>
-	<class path="trilateral3.drawing.Contour" params="" file="src/trilateral3/drawing/Contour.hx">
-		<smallDotScale get="inline" set="null" expr="0.07" line="95" static="1">
-			<x path="Float"/>
-			<meta><m n=":value"><e>0.07</e></m></meta>
-		</smallDotScale>
-		<thetaCompute get="inline" set="null" line="181" static="1"><f a="px:py:qx:qy">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-</f></thetaCompute>
-		<dist get="inline" set="null" line="185" static="1"><f a="px:py:qx:qy">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-</f></dist>
-		<debugCol0 public="1" expr="redRadish">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>redRadish</e></m></meta>
-		</debugCol0>
-		<debugCol1 public="1" expr="gokuOrange">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>gokuOrange</e></m></meta>
-		</debugCol1>
-		<debugCol2 public="1" expr="carona">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>carona</e></m></meta>
-		</debugCol2>
-		<debugCol3 public="1" expr="flirtatious">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>flirtatious</e></m></meta>
-		</debugCol3>
-		<debugCol4 public="1" expr="daffodil">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>daffodil</e></m></meta>
-		</debugCol4>
-		<debugCol5 public="1" expr="peraRocha">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>peraRocha</e></m></meta>
-		</debugCol5>
-		<debugCol6 public="1" expr="fieldGreen">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>fieldGreen</e></m></meta>
-		</debugCol6>
-		<debugCol7 public="1" expr="maximumBlue">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>maximumBlue</e></m></meta>
-		</debugCol7>
-		<debugCol8 public="1" expr="celestialPlum">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>celestialPlum</e></m></meta>
-		</debugCol8>
-		<debugCol9 public="1" expr="earlySpringNight">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>earlySpringNight</e></m></meta>
-		</debugCol9>
-		<debugCol10 public="1" expr="nebulaFuchsia">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>nebulaFuchsia</e></m></meta>
-		</debugCol10>
-		<debugCol11 public="1" expr="royalFuchsia">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>royalFuchsia</e></m></meta>
-		</debugCol11>
-		<debugCol12 public="1" expr="orangeSoda">
-			<x path="pallette.wheel.Wheel24"/>
-			<meta><m n=":value"><e>orangeSoda</e></m></meta>
-		</debugCol12>
-		<pointsClock public="1" expr="[]">
-			<c path="Array"><x path="Float"/></c>
-			<meta><m n=":value"><e>[]</e></m></meta>
-		</pointsClock>
-		<pointsAnti public="1" expr="[]">
-			<c path="Array"><x path="Float"/></c>
-			<meta><m n=":value"><e>[]</e></m></meta>
-		</pointsAnti>
-		<penultimateCX public="1"><x path="Float"/></penultimateCX>
-		<penultimateCY public="1"><x path="Float"/></penultimateCY>
-		<lastClockX public="1"><x path="Float"/></lastClockX>
-		<lastClockY public="1"><x path="Float"/></lastClockY>
-		<penultimateAX public="1"><x path="Float"/></penultimateAX>
-		<penultimateAY public="1"><x path="Float"/></penultimateAY>
-		<lastAntiX public="1"><x path="Float"/></lastAntiX>
-		<lastAntiY public="1"><x path="Float"/></lastAntiY>
-		<pen public="1"><c path="trilateral3.drawing.Pen"/></pen>
-		<endLine><x path="trilateral3.drawing.StyleEndLine"/></endLine>
-		<ax><x path="Float"/></ax>
-		<ay><x path="Float"/></ay>
-		<bx><x path="Float"/></bx>
-		<by><x path="Float"/></by>
-		<cx><x path="Float"/></cx>
-		<cy><x path="Float"/></cy>
-		<dx><x path="Null"><x path="Float"/></x></dx>
-		<dy><x path="Null"><x path="Float"/></x></dy>
-		<ex><x path="Null"><x path="Float"/></x></ex>
-		<ey><x path="Null"><x path="Float"/></x></ey>
-		<dxPrev><x path="Null"><x path="Float"/></x></dxPrev>
-		<dyPrev><x path="Null"><x path="Float"/></x></dyPrev>
-		<exPrev><x path="Null"><x path="Float"/></x></exPrev>
-		<eyPrev><x path="Null"><x path="Float"/></x></eyPrev>
-		<dxOld><x path="Null"><x path="Float"/></x></dxOld>
-		<dyOld><x path="Null"><x path="Float"/></x></dyOld>
-		<exOld><x path="Null"><x path="Float"/></x></exOld>
-		<eyOld><x path="Null"><x path="Float"/></x></eyOld>
-		<jx><x path="Float"/></jx>
-		<jy><x path="Float"/></jy>
-		<lastClock><x path="Bool"/></lastClock>
-		<jxOld><x path="Float"/></jxOld>
-		<jyOld><x path="Float"/></jyOld>
-		<kax><x path="Float"/></kax>
-		<kay><x path="Float"/></kay>
-		<kbx><x path="Float"/></kbx>
-		<kby><x path="Float"/></kby>
-		<kcx><x path="Float"/></kcx>
-		<kcy><x path="Float"/></kcy>
-		<ncx><x path="Float"/></ncx>
-		<ncy><x path="Float"/></ncy>
-		<quadIndex><x path="Float"/></quadIndex>
-		<angleA public="1"><x path="Float"/></angleA>
-		<halfA public="1"><x path="Float"/></halfA>
-		<beta public="1"><x path="Float"/></beta>
-		<r><x path="Float"/></r>
-		<theta public="1"><x path="Float"/></theta>
-		<angle1 public="1"><x path="Null"><x path="Float"/></x></angle1>
-		<angle2 public="1"><x path="Float"/></angle2>
-		<reset public="1" set="method" line="97"><f a=""><x path="Void"/></f></reset>
-		<count public="1" expr="0">
-			<x path="Int"/>
-			<meta><m n=":value"><e>0</e></m></meta>
-		</count>
-		<computeDE public="1" get="inline" set="null" line="140"><f a=""><x path="Void"/></f></computeDE>
-		<anglesCompute get="inline" set="null" line="156"><f a=""><x path="Void"/></f></anglesCompute>
-		<thetaComputeAdj get="inline" set="null" line="177"><f a="qx:qy">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-</f></thetaComputeAdj>
-		<triangleJoin public="1" get="inline" set="null" line="194">
-			<f a="ax_:ay_:bx_:by_:width_:?curveEnds:?overlap" v=":::::false:false">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Bool"/>
-				<x path="Bool"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":value"><e>{ overlap : false, curveEnds : false }</e></m></meta>
-		</triangleJoin>
-		<overlapQuad get="inline" set="null" line="301"><f a=""><x path="Void"/></f></overlapQuad>
-		<end public="1" get="inline" set="null" line="309"><f a="width_">
-	<x path="Float"/>
-	<x path="Void"/>
-</f></end>
-		<triangle2DFill get="inline" set="null" line="315">
-			<f a="ax_:ay_:bx_:by_:cx_:cy_:?color_" v="::::::-1">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":value"><e>{ color_ : -1 }</e></m></meta>
-		</triangle2DFill>
-		<addPieXstart get="inline" set="null" line="319">
-			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::-1:36">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<e path="fracs.DifferencePreference"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":value"><e>{ sides : 36, mark : -1 }</e></m></meta>
-		</addPieXstart>
-		<addPieX get="inline" set="null" line="341">
-			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::0:36">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<e path="fracs.DifferencePreference"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":value"><e>{ sides : 36, mark : 0 }</e></m></meta>
-		</addPieX>
-		<addPie get="inline" set="null" line="362">
-			<f a="ax:ay:radius:beta:gamma:prefer:?mark:?sides" v="::::::0:36">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<e path="fracs.DifferencePreference"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":value"><e>{ sides : 36, mark : 0 }</e></m></meta>
-		</addPie>
-		<computeJ get="inline" set="null" line="369"><f a="width_:theta0:dif">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></computeJ>
-		<addDot get="inline" set="null" line="379"><f a="x:y:color:width_">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Int"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></addDot>
-		<addSmallTriangles get="inline" set="null" line="408"><f a="clockWise:width_">
-	<x path="Bool"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></addSmallTriangles>
-		<triangle2DFillangleCorners get="inline" set="null" line="420"><f a="oldx_:oldy_:prevx_:prevy_:width_">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></triangle2DFillangleCorners>
-		<triangle2DFillangleCornersLess get="inline" set="null" line="436"><f a="oldx_:oldy_:prevx_:prevy_:width_">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></triangle2DFillangleCornersLess>
-		<connectQuadsWhenQuadsOverlay get="inline" set="null" line="450"><f a="clockWise:width_">
-	<x path="Bool"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></connectQuadsWhenQuadsOverlay>
-		<connectQuads get="inline" set="null" line="465"><f a="clockWise:width_">
-	<x path="Bool"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></connectQuads>
-		<addInitialQuads get="inline" set="null" line="481"><f a="clockWise:width_">
-	<x path="Bool"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></addInitialQuads>
-		<endEdges public="1" set="method" line="564"><f a=""><x path="Void"/></f></endEdges>
-		<counter expr="0">
-			<x path="Int"/>
-			<meta><m n=":value"><e>0</e></m></meta>
-		</counter>
-		<addQuads set="method" line="590"><f a="clockWise:width_">
-	<x path="Bool"/>
-	<x path="Float"/>
-	<x path="Void"/>
-</f></addQuads>
-		<storeLastQuads get="inline" set="null" line="756"><f a=""><x path="Void"/></f></storeLastQuads>
-		<isClockwise get="inline" set="null" line="766"><f a="x:y">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Bool"/>
-</f></isClockwise>
-		<line public="1" get="inline" set="null" line="771">
-			<f a="ax_:ay_:bx_:by_:width_:?endLineCurve" v=":::::no">
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="Float"/>
-				<x path="trilateral3.drawing.StyleEndLine"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":value"><e>{ endLineCurve : no }</e></m></meta>
-		</line>
-		<new public="1" set="method" line="134">
-			<f a="pen_:?endLine_" v=":no">
-				<c path="trilateral3.drawing.Pen"/>
-				<x path="trilateral3.drawing.StyleEndLine"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":value"><e>{ endLine_ : no }</e></m></meta>
-		</new>
-		<meta><m n=":directlyUsed"/></meta>
-	</class>
 	<abstract path="trilateral3.drawing.DrawAbstract" params="" file="src/trilateral3/drawing/DrawAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.DrawType"/></icast></from>
 		<this><t path="trilateral3.drawing.DrawType"/></this>
@@ -14674,7 +15391,8 @@
 	</color3current>
 </a></typedef>
 	<class path="trilateral3.drawing.Pen" params="" file="src/trilateral3/drawing/Pen.hx">
-		<tweenWrap public="1" set="method" line="374" static="1"><f a="tweenEquation">
+		<implements path="cornerContour.IPen"/>
+		<tweenWrap public="1" set="method" line="373" static="1"><f a="tweenEquation">
 	<f a=":::">
 		<x path="Float"/>
 		<x path="Float"/>
@@ -14745,59 +15463,59 @@
 			<meta><m n=":value"><e>[]</e></m></meta>
 		</indices>
 		<range public="1"><c path="trilateral3.shape.PenRangeFactory"/></range>
-		<transformRange public="1" get="inline" set="null" line="45"><f a="trans:ir">
+		<transformRange public="1" get="inline" set="null" line="46"><f a="trans:ir">
 	<c path="trilateral3.matrix.MatrixDozen"/>
 	<x path="trilateral3.shape.IteratorRange"/>
 	<x path="Void"/>
 </f></transformRange>
 		<textureXYWH public="1" get="null" set="accessor"><x path="trilateral3.structure.XYWH"/></textureXYWH>
-		<set_textureXYWH get="inline" set="null" line="50"><f a="r">
+		<set_textureXYWH get="inline" set="null" line="51"><f a="r">
 	<x path="trilateral3.structure.XYWH"/>
 	<x path="trilateral3.structure.XYWH"/>
 </f></set_textureXYWH>
-		<up public="1" get="inline" set="null" line="56"><f a="ir">
+		<up public="1" get="inline" set="null" line="57"><f a="ir">
 	<x path="trilateral3.shape.IteratorRange"/>
 	<x path="Void"/>
 </f></up>
-		<down public="1" get="inline" set="null" line="61"><f a="ir">
+		<down public="1" get="inline" set="null" line="62"><f a="ir">
 	<x path="trilateral3.shape.IteratorRange"/>
 	<x path="Void"/>
 </f></down>
-		<back public="1" get="inline" set="null" line="66"><f a="ir">
+		<back public="1" get="inline" set="null" line="67"><f a="ir">
 	<x path="trilateral3.shape.IteratorRange"/>
 	<x path="Void"/>
 </f></back>
-		<transBack get="inline" set="null" line="70"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
-		<cornerColor public="1" get="inline" set="null" line="100">
+		<transBack get="inline" set="null" line="71"><f a=""><c path="trilateral3.matrix.MatrixDozen"/></f></transBack>
+		<cornerColor public="1" get="inline" set="null" line="101">
 			<f a="?color" v="-1">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</cornerColor>
-		<cornerColors public="1" get="inline" set="null" line="105"><f a="colorA:colorB:colorC">
+		<cornerColors public="1" get="inline" set="null" line="106"><f a="colorA:colorB:colorC">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></cornerColors>
-		<middleColor public="1" get="inline" set="null" line="109"><f a="color:colorCentre">
+		<middleColor public="1" get="inline" set="null" line="110"><f a="color:colorCentre">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColor>
-		<middleColors public="1" get="inline" set="null" line="113"><f a="color:colorCentre:times">
+		<middleColors public="1" get="inline" set="null" line="114"><f a="color:colorCentre:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></middleColors>
-		<colorTriangles public="1" get="inline" set="null" line="119"><f a="color:times">
+		<colorTriangles public="1" get="inline" set="null" line="120"><f a="color:times">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></colorTriangles>
-		<pieDifX public="1" get="inline" set="null" line="127">
+		<pieDifX public="1" get="inline" set="null" line="128">
 			<f a="ax:ay:radius:beta:dif:edgePoly:?sides" v="::::::36">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14831,7 +15549,7 @@
 	<x path="cpp.Float32"/>
 	<x path="Bool"/>
 </f></posTriangle>
-		<addTriangle public="1" get="inline" set="null" line="188"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
+		<addTriangle public="1" get="inline" set="null" line="187"><f a="ax:ay:az:bx:by:bz:cx:cy:cz">
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
 	<x path="cpp.Float32"/>
@@ -14843,7 +15561,7 @@
 	<x path="cpp.Float32"/>
 	<x path="Bool"/>
 </f></addTriangle>
-		<triangle2DFillGrad public="1" get="inline" set="null" line="236">
+		<triangle2DFillGrad public="1" get="inline" set="null" line="235">
 			<f a="ax:ay:bx:by:cx:cy:?col0:?col1:?gradCorner" v="::::::-1:-1:0">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14858,7 +15576,7 @@
 			</f>
 			<meta><m n=":value"><e>{ gradCorner : 0, col1 : -1, col0 : -1 }</e></m></meta>
 		</triangle2DFillGrad>
-		<triangle2DFill public="1" get="inline" set="null" line="255">
+		<triangle2DFill public="1" get="inline" set="null" line="254">
 			<f a="ax:ay:bx:by:cx:cy:?color" v="::::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14871,7 +15589,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</triangle2DFill>
-		<triangle2DFillColors public="1" get="inline" set="null" line="267">
+		<triangle2DFillColors public="1" get="inline" set="null" line="266">
 			<f a="ax:ay:bx:by:cx:cy:?colorA:?colorB:?colorC" v="::::::-1:-1:-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14886,7 +15604,7 @@
 			</f>
 			<meta><m n=":value"><e>{ colorC : -1, colorB : -1, colorA : -1 }</e></m></meta>
 		</triangle2DFillColors>
-		<nineSliceFill public="1" get="inline" set="null" line="287">
+		<nineSliceFill public="1" get="inline" set="null" line="286">
 			<f a="ax:ay:width:height:left:right:top:bottom:?color0:?color1:?color2:?color3:?color4:?color5:?color6:?color7:?color8" v="::::::::-1:-1:-1:-1:-1:-1:-1:-1:-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14909,7 +15627,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color8 : -1, color7 : -1, color6 : -1, color5 : -1, color4 : -1, color3 : -1, color2 : -1, color1 : -1, color0 : -1 }</e></m></meta>
 		</nineSliceFill>
-		<quad2DFill public="1" get="inline" set="null" line="305">
+		<quad2DFill public="1" get="inline" set="null" line="304">
 			<f a="ax:ay:width:height:?color" v="::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14920,7 +15638,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</quad2DFill>
-		<quad2DFillclockwise public="1" get="inline" set="null" line="318">
+		<quad2DFillclockwise public="1" get="inline" set="null" line="317">
 			<f a="ax:ay:bx:by:cx:cy:dx:dy:?color" v="::::::::-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14935,7 +15653,7 @@
 			</f>
 			<meta><m n=":value"><e>{ color : -1 }</e></m></meta>
 		</quad2DFillclockwise>
-		<quad2DFillColors public="1" get="inline" set="null" line="327">
+		<quad2DFillColors public="1" get="inline" set="null" line="326">
 			<f a="ax:ay:width:height:?colorA:?colorB:?colorC:?colorD" v="::::-1:-1:-1:-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14949,7 +15667,7 @@
 			</f>
 			<meta><m n=":value"><e>{ colorD : -1, colorC : -1, colorB : -1, colorA : -1 }</e></m></meta>
 		</quad2DFillColors>
-		<quad2DFillclockwiseColors public="1" get="inline" set="null" line="344">
+		<quad2DFillclockwiseColors public="1" get="inline" set="null" line="343">
 			<f a="ax:ay:bx:by:cx:cy:dx:dy:?colorA:?colorB:?colorC:?colorD" v="::::::::-1:-1:-1:-1">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14967,7 +15685,7 @@
 			</f>
 			<meta><m n=":value"><e>{ colorD : -1, colorC : -1, colorB : -1, colorA : -1 }</e></m></meta>
 		</quad2DFillclockwiseColors>
-		<quadGradient public="1" get="inline" set="null" line="360">
+		<quadGradient public="1" get="inline" set="null" line="359">
 			<f a="pos:dim:?col0:?col1:?horizontal:?theta:?pivotX:?pivotY" v="::-1:-1:false:0.:0.:0.">
 				<t path="trilateral3.structure.XY"/>
 				<t path="trilateral3.structure.XY"/>
@@ -14981,7 +15699,7 @@
 			</f>
 			<meta><m n=":value"><e>{ pivotY : 0., pivotX : 0., theta : 0., horizontal : false, col1 : -1, col0 : -1 }</e></m></meta>
 		</quadGradient>
-		<multiGradient public="1" get="inline" set="null" line="386">
+		<multiGradient public="1" get="inline" set="null" line="385">
 			<f a="horizontal_:x_:y_:wid_:hi_:colors:?func:?theta:?pivotX:?pivotY" v="::::::null:0.:0.:0.">
 				<x path="Bool"/>
 				<x path="Float"/>
@@ -15001,18 +15719,18 @@
 			<meta><m n=":value"><e>{ pivotY : 0., pivotX : 0., theta : 0., func : null }</e></m></meta>
 		</multiGradient>
 		<pos public="1" get="accessor" set="accessor"><x path="Float"/></pos>
-		<get_pos get="inline" set="null" line="419"><f a=""><x path="Float"/></f></get_pos>
-		<set_pos get="inline" set="null" line="423"><f a="v">
+		<get_pos public="1" get="inline" set="null" line="418"><f a=""><x path="Float"/></f></get_pos>
+		<set_pos public="1" get="inline" set="null" line="422"><f a="v">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_pos>
 		<size public="1" get="accessor" set="accessor"><x path="Int"/></size>
-		<get_size get="inline" set="null" line="430"><f a=""><x path="Int"/></f></get_size>
-		<set_size get="inline" set="null" line="434"><f a="v">
+		<get_size get="inline" set="null" line="429"><f a=""><x path="Int"/></f></get_size>
+		<set_size get="inline" set="null" line="433"><f a="v">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_size>
-		<setStartDepth public="1" get="inline" set="null" line="442">
+		<setStartDepth public="1" get="inline" set="null" line="441">
 			<f a="v:len">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -15020,7 +15738,7 @@
 			</f>
 			<haxe_doc>* sends pos to start of draw array ( bottom? )</haxe_doc>
 		</setStartDepth>
-		<setEndDepth public="1" get="inline" set="null" line="449">
+		<setEndDepth public="1" get="inline" set="null" line="448">
 			<f a="v:len">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -15028,7 +15746,7 @@
 			</f>
 			<haxe_doc>* sends pos to end of draw array ( top? )</haxe_doc>
 		</setEndDepth>
-		<swapDepth public="1" get="inline" set="null" line="456">
+		<swapDepth public="1" get="inline" set="null" line="455">
 			<f a="v0:v1:len">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -15041,24 +15759,24 @@
 			<x path="trilateral3.drawing.TriangleAbstract"/>
 			<haxe_doc>* Only optionally available use with care, works with PenNodule.</haxe_doc>
 		</triangleCurrent>
-		<get_triangleCurrent get="inline" set="null" line="464"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
+		<get_triangleCurrent get="inline" set="null" line="463"><f a=""><x path="trilateral3.drawing.TriangleAbstract"/></f></get_triangleCurrent>
 		<triangleCurrentUV public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.TriangleAbstractUV"/>
 			<haxe_doc>* Only optionally available use with care, works with PenNoduleUV.</haxe_doc>
 		</triangleCurrentUV>
-		<get_triangleCurrentUV get="inline" set="null" line="472"><f a=""><x path="trilateral3.drawing.TriangleAbstractUV"/></f></get_triangleCurrentUV>
+		<get_triangleCurrentUV get="inline" set="null" line="471"><f a=""><x path="trilateral3.drawing.TriangleAbstractUV"/></f></get_triangleCurrentUV>
 		<color3Current public="1" get="accessor" set="null">
 			<x path="trilateral3.drawing.Color3Abstract"/>
 			<haxe_doc>* Only possible if using interleave data structure !! use with care.</haxe_doc>
 		</color3Current>
-		<get_color3Current get="inline" set="null" line="480"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
-		<copyRange public="1" get="inline" set="null" line="484"><f a="otherPen:startEnd:vec">
+		<get_color3Current get="inline" set="null" line="479"><f a=""><x path="trilateral3.drawing.Color3Abstract"/></f></get_color3Current>
+		<copyRange public="1" get="inline" set="null" line="483"><f a="otherPen:startEnd:vec">
 	<c path="trilateral3.drawing.Pen"/>
 	<x path="trilateral3.shape.IteratorRange"/>
 	<c path="trilateral3.matrix.Vertex"/>
 	<x path="trilateral3.shape.IteratorRange"/>
 </f></copyRange>
-		<new public="1" set="method" line="39"><f a="paintType_">
+		<new public="1" set="method" line="40"><f a="paintType_">
 	<x path="trilateral3.drawing.PaintAbstract"/>
 	<x path="Void"/>
 </f></new>
@@ -15070,7 +15788,7 @@
 		<to><icast><c path="String"/></icast></to>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="trilateral3.drawing._Sketch.AIColorType_Impl_" params="" file="src/trilateral3/drawing/Sketch.hx" private="1" module="trilateral3.drawing.Sketch" extern="1" final="1">
-	<GRAY public="1" get="inline" set="null" expr="cast &quot;g&quot;" line="15" static="1">
+	<GRAY public="1" get="inline" set="null" expr="cast &quot;g&quot;" line="16" static="1">
 		<x path="trilateral3.drawing.AIColorType"/>
 		<meta>
 			<m n=":value"><e>cast "g"</e></m>
@@ -15078,7 +15796,7 @@
 			<m n=":enum"/>
 		</meta>
 	</GRAY>
-	<CYMK public="1" get="inline" set="null" expr="cast &quot;k&quot;" line="16" static="1">
+	<CYMK public="1" get="inline" set="null" expr="cast &quot;k&quot;" line="17" static="1">
 		<x path="trilateral3.drawing.AIColorType"/>
 		<meta>
 			<m n=":value"><e>cast "k"</e></m>
@@ -15086,7 +15804,7 @@
 			<m n=":enum"/>
 		</meta>
 	</CYMK>
-	<RGB public="1" get="inline" set="null" expr="cast &quot;xa&quot;" line="17" static="1">
+	<RGB public="1" get="inline" set="null" expr="cast &quot;xa&quot;" line="18" static="1">
 		<x path="trilateral3.drawing.AIColorType"/>
 		<meta>
 			<m n=":value"><e>cast "xa"</e></m>
@@ -15094,7 +15812,7 @@
 			<m n=":enum"/>
 		</meta>
 	</RGB>
-	<EPS_RGB public="1" get="inline" set="null" expr="cast &quot;r&quot;" line="18" static="1">
+	<EPS_RGB public="1" get="inline" set="null" expr="cast &quot;r&quot;" line="19" static="1">
 		<x path="trilateral3.drawing.AIColorType"/>
 		<meta>
 			<m n=":value"><e>cast "r"</e></m>
@@ -15106,7 +15824,7 @@
 </class></impl>
 	</abstract>
 	<class path="trilateral3.drawing._Sketch.AIColorType_Impl_" params="" file="src/trilateral3/drawing/Sketch.hx" private="1" module="trilateral3.drawing.Sketch" extern="1" final="1">
-		<GRAY public="1" get="inline" set="null" expr="cast &quot;g&quot;" line="15" static="1">
+		<GRAY public="1" get="inline" set="null" expr="cast &quot;g&quot;" line="16" static="1">
 			<x path="trilateral3.drawing.AIColorType"/>
 			<meta>
 				<m n=":value"><e>cast "g"</e></m>
@@ -15114,7 +15832,7 @@
 				<m n=":enum"/>
 			</meta>
 		</GRAY>
-		<CYMK public="1" get="inline" set="null" expr="cast &quot;k&quot;" line="16" static="1">
+		<CYMK public="1" get="inline" set="null" expr="cast &quot;k&quot;" line="17" static="1">
 			<x path="trilateral3.drawing.AIColorType"/>
 			<meta>
 				<m n=":value"><e>cast "k"</e></m>
@@ -15122,7 +15840,7 @@
 				<m n=":enum"/>
 			</meta>
 		</CYMK>
-		<RGB public="1" get="inline" set="null" expr="cast &quot;xa&quot;" line="17" static="1">
+		<RGB public="1" get="inline" set="null" expr="cast &quot;xa&quot;" line="18" static="1">
 			<x path="trilateral3.drawing.AIColorType"/>
 			<meta>
 				<m n=":value"><e>cast "xa"</e></m>
@@ -15130,7 +15848,7 @@
 				<m n=":enum"/>
 			</meta>
 		</RGB>
-		<EPS_RGB public="1" get="inline" set="null" expr="cast &quot;r&quot;" line="18" static="1">
+		<EPS_RGB public="1" get="inline" set="null" expr="cast &quot;r&quot;" line="19" static="1">
 			<x path="trilateral3.drawing.AIColorType"/>
 			<meta>
 				<m n=":value"><e>cast "r"</e></m>
@@ -15148,11 +15866,11 @@
 </a></typedef>
 	<class path="trilateral3.drawing.Sketch" params="" file="src/trilateral3/drawing/Sketch.hx">
 		<implements path="justPath.IPathContext"/>
-		<create public="1" get="inline" set="null" line="96" static="1">
+		<create public="1" get="inline" set="null" line="99" static="1">
 			<f a="paintType_:sketchForm_:?endLine_" v="::no">
 				<x path="trilateral3.drawing.PaintAbstract"/>
-				<x path="trilateral3.drawing.StyleSketch"/>
-				<x path="trilateral3.drawing.StyleEndLine"/>
+				<t path="trilateral3.drawing.StyleSketch"/>
+				<t path="trilateral3.drawing.StyleEndLine"/>
 				<c path="trilateral3.drawing.Sketch"/>
 			</f>
 			<meta><m n=":value"><e>{ endLine_ : no }</e></m></meta>
@@ -15186,55 +15904,55 @@
 	<x path="Int"/>
 </f></colourFunction>
 		<tempArr><c path="Array"><x path="Float"/></c></tempArr>
-		<contour public="1"><c path="trilateral3.drawing.Contour"/></contour>
+		<contour public="1"><c path="cornerContour.Contour"/></contour>
 		<pen><c path="trilateral3.drawing.Pen"/></pen>
-		<endLine><x path="trilateral3.drawing.StyleEndLine"/></endLine>
-		<sketchForm><x path="trilateral3.drawing.StyleSketch"/></sketchForm>
+		<endLine><t path="trilateral3.drawing.StyleEndLine"/></endLine>
+		<sketchForm><t path="trilateral3.drawing.StyleSketch"/></sketchForm>
 		<points public="1"><c path="Array"><c path="Array"><x path="Float"/></c></c></points>
 		<pointsClock public="1"><c path="Array"><c path="Array"><x path="Float"/></c></c></pointsClock>
 		<pointsAnti public="1"><c path="Array"><c path="Array"><x path="Float"/></c></c></pointsAnti>
 		<dim public="1"><c path="Array"><t path="trilateral3.drawing.Dim"/></c></dim>
-		<tracerLine get="inline" set="null" line="42"><f a="x_:y_">
+		<tracerLine get="inline" set="null" line="43"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></tracerLine>
-		<fillOnlyLine get="inline" set="null" line="45"><f a="x_:y_">
+		<fillOnlyLine get="inline" set="null" line="46"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></fillOnlyLine>
-		<baseLine set="method" line="47"><f a="x_:y_">
+		<baseLine set="method" line="48"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></baseLine>
-		<crudeLine get="inline" set="null" line="51"><f a="x_:y_">
+		<crudeLine get="inline" set="null" line="52"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></crudeLine>
-		<roundEndLine get="inline" set="null" line="54"><f a="x_:y_">
+		<roundEndLine get="inline" set="null" line="55"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></roundEndLine>
-		<mediumLine get="inline" set="null" line="57"><f a="x_:y_">
+		<mediumLine get="inline" set="null" line="58"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></mediumLine>
-		<mediumOverlapLine get="inline" set="null" line="60"><f a="x_:y_">
+		<mediumOverlapLine get="inline" set="null" line="61"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></mediumOverlapLine>
-		<fineLine get="inline" set="null" line="63"><f a="x_:y_">
+		<fineLine get="inline" set="null" line="64"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></fineLine>
-		<fineOverlapLine get="inline" set="null" line="66"><f a="x_:y_">
+		<fineOverlapLine get="inline" set="null" line="67"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
@@ -15244,42 +15962,42 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></line>
-		<reset public="1" set="method" line="102"><f a=""><x path="Void"/></f></reset>
-		<pointsNoEndOverlap public="1" set="method" line="111"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
-		<pointsRewound public="1" set="method" line="165"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
-		<initDim get="inline" set="null" line="225"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
-		<updateDim get="inline" set="null" line="228"><f a="x:y">
+		<reset public="1" set="method" line="105"><f a=""><x path="Void"/></f></reset>
+		<pointsNoEndOverlap public="1" set="method" line="115"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsNoEndOverlap>
+		<pointsRewound public="1" set="method" line="169"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></pointsRewound>
+		<initDim get="inline" set="null" line="229"><f a=""><t path="trilateral3.drawing.Dim"/></f></initDim>
+		<updateDim get="inline" set="null" line="232"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></updateDim>
-		<moveTo public="1" set="method" line="235"><f a="x_:y_">
+		<moveTo public="1" set="method" line="239"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></moveTo>
-		<lastClock public="1" get="inline" set="null" line="253"><f a=""><x path="Void"/></f></lastClock>
-		<getEdges public="1" get="inline" set="null" line="263"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
-		<lineTo public="1" get="inline" set="null" line="291"><f a="x_:y_">
+		<lastClock public="1" get="inline" set="null" line="257"><f a=""><x path="Void"/></f></lastClock>
+		<getEdges public="1" get="inline" set="null" line="267"><f a=""><c path="Array"><c path="Array"><x path="Float"/></c></c></f></getEdges>
+		<lineTo public="1" get="inline" set="null" line="295"><f a="x_:y_">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></lineTo>
-		<quadTo public="1" get="inline" set="null" line="308"><f a="x1:y1:x2:y2">
+		<quadTo public="1" get="inline" set="null" line="312"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadTo>
-		<quadThru public="1" get="inline" set="null" line="317"><f a="x1:y1:x2:y2">
+		<quadThru public="1" get="inline" set="null" line="321"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></quadThru>
-		<curveTo public="1" get="inline" set="null" line="323"><f a="x1:y1:x2:y2:x3:y3">
+		<curveTo public="1" get="inline" set="null" line="327"><f a="x1:y1:x2:y2:x3:y3">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -15288,7 +16006,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></curveTo>
-		<plotCoord public="1" get="inline" set="null" line="331">
+		<plotCoord public="1" get="inline" set="null" line="335">
 			<f a="arr:?withMove" v=":true">
 				<c path="Array"><x path="Float"/></c>
 				<x path="Bool"/>
@@ -15296,16 +16014,16 @@
 			</f>
 			<meta><m n=":value"><e>{ withMove : true }</e></m></meta>
 		</plotCoord>
-		<aiColorSet set="method" line="344"><f a="colorType:arr">
+		<aiColorSet set="method" line="348"><f a="colorType:arr">
 	<x path="trilateral3.drawing.AIColorType"/>
 	<c path="Array"><c path="String"/></c>
 	<x path="trilateral3.color.ColorInt"/>
 </f></aiColorSet>
-		<getColorType set="method" line="361"><f a="arr">
+		<getColorType set="method" line="365"><f a="arr">
 	<c path="Array"><c path="String"/></c>
 	<x path="trilateral3.drawing.AIColorType"/>
 </f></getColorType>
-		<aiStringPart public="1" get="inline" set="null" line="368">
+		<aiStringPart public="1" get="inline" set="null" line="372">
 			<f a="str:x:y:?flipY" v=":::0">
 				<c path="String"/>
 				<x path="Float"/>
@@ -15315,92 +16033,17 @@
 			</f>
 			<meta><m n=":value"><e>{ flipY : 0 }</e></m></meta>
 		</aiStringPart>
-		<new public="1" set="method" line="70">
+		<new public="1" set="method" line="71">
 			<f a="pen_:sketchForm_:?endLine_" v="::no">
 				<c path="trilateral3.drawing.Pen"/>
-				<x path="trilateral3.drawing.StyleSketch"/>
-				<x path="trilateral3.drawing.StyleEndLine"/>
+				<t path="trilateral3.drawing.StyleSketch"/>
+				<t path="trilateral3.drawing.StyleEndLine"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ endLine_ : no }</e></m></meta>
 		</new>
 	</class>
-	<abstract path="trilateral3.drawing.StyleEndLine" params="" file="src/trilateral3/drawing/StyleEndLine.hx">
-		<from><icast><x path="Int"/></icast></from>
-		<this><x path="Int"/></this>
-		<to><icast><x path="Int"/></icast></to>
-		<meta><m n=":enum"/></meta>
-		<impl><class path="trilateral3.drawing._StyleEndLine.StyleEndLine_Impl_" params="" file="src/trilateral3/drawing/StyleEndLine.hx" private="1" module="trilateral3.drawing.StyleEndLine" extern="1" final="1">
-	<no public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
-		<x path="trilateral3.drawing.StyleEndLine"/>
-		<meta>
-			<m n=":value"><e>cast 0</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</no>
-	<begin public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
-		<x path="trilateral3.drawing.StyleEndLine"/>
-		<meta>
-			<m n=":value"><e>cast 1</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</begin>
-	<end public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
-		<x path="trilateral3.drawing.StyleEndLine"/>
-		<meta>
-			<m n=":value"><e>cast 2</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</end>
-	<both public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
-		<x path="trilateral3.drawing.StyleEndLine"/>
-		<meta>
-			<m n=":value"><e>cast 3</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</both>
-	<meta><m n=":enum"/></meta>
-</class></impl>
-	</abstract>
-	<class path="trilateral3.drawing._StyleEndLine.StyleEndLine_Impl_" params="" file="src/trilateral3/drawing/StyleEndLine.hx" private="1" module="trilateral3.drawing.StyleEndLine" extern="1" final="1">
-		<no public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
-			<x path="trilateral3.drawing.StyleEndLine"/>
-			<meta>
-				<m n=":value"><e>cast 0</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</no>
-		<begin public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
-			<x path="trilateral3.drawing.StyleEndLine"/>
-			<meta>
-				<m n=":value"><e>cast 1</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</begin>
-		<end public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
-			<x path="trilateral3.drawing.StyleEndLine"/>
-			<meta>
-				<m n=":value"><e>cast 2</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</end>
-		<both public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
-			<x path="trilateral3.drawing.StyleEndLine"/>
-			<meta>
-				<m n=":value"><e>cast 3</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</both>
-		<meta><m n=":enum"/></meta>
-	</class>
+	<typedef path="trilateral3.drawing.StyleEndLine" params="" file="src/trilateral3/drawing/StyleEndLine.hx"><x path="cornerContour.StyleEndLine"/></typedef>
 	<abstract path="trilateral3.drawing.StyleFill" params="" file="src/trilateral3/drawing/StyleFill.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
@@ -15461,162 +16104,7 @@
 		</poly2tri>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="trilateral3.drawing.StyleSketch" params="" file="src/trilateral3/drawing/StyleSketch.hx">
-		<from><icast><x path="Int"/></icast></from>
-		<this><x path="Int"/></this>
-		<to><icast><x path="Int"/></icast></to>
-		<meta><m n=":enum"/></meta>
-		<impl><class path="trilateral3.drawing._StyleSketch.StyleSketch_Impl_" params="" file="src/trilateral3/drawing/StyleSketch.hx" private="1" module="trilateral3.drawing.StyleSketch" extern="1" final="1">
-	<Tracer public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 0</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</Tracer>
-	<Base public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 1</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</Base>
-	<Crude public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 2</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</Crude>
-	<FillOnly public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 3</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</FillOnly>
-	<Fine public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 4</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</Fine>
-	<FineOverlap public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 5</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</FineOverlap>
-	<Medium public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 6</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</Medium>
-	<MediumOverlap public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 7</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</MediumOverlap>
-	<RoundEnd public="1" get="inline" set="null" expr="cast 8" line="1" static="1">
-		<x path="trilateral3.drawing.StyleSketch"/>
-		<meta>
-			<m n=":value"><e>cast 8</e></m>
-			<m n=":impl"/>
-			<m n=":enum"/>
-		</meta>
-	</RoundEnd>
-	<meta><m n=":enum"/></meta>
-</class></impl>
-	</abstract>
-	<class path="trilateral3.drawing._StyleSketch.StyleSketch_Impl_" params="" file="src/trilateral3/drawing/StyleSketch.hx" private="1" module="trilateral3.drawing.StyleSketch" extern="1" final="1">
-		<Tracer public="1" get="inline" set="null" expr="cast 0" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 0</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</Tracer>
-		<Base public="1" get="inline" set="null" expr="cast 1" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 1</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</Base>
-		<Crude public="1" get="inline" set="null" expr="cast 2" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 2</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</Crude>
-		<FillOnly public="1" get="inline" set="null" expr="cast 3" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 3</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</FillOnly>
-		<Fine public="1" get="inline" set="null" expr="cast 4" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 4</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</Fine>
-		<FineOverlap public="1" get="inline" set="null" expr="cast 5" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 5</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</FineOverlap>
-		<Medium public="1" get="inline" set="null" expr="cast 6" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 6</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</Medium>
-		<MediumOverlap public="1" get="inline" set="null" expr="cast 7" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 7</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</MediumOverlap>
-		<RoundEnd public="1" get="inline" set="null" expr="cast 8" line="1" static="1">
-			<x path="trilateral3.drawing.StyleSketch"/>
-			<meta>
-				<m n=":value"><e>cast 8</e></m>
-				<m n=":impl"/>
-				<m n=":enum"/>
-			</meta>
-		</RoundEnd>
-		<meta><m n=":enum"/></meta>
-	</class>
+	<typedef path="trilateral3.drawing.StyleSketch" params="" file="src/trilateral3/drawing/StyleSketch.hx"><x path="cornerContour.StyleSketch"/></typedef>
 	<abstract path="trilateral3.drawing.TriangleAbstract" params="" file="src/trilateral3/drawing/TriangleAbstract.hx">
 		<from><icast><t path="trilateral3.drawing.TriangleType"/></icast></from>
 		<this><t path="trilateral3.drawing.TriangleType"/></this>

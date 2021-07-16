@@ -14,10 +14,11 @@ import trilateral3.structure.XYWH;
 import trilateral3.structure.XY;
 import trilateral3.math.Algebra;
 import trilateral3.shape.PenRangeFactory;
+import cornerContour.IPen;
 #if cpp
 import cpp.Float32;
 #end
-class Pen {
+class Pen implements IPen {
    
     public var z2D: Float = 0.; // this is problematic for Shape triangle2d...
     public var useTexture:   Bool = false;
@@ -144,7 +145,6 @@ class Pen {
             edgePoly[ p2++ ] = cx;
             edgePoly[ p2++ ] = cy;
             if( i != 0 ){ // start on second iteration after b is populated.
-                //var t = ( positive )? new Trilateral( ax, ay, bx, by, cx, cy ): new Trilateral( ax, ay, cx, cy, bx, by );
                 triangle2DFill( ax, ay, bx, by, cx, cy );
             }
             angle = angle + step;
@@ -176,7 +176,6 @@ class Pen {
                         , cx: Float, cy: Float, cz: Float ){
         // don't need to reorder corners and Trilateral can do that!
         var windAdjust = paintType.triangle( ax, ay, az, bx, by, bz, cx, cy, cz );
-        //trace( 'windAdjust ' + windAdjust );
         if( Trilateral.transformMatrix != null ) paintType.transform( Trilateral.transformMatrix );
         return windAdjust;
     }
@@ -252,7 +251,7 @@ class Pen {
     function triangle2DFill( ax: Float, ay: Float
                           , bx: Float, by: Float
                           , cx: Float, cy: Float
-                          , color: Int = -1 ): Int {
+                          , color: Null<Int> = -1 ): Int {
         // if no color set use current default colour.
         if( color == -1 ) color = currentColor;
         addTriangle( ax, ay, z2D, bx, by, z2D, cx, cy, z2D );
@@ -415,11 +414,11 @@ class Pen {
         return 2*(loops-1);
     }
     public var pos( get, set ): Float;
-    inline 
+    public inline 
     function get_pos(): Float {
         return paintType.pos;
     }
-    inline
+    public inline
     function set_pos( v: Float ){
         paintType.pos  = v;
         //colorType.pos = v; assumes they are same

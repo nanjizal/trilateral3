@@ -1,7 +1,8 @@
 package trilateral3.drawing;
 import justPath.IPathContext;
 import trilateral3.math.Algebra;
-import trilateral3.drawing.Contour;
+import cornerContour.Contour;
+import cornerContour.IPen;
 import trilateral3.color.ColorInt;
 
 #if useHyperKitGL
@@ -69,6 +70,8 @@ class Sketch implements IPathContext {
     public var line: ( x: Float, y: Float ) -> Void;
     public
     function new( pen_: Pen,  sketchForm_: StyleSketch, endLine_: StyleEndLine = no ){
+        //var pType: PenType = cast pen_;
+        //var aPen: PenAbstract = new PenAbstract( pType );
         contour    = new Contour( pen_, endLine_ );
         pen        = pen_;
         endLine    = endLine_;
@@ -101,6 +104,7 @@ class Sketch implements IPathContext {
     // TODO: reset pen? reset Contour instead?
     public function reset(){
         // pen.reset?
+        //var aPen: PenAbstract = cast pen;
         contour = new Contour( pen, endLine );
         points = [];
         pointsClock = [];

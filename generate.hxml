@@ -6,6 +6,9 @@
 -lib fracs
 -lib lime
 
+### contour code
+-lib cornerContour
+
 ### svg paths
 -lib justPath
 
