@@ -10,6 +10,8 @@ Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can
 
 - [justPath](https://github.com/nanjizal/justPath), justPath is quick parsing of a string from an svg path.
 
+-[cornerContour](https://github.com/nanjzial/cornerContour), cornerContour provides the algorithm for drawing thick lines with possibly nice rounded corners.
+
 ## Libraries likely to be needed.
 
 -  **Triangulate libraries**, need for fill, and all have specific advantages, [hxPolyK](https://github.com/nanjizal/hxPolyK),  [hxGeomAlgo](https://github.com/azrafe7/hxGeomAlgo), [poly2trihx](https://github.com/nerik/poly2trihx)
