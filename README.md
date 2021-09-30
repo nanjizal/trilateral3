@@ -38,7 +38,7 @@ Haxe 2D drawing engine suitable for use with GPU, ideal for use on WebGL but can
 
 - example WIP use cases are contained on [TrilateralX](https://github.com/TrilateralX)
 
-- [0.0.4-alpha](https://github.com/nanjizal/trilateral3/releases/tag/0.0.4-alpha) pre-release zip.
+- [0.0.5-alpha](https://github.com/nanjizal/trilateral3/releases/tag/0.0.5-alpha) pre-release zip.
 
 - **target** folder to easy toolkits use, have been moved to seperate repo to avoid **dox** issues. The issues with the toolkits were due to not being always well formed for **dox** or out of phase with latest haxe builds.
 
