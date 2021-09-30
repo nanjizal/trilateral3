@@ -28,7 +28,8 @@ class Pen implements IPen {
     public var dz:           Float = 0.01; // default value... change
     public var currentColor: Int   = 0xFACADE; // Classic Rose 
     public var paintType:     PaintAbstract;
-
+    public var colorB: Int;
+    public var colorC: Int;
     public var translateX:   Float -> MatrixDozen;
     public var translateY:   Float -> MatrixDozen;
     public var translateZ:   Float -> MatrixDozen;
@@ -258,6 +259,18 @@ class Pen implements IPen {
         cornerColors( color, color, color ); // next
         paintType.next();
         return 1; 
+    }
+    // TODO: needs considering
+    public var arr = new cornerContour.io.Array2DTriangles();
+    // This is just to provide implementation for Pen2DGrad
+    public function triangle2DGrad( ax: Float, ay: Float
+                                  , bx: Float, by: Float
+                                  , cx: Float, cy: Float
+                                  , ?colorA: Null<Int>, ?colorB: Null<Int>, ?colorC: Null<Int> ): Int {
+        if( colorA == null || colorA == -1 ) colorA = currentColor;
+        arr.triangle2DFill( ax, ay, bx, by, cx, cy, colorA );
+        arr.pos = arr.pos + 1;
+        return 1;
     }
     inline public
     function triangle2DFillColors( ax: Float, ay: Float
